@@ -1,5 +1,5 @@
-https://github.com/mermaid-js/mermaid
-https://mermaid-js.github.io/mermaid/#/
+- https://github.com/mermaid-js/mermaid
+- https://mermaid-js.github.io/mermaid/#/
 
 ```mermaid
   flowchart LR;
