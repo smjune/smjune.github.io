@@ -32,6 +32,6 @@ sequenceDiagram
     P4->>p4_setup: file list & content
     p4_setup->>GitHub Workflow: /temp/files
     GitHub Workflow->>GitHub Workflow: java checkstyle.jar ./temp 
-    GitHub Workflow->>GitHub Workflow: POST update
-    GitHub Workflow->>GitHub Workflow: POST comment
+    GitHub Workflow->>SWARM: POST update
+    GitHub Workflow->>SWARM: Workflow: POST comment
 ```
