@@ -11,6 +11,6 @@ sequenceDiagram
     p4setup->>GitHub Workflow: files
     Github Workflow->>test_cppcheck:./temp
     test_cppcheck->GitHub Workflow: result_cppcheck.txt
-    GitHub Worflow->>commment:update,review,result_cppcheck.txt
+    GitHub Worflow->>comment:update,review,result_cppcheck.txt
     comment->>SWARM: comment
 ```
