@@ -1,18 +1,25 @@
-
 ```mermaid
-sequenceDiagram
-    participant SWARM 
-    participant GitHub Workflow
-    participant p4_setup
-    participant P4
-    SWARM->>GitHub Workflow: review, change, update
-    GitHub Workflow->>GitHub Workflow:workflow dispatch : jobs
-    GitHub Workflow->>p4_setup: change, PORT,USER,PASSWD
-    p4_setup->>P4: getfils.sh (p4 files | p4 print)
-    P4->>p4_setup: file list & content
-    p4_setup->>GitHub Workflow: /temp/files
-    GitHub Workflow->>GitHub Workflow: java checkstyle.jar ./temp 
-    GitHub Workflow->>SWARM: POST update
-    GitHub Workflow->>SWARM: POST comment
+  flowchart LR;
+      A[CI MULTI CHAPTCHA]-->B{Select captcha service by developer?};
+      classDef green color:#022e1f,fill:#00f500;
+      classDef red color:#022e1f,fill:#f11111;
+      classDef white color:#022e1f,fill:#fff;
+      classDef black color:#fff,fill:#000;
+      B--YES-->C[How to use?]:::green;
+      
+      C-->U[I choose recaptcha.]:::green;
+      U--Views-->Q["echo CIMC_JS('recaptcha');\n echo CIMC_HTML(['captcha_name'=>'recaptcha']);"]:::green;
+      U--Controller-->W["CIMC_RULE('recaptcha');"]:::green;
+      
+      C-->I[I choose arcaptcha.]:::white;
+      I--Views-->O["echo CIMC_JS('arcaptcha');\n echo CIMC_HTML(['captcha_name'=>'arcaptcha']);"]:::white;
+      I--Controller-->P["CIMC_RULE('arcaptcha');"]:::white;
+      
+      C-->X[I choose bibot.]:::red;
+      X--Views-->V["echo CIMC_JS('bibot');\n echo CIMC_HTML(['captcha_name'=>'bibot']);"]:::red;
+      X--Controller-->N["CIMC_RULE('bibot');"]:::red;
+      
+      B--NO-->D[How to use?]:::black;
+      D---Views:::black-->F["echo CIMC_JS('randomcaptcha');\n echo CIMC_HTML(['captcha_name'=>'randomcaptcha']);"]:::black; 
+      D---Controller:::black-->T["CIMC_RULE('archaptcha,recaptcha,bibot');"]:::black;
 ```
-
