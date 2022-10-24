@@ -23,3 +23,16 @@
       D---Views:::black-->F["echo CIMC_JS('randomcaptcha');\n echo CIMC_HTML(['captcha_name'=>'randomcaptcha']);"]:::black; 
       D---Controller:::black-->T["CIMC_RULE('archaptcha,recaptcha,bibot');"]:::black;
 ```
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant John
+    links Alice: {"Dashboard": "https://dashboard.contoso.com/alice", "Wiki": "https://wiki.contoso.com/alice"}
+    links John: {"Dashboard": "https://dashboard.contoso.com/john", "Wiki": "https://wiki.contoso.com/john"}
+    Alice->>John: Hello John, how are you?
+    John-->>Alice: Great!
+    Alice-)John: See you later!
+```
+
+https://gist.github.com/martinwoodward/8ad6296118c975510766d80310db71fd
