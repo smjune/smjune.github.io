@@ -65,7 +65,7 @@ Bob-->>John: Jolly good!
  
 ```mermaid
 sequenceDiagram
-    participant S as SWARM \n test
+    participant S as SWARM `\n test
     participant GitHub Workflow
     participant CodeStyleChecker.py
     participant P4
