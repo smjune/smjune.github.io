@@ -48,3 +48,16 @@ John-->>Alice: Great!
 John->>Bob: How about you?
 Bob-->>John: Jolly good!
 ```
+
+```mermaid
+    gitGraph
+       commit
+       commit
+       branch develop
+       commit
+       commit
+       commit
+       checkout main
+       commit
+       commit
+ ```
