@@ -12,13 +12,18 @@ date: 2023-02-05T10:22:18+09:00
 
 hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신
 github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용  
->Project Settings | Pages | Build and Deploy | branches : gh-pages  
+>Project Settings | Pages | Build and Deploy | branches : gh-pages 설정  
 >로컬에서는 'hugo server' 을 이용하여 확인 후 push 함  
 
 
 ## Hugo (SSG)
 
-
+    1. $ hugo new site [hugo project name] 으로 프로젝트 생성.  
+    2. config.toml : BaseURL, title 과 Theme 을 수정.  
+    3. themes : 사용할 Web theme 을 설치. ( git submodule 사용 )  
+    4. content : 폴더/파일.md 형태로 글 작성 및 구성. ( $ hugo new posts/hello.md )  
+    5. hugo server 으로 로컬 호스트 페이지 확인 ( md 파일에 draft : true 인 경우 -D 옵션 필요)
+    6. hugo server 가 실행 중이면, 수정 내용을 저장하면 바로 로컬 호스트 페이지에 반영됨
 
 ## github pages 만들기 
 
