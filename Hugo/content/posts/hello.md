@@ -6,14 +6,17 @@ date: 2023-02-05T10:22:18+09:00
 
 # github 에서 블로그 만들기 
 
-해당 github pages 을 만든 이력정리 **(아래 관련 지식 보유 가정)**
-> 기본 적인 SSG (Static Site Generator) 관련 정보  
-> brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)
+해당 github pages 을 만든 이력정리 **(아래 관련 지식 보유 가정)**  
+```
+* 기본 적인 SSG (Static Site Generator) 관련 정보  
+* brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
+```
 
 hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신
 github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용  
->Project Settings | Pages | Build and Deploy | branches : gh-pages 설정  
->로컬에서는 'hugo server' 을 이용하여 확인 후 push 함  
+
+- Project Settings | Pages | Build and Deploy | branches : gh-pages 설정  
+- 로컬에서는 'hugo server' 을 이용하여 확인 후 push 함  
 
 
 ## Hugo (SSG)
@@ -55,6 +58,25 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
     $ git push origin master
     // browse https://UserAccount.github.io/
 
+* 폴더 구조
+```text
+project folder (git, hugo)
+    .git
+    .gitmodules
+    .github
+        workflows
+            gh-pages.yml
+    congif.toml
+    themes
+        themes folder
+    content
+        posts
+            main.md
+        ...
+    ...
+    readme.md
+````
+
 
 ### 2. 프로젝트 Page (Blog) UserAccont.github.io/Project
 
@@ -81,9 +103,9 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
     // browse https://UserAccount.github.io/Project
     ```
 
-* project 구조
+* 폴더 구조
 
->  프로젝트의 main branch 기본구조는 아래와 같이 구성한다.  
+>  프로젝트의 main branch 기본구조는 아래와 같이 구성된다.  
 >  프로젝트는 source code folder와 hugo 폴더를 갖는다.  
 >  pages 을 deploy 하는 github action 은 .github/workflows/gh-pages.yml 이다.  
 >  hugo folder 는 ' $ hugo new site hugo ' 로 생성한다.  
@@ -93,28 +115,32 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
 
 
 ```text
-project folder
+project folder (git)
     .git
+    .gitmodules
     .github
         workflows
             gh-pages.yml
-    .gitmodules
      Source Code folder
         main.cpp
         ...
-    hugo project folder
+    hugo project folder (hugo)
         congif.toml
         themes
             themes folder
         content
             posts
                 main.md
+            ...
         ...
+    ...
     readme.md
-
 ````
-_branch 으로 구분하는 방법도 생각 해 보았으나, (main, hugo, gh-pages)_  
-_동일한 수정에 대한 commit 을 main 브랜치 (source code 수정) 와_  
+_branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)_  
+    _- main branch : soure code 파일 만 존재_  
+    _- hugo branch : hugo project 파일만 존재_  
+    _- gh-pasges branch : hugo build 결과 (html) 파일만 존재_  
+    _동일한 수정에 대한 commit 을 main 브랜치 (source code 수정) 와_  
 _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하므로 보류_  
 
 
