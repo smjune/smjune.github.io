@@ -36,22 +36,61 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
 
 * Base URL : https://UserAccount.github.io/
 * Repo 주소 : https://github.com/UserAcount/UserAccount.github.io.git
-    * 해당 repo 는 pages 을 위한 repo 이므로 git project = hugo project 으로 생성한다. 
+    * 해당 repo 는 pages 을 위한 repo 이므로 hugo project = git project 으로 생성한다. 
+
+    ```bash
+    $ hugo new site hugo_project
+    $ cd hugo_project
+    $ git init
+    $ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke themes/ananke
+    $ echo "theme = 'ananke'" >> config.toml
+       // edit BaseURL and title
+    $ hugo new posts/sample.md
+       // edit sample.md
+    $ hugo server
+       // Be sure it works. if not, correct it
+    $ git remote add origin https://github.com/UserAcount/UserAccount.github.io.git
+    $ git add .
+    $ git commit -m 'initiate project'
+    $ git push origin master
+    // browse https://UserAccount.github.io/
+
 
 ### 2. 프로젝트 Page (Blog) UserAccont.github.io/Project
 
 * Base URL : https://UserAccount.github.io/Project
 * Repo 주소 : https://github.com/UserAcount/Project.git
-    * 해당 repo 는 git 프로젝트 안에 source code 와 hugo 을 포함한다.
-    
+    * 해당 repo 는 git 프로젝트 안에 source code 와 hugo 을 포함한다.  
+
+
+    ```bash
+    // 기존 git project 에서 
+    $ hugo new site hugo
+    $ cd hugo_project
+    $ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke themes/ananke
+    $ echo "theme = 'ananke'" >> config.toml
+       // edit BaseURL and title
+    $ hugo new posts/sample.md
+       // edit sample.md
+    $ hugo server
+       // Be sure it works. if not, correct it
+    $ cd ..
+    $ git add .
+    $ git commit -m 'initiate project'
+    $ git push origin master
+    // browse https://UserAccount.github.io/Project
+    ```
+
 * project 구조
 
->  프로젝트의 main branch 기본구조는 아래와 같이 구성한다. 
->  프로젝트는 source code folder와 hugo 폴더를 갖는다.
->  pages 을 deploy 하는 github action 은 .github/workflows/gh-pages.yml 이다.
->  hugo folder 는 ' $ hugo new site hug ' 로 생성한다.
->  theme 는 ' $ git submodule add [submoduel.git] themes/[theme name] '
->  각 page 는 ' $ hugo new xxx/xxx.md ' 로 생성한다.
+>  프로젝트의 main branch 기본구조는 아래와 같이 구성한다.  
+>  프로젝트는 source code folder와 hugo 폴더를 갖는다.  
+>  pages 을 deploy 하는 github action 은 .github/workflows/gh-pages.yml 이다.  
+>  hugo folder 는 ' $ hugo new site hugo ' 로 생성한다.  
+>  theme 는 ' $ git submodule add [submoduel.git] themes/[theme name] '  
+>  각 page 는 ' $ hugo new xxx/xxx.md ' 로 생성한다.  
+>  프로젝트 gh-pages 브랜치는 hugo 가 빌드된 Web Site (html) 만 존재한다.
+
 
 ```text
 project folder
@@ -74,3 +113,33 @@ project folder
     readme.md
 
 ````
+_branch 으로 구분하는 방법도 생각 해 보았으나, (main, hugo, gh-pages)_  
+_동일한 수정에 대한 commit 을 main 브랜치 (source code 수정) 와_  
+_hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하므로 보류_  
+
+
+### 3. GitHub Actions to build and deploy the hugo project  
+
+* .github/workflows/gh-pages.yml 생성
+
+https://github.com/peaceiris/actions-gh-pages
+
+- 여기서 주의 할 점  
+> project page 인 경우  
+    > hugo 프로젝트 가 하위로 설정 되어 있으므로 
+    
+    ...
+    - name: Build
+        run: |
+          cd hugo_project                           // hugo 프로젝트로 이동
+          hugo --minify
+    - name: Deploy
+        uses: peaceiris/actions-gh-pages@v.
+        if: ${{ github.ref == 'refs/heads/main' }}  // branch 확인
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./hugu_project/public        // hugo project 하위 public 폴더 사용
+    ...
+
+
+    
