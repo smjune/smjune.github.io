@@ -25,7 +25,7 @@ jobs:
 
       - name: Build
         run: |
-          cd hugo
+          cd Hugo
           hugo --minify
 
       - name: Deploy
