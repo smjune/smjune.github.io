@@ -6,20 +6,20 @@ date: 2023-02-05T10:22:18+09:00
 
 # github 에서 블로그 만들기 
 
-해당 github pages 을 만든 이력정리 **(아래 관련 지식 보유 가정)**  
-```
-* 기본 적인 SSG (Static Site Generator) 관련 정보  
-* brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
-```
-
 hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신
 github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용  
 
 - Project Settings | Pages | Build and Deploy | branches : gh-pages 설정  
-- 로컬에서는 'hugo server' 을 이용하여 확인 후 push 함  
+- 로컬에서는 'hugo server' 을 이용하여 확인 후 push 함 
 
+해당 github pages 을 만든 이력정리 **(아래 관련 지식 보유 가정)**  
+```
+* 기본 적인 SSG (Static Site Generator) 관련 정보  
+* brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
+```  
 
-## Hugo (SSG)
+## Hugo (SSG)  
+* [https://gohugo.io/documentation/](https://gohugo.io/documentation/)  
 
     1. $ hugo new site [hugo project name] 으로 프로젝트 생성.  
     2. config.toml : BaseURL, title 과 Theme 을 수정.  
@@ -29,16 +29,17 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
     6. hugo server 가 실행 중이면, 수정 내용을 저장하면 바로 로컬 호스트 페이지에 반영됨
 
 ## github pages 만들기 
+* [https://docs.github.com/en/pages/](https://docs.github.com/en/pages/)  
 
 ### github pages 종류
 ~~~
- 1. 개인 github Page
- 2. 프로젝트 github Page
+ 1. 개인 github Pages
+ 2. 프로젝트 github Pages
 ~~~
 ### 1. 개인 Page (Blog) : UserAccont.github.io
 
 * Base URL : https://UserAccount.github.io/
-* Repo 주소 : https://github.com/UserAcount/UserAccount.github.io.git
+* Repo 주소 : https://github.com/UserAccount/UserAccount.github.io.git
     * 해당 repo 는 pages 을 위한 repo 이므로 hugo project = git project 으로 생성한다. 
 
     ```bash
@@ -52,29 +53,35 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
        // edit sample.md
     $ hugo server
        // Be sure it works. if not, correct it
-    $ git remote add origin https://github.com/UserAcount/UserAccount.github.io.git
+    $ git remote add origin https://github.com/UserAccount/UserAccount.github.io.git
     $ git add .
     $ git commit -m 'initiate project'
     $ git push origin master
     // browse https://UserAccount.github.io/
 
-* 폴더 구조
+* 폴더 구조  
+
+> hugo project 을 git project 로 관리한다고 생각하면 된다.  
+> project root 에서 hugo 와 git 명령어를 사용할 수 있다.  
+
 ```text
 project folder (git, hugo)
-    .git
-    .gitmodules
-    .github
-        workflows
-            gh-pages.yml
-    congif.toml
-    themes
-        themes folder
-    content
-        posts
-            main.md
-        ...
-    ...
-    readme.md
+ ├─.git
+ ├─.gitmodules
+ ├─.github
+ │  └─workflows
+ │     └─gh-pages.yml
+ ├─congif.toml
+ ├─themes
+ │  └─themes folder (submodule)
+ ├─content
+ │  ├─posts
+ │  │  ├─main.md
+ │  │  └─...
+ │  └─...
+ ├─...
+ └─readme.md
+
 ````
 
 
@@ -107,6 +114,7 @@ project folder (git, hugo)
 
 >  프로젝트의 main branch 기본구조는 아래와 같이 구성된다.  
 >  프로젝트는 source code folder와 hugo 폴더를 갖는다.  
+>  따라서 git 명령어는 project root 에서, hugo 명령어는 hugo 폴더로 이동후 사용한다.  
 >  pages 을 deploy 하는 github action 은 .github/workflows/gh-pages.yml 이다.  
 >  hugo folder 는 ' $ hugo new site hugo ' 로 생성한다.  
 >  theme 는 ' $ git submodule add [submoduel.git] themes/[theme name] '  
@@ -116,25 +124,33 @@ project folder (git, hugo)
 
 ```text
 project folder (git)
-    .git
-    .gitmodules
-    .github
-        workflows
-            gh-pages.yml
-     Source Code folder
-        main.cpp
-        ...
-    hugo project folder (hugo)
-        congif.toml
-        themes
-            themes folder
-        content
-            posts
-                main.md
-            ...
-        ...
-    ...
-    readme.md
+ ├─.git
+ ├─.gitmodules
+ ├─.github
+ │  └─workflows
+ │     └─gh-pages.yml
+ ├─Source Code folder
+ │  ├─lib
+ │  │  ├─utillib.lib
+ │  │  └─...
+ │  ├─build
+ │  │  ├─.buildscript
+ │  │  └─...
+ │  ├─main.cpp
+ │  └─...
+ ├─hugo project folder (hugo)
+ │  ├─congif.toml
+ │  ├─themes
+ │  │  └─themes folder (submodule)
+ │  ├─content
+ │  │  ├─posts
+ │  │  │  ├─main.md
+ │  │  │  └─...
+ │  │  └─...
+ │  └─...
+ ├─...
+ └─readme.md
+
 ````
 _branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)_  
     _- main branch : soure code 파일 만 존재_  
