@@ -9,6 +9,8 @@ date: 2023-02-05T10:22:18+09:00
 hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신
 github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용  
 
+
+
 - Project Settings | Pages | Build and Deploy | branches : gh-pages 설정  
 - 로컬에서는 'hugo server' 을 이용하여 확인 후 push 함 
 
@@ -57,11 +59,13 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
     $ git add .
     $ git commit -m 'initiate project'
     $ git push origin master
-    // browse https://UserAccount.github.io/
+    // browse https://UserAccount.github.io/  
+    ```
+
 
 * 폴더 구조  
 
-> hugo project 을 git project 로 관리한다고 생각하면 된다.  
+> hugo project 을 git (github) 로 관리한다고 생각하면 된다.  
 > project root 에서 hugo 와 git 명령어를 사용할 수 있다.  
 
 ```text
@@ -82,7 +86,8 @@ project folder (git, hugo)
  ├─...
  └─readme.md
 
-````
+```  
+
 
 
 ### 2. 프로젝트 Page (Blog) UserAccont.github.io/Project
@@ -108,7 +113,7 @@ project folder (git, hugo)
     $ git commit -m 'initiate project'
     $ git push origin master
     // browse https://UserAccount.github.io/Project
-    ```
+    ```  
 
 * 폴더 구조
 
