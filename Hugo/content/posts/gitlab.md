@@ -17,6 +17,7 @@ gitlab CI/CD 을 이용하여 build, deploy 하는 방법
 ```bash
 $ cd 'exiting git project'
 $ git remote add gitlab https://gitlab.com/smjune/smjune.gitlab.io/
+# origin 이란 이름 대신 gitlab 이란 이름으로 remote을 설정
 $ git branch -M gitlabmain  
 $ git push -uf gitlab gitlabmain
 # 현재 checkout 한 브랜치를 gitlabmain 으로 변경하고, 이것을 gitlab 리모트와 연결
@@ -28,8 +29,8 @@ $ git branch
 ```
 현재 로컬 상황을 정리하자면,  
 main 브랜치와 gitlabmain 이 동일하고, 각각 자신의 리모트에 연결되어 있음  
-> gitlabmain, gitlab/gitlabmain   # gitlab 용  
-> main, smjune/main               # github 용
+> gitlabmain, gitlab/gitlabmain   # gitlab 용 (gitlab 은 remote 이름, gitlabmain 는 브랜치 이름)
+> main, smjune/main               # github 용 (smjune 는 remote 이름, main 는 브랜치 이름)
 
 작업 순서는 
 1. update main branch 
@@ -46,7 +47,7 @@ Updating 5487806..11711a6
 Fast-forward
  .github/workflows/gh-pages.yml | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
- 
+ ```
 
 ## Gitlab CI/CD 구성
 
