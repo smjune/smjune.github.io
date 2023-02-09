@@ -6,8 +6,8 @@ on:
       - main  # Set a branch to deploy
   pull_request:
 
-permissions:
-  contents: write  
+# permissions:
+#  contents: write  # avoid getting '/usr/bin/git' failed with exit code 128 at first
 
 jobs:
   deploy:
