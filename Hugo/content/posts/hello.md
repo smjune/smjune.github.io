@@ -188,5 +188,23 @@ https://github.com/peaceiris/actions-gh-pages
           publish_dir: ./hugu_project/public        // hugo project 하위 public 폴더 사용
     ...
 
+### 4. local branch and remote 
 
+```bash
+myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
+  labmain                 bcb809a [gitlab/main] change name of .gitlab-ci
+* main                    bcb809a [github/main] change name of .gitlab-ci
+  remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
+  remotes/github/main     bcb809a change name of .gitlab-ci
+  remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
+  remotes/gitlab/main     bcb809a change name of .gitlab-ci
+myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ _
+```
+
+- main 은 remote 로 github (github.com/smjune/smjung.github.io) 의 main 브랜치를 트랙킹  
+   - git push github main
+- labmain 은 remote 로 gitlab (gitlab.com/smjune/smjune.gitlab.io) 의 main 브랜치를 트래킹
+   - git checkout labmain
+   - git merge main
+   - git push gitlab main
     
