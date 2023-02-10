@@ -9,8 +9,30 @@ date: 2023-02-06T20:28:27+09:00
 github 에 deploy 했던 hugo project 을 git remote 만 추가하서 gitlab repo 에 push 하고,  
 gitlab CI/CD 을 이용하여 build, deploy 하는 방법  
 
-> 이미 github 에서 main 이라는 브랜치명을 사용했으므로, gitlab 에서는 다른 이름(labmain)을 사용하여야 함.  
+> gitlab 에서 main 생성시 initial commit 이 자동으로 생성되어 바로 push 할 수 없다.  
+> 로컬에서 다른 labmain 만든 후 push 한 후, main 을 지우고, labmain 를 기준으로 main 을 다시 생성 하여야 한다. 
 
+```bash
+myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git push gitlab main
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (16/16), 3.27 KiB | 1.09 MiB/s, done.
+Total 16 (delta 6), reused 0 (delta 0), pack-reused 0
+To https://gitlab.com/smjune/smjune.gitlab.io.git
+   bcb809a..2b0d320  main -> main
+myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git push github main
+Everything up-to-date
+myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
+  labmain                 2b0d320 [gitlab/main] add how to update github and gitlab
+* main                    2b0d320 [github/main] add how to update github and gitlab
+  remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
+  remotes/github/main     2b0d320 add how to update github and gitlab
+  remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
+  remotes/gitlab/main     2b0d320 add how to update github and gitlab
+myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ 
+```
 
 ## gitlab.com/smjune/smjune.io 만들기  
 
@@ -72,6 +94,9 @@ main                    bcb809a [github/main] change name of .gitlab-ci
 1. update main branch 
 2. checkout gitlabmain
 3. merge main
+
+그러나 
+checkout 하지 않고, 바로 github 와 gitlab 에 push 할 수 있다. 
 
 ```bash
 $ git checkout labmain
