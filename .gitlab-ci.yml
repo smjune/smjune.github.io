@@ -5,7 +5,10 @@ variables:
 
 pages:
   script:
-  - hugo
+  - cd Hugo                                       # hugo 설치 폴더로 이동 
+  - rm config.toml                                # 기존 (github 용) config 삭제
+  - cp config_gitlab.toml config.toml             # gitlab용 config 복사
+  - hugo --minify                                 # hugo build
   artifacts:
     paths:
     - Hugo/public

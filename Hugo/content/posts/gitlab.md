@@ -151,10 +151,23 @@ myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
 ---  
 ## 남아 있는 Gitlab 작업 : CI/CD 구성
 
-1. gilab CI/CD 을 사용하려면 credit card로 인증해야 함.
-> Pipeline failing?   
-  *To keep GitLab spam and abuse free we ask that you verify your identity.*  
+1. gitlab CI/CD 을 사용하려면 credit card로 인증해야 함. (2021. 5.16 이후 사용자 생성)  
+  *https://insight.infograb.net/blog/2021/11/23/how-to-prevent-crypto-mining-abuse/*  
+  *Pipeline failing? To keep GitLab spam and abuse free we ask that you verify your identity.*  
   *Until then, shared runners will be unavailable. Validate your account or use your own runners.*  
 2. github 용 config.toml 지우고, config_gitlab.toml 을 config.tolml 으로 복사  
 3. project root 가 아닌 hugo 폴더에 이동 하여 빌드해야 함.  
 4. hugo/public 을 deploy 해야함.  
+   *https://gohugo.io/hosting-and-deployment/hosting-on-gitlab/*  
+
+```yml
+pages:
+  script:
+  - cd Hugo                                       # hugo 설치 폴더로 이동 
+  - rm config.toml                                # 기존 (github 용) config 삭제
+  - cp config_gitlab.toml config.toml             # gitlab용 config 복사
+  - hugo --minify                                 # hugo build
+  artifacts:
+    paths:
+    - Hugo/public
+```
