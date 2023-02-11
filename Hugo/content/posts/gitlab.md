@@ -9,8 +9,16 @@ date: 2023-02-06T20:28:27+09:00
 github 에 deploy 했던 hugo project 을 git remote 만 추가하서 gitlab repo 에 push 하고,  
 gitlab CI/CD 을 이용하여 build, deploy 하는 방법  
 
-> gitlab 에서 main 생성시 initial commit 이 자동으로 생성되어 바로 push 할 수 없다.  
-> 로컬에서 다른 labmain 만든 후 push 한 후, main 을 지우고, labmain 를 기준으로 main 을 다시 생성 하여야 한다. 
+> * 결론     
+> gitlab에서 repo 만들고, 단순히 remote 만 추가해서 바로 push 하면 될 줄 알았는데,  
+> 1. gitlab 에서 main 생성시 initial commit 이 자동으로 생성되어 바로 push 할 수 없었다. (빈 브랜치 생성불가)  
+>    로컬 main 기준으로 다른 브랜치 labmain 만든 후 push 한 후, main 을 지우고, labmain 를 기준으로 main 을 다시 생성 하여야 한다.  
+>    (로컬과 같은 커밑 과 같은 브랜치명 필요)  
+> 2. 서로 다른 값을 저장하는 config.toml 은 각 workflow (CI/CD) 스크립에서 자신에 맞게 copy 하는걸로 해결  
+>    githug : config.toml 을 그냥 사용하고 (어짜피 hugo server 할 때 config.toml 은 필요하니)
+>    gitlab : config_gitlab.toml -> config.toml (baseURL = 'smjune.gitlab.io')을 .gitlab-ci.yml에 추가
+> 3. 서로 다른 브랜치로 checkout 할때 없어지는 파일,폴더 (themes) 확인
+
 
 ```bash
 myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git push gitlab main
@@ -33,6 +41,8 @@ myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
   remotes/gitlab/main     2b0d320 add how to update github and gitlab
 myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ 
 ```
+*/ labmain 은 삭제 할 예정 /*
+
 
 ## gitlab.com/smjune/smjune.io 만들기  
 

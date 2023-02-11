@@ -207,4 +207,60 @@ myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ _
    - git checkout labmain
    - git merge main
    - git push gitlab main
-    
+
+```bash
+myoungjune-sung-ui-iMac:hugo myoungjunesung$ git status
+On branch main
+Your branch is up to date with 'github/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   content/posts/gitlab.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+myoungjune-sung-ui-iMac:hugo myoungjunesung$ git add .
+myoungjune-sung-ui-iMac:hugo myoungjunesung$ git commit -m 'update way to push'
+[main d7c0db2] update way to push
+ Committer: myoungjune sung <myoungjunesung@myoungjune-sung-ui-iMac.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 26 insertions(+), 1 deletion(-)
+myoungjune-sung-ui-iMac:hugo myoungjunesung$ git push github main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.11 KiB | 1.11 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/smjune/smjune.github.io.git
+   2b0d320..d7c0db2  main -> main
+myoungjune-sung-ui-iMac:hugo myoungjunesung$ git push gitlab main
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 1.11 KiB | 1.11 MiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+To https://gitlab.com/smjune/smjune.gitlab.io.git
+   2b0d320..d7c0db2  main -> main
+myoungjune-sung-ui-iMac:hugo myoungjunesung$ git branch -avv
+  labmain                 2b0d320 [gitlab/main: behind 1] add how to update github and gitlab
+* main                    d7c0db2 [github/main] update way to push
+  remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
+  remotes/github/main     d7c0db2 update way to push
+  remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
+  remotes/gitlab/main     d7c0db2 update way to push
+myoungjune-sung-ui-iMac:hugo myoungjunesung$ 
+``` 
