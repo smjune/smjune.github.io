@@ -1,5 +1,5 @@
 ---
-title: "Pyenv"
+title: "Python with Pyenv"
 date: 2023-02-09T18:07:51+09:00
 
 ---
@@ -39,7 +39,7 @@ $ pyenv shell —unset                               # set 해제
 
 ## pyenv 과 virtualenv 별도 사용 
   
-`$ virtualenv py271 --python=python2.7
+*$ virtualenv py271 --python=python2.7*
 
 ### Shell setup :  
 ```bash

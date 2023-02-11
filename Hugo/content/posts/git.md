@@ -38,6 +38,9 @@ $ git branch -u origin/maser [Branch A]
 
 $ git branch -d Branch A  
 : local 에서만 Branch A 삭제  
+
+$ git branch -d -r origin/branch A 
+: remote 트랙킹 브랜치를 로컬에서 삭제 (에, origin/featrue )
 ```
 ### checkout
 ```bash

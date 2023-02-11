@@ -1,5 +1,5 @@
 ---
-title: "Hello"
+title: "Hello GitHub"
 date: 2023-02-05T10:22:18+09:00
 
 ---
@@ -19,25 +19,29 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
 * 기본 적인 SSG (Static Site Generator) 관련 정보  
 * brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
 ```  
+---  
 
 ## Hugo (SSG)  
 * [https://gohugo.io/documentation/](https://gohugo.io/documentation/)  
 
     1. $ hugo new site [hugo project name] 으로 프로젝트 생성.  
-    2. config.toml : BaseURL, title 과 Theme 을 수정.  
+    2. config.toml : baseURL, Title 과 Theme 을 수정.  
     3. themes : 사용할 Web theme 을 설치. ( git submodule 사용 )  
     4. content : 폴더/파일.md 형태로 글 작성 및 구성. ( $ hugo new posts/hello.md )  
     5. hugo server 으로 로컬 호스트 페이지 확인 ( md 파일에 draft : true 인 경우 -D 옵션 필요)
-    6. hugo server 가 실행 중이면, 수정 내용을 저장하면 바로 로컬 호스트 페이지에 반영됨
+    6. hugo server 가 실행 중이면, 저장하는 수정 내용이 바로 로컬 호스트 페이지에 반영됨
 
 ## github pages 만들기 
-* [https://docs.github.com/en/pages/](https://docs.github.com/en/pages/)  
+https://docs.github.com/en/pages/  
 
 ### github pages 종류
 ~~~
  1. 개인 github Pages
  2. 프로젝트 github Pages
 ~~~
+
+---
+
 ### 1. 개인 Page (Blog) : UserAccont.github.io
 
 * Base URL : https://UserAccount.github.io/
@@ -67,7 +71,6 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
 
 > hugo project 을 git (github) 로 관리한다고 생각하면 된다.  
 > project root 에서 hugo 와 git 명령어를 사용할 수 있다.  
-
 ```text
 project folder (git, hugo)
  ├─.git
@@ -87,8 +90,9 @@ project folder (git, hugo)
  └─readme.md
 
 ```  
+*Created from https://arthursonzogni.com/Diagon/#Tree*  
 
-
+---  
 
 ### 2. 프로젝트 Page (Blog) UserAccont.github.io/Project
 
@@ -156,8 +160,10 @@ project folder (git)
  ├─...
  └─readme.md
 
-````
-_branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)_  
+```  
+*Created from https://arthursonzogni.com/Diagon/#Tree*  
+
+** _branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)_  
     _- main branch : soure code 파일 만 존재_  
     _- hugo branch : hugo project 파일만 존재_  
     _- gh-pasges branch : hugo build 결과 (html) 파일만 존재_  
@@ -165,6 +171,7 @@ _branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pa
 _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하므로 보류_  
 
 
+---  
 ### 3. GitHub Actions to build and deploy the hugo project  
 
 * .github/workflows/gh-pages.yml 생성
@@ -188,6 +195,8 @@ https://github.com/peaceiris/actions-gh-pages
           publish_dir: ./hugu_project/public        // hugo project 하위 public 폴더 사용
     ...
 
+---  
+
 ### 4. local branch and remote 
 
 ```bash
@@ -199,13 +208,12 @@ myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
   remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
   remotes/gitlab/main     bcb809a change name of .gitlab-ci
 myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ _
-```
+```  
+*/labmain 과 gitlab/labmain 은 삭제/*
 
 - main 은 remote 로 github (github.com/smjune/smjung.github.io) 의 main 브랜치를 트랙킹  
    - git push github main
-- labmain 은 remote 로 gitlab (gitlab.com/smjune/smjune.gitlab.io) 의 main 브랜치를 트래킹
-   - git checkout labmain
-   - git merge main
+- remote 로 gitlab (gitlab.com/smjune/smjune.gitlab.io) main 도 등록되어 있으므로  
    - git push gitlab main
 
 ```bash
@@ -219,6 +227,8 @@ Changes not staged for commit:
         modified:   content/posts/gitlab.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
+```
+```bash
 myoungjune-sung-ui-iMac:hugo myoungjunesung$ git add .
 myoungjune-sung-ui-iMac:hugo myoungjunesung$ git commit -m 'update way to push'
 [main d7c0db2] update way to push
@@ -236,6 +246,8 @@ After doing this, you may fix the identity used for this commit with:
     git commit --amend --reset-author
 
  1 file changed, 26 insertions(+), 1 deletion(-)
+ ```
+ ```bash
 myoungjune-sung-ui-iMac:hugo myoungjunesung$ git push github main
 Enumerating objects: 11, done.
 Counting objects: 100% (11/11), done.
@@ -246,6 +258,8 @@ Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/smjune/smjune.github.io.git
    2b0d320..d7c0db2  main -> main
+```
+```bash
 myoungjune-sung-ui-iMac:hugo myoungjunesung$ git push gitlab main
 Enumerating objects: 11, done.
 Counting objects: 100% (11/11), done.
@@ -255,6 +269,8 @@ Writing objects: 100% (6/6), 1.11 KiB | 1.11 MiB/s, done.
 Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
 To https://gitlab.com/smjune/smjune.gitlab.io.git
    2b0d320..d7c0db2  main -> main
+```
+```bash
 myoungjune-sung-ui-iMac:hugo myoungjunesung$ git branch -avv
   labmain                 2b0d320 [gitlab/main: behind 1] add how to update github and gitlab
 * main                    d7c0db2 [github/main] update way to push
