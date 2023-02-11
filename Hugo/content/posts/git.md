@@ -4,24 +4,32 @@ date: 2023-02-11T10:04:43+09:00
 
 ---
 
-## 연습 가이드 
+## 연습 Site   
 
 http://learngitbranching.js.org/  
 https://backlogtool.com/git-guide/kr/  
- 
-```text
-
+```
 $ level                       - 연습문제 초기 화면 (문제선택)  
 $ sandbox                     - 빈 연습  
 $ show solution               - 해당보기  
 $ reset                       - 해당 level 처음부터 다시  
 $ undo                        - 1개 명령 취소  
 $ git fakeTeamwork 1          - origin 에 1개 커밋 넣기  
- 
-$ git clone -b [브랜치 | tag] [REPO URL]  
 ```
-## branch 
-```text 
+
+
+### Set up 
+```bash
+$ git clone -b [브랜치 | tag] [REPO URL]  
+$ git remote add orgin [REPO URL]      // origin 으로 REPO URL 등록
+$ git remote rm orgin                  // origin 삭제
+$ git submodule add [REPO RUL] [Folder Path]
+$ git submodule update 
+```
+
+
+### branch 
+```bash
 $ git branch -f bugfix HEAD~1                       
 : bugfix 브랜치를 HEAD [혹은 브랜치 명] 1개 전 commit으로 이동  
 
@@ -31,8 +39,8 @@ $ git branch -u origin/maser [Branch A]
 $ git branch -d Branch A  
 : local 에서만 Branch A 삭제  
 ```
-## checkout
-```text    
+### checkout
+```bash
 $ git checkout branch A                               
 : Remote에 있는 branch A 에 대해 local 에 branch A 와 origin/branch A만들고, checkout.  
 -> 로컬 branch A가 없고, 유일한 Remote에 branch A가 있다면 ("remotes/origin/branch A"가 있어야 함)  
@@ -49,7 +57,7 @@ $ git checkout -b [Branch A] origin/master
 $ git checkout --track origin/master               
 : Local에 master(remote와 같은 이름의 브랜치)을 만들고 checkout 한 후 origin/master (Remote 브랜치)을 tracking 함. --> git branch -u 와 비교  
 ```   
-## Others
+### Others
 ```bash
 $ git cherry-pick [commit-ID1] [commit-ID2] …  
 : 현재 checkout된 브랜치에 C1, C2 을 넣어라  
