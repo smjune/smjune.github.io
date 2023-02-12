@@ -75,5 +75,5 @@ sequenceDiagram
         Local->>github: Push github main
     end
     Local->>gitlab: push gitlab main
-    github-))Local: Fetch github main
+    github-->>Local: fetch github main
 ```
