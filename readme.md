@@ -70,10 +70,15 @@ sequenceDiagram
     links gitlab: {"pages": "https://smjune.gitlab.io/"}
     links github: {"Pages": "https:/smjjune.github.io/"}
     loop main job
-        Local->>Local: edit page on Hugo
+        Local->>Local: edit a page on Hugo
         Local->>Local: add and commit on .git
+        github-->>Lacal: fetch
         Local->>github: Push 
     end
     Local->>gitlab: push gitlab main
-    github-->>Local: fetch, pull
+    github-->>Local: fetch
+    github->>github: edit a page on GitHub WEB UI
+    github-->>Local: fetch
+    github->>local: pull
+    local->>gitlab: push gitlab main
 ```
