@@ -5,6 +5,9 @@
 
 
 ```mermaid
+---
+title: git blog 종류
+---
   flowchart LR;
       A[Create a blog with git]-->B{is it a Personal or ORG?};      
       classDef white color:#022e1f,fill:#fff;
@@ -21,6 +24,9 @@
 ```
 
 ```mermaid
+---
+title: blog 작업 순서
+---
 sequenceDiagram
     participant gitlab
     participant Local 
