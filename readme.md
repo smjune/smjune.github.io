@@ -67,10 +67,13 @@ sequenceDiagram
     participant gitlab
     participant Local 
     participant github
-    links gitlab: {"Repository": "https://gitlab.com/smjune/smjune.gitlab.io"}
-    links github: {"Repository": "https://github.com/smjune/smjune.github.io"}
-    Local->>Local: edit and commit
-    Local->>github: Push github main
+    links gitlab: {"pages": "https://smjune.gitlab.io/"}
+    links github: {"Pages": "https:/smjjune.github.io/"}
+    loop main job
+        Local->>Local: edit page on Hugo
+        Local->>Local: add and commit on .git
+        Local->>github: Push github main
+    end
     Local->>gitlab: push gitlab main
-    github-)Local: Fetch github main
+    github-))Local: Fetch github main
 ```
