@@ -72,13 +72,13 @@ sequenceDiagram
     loop main job
         Local->>Local: edit a page on Hugo
         Local->>Local: add and commit on .git
-        github-->>Local: fetch
-        Local->>github: Push 
+        github-->>Local: fetch (github)
+        Local->>github: Push (github main)
     end
     Local->>gitlab: push gitlab main
-    github-->>Local: fetch
+    github-->>Local: fetch (github)
     github->>github: edit a page on GitHub WEB UI
-    github-->>Local: fetch
-    github->>Local: pull
-    local->>gitlab: push gitlab main
+    github-->>Local: fetch (github)
+    github->>Local: pull (github main)
+    Local->>gitlab: push gitlab main
 ```
