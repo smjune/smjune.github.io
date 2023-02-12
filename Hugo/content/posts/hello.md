@@ -201,18 +201,16 @@ https://github.com/peaceiris/actions-gh-pages
 
 ```bash
 myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
-  labmain                 bcb809a [gitlab/main] change name of .gitlab-ci
 * main                    bcb809a [github/main] change name of .gitlab-ci
   remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
   remotes/github/main     bcb809a change name of .gitlab-ci
-  remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
   remotes/gitlab/main     bcb809a change name of .gitlab-ci
 myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ _
 ```  
 */labmain 과 gitlab/labmain 은 삭제/*
 
 - main 은 remote 로 github (github.com/smjune/smjung.github.io) 의 main 브랜치를 트랙킹  
-   - git push github main
+   - git push github main, git fetch, git pull
 - remote 로 gitlab (gitlab.com/smjune/smjune.gitlab.io) main 도 등록되어 있으므로  
    - git push gitlab main
 
@@ -272,11 +270,9 @@ To https://gitlab.com/smjune/smjune.gitlab.io.git
 ```
 ```bash
 myoungjune-sung-ui-iMac:hugo myoungjunesung$ git branch -avv
-  labmain                 2b0d320 [gitlab/main: behind 1] add how to update github and gitlab
 * main                    d7c0db2 [github/main] update way to push
   remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
   remotes/github/main     d7c0db2 update way to push
-  remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
   remotes/gitlab/main     d7c0db2 update way to push
 myoungjune-sung-ui-iMac:hugo myoungjunesung$ 
 ``` 
