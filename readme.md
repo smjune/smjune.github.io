@@ -62,3 +62,15 @@ Bob-->>John: Jolly good!
        commit
  ```
  
+```mermaid
+sequenceDiagram
+    participant gitlab
+    participant Local 
+    participant github
+    links gitlab: {"Repository": "https://gitlab.com/smjune/smjune.gitlab.io"}
+    links github: {"Repository": "https://github.com/smjune/smjune.github.io"}
+    Local->>Local: edit and commit
+    Local->>github: Push github main
+    Local->>gitlab: push gitlab main
+    github-)Local: Fetch github main
+```

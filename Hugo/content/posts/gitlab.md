@@ -7,7 +7,9 @@ date: 2023-02-06T20:28:27+09:00
 # GitLab 으로 Deploy 하기  
 
 github 에 deploy 했던 hugo project 을 git remote 만 추가하서 gitlab repo 에 push 하고,  
-gitlab CI/CD 을 이용하여 build, deploy 하는 방법  
+gitlab CI/CD 을 이용하여 build, deploy 하기  
+
+
 
 > * 결론     
 > gitlab에서 repo 만들고, 단순히 remote 만 추가해서 바로 push 하면 될 줄 알았는데,  
