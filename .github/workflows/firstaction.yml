@@ -1,6 +1,12 @@
 name: CI
 
-on: [push]
+on: 
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - '.github/workflows/gh-pages.yml'
+      - 'Hugo/**'
 
 jobs:
   build:
