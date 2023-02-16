@@ -2,8 +2,11 @@ name: GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # Set a branch to deploy
+#    branches:
+#      - main  # Set a branch to deploy
+     paths:
+       - '.github/workflows/gh-pages.yml'
+       - 'Hugo/**'
   pull_request:
 
 permissions:
@@ -25,7 +28,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.110.0'
-          # extended: true
+          extended: true
 
       - name: Build
         run: |

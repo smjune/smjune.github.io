@@ -22,7 +22,8 @@ github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브�
 ---  
 
 ## Hugo (SSG)  
-* [https://gohugo.io/documentation/](https://gohugo.io/documentation/)  
+https://gohugo.io/documentation/  
+https://themes.gohugo.io/themes/hugo-book/   
 
     1. $ hugo new site [hugo project name] 으로 프로젝트 생성.  
     2. config.toml : baseURL, Title 과 Theme 을 수정.  
@@ -181,8 +182,15 @@ https://github.com/peaceiris/actions-gh-pages
 - 여기서 주의 할 점  
 > project page 인 경우  
     > hugo 프로젝트 가 하위로 설정 되어 있으므로 
-    
-    ...
+```yml    
+on:
+  push:
+#    branches:
+#      - main  # Set a branch to deploy
+     paths:
+       - '.github/workflows/gh-pages.yml'           // olny deploy when workflow and hugo folder are updated.
+       - 'Hugo/**'
+   ...
     - name: Build
         run: |
           cd hugo_project                           // hugo 프로젝트로 이동
@@ -194,7 +202,7 @@ https://github.com/peaceiris/actions-gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./hugu_project/public        // hugo project 하위 public 폴더 사용
     ...
-
+```
 ---  
 
 ### 4. local branch and remote 
