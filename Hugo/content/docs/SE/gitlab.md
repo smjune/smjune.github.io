@@ -49,7 +49,7 @@ $ git branch
 
 1. gitlab WEB 에서 main (474dbe7)을 삭제, labmain 을 기준으로 main 을 다시 만든다.   
 ```bash
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
+Hello_world$ git branch -avv
 * labmain                 bcb809a [gitlab/labmain] change name of .gitlab-ci
   main                    bcb809a [github/main] change name of .gitlab-ci
   remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
@@ -63,17 +63,17 @@ myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
 *생각해보니, gitlab Web 상태가 main (bcb809a)된 후, 아래 단계를 진행 하지 않아도 되었을듯*
 
 ```bash
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git fetch gitlab
+Hello_world$ git fetch gitlab
 From https://gitlab.com/smjune/smjune.gitlab.io
  + 474dbe7...bcb809a main       -> gitlab/main  (forced update)
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
+Hello_world$ git branch -avv
 * labmain                 bcb809a [gitlab/labmain] change name of .gitlab-ci
   main                    bcb809a [github/main] change name of .gitlab-ci
   remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
   remotes/gitlab/main     bcb809a change name of .gitlab-ci
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -u gitlab/main labmain
+Hello_world$ git branch -u gitlab/main labmain
 branch 'labmain' set up to track 'gitlab/main'.
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
+Hello_world$ git branch -avv
 * labmain                 bcb809a [gitlab/main] change name of .gitlab-ci
   main                    bcb809a [github/main] change name of .gitlab-ci
   remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
@@ -118,7 +118,7 @@ checkout 하지 않고, 바로 github 와 gitlab 에 push 할 수 있다.
  * 이후 labmain 을 로컬, 리모트 트래킹 브랜치 모두 지움  
  
 ```bash
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git push gitlab main
+Hello_world$ git push gitlab main
 Enumerating objects: 22, done.
 Counting objects: 100% (22/22), done.
 Delta compression using up to 2 threads
@@ -127,24 +127,24 @@ Writing objects: 100% (16/16), 3.27 KiB | 1.09 MiB/s, done.
 Total 16 (delta 6), reused 0 (delta 0), pack-reused 0
 To https://gitlab.com/smjune/smjune.gitlab.io.git
    bcb809a..2b0d320  main -> main
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git push github main
+Hello_world$ git push github main
 Everything up-to-date
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
+Hello_world$ git branch -avv
   labmain                 2b0d320 [gitlab/main] add how to update github and gitlab
 * main                    2b0d320 [github/main] add how to update github and gitlab
   remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
   remotes/github/main     2b0d320 add how to update github and gitlab
   remotes/gitlab/labmain  bcb809a change name of .gitlab-ci
   remotes/gitlab/main     2b0d320 add how to update github and gitlab
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git barnch -d labmain
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git barnch -d -r gitlab/labmain
+Hello_world$ git barnch -d labmain
+Hello_world$ git barnch -d -r gitlab/labmain
 ```  
 *labmain 리모트 삭제 : '$ git branch -d -r gitlab/labmain'*  
 
 * 결국 원하는 형태  
 로컬과 gitlab, github 모두 7afd5d6 으로 sync, gh-pages 브랜치도 7afd5d 으로 deplay 완료
 ```bash
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
+Hello_world$ git branch -avv
 * main                    7afd5d6 [github/main] add update git page with setup section
   remotes/github/gh-pages c53a420 deploy: 7afd5d6bc8d95476eea52ec6a4e60fd3d3642627
   remotes/github/main     7afd5d6 add update git page with setup section

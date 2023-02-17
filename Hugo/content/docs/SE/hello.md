@@ -6,13 +6,15 @@ date: 2023-02-05T10:22:18+09:00
 
 # github 에서 블로그 만들기 
 
-hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신
-github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용  
-
-
-
-- Project Settings | Pages | Build and Deploy | branches : gh-pages 설정  
-- 로컬에서는 'hugo server' 을 이용하여 확인 후 push 함 
+- Editor : Scrivener, VSCode  
+- SSG : HUGO (theme : hugo-book)  
+- REPO : github (github.com/smjune/smjune.github.io),  
+         gitlab (backup : gitlab.com/smjune/smjune.gitlab.io)
+- WEB hosting : smjune.github.io  (GitHub Pages)
+   - Project Settings | Pages | Build and Deploy | branches : gh-pages 설정    
+- 로컬에서는 'hugo server' 을 이용하여 확인 후 push 함  
+- Build & Deploy : github actions / gitlab CI/CD
+hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신 github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용   
 
 해당 github pages 을 만든 이력정리 **(아래 관련 지식 보유 가정)**  
 ```
@@ -208,12 +210,12 @@ on:
 ### 4. local branch and remote 
 
 ```bash
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ git branch -avv
+Hello_world$ git branch -avv
 * main                    bcb809a [github/main] change name of .gitlab-ci
   remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
   remotes/github/main     bcb809a change name of .gitlab-ci
   remotes/gitlab/main     bcb809a change name of .gitlab-ci
-myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ _
+Hello_world$ _
 ```  
 */labmain 과 gitlab/labmain 은 삭제/*
 
@@ -223,7 +225,7 @@ myoungjune-sung-ui-iMac:Hello_world myoungjunesung$ _
    - git push gitlab main
 
 ```bash
-myoungjune-sung-ui-iMac:hugo myoungjunesung$ git status
+Hello_world$ git status
 On branch main
 Your branch is up to date with 'github/main'.
 
@@ -235,8 +237,8 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 ```bash
-myoungjune-sung-ui-iMac:hugo myoungjunesung$ git add .
-myoungjune-sung-ui-iMac:hugo myoungjunesung$ git commit -m 'update way to push'
+Hello_world$ git add .
+Hello_world$ git commit -m 'update way to push'
 [main d7c0db2] update way to push
  Committer: myoungjune sung <myoungjunesung@myoungjune-sung-ui-iMac.local>
 Your name and email address were configured automatically based
@@ -254,7 +256,7 @@ After doing this, you may fix the identity used for this commit with:
  1 file changed, 26 insertions(+), 1 deletion(-)
  ```
  ```bash
-myoungjune-sung-ui-iMac:hugo myoungjunesung$ git push github main
+Hello_world$ git push github main
 Enumerating objects: 11, done.
 Counting objects: 100% (11/11), done.
 Delta compression using up to 2 threads
@@ -266,7 +268,7 @@ To https://github.com/smjune/smjune.github.io.git
    2b0d320..d7c0db2  main -> main
 ```
 ```bash
-myoungjune-sung-ui-iMac:hugo myoungjunesung$ git push gitlab main
+Hello_world$ git push gitlab main
 Enumerating objects: 11, done.
 Counting objects: 100% (11/11), done.
 Delta compression using up to 2 threads
@@ -277,10 +279,10 @@ To https://gitlab.com/smjune/smjune.gitlab.io.git
    2b0d320..d7c0db2  main -> main
 ```
 ```bash
-myoungjune-sung-ui-iMac:hugo myoungjunesung$ git branch -avv
+Hello_world$ git branch -avv
 * main                    d7c0db2 [github/main] update way to push
   remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
   remotes/github/main     d7c0db2 update way to push
   remotes/gitlab/main     d7c0db2 update way to push
-myoungjune-sung-ui-iMac:hugo myoungjunesung$ 
+Hello_world$ 
 ``` 

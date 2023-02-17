@@ -4,7 +4,7 @@ date: 2023-02-11T10:04:43+09:00
 
 ---
 
-## 연습 Site   
+## GIT 연습 Site   
 
 http://learngitbranching.js.org/  
 https://backlogtool.com/git-guide/kr/  

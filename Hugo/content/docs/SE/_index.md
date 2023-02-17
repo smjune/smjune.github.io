@@ -1,5 +1,5 @@
 ---
-title: "Se"
+title: "History"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
@@ -9,4 +9,4 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-se 
+일상 작업를 기록해 놓는 곳 

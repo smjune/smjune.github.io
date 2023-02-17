@@ -1,12 +1,17 @@
 ---
-title: "Daily"
+title: "Hugo Tips"
 weight: 1
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
-bookCollapseSection: true
+# bookCollapseSection: false
 # bookComments: false
 # bookSearchExclude: false
 ---
 
-일일 영어 공부
+## Bundles
+
+### Menu
+
+### Lacal Image
+
