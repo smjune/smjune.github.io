@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Countinuous Integration on MyoungJune Sung says Hello Wrold</title><link>https://smjune.github.io/docs/se/ci/</link><description>Recent content in Countinuous Integration on MyoungJune Sung says Hello Wrold</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://smjune.github.io/docs/se/ci/index.xml" rel="self" type="application/rss+xml"/><item><title>Local build</title><link>https://smjune.github.io/docs/se/ci/localbuild/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/se/ci/localbuild/</guid><description>- 소스를 VCS 에 업로드 한다. - 소스를 받아 로컬에서 빌드 한다. - 빌드 결과를 depoly 서버에 업로드 한다. - deploy 된 빌드를 download 해서 결과를 확인 한다. - 확인 결과를 게시 한다. - 게시된 빌드 결과에 따라 코드를 수정한다. - 수정된 소스를 다시 VCS 에 업로드 (version up) 한다. - 수정한 코드를 받아, 다시 빌드 한다. 로컬빌드 https://ryan-han.com/post/dev/creating_static_blog/
+action 빌드 https://taetaetae.github.io/posts/blog-reorganization-by-hugo/</description></item><item><title>Post CI</title><link>https://smjune.github.io/docs/se/ci/postci/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/se/ci/postci/</guid><description>CI 개념이 최로로 나로면서
+submit 된 내용이 CI 툴에 의해 모니터링 되어 (혹은 WebHook 으로 호출) CI 툴 (서버) 에서 빌드, 테스트 되어 deploy 됨
+Github self-hosted 는 항상 repos 을 listening 하고 있다.
+bare metal 서버
+vitural 서버
+- 소스 코드를 VCS 에 업로드 한다 - VCS 로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다. - 빌드 후 자동화된 테스트 를 수행한다. - 결과를 게시 한다. - 게시된 결과에 따라 코드를 수정한다.</description></item><item><title>Branches</title><link>https://smjune.github.io/docs/se/ci/branch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/se/ci/branch/</guid><description>submit 전에 어떻게 사전 검증을 할 것인가에 대하 대답으로
+브랜치 개념이 도입이 됨
+기존 post CI 가 적용된 브랜치를 운영 (dev) 하여
+확인이 완료된 change을 운영 브랜치 (main) 으로 merge
+- 각자 정해진 소스 트리 (branch) 에 소스를 업로드 한다. - 해당 브랜치로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다. - 빌드 후 자동화된 테스트 를 수행한다. - 결과를 게시 한다. - 게시된 결과에 따라 코드를 수정한다. - 수정한 코드를 정해진 브랜치에 다시 업로드 한다.</description></item><item><title>Presubmit</title><link>https://smjune.github.io/docs/se/ci/presubmit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/se/ci/presubmit/</guid><description>브랜치가 많아 짐에 따라 브랜치 운영 전략 (Flow) 이 복잡해짐
+이에 바로 main 브랜치에 submit 하는 것을 기본으로
+submit 전 Work In Progress 단계를 제공함
+- code base 의 WIP 기능을 이용하여 소스를 업로드 한다. (refs/for/head, Sheves) - WIP 와 연결된 workflow 에 따라 빌드 및 테스트가 수행된다. - 결과를 게시한다. - 수정한 코드로 WIP 을 업데이트 한다. (patch-set, revision) - WIP 와 연결된 workflow 에 따라 빌드 및 테스트가 수행된다.</description></item><item><title>Delivery &amp; Deployment</title><link>https://smjune.github.io/docs/se/ci/cd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/se/ci/cd/</guid><description>deploy 을 어느 user 수준까지 제공하는냐.
+- 완료된 binary 을 누구에게 배포할 것인가?
+. 내부 / 외부
+. discrete (App) / countinuous (WEB))
+. 내부 user (tester, QA)
+. 외부 canary
+A/B
+단계적
+. DevOps</description></item><item><title>VCS</title><link>https://smjune.github.io/docs/se/ci/vcs/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/se/ci/vcs/</guid><description>distributed vs Centrialized VCS</description></item><item><title>Repo</title><link>https://smjune.github.io/docs/se/ci/repo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/se/ci/repo/</guid><description>Multi vs Mono REPO</description></item></channel></rss>

@@ -1,50 +1,31 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="History # 1. local build # - 소스를 VCS 에 업로드 한다. - 소스를 받아 로컬에서 빌드 한다. - 빌드 결과를 depoly 서버에 업로드 한다. - deploy 된 빌드를 download 해서 결과를 확인 한다. - 확인 결과를 게시 한다. - 게시된 빌드 결과에 따라 코드를 수정한다. - 수정된 소스를 다시 VCS 에 업로드 (version up) 한다. - 수정한 코드를 받아, 다시 빌드 한다. 2. Countinous Integration (Post integration) # - 소스 코드를 VCS 에 업로드 한다 - VCS 로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="Countinuous Integration"><meta property="og:description" content="History # 1. local build # - 소스를 VCS 에 업로드 한다. - 소스를 받아 로컬에서 빌드 한다. - 빌드 결과를 depoly 서버에 업로드 한다. - deploy 된 빌드를 download 해서 결과를 확인 한다. - 확인 결과를 게시 한다. - 게시된 빌드 결과에 따라 코드를 수정한다. - 수정된 소스를 다시 VCS 에 업로드 (version up) 한다. - 수정한 코드를 받아, 다시 빌드 한다. 2. Countinous Integration (Post integration) # - 소스 코드를 VCS 에 업로드 한다 - VCS 로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다."><meta property="og:type" content="article"><meta property="og:url" content="https://smjune.github.io/docs/se/ci/"><meta property="article:section" content="docs"><title>Countinuous Integration | MyoungJune Sung says Hello Wrold</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.a82d7e77ceb134d151c4d7e381eeb30623fbd5a524d58c584d8716ecec0205bd.css integrity="sha256-qC1+d86xNNFRxNfjge6zBiP71aUk1YxYTYcW7OwCBb0=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.04425428b58d066252366861255dd59fe2e306b6d52606655c4b28fb3d4b88ad.js integrity="sha256-BEJUKLWNBmJSNmhhJV3Vn+LjBrbVJgZlXEso+z1LiK0=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>MyoungJune Sung says Hello Wrold</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/docs/se/>History</a><ul><li><a href=/docs/se/hello/>Hello GitHub</a></li><li><a href=/docs/se/ci/ class=active>Countinuous Integration</a></li><li><a href=/docs/se/docker/>Docker</a></li><li><a href=/docs/se/hugo/>Hugo Tips</a></li><li><a href=/docs/se/git/>Git command 정리</a></li><li><a href=/docs/se/pyenv/>Python with Pyenv</a></li><li><a href=/docs/se/gitlab/>Push to Gitlab</a></li></ul></li><li><a href=/docs/eng/>Eng</a><ul><li><input type=checkbox id=section-7f83e4df9c783565dd003225813fbe8c class=toggle>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Contents # GitHub pages 을 만들면서 아래 방식을 이용하여 개념을 익힌다.
+Local build - 소스를 VCS 에 업로드 한다. - 소스를 받아 로컬에서 빌드 한다. - 빌드 결과를 depoly 서버에 업로드 한다. - deploy 된 빌드를 download 해서 결과를 확인 한다. - 확인 결과를 게시 한다. - 게시된 빌드 결과에 따라 코드를 수정한다. - 수정된 소스를 다시 VCS 에 업로드 (version up) 한다. - 수정한 코드를 받아, 다시 빌드 한다."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="Countinuous Integration"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://smjune.github.io/docs/se/ci/"><title>Countinuous Integration | MyoungJune Sung says Hello Wrold</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.a82d7e77ceb134d151c4d7e381eeb30623fbd5a524d58c584d8716ecec0205bd.css integrity="sha256-qC1+d86xNNFRxNfjge6zBiP71aUk1YxYTYcW7OwCBb0=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/en.search.min.b624c9d9baf13edc99ce5dc33c09df5f0ab4c0d85ef3c5f64ea01d7b209b8a61.js integrity="sha256-tiTJ2brxPtyZzl3DPAnfXwq0wNhe88X2TqAdeyCbimE=" crossorigin=anonymous></script>
+<link rel=alternate type=application/rss+xml href=https://smjune.github.io/docs/se/ci/index.xml title="MyoungJune Sung says Hello Wrold"></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>MyoungJune Sung says Hello Wrold</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/docs/se/>History</a><ul><li><a href=/docs/se/hello/>Hello GitHub</a></li><li><a href=/docs/se/gitlab/>Push to Gitlab</a></li><li><a href=/docs/se/hugo/>Hugo Tips</a></li><li><a href=/docs/se/git/>Git command 정리</a></li><li><a href=/docs/se/pyenv/>Python with Pyenv</a></li><li><a href=/docs/se/docker/>Docker</a></li><li><input type=checkbox id=section-0e7fcf89fce8e039d8901145e2e52009 class=toggle checked>
+<label for=section-0e7fcf89fce8e039d8901145e2e52009 class="flex justify-between"><a href=/docs/se/ci/ class=active>Countinuous Integration</a></label><ul><li><a href=/docs/se/ci/localbuild/>Local build</a></li><li><a href=/docs/se/ci/postci/>Post CI</a></li><li><a href=/docs/se/ci/branch/>Branches</a></li><li><a href=/docs/se/ci/presubmit/>Presubmit</a></li><li><a href=/docs/se/ci/cd/>Delivery & Deployment</a></li><li><a href=/docs/se/ci/vcs/>VCS</a></li><li><a href=/docs/se/ci/repo/>Repo</a></li></ul></li></ul></li><li><a href=/docs/eng/>Eng</a><ul><li><input type=checkbox id=section-7f83e4df9c783565dd003225813fbe8c class=toggle>
 <label for=section-7f83e4df9c783565dd003225813fbe8c class="flex justify-between"><a href=/docs/eng/daily/>Daily</a></label><ul><li><a href=/docs/eng/daily/daily1/>Daily1</a></li></ul></li><li><a href=/docs/eng/grammarly/>Grammarly</a><ul></ul></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Countinuous Integration</strong>
-<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#history>History</a></li><li><a href=#1-local-build>1. local build</a></li><li><a href=#2-countinous-integration-post-integration>2. Countinous Integration (Post integration)</a></li><li><a href=#3-branch-pre-integration--git-flow>3. Branch (Pre integration : Git-Flow)</a></li><li><a href=#4-prepost-submit-trunk-based>4. Pre/Post-submit (trunk based)</a></li><li><a href=#5-cd>5. CD</a></li><li><a href=#6-cicd--devops->6. CI/CD ( DevOps )</a></li></ul></nav></aside></header><article class=markdown><h2 id=history>History
-<a class=anchor href=#history>#</a></h2><h2 id=1-local-build>1. local build
-<a class=anchor href=#1-local-build>#</a></h2><pre><code>- 소스를 VCS 에 업로드 한다.
-- 소스를 받아 로컬에서 빌드 한다.
-- 빌드 결과를 depoly 서버에 업로드 한다.
-- deploy 된 빌드를 download 해서 결과를 확인 한다. 
-- 확인 결과를 게시 한다. 
-- 게시된 빌드 결과에 따라 코드를 수정한다.
-- 수정된 소스를 다시 VCS 에 업로드 (version up) 한다.
-- 수정한 코드를 받아, 다시 빌드 한다. 
-</code></pre><h2 id=2-countinous-integration-post-integration>2. Countinous Integration (Post integration)
-<a class=anchor href=#2-countinous-integration-post-integration>#</a></h2><pre><code>- 소스 코드를 VCS 에 업로드 한다 
-- VCS 로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다. 
-- 빌드 후 자동화된 테스트 를 수행한다. 
-- 결과를 게시 한다. 
-- 게시된 결과에 따라 코드를 수정한다.
-- 수정한 코드를 VCS 에 다시 업로드 한다. (version up)
-</code></pre><h2 id=3-branch-pre-integration--git-flow>3. Branch (Pre integration : Git-Flow)
-<a class=anchor href=#3-branch-pre-integration--git-flow>#</a></h2><pre><code>- 각자 정해진 소스 트리 (branch) 에 소스를 업로드 한다.
-- 해당 브랜치로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다.
-- 빌드 후 자동화된 테스트 를 수행한다. 
-- 결과를 게시 한다. 
-- 게시된 결과에 따라 코드를 수정한다.
-- 수정한 코드를 정해진 브랜치에 다시 업로드 한다. (version up)
-- 해당 브랜치로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다.
-- 빌드 후 자동화된 테스트 를 수행한다. 
-- 이상이 없는 경우 Code base 와 해당 브랜치를 merge 한다. 
-- merge된 code base 을 다시 빌드, 테스트 한다.
-</code></pre><h2 id=4-prepost-submit-trunk-based>4. Pre/Post-submit (trunk based)
-<a class=anchor href=#4-prepost-submit-trunk-based>#</a></h2><pre><code>- code base 의 WIP 기능을 이용하여 소스를 업로드 한다.  
-    (refs/for/head, Sheves)
-- WIP 와 연결된 workflow 에 따라 빌드 및 테스트가 수행된다.
-- 결과를 게시한다.
-- 수정한 코드로 WIP 을 업데이트 한다. (patch-set, revision)
-- WIP 와 연결된 workflow 에 따라 빌드 및 테스트가 수행된다.
-- 이상이 없는 경우 Code base 에 submit 한다. (version up)
-- submit 된 change 기준으로 다시 빌드, 테스트 한다.  
-    (Postsubmit)
-</code></pre><h2 id=5-cd>5. CD
-<a class=anchor href=#5-cd>#</a></h2><pre><code>- 완료된 binary 을 누구에게 배포할 것인가?  
-    . 내부 / 외부  
-    . discrete (App) / countinuous (WEB))  
-</code></pre><h2 id=6-cicd--devops->6. CI/CD ( DevOps )
-<a class=anchor href=#6-cicd--devops->#</a></h2><pre><code>- SW 서비스 
-</code></pre><ul><li>위와 같은 스텝으로 hugo project 을 web 으로 게시(deploy) 하는 예제</li></ul></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#history>History</a></li><li><a href=#1-local-build>1. local build</a></li><li><a href=#2-countinous-integration-post-integration>2. Countinous Integration (Post integration)</a></li><li><a href=#3-branch-pre-integration--git-flow>3. Branch (Pre integration : Git-Flow)</a></li><li><a href=#4-prepost-submit-trunk-based>4. Pre/Post-submit (trunk based)</a></li><li><a href=#5-cd>5. CD</a></li><li><a href=#6-cicd--devops->6. CI/CD ( DevOps )</a></li></ul></nav></div></aside></main></body></html>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#contents>Contents</a></li></ul></nav></aside></header><article class=markdown><h2 id=contents>Contents
+<a class=anchor href=#contents>#</a></h2><p>GitHub pages 을 만들면서 아래 방식을 이용하여 개념을 익힌다.</p><dl><dt><a href=/docs/se/ci/localbuild/>Local build</a></dt><dd class=markdown-inner>- 소스를 VCS 에 업로드 한다. - 소스를 받아 로컬에서 빌드 한다. - 빌드 결과를 depoly 서버에 업로드 한다. - deploy 된 빌드를 download 해서 결과를 확인 한다. - 확인 결과를 게시 한다. - 게시된 빌드 결과에 따라 코드를 수정한다. - 수정된 소스를 다시 VCS 에 업로드 (version up) 한다. - 수정한 코드를 받아, 다시 빌드 한다. 로컬빌드 https://ryan-han.com/post/dev/creating_static_blog/
+action 빌드 https://taetaetae.github.io/posts/blog-reorganization-by-hugo/</dd><dt><a href=/docs/se/ci/postci/>Post CI</a></dt><dd class=markdown-inner>CI 개념이 최로로 나로면서
+submit 된 내용이 CI 툴에 의해 모니터링 되어 (혹은 WebHook 으로 호출) CI 툴 (서버) 에서 빌드, 테스트 되어 deploy 됨
+Github self-hosted 는 항상 repos 을 listening 하고 있다.
+bare metal 서버
+vitural 서버
+- 소스 코드를 VCS 에 업로드 한다 - VCS 로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다. - 빌드 후 자동화된 테스트 를 수행한다. - 결과를 게시 한다. - 게시된 결과에 따라 코드를 수정한다.</dd><dt><a href=/docs/se/ci/branch/>Branches</a></dt><dd class=markdown-inner>submit 전에 어떻게 사전 검증을 할 것인가에 대하 대답으로
+브랜치 개념이 도입이 됨
+기존 post CI 가 적용된 브랜치를 운영 (dev) 하여
+확인이 완료된 change을 운영 브랜치 (main) 으로 merge
+- 각자 정해진 소스 트리 (branch) 에 소스를 업로드 한다. - 해당 브랜치로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다. - 빌드 후 자동화된 테스트 를 수행한다. - 결과를 게시 한다. - 게시된 결과에 따라 코드를 수정한다. - 수정한 코드를 정해진 브랜치에 다시 업로드 한다.</dd><dt><a href=/docs/se/ci/presubmit/>Presubmit</a></dt><dd class=markdown-inner>브랜치가 많아 짐에 따라 브랜치 운영 전략 (Flow) 이 복잡해짐
+이에 바로 main 브랜치에 submit 하는 것을 기본으로
+submit 전 Work In Progress 단계를 제공함
+- code base 의 WIP 기능을 이용하여 소스를 업로드 한다. (refs/for/head, Sheves) - WIP 와 연결된 workflow 에 따라 빌드 및 테스트가 수행된다. - 결과를 게시한다. - 수정한 코드로 WIP 을 업데이트 한다. (patch-set, revision) - WIP 와 연결된 workflow 에 따라 빌드 및 테스트가 수행된다.</dd><dt><a href=/docs/se/ci/cd/>Delivery & Deployment</a></dt><dd class=markdown-inner>deploy 을 어느 user 수준까지 제공하는냐.
+- 완료된 binary 을 누구에게 배포할 것인가?
+. 내부 / 외부
+. discrete (App) / countinuous (WEB))
+. 내부 user (tester, QA)
+. 외부 canary
+A/B
+단계적
+. DevOps</dd><dt><a href=/docs/se/ci/vcs/>VCS</a></dt><dd class=markdown-inner>distributed vs Centrialized VCS</dd><dt><a href=/docs/se/ci/repo/>Repo</a></dt><dd class=markdown-inner>Multi vs Mono REPO</dd></dl></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#contents>Contents</a></li></ul></nav></div></aside></main></body></html>
