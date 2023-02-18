@@ -61,4 +61,4 @@ weight: 1
 ## 6. CI/CD ( DevOps )
     - SW 서비스 
 
-
+* 위와 같은 스텝으로 hugo project 을 web 으로 게시(deploy) 하는 예제

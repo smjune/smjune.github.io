@@ -1,7 +1,14 @@
 ---
 title: "Hello GitHub"
 date: 2023-02-05T10:22:18+09:00
+weight: 1
 
+# bookFlatSection: false
+# bookToc: true
+# bookHidden: false
+# bookCollapseSection: false
+# bookComments: false
+# bookSearchExclude: false
 ---
 
 # github 에서 블로그 만들기 
@@ -184,6 +191,10 @@ https://github.com/peaceiris/actions-gh-pages
 - 여기서 주의 할 점  
 > project page 인 경우  
     > hugo 프로젝트 가 하위로 설정 되어 있으므로 
+
+    1. hugo 업데이트 일때만 pages workflow 실행
+    2. hugo 폴더로 이동하여 hugo 명령어 사용 
+
 ```yml    
 on:
   push:
@@ -206,6 +217,10 @@ on:
     ...
 ```
 ---  
+> push 을 main 으로 설정할 경우, 2개 workflow 실행이 되는 것을 
+> paths 을 설정하여 hugo 폴더 업데이트 때문 실행되도록 변경  
+
+![workflow 설정](images/hello_1.png)
 
 ### 4. local branch and remote 
 
