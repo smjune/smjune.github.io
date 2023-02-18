@@ -1,9 +1,66 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=" Bundles # Menu # Lacal Image # "><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="Hugo Tips"><meta property="og:description" content=" Bundles # Menu # Lacal Image # "><meta property="og:type" content="article"><meta property="og:url" content="https://smjune.github.io/docs/se/hugo/"><meta property="article:section" content="docs"><title>Hugo Tips | MyoungJune Sung says Hello Wrold</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.a82d7e77ceb134d151c4d7e381eeb30623fbd5a524d58c584d8716ecec0205bd.css integrity="sha256-qC1+d86xNNFRxNfjge6zBiP71aUk1YxYTYcW7OwCBb0=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.006a52cb76bd8d69c06b3fc285cb2b4642137e01714e642d8aaf2d37f719c067.js integrity="sha256-AGpSy3a9jWnAaz/ChcsrRkITfgFxTmQtiq8tN/cZwGc=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>MyoungJune Sung says Hello Wrold</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/docs/se/>History</a><ul><li><a href=/docs/se/hugo/ class=active>Hugo Tips</a></li><li><a href=/docs/se/git/>Git command 정리</a></li><li><a href=/docs/se/pyenv/>Python with Pyenv</a></li><li><a href=/docs/se/gitlab/>Push to Gitlab</a></li><li><a href=/docs/se/hello/>Hello GitHub</a></li></ul></li><li><a href=/docs/eng/>Eng</a><ul><li><input type=checkbox id=section-7f83e4df9c783565dd003225813fbe8c class=toggle>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Bundles # 전체 글 구조를 잡을때, 가장 중요하게 생각해 하는 부분이 hugo 의 bundle 개념이다.
+Leaf 와 Branch 로 나눠 지는대, 말 그대로 leaf bundle 은 말단 말뭉치 (?) 이므로,
+하위로 다른 구성요소를 갖을수 없다.
+반면 Branch bundle의 경우 하위로 다른 branch bundle 과 leaf bundle을 갖을 수 있다.
+자세한 차이점은 아래 표를 참고 하자
+index.md vs _index.md 으로 구분하여 보면 된다.
+https://gohugo.io/content-management/page-bundles/
+Leaf Bundle Branch Bundle Usage Collection of content and attachments for single pages Collection of attachments for section pages (home page, section, taxonomy terms, taxonomy list) Index filename index."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content="Hugo Tips"><meta property="og:description" content="Bundles # 전체 글 구조를 잡을때, 가장 중요하게 생각해 하는 부분이 hugo 의 bundle 개념이다.
+Leaf 와 Branch 로 나눠 지는대, 말 그대로 leaf bundle 은 말단 말뭉치 (?) 이므로,
+하위로 다른 구성요소를 갖을수 없다.
+반면 Branch bundle의 경우 하위로 다른 branch bundle 과 leaf bundle을 갖을 수 있다.
+자세한 차이점은 아래 표를 참고 하자
+index.md vs _index.md 으로 구분하여 보면 된다.
+https://gohugo.io/content-management/page-bundles/
+Leaf Bundle Branch Bundle Usage Collection of content and attachments for single pages Collection of attachments for section pages (home page, section, taxonomy terms, taxonomy list) Index filename index."><meta property="og:type" content="article"><meta property="og:url" content="https://smjune.github.io/docs/se/hugo/"><meta property="article:section" content="docs"><title>Hugo Tips | MyoungJune Sung says Hello Wrold</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.a82d7e77ceb134d151c4d7e381eeb30623fbd5a524d58c584d8716ecec0205bd.css integrity="sha256-qC1+d86xNNFRxNfjge6zBiP71aUk1YxYTYcW7OwCBb0=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script>
+<script defer src=/en.search.min.6d03d4e4df205c4c15ce3f7aa57169a3beee65f0f8e404f345c50b6a24d40adc.js integrity="sha256-bQPU5N8gXEwVzj96pXFpo77uZfD45ATzRcULaiTUCtw=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>MyoungJune Sung says Hello Wrold</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/docs/se/>History</a><ul><li><a href=/docs/se/ci/>Countinuous Integration</a></li><li><a href=/docs/se/docker/>Docker</a></li><li><a href=/docs/se/hugo/ class=active>Hugo Tips</a></li><li><a href=/docs/se/git/>Git command 정리</a></li><li><a href=/docs/se/pyenv/>Python with Pyenv</a></li><li><a href=/docs/se/gitlab/>Push to Gitlab</a></li><li><a href=/docs/se/hello/>Hello GitHub</a></li></ul></li><li><a href=/docs/eng/>Eng</a><ul><li><input type=checkbox id=section-7f83e4df9c783565dd003225813fbe8c class=toggle>
 <label for=section-7f83e4df9c783565dd003225813fbe8c class="flex justify-between"><a href=/docs/eng/daily/>Daily</a></label><ul><li><a href=/docs/eng/daily/daily1/>Daily1</a></li></ul></li><li><a href=/docs/eng/grammarly/>Grammarly</a><ul></ul></li></ul></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Hugo Tips</strong>
 <label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#bundles>Bundles</a><ul><li><a href=#menu>Menu</a></li><li><a href=#lacal-image>Lacal Image</a></li></ul></li></ul></nav></aside></header><article class=markdown><h2 id=bundles>Bundles
-<a class=anchor href=#bundles>#</a></h2><h3 id=menu>Menu
-<a class=anchor href=#menu>#</a></h3><h3 id=lacal-image>Lacal Image
-<a class=anchor href=#lacal-image>#</a></h3></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#bundles>Bundles</a><ul><li><a href=#menu>Menu</a></li><li><a href=#lacal-image>Lacal Image</a></li></ul></li></ul></nav></div></aside></main></body></html>
+<a class=anchor href=#bundles>#</a></h2><p>전체 글 구조를 잡을때, 가장 중요하게 생각해 하는 부분이 hugo 의 bundle 개념이다.<br>Leaf 와 Branch 로 나눠 지는대, 말 그대로 leaf bundle 은 말단 말뭉치 (?) 이므로,<br>하위로 다른 구성요소를 갖을수 없다.<br>반면 Branch bundle의 경우 하위로 다른 branch bundle 과 leaf bundle을 갖을 수 있다.</p><p>자세한 차이점은 아래 표를 참고 하자</p><blockquote><p>index.md vs _index.md 으로 구분하여 보면 된다.</p></blockquote><p><a href=https://gohugo.io/content-management/page-bundles/>https://gohugo.io/content-management/page-bundles/</a></p><table><thead><tr><th style=text-align:center></th><th style=text-align:center>Leaf Bundle</th><th style=text-align:center>Branch Bundle</th><th></th><th></th></tr></thead><tbody><tr><td style=text-align:center>Usage</td><td style=text-align:center>Collection of content and attachments for single pages</td><td style=text-align:center>Collection of attachments for section pages (home page, section, taxonomy terms, taxonomy list)</td><td></td><td></td></tr><tr><td style=text-align:center>Index filename</td><td style=text-align:center>index.md 1</td><td style=text-align:center>_index.md 1</td><td></td><td></td></tr><tr><td style=text-align:center>Allowed Resources</td><td style=text-align:center>Page and non-page (like images, PDF, etc.) types</td><td style=text-align:center>Only non-page (like images, PDF, etc.) types</td><td></td><td></td></tr><tr><td style=text-align:center>Where can the Resources live?</td><td style=text-align:center>At any directory level within the leaf bundle directory.</td><td style=text-align:center>Only in the directory level of the branch bundle directory i.e. the directory containing the _index.md (<a href="https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi">ref</a>).</td><td></td><td></td></tr><tr><td style=text-align:center>Layout type</td><td style=text-align:center>single</td><td style=text-align:center>list</td><td></td><td></td></tr><tr><td style=text-align:center>Nesting</td><td style=text-align:center>Does not allow nesting of more bundles under it</td><td style=text-align:center>Allows nesting of leaf or branch bundles under it</td><td></td><td></td></tr><tr><td style=text-align:center>Example</td><td style=text-align:center>content/posts/my-post/index.md</td><td style=text-align:center>content/posts/_index.md</td><td></td><td></td></tr><tr><td style=text-align:center>Content from non-index page files…</td><td style=text-align:center>Accessed only as page resources</td><td style=text-align:center>Accessed only as regular pages</td><td></td><td></td></tr></tbody></table><h3 id=menu>Menu
+<a class=anchor href=#menu>#</a></h3><ol><li>posts 항목에 book과 novel 이라는 페이지가 생성된다.</li></ol><pre tabindex=0><code>content
+ └─posts
+    ├─_index.md    # posts 가 리스트가 되기 위해 필요
+    ├─book.md      # http://~/posts/book
+    └─novel.md     # http://~/posts/novel
+</code></pre><p><em>content 하위로 posts 와 docs 페이지가 생성된다.</em></p><pre tabindex=0><code>content
+ ├─posts           # http://~/posts
+ │  ├─_index.md   
+ │  ├─book.md   
+ │  └─novel.md
+ ├─docs.md         # http://~/doc
+ └─_index.md       # content 가 list 가 되기 위해 필요
+</code></pre><ol start=2><li>posts 항목에 book 페이지 만 생성 된다.</li></ol><pre tabindex=0><code>contents
+ └─posts
+    └─book
+       ├─index.md   # http://posts/book/
+       └─novel.md   # is not rendered.
+</code></pre><p><em>book 은 index.md 으로 leaf bundle 정의되어 하위 페이지를 갖을 수 없어 novel 은 표시되지 않는다.</em></p><ol start=3><li>posts 항목에 book 페이지 와 book 하위로 novel 페이지 가 생성된다.</li></ol><pre tabindex=0><code>contents
+ └─posts
+    └─book
+       ├─_index.md     
+       └─novel.md     # http://~/posts/book/novel
+</code></pre><ol start=4><li>posts 항목에 book 페이지 가 만들어 지고, 하위로 novel, essay 페이지가 만들어 진다.</li></ol><pre tabindex=0><code>contents
+ └─posts
+    └─book
+       ├─_index.md
+       ├─novel        # http://~/posts/book/novel
+       │  └─index.md
+       └─essay.md     # httP://~posts/book/essay
+</code></pre><h3 id=lacal-image>Lacal Image
+<a class=anchor href=#lacal-image>#</a></h3><p>Leaf bundle 은 하위로 images 폴더를 만들어 해당 페이지 에서 사용한 이미지를 따로 저장하자.
+branch bundle 은 _index.md 와 동일한 folder 위치에 이미지를 저장해야 한다.</p><pre tabindex=0><code>contents
+ └─posts
+    └─book
+       ├─_index.md         # ![이미지](./book.png)
+       ├─book.png          # book 이미지 
+       ├─novel
+       │  ├─index.md       # ![이미지](./images/novel.png)
+       │  └─images
+       │     └─novel.png   # novel 이미지
+       └─essay.md
+          └─images
+             └─essay.png   # essay 이미지
+</code></pre><ul><li>참고
+<a href="https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi">https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi</a></li></ul></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#bundles>Bundles</a><ul><li><a href=#menu>Menu</a></li><li><a href=#lacal-image>Lacal Image</a></li></ul></li></ul></nav></div></aside></main></body></html>
