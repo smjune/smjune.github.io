@@ -1,6 +1,6 @@
 ---
 title: "Hugo Tips"
-weight: 1
+weight: 3
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false
@@ -98,7 +98,8 @@ contents
        │  ├─index.md       # ![이미지](./images/novel.png)
        │  └─images
        │     └─novel.png   # novel 이미지
-       └─essay.md
+       └─essay
+          ├─index.md       # # ![이미지](./images/essay.png)
           └─images
              └─essay.png   # essay 이미지
 ```

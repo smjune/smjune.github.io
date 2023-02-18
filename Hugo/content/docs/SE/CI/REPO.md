@@ -1,6 +1,6 @@
 ---
 title: "Repo"
-weight: 1
+weight: 7
 # bookFlatSection: false
 # bookToc: true
 # bookHidden: false

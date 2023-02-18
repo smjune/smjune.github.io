@@ -1,7 +1,7 @@
 ---
 title: "Push to Gitlab"
 date: 2023-02-06T20:28:27+09:00
-
+weight: 2
 ---
 
 # GitLab 으로 Deploy 하기  

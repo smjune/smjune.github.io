@@ -23,12 +23,11 @@ weight: 1
 - Build & Deploy : github actions / gitlab CI/CD
 hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신 github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용   
 
-해당 github pages 을 만든 이력정리 **(아래 관련 지식 보유 가정)**  
-```
-* 기본 적인 SSG (Static Site Generator) 관련 정보  
-* brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
-```  
----  
+{{< hint warning >}}
+**아래 관련 지식 보유 가정**  
+   1. 기본 적인 SSG (Static Site Generator) 관련 정보  
+   2. brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
+{{< /hint >}}
 
 ## Hugo (SSG)  
 https://gohugo.io/documentation/  
@@ -188,12 +187,13 @@ _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하�
 
 https://github.com/peaceiris/actions-gh-pages
 
-- 여기서 주의 할 점  
-> project page 인 경우  
-    > hugo 프로젝트 가 하위로 설정 되어 있으므로 
-
-    1. hugo 업데이트 일때만 pages workflow 실행
-    2. hugo 폴더로 이동하여 hugo 명령어 사용 
+{{< hint danger >}}
+**작성시 주의 할 점**  
+project page 인 경우, hugo 프로젝트가 git 프로젝트 하위로 설정 되어 있으므로   
+    1. hugo 업데이트 일때만 pages workflow 실행  
+    2. hugo 폴더로 이동하여 hugo 명령어 사용  
+을 명확하게 구분하여야 한다.  
+{{< /hint >}}
 
 ```yml    
 on:

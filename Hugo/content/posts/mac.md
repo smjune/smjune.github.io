@@ -1,5 +1,5 @@
 ---
-title: "iMAC 2009 Late upgrade"
+title: "iMAC, Late 2009 upgrade"
 date: 2023-02-17T22:02:05+09:00
 # bookComments: false
 # bookSearchExclude: false

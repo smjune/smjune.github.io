@@ -1,21 +1,22 @@
 ---
 title: "Git command 정리"
 date: 2023-02-11T10:04:43+09:00
-
+weight: 4
 ---
 
 ## GIT 연습 Site   
 
 http://learngitbranching.js.org/  
 https://backlogtool.com/git-guide/kr/  
-```
+
+{{< hint info >}}
 $ level                       - 연습문제 초기 화면 (문제선택)  
 $ sandbox                     - 빈 연습  
 $ show solution               - 해당보기  
 $ reset                       - 해당 level 처음부터 다시  
 $ undo                        - 1개 명령 취소  
 $ git fakeTeamwork 1          - origin 에 1개 커밋 넣기  
-```
+{{< /hint >}}
 
 
 ### Set up 
