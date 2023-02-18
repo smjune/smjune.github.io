@@ -23,7 +23,7 @@ weight: 1
 - Build & Deploy : github actions / gitlab CI/CD
 hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신 github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용   
 
-{{< hint warning >}}
+{{< hint info >}}
 **아래 관련 지식 보유 가정**  
    1. 기본 적인 SSG (Static Site Generator) 관련 정보  
    2. brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
@@ -172,13 +172,14 @@ project folder (git)
 ```  
 *Created from https://arthursonzogni.com/Diagon/#Tree*  
 
-** _branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)_  
+{{< hint warning >}}
+ _branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)_  
     _- main branch : soure code 파일 만 존재_  
     _- hugo branch : hugo project 파일만 존재_  
     _- gh-pasges branch : hugo build 결과 (html) 파일만 존재_  
     _동일한 수정에 대한 commit 을 main 브랜치 (source code 수정) 와_  
 _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하므로 보류_  
-
+{{< /hint >}}
 
 ---  
 ### 3. GitHub Actions to build and deploy the hugo project  
