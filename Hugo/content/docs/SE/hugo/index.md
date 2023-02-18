@@ -21,16 +21,16 @@ Leaf 와 Branch 로 나눠 지는대, 말 그대로 leaf bundle 은 말단 말�
 
 https://gohugo.io/content-management/page-bundles/   
 
-|  	| Leaf Bundle 	| Branch Bundle 	|  	|  	|
-|:---:	|:---:	|:---:	|---	|---	|
-| Usage 	| Collection of content and attachments for single pages 	| Collection of attachments for section pages (home page, section, taxonomy terms, taxonomy list) 	|  	|  	|
-| Index filename 	| index.md 1 	| _index.md 1 	|  	|  	|
-| Allowed Resources 	| Page and non-page (like images, PDF, etc.) types 	| Only non-page (like images, PDF, etc.) types 	|  	|  	|
-| Where can the Resources live? 	| At any directory level within the leaf bundle directory. 	| Only in the directory level of the branch bundle directory i.e. the directory containing the _index.md ([ref](https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi)). 	|  	|  	|
-| Layout type 	| single 	| list 	|  	|  	|
-| Nesting 	| Does not allow nesting of more bundles under it 	| Allows nesting of leaf or branch bundles under it 	|  	|  	|
-| Example 	| content/posts/my-post/index.md 	| content/posts/_index.md 	|  	|  	|
-| Content from non-index page files… 	| Accessed only as page resources 	| Accessed only as regular pages 	|  	|  	|
+|  	| Leaf Bundle 	| Branch Bundle 	|
+|:---:	|:---:	|:---:	|
+| Usage 	| Collection of content and attachments for single pages 	| Collection of attachments for section pages (home page, section, taxonomy terms, taxonomy list) 	|
+| Index filename 	| index.md 1 	| _index.md 1 	|
+| Allowed Resources 	| Page and non-page (like images, PDF, etc.) types 	| Only non-page (like images, PDF, etc.) types 	|
+| Where can the Resources live? 	| At any directory level within the leaf bundle directory. 	| Only in the directory level of the branch bundle directory i.e. the directory containing the _index.md [(ref)](https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi). 	|
+| Layout type 	| single 	| list 	|
+| Nesting 	| Does not allow nesting of more bundles under it 	| Allows nesting of leaf or branch bundles under it 	|
+| Example 	| content/posts/my-post/index.md 	| content/posts/_index.md 	|
+| Content from non-index page files… 	| Accessed only as page resources 	| Accessed only as regular pages 	|
 
 ### Menu
 
@@ -85,7 +85,7 @@ contents
 
 ### Lacal Image
 
-Leaf bundle 은 하위로 images 폴더를 만들어 해당 페이지 에서 사용한 이미지를 따로 저장하자. 
+Leaf bundle 은 하위로 images 폴더를 만들어 해당 페이지 에서 사용하는 이미지를 따로 저장하자.   
 branch bundle 은 _index.md 와 동일한 folder 위치에 이미지를 저장해야 한다.
 
 ```
