@@ -9,7 +9,7 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-deploy 을 어는 user 수준까지 제공하는냐.  
+deploy 을 어느 user 수준까지 제공하는냐.  
 
 . 내부 user (tester, QA)  
 . 외부  
