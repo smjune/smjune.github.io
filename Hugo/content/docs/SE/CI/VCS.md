@@ -10,3 +10,5 @@ weight: 6
 ---
 
 distributed vs Centrialized VCS
+
+fork : clone a repo from remote on REPO

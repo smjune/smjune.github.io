@@ -71,7 +71,7 @@ https://docs.github.com/en/pages/
     $ git remote add origin https://github.com/UserAccount/UserAccount.github.io.git
     $ git add .
     $ git commit -m 'initiate project'
-    $ git push origin master
+    $ git push origin main
     // browse https://UserAccount.github.io/  
     ```
 
@@ -112,7 +112,7 @@ project folder (git, hugo)
 
     ```bash
     // 기존 git project 에서 
-    $ hugo new site hugo
+    $ hugo new site hugo_project
     $ cd hugo_project
     $ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke themes/ananke
     $ echo "theme = 'ananke'" >> config.toml
@@ -124,7 +124,7 @@ project folder (git, hugo)
     $ cd ..
     $ git add .
     $ git commit -m 'initiate project'
-    $ git push origin master
+    $ git push origin main
     // browse https://UserAccount.github.io/Project
     ```  
 

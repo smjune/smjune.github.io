@@ -11,7 +11,7 @@ bookCollapseSection: true
 
 ## Contents
 
-GitHub pages 을 만들면서 아래 방식을 이용하여 개념을 익힌다.
+GitHub pages 을 만들면서 프로젝트 관리 개념을 익힌다.
 
 {{<section>}}
 
