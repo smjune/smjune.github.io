@@ -8,6 +8,56 @@ weight: 3
 # bookComments: false
 # bookSearchExclude: false
 ---
+## hugo.yml (config.toml)
+v0.110.0 이상에서 지원, 하위 호환을 위해 기존 config.toml 도 사용 가능  
+theme 의 가이드에 따라 설정값들을 사용해야 한다.
+>[hugo-book 샘플 hugo.yml](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml)
+
+* 지금 사이트 설정 (yml, toml, json 지원)
+```yaml
+baseURL: https://smjune.github.io/
+title: MyoungJune Sung says Hello Wrold
+theme: hugo-book
+
+# Book configuration
+disablePathToLower: true
+enableGitInfo: true
+
+# Needed for mermaid/katex shortcodes
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 1
+
+menu:
+  # before: []
+  after:
+    - name: "Github Repo"
+      url: "https://github.com/smjune/"
+      weight: 10
+    - name: "Powered by Hugo"
+      url: "https://gohugo.io/"
+      weight: 20
+    - name: "and hugo-book"
+      url: "https://themes.gohugo.io/hugo-book//"
+      weight: 30
+
+params:
+  # (Optional, default light) Sets color theme: light, dark or auto.
+  # Theme 'auto' switches between dark and light modes based on browser/os preferences
+  BookTheme: "auto"
+
+  # Set source repository location.
+  # Used for 'Last Modified' and 'Edit this page' links.
+  BookRepo: https://github.com/smjune/smjune.github.io
+
+# Configure the date format used on the pages
+  # - In git information
+  # - In blog posts
+  BookDateFormat: "January 2, 2006"
+```
 
 ## Bundles
 
@@ -104,5 +154,51 @@ contents
              └─essay.png   # essay 이미지
 ```
 
-* 참고
-https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi
+>[참고](https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi)
+
+## comment (utterances)
+
+1. utterances 스크립트 생성  
+https://utteranc.es/ 에서 가이하는 작성 방법에 따라 진행   
+{{< hint info >}}
+repo 는 자신의 블로그 repo (yourAcount/yourAccount.github.io) 을 사용해도 되고, 별도 프로젝트 repo (yourAccount/yourRepo) 을 사용해도 된다.  
+해당 repo 에 utterances app 을 설치 하지 않아도 작동한다 (ChatGPT 말이 맞네.)
+{{< /hint >}}
+
+```html
+<script src="https://utteranc.es/client.js"
+        repo="smjune/smjune.github.io"
+        issue-term="pathname"
+        label="Comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+```
+
+2. utterances 스크립을 넣을 layouts 파일 
+일반적으로 theme 을 사용하기 때문에 theme 에서 사용하는 commnet layout 을 overriding 하여야 한다. 
+hugo-book (theme) 의 경우 theme/hugo-book/layouts/docs/comments.html 을 사용하여 hugo internal comment (Disque) 을 사용하게 되는데.
+layouts/partials/docs/comments.html 을 만들어 hugo-hook 에 있는것 보다 먼저 사용하게 해야 한다. 
+
+{{< hint warning >}}
+theme 을 customizing 할때 theme 의 파일을 수정하는 것보다, 이렇게 hugo root 에서 부터 동일한 파일을 만들어 수정해야 한다. 로컬이나, github action 에 theme 을 업데이트 할때 수정한 파일이 원복되지 않게 하기 위해서 이다.
+{{< /hint >}}
+
+```
+hugo
+ ├─layouts
+ │  └─partials
+ │     └─docs
+ │        └─comments.html        // theme 을 사용하지 않고 이 파일을 사용
+ └─themes
+    └─hugo-book
+       └─layouts
+          └─partials
+             └─docs
+                └─comments.html  // theme comment 
+```
+
+> hugo-book theme comment 는 bookComments: true 가 디폴트 이며, 따라서 모든 page 에 자동으로 적용된다. 따라서, 각 페이지에서 "bookComments: false" 을 설정하여 comment 을 OFF 하여야 한다. 
+
+> theme 가 없는 경우 utterance 스크립을 /layouts/partials/utterances.html 에 넣고, 각 pages (xxx.md) 에서 {{ partial "utterances.html" . }} 을 직접 호출하여야 한다.

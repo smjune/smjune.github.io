@@ -1,0 +1,48 @@
+baseURL: https://smjune.github.io/
+title: MyoungJune Sung says Hello Wrold
+theme: hugo-book
+
+# Book configuration
+disablePathToLower: true
+enableGitInfo: true
+
+# Needed for mermaid/katex shortcodes
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  tableOfContents:
+    startLevel: 1
+
+menu:
+  # before: []
+  after:
+    - name: "Github Repo"
+      url: "https://github.com/smjune/"
+      weight: 10
+    - name: "Powered by Hugo"
+      url: "https://gohugo.io/"
+      weight: 20
+    - name: "and hugo-book"
+      url: "https://themes.gohugo.io/hugo-book//"
+      weight: 30
+
+params:
+  # (Optional, default light) Sets color theme: light, dark or auto.
+  # Theme 'auto' switches between dark and light modes based on browser/os preferences
+  BookTheme: "auto"
+
+  # Set source repository location.
+  # Used for 'Last Modified' and 'Edit this page' links.
+  BookRepo: https://github.com/smjune/smjune.github.io
+
+  # Configure the date format used on the pages
+  # - In git information
+  # - In blog posts
+  BookDateFormat: "January 2, 2006"
+
+  # (Optional, default true) Enables comments template on pages
+  # By default partals/docs/comments.html includes Disqus template
+  # See https://gohugo.io/content-management/comments/#configure-disqus
+  # Can be overwritten by same param in page frontmatter
+  BookComments: false

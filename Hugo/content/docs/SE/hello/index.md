@@ -45,9 +45,26 @@ https://docs.github.com/en/pages/
 
 ### github pages 종류
 ~~~
- 1. 개인 github Pages
+ 1. 개인/ORG github Pages
  2. 프로젝트 github Pages
 ~~~
+
+{{< mermaid >}}
+flowchart LR;
+      A[Create a blog with git]-->B{is it a Personal or ORG?};      
+      classDef white color:#022e1f,fill:#fff;
+      classDef black color:#fff,fill:#000;
+      
+      B--YES-->C["Personal or ORG\n https://ACCOUNT.gitxxx.io/"]:::white;
+      C--blog only-->E["Personal & Hugo Project\n : git과 hugo가 동일 root"]; 
+      C--project & blog-->F["Personal & git project\n : git하위 sorce, hugo 폴더 존재"];
+      
+      B--NO-->D["Code Project\n https://ACCOUNT.gitxxx.io/PROJECT"]:::black;
+      D--project = hugo-->G["Code Project & Hug Project\n git과 hugo가 동일 root"]; 
+      D--project & hugo-->H["Code Project & Hug Project\n git하위 source, hugo 폴더 존재"];
+  
+{{< /mermaid >}}
+
 
 ---
 
@@ -239,6 +256,29 @@ Hello_world$ _
    - git push github main, git fetch, git pull
 - remote 로 gitlab (gitlab.com/smjune/smjune.gitlab.io) main 도 등록되어 있으므로  
    - git push gitlab main
+
+### 5. 최종 작업 순서 
+{{< mermaid >}}
+sequenceDiagram
+    participant gitlab
+    participant Local 
+    participant github
+    links gitlab: {"pages": "https://smjune.gitlab.io/"}
+    links github: {"Pages": "https:/smjjune.github.io/"}
+    loop main job
+        Local->>Local: edit a page on Hugo
+        Local->>Local: add and commit on .git
+        github-->>Local: fetch (github)
+        Local->>github: Push (github main)
+    end
+    Local->>gitlab: push gitlab main
+    github-->>Local: fetch (github)
+    github->>github: edit a page on GitHub WEB UI
+    github-->>Local: fetch (github)
+    github->>Local: pull (github main)
+    Local->>gitlab: push gitlab main
+
+{{< /mermaid >}}
 
 ```bash
 Hello_world$ git status
