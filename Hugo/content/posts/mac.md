@@ -1,9 +1,16 @@
----
-title: "iMAC, Late 2009 upgrade"
-date: 2023-02-17T22:02:05+09:00
-# bookComments: false
-# bookSearchExclude: false
----
++++
+title = "iMAC, Late 2009 upgrade"
+description = ""
+tags = [
+    "iMac",
+	"Scrivener",
+	"Hi Sierra",
+]
+date = "2023-02-17T22:02:05+09:00"
+categories = [
+    "Mac",
+]
++++
 
 ## Mac OS
 ㅁ Snow leopard (10.6.8) 에서 High Sierra (10.13.6) 까지 업그레이드  

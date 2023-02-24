@@ -1,7 +1,7 @@
 ---
-title: "History"
+title: "Job Logs"
 weight: 1
-# bookFlatSection: false
+bookFlatSection: true
 # bookToc: true
 # bookHidden: false
 # bookCollapseSection: false
