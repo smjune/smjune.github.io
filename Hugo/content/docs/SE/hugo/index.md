@@ -11,7 +11,7 @@ bookComments: false
 ## hugo.yml (config.toml)
 v0.110.0 이상에서 지원, 하위 호환을 위해 기존 config.toml 도 사용 가능  
 theme 의 가이드에 따라 설정값들을 사용해야 한다.
->[hugo-book 샘플 hugo.yml](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml)
+> :bulb: **Tip** [hugo-book 샘플 hugo.yml](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml)
 
 * 지금 사이트 설정 (yml, toml, json 지원)
 ```yaml
@@ -162,7 +162,7 @@ contents
 https://utteranc.es/ 에서 가이하는 작성 방법에 따라 진행   
 {{< hint info >}}
 repo 는 자신의 블로그 repo (yourAcount/yourAccount.github.io) 을 사용해도 되고, 별도 프로젝트 repo (yourAccount/yourRepo) 을 사용해도 된다.  
-해당 repo 에 utterances app 을 설치 하지 않아도 작동한다 (ChatGPT 말이 맞네.)
+해당 repo 에 utterances app 을 설치 하지 않아도 보이긴함, 그러나 작동은 안됨 (ChatGPT 가 틀린듯)
 {{< /hint >}}
 
 ```html
@@ -176,8 +176,8 @@ repo 는 자신의 블로그 repo (yourAcount/yourAccount.github.io) 을 사용�
 </script>
 ```
 {{< hint danger >}}
-utterances app 을 설치하지 않으면, 아래와 같은 에러가 발생함
->Error: utterances is not installed on smjune/smjune.github.io. If you own this repo, install the app. Read more about this change in the PR. 
+utterances app 을 설치하지 않으면, 아래와 같은 에러가 발생함  
+Error: utterances is not installed on smjune/smjune.github.io. If you own this repo, install the app. Read more about this change in the PR. 
 {{< /hint >}}
 
 2. utterances 스크립을 넣을 layouts 파일 

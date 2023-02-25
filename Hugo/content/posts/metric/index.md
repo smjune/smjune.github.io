@@ -1,6 +1,10 @@
 ---
 title: "단순 수치에 의한 업무 평가?"
 date: 2023-02-24T19:17:04+09:00
+
+Categories: "Posted"
+Tags: ["Metrics","Index","Communication",]
+
 bookComments: ture
 # bookSearchExclude: false
 ---
@@ -31,7 +35,7 @@ bookComments: ture
 
 “아래 그래프의 주간 오류 처리량으로 판단 하건대 당신의 업무량이 상대적으로 많다고 할 수 없습니다.”  
 
-![매트릭스](metrix.png)
+![매트릭스](metrix.png#center "그래프")
 
 그 프로젝트 관리자에게 돌아 오는 실무자의 반응은 아마도 아래와 같을 것이다.   
 

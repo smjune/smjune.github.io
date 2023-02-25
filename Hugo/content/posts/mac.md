@@ -1,6 +1,6 @@
 +++
 title = "iMAC, Late 2009 upgrade"
-description = ""
+description = "맥 업그레이드 관련 기록 저장, 테스트 페이지"
 tags = [
     "iMac",
 	"Scrivener",

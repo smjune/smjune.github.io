@@ -9,10 +9,44 @@ weight: 1
 # bookSearchExclude: false
 ---
 
-## theme (hugo-book) 
+## Hugo-book
 
-### Git information
+### Config yml
 
-### mermaid (shorcode)
+```yaml
+enableGitInfo: true
+...
+params:
+  # Set source repository location.
+  # Used for 'Last Modified' and 'Edit this page' links.
+  BookRepo: https://github.com/smjune/smjune.github.io
+```
+### Pages Front matter
 
-### comment (partial)
+Categories & Tages
+
+```yaml
+Categories: "Posted"
+Tags: ["Big Data","한글","Minority",]
+```
+혹은 
+
+### Shortcode
+
+Hint
+
+Details
+
+Mermaid
+
+Section
+
+columns
+
+Tabs
+
+### partial
+
+Comments
+
+## PaperMode
