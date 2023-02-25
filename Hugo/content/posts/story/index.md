@@ -5,7 +5,7 @@ date: 2023-02-25T18:41:37+09:00
 Categories: "Posted"
 Tags: [ "Story", "Narrative", "Mind Map",]
 
-bookComments: false
+bookComments: true
 # bookSearchExclude: false
 ---
 
@@ -73,7 +73,7 @@ bookComments: false
 
 Mind Map 은 이야기 구조를 표현하는데 아주 훌륭한 툴입니다. 말 그대로 마음의 지도 인데, 이것이 곧 우리가 외부 세계를 인식하는 형상화된 모습이며, 이 형상화 된 모습을 시간의 흐름, 혹은 인과관계 등로 표현한다면 하나의 훌륭한 "STORY" 가 만들어 질 수 있기 때문 입니다.
 
-![마인드맵 이미지](2023-02-25-19-02-26.png)  
+![마인드맵 이미지](story5.png)  
 [마인드맵은 토니 부잔이 1960년대 만들어 학교 및 IBM, 골드만삭스, 보잉, GM 등 글로벌 기업들이 사원교육에 활용중이다.]  
 
 위 그림은 Mind Map을 설명한 간단한 Mind Map 입니다. 단순하게 나열하는 설명보다 도식화된 요소들이 쉽게 눈에 들어 오고, 보는 사람에 따라 그림을 보고 쉽게 적절한 이야기로 설명할 수 있지 않을까요.  

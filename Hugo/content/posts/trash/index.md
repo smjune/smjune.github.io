@@ -5,7 +5,7 @@ date: 2023-02-25T17:06:57+09:00
 Categories: "Posted"
 Tags: ["Big Data","Garbage Archaeology",]
 
-bookComments: false
+bookComments: true
 # bookSearchExclude: false
 ---
 
