@@ -11,7 +11,7 @@ submit 전에 어떻게 사전 검증을 할 것인가에 대하 대답으로
 확인이 완료된 change을 운영 브랜치 (main) 으로 merge
 - 각자 정해진 소스 트리 (branch) 에 소스를 업로드 한다.</description></item><item><title>Hugo Tips</title><link>https://smjune.github.io/docs/SE/hugo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/hugo/</guid><description>hugo.yml (config.toml) # v0.110.0 이상에서 지원, 하위 호환을 위해 기존 config.toml 도 사용 가능
 theme 의 가이드에 따라 설정값들을 사용해야 한다.
-hugo-book 샘플 hugo.yml
+:bulb: Tip hugo-book 샘플 hugo.yml
 지금 사이트 설정 (yml, toml, json 지원) baseURL: https://smjune.github.io/ title: MyoungJune Sung says Hello Wrold theme: hugo-book # Book configuration disablePathToLower: true enableGitInfo: true # Needed for mermaid/katex shortcodes markup: goldmark: renderer: unsafe: true tableOfContents: startLevel: 1 menu: # before: [] after: - name: &amp;#34;Github Repo&amp;#34; url: &amp;#34;https://github.</description></item><item><title>Git command 정리</title><link>https://smjune.github.io/docs/SE/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/git/</guid><description>GIT 연습 Site # http://learngitbranching.js.org/
 https://backlogtool.com/git-guide/kr/
 $ level - 연습문제 초기 화면 (문제선택)
