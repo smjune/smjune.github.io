@@ -5,7 +5,7 @@ weight: 3
 # bookToc: true
 # bookHidden: false
 # bookCollapseSection: false
-# bookComments: false
+bookComments: false
 # bookSearchExclude: false
 ---
 ## hugo.yml (config.toml)
@@ -175,6 +175,10 @@ repo 는 자신의 블로그 repo (yourAcount/yourAccount.github.io) 을 사용�
         async>
 </script>
 ```
+{{< hint danger >}}
+utterances app 을 설치하지 않으면, 아래와 같은 에러가 발생함
+>Error: utterances is not installed on smjune/smjune.github.io. If you own this repo, install the app. Read more about this change in the PR. 
+{{< /hint >}}
 
 2. utterances 스크립을 넣을 layouts 파일 
 일반적으로 theme 을 사용하기 때문에 theme 에서 사용하는 commnet layout 을 overriding 하여야 한다. 

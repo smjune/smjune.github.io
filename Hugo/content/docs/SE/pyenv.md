@@ -2,6 +2,7 @@
 title: "Python with Pyenv"
 date: 2023-02-09T18:07:51+09:00
 weight: 5
+BookComments: false
 ---
 
 # Pyenv 사용하기 

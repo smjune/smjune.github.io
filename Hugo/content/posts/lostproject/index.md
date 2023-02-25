@@ -1,7 +1,7 @@
 ---
 title: "프로젝트속에서 길을 잃다"
 date: 2023-02-24T19:06:06+09:00
-# bookComments: false
+BookComments: ture
 # bookSearchExclude: false
 ---
 

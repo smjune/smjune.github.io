@@ -10,6 +10,7 @@ date = "2023-02-17T22:02:05+09:00"
 categories = [
     "Mac",
 ]
+BookComments=true
 +++
 
 ## Mac OS

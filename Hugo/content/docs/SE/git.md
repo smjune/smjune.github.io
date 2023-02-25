@@ -2,6 +2,7 @@
 title: "Git command 정리"
 date: 2023-02-11T10:04:43+09:00
 weight: 4
+BookComments: false
 ---
 
 ## GIT 연습 Site   

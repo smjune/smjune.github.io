@@ -5,4 +5,5 @@ menu:
     weight: 5
 title: Blog
 bookFlatSection: true
+BookComments: false
 ---
