@@ -111,8 +111,12 @@ BookComments=true
 +++
 ```
 
+---
+
 ## Shortcode
 각 페이지에서 사용할 다양한 문단 효과, 아래와 같은 형식으로 사용한다.  
+자세한 내용은 샘플 사이트를 참고 
+
 ```md
 {{</* "Shortcode name" */>}}
 내용 ...
@@ -138,13 +142,51 @@ open 옵션을 사용할 경우 항상 확장된 형태로 표시 됨
 ```
 
 ### Mermaid
-hugo.yml 에서 marmain 사용을 위해 "markup" 설정을 해야 한다.
+hugo.yml 에서 marmain 사용을 위해 "markup" 설정을 해야 한다.  
+[Mermaid Docs](https://mermaid.js.org/intro/)  
+[Mermaid live](https://mermaid.live)  
 
+hugo 에서 제공하는 방식을 미리 theme에서 수정하였으므로, Theme방식을 따라야 한다.
+```md
+{{</* mermaid [class="text-center"] */>}}
+Mermaid syntex 내용 ...    
+{{</* /mermaid */>}}
+```
 ### Section
-
+하위 폴더 내용을 간략하게 표시해 준다.
+```md
+{{</* section */>}}
+```
 ### columns 
+한 페이지에 문단을 나눠서 표시 해둔다.
+```html
+{{</* columns */>}} <!-- begin columns block -->
+# Left Content
+Lorem markdownum insigne...
+
+<---> <!-- magic separator, between columns -->
+
+# Mid Content
+Lorem markdownum insigne...
+
+<---> <!-- magic separator, between columns -->
+
+# Right Content
+Lorem markdownum insigne...
+{{</* /columns */>}}
+```
 
 ### Tabs
+하나의 문단을 tab으로 구분하여 표시 해준다.
+```tpl
+{{</* tabs "uniqueid" */>}}
+{{</* tab "MacOS" */>}} # MacOS Content {{</* /tab */>}}
+{{</* tab "Linux" */>}} # Linux Content {{</* /tab */>}}
+{{</* tab "Windows" */>}} # Windows Content {{</* /tab */>}}
+{{</* /tabs */>}}
+```
+  
+---
 
 ## partial
 

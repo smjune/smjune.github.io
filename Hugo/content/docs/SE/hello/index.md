@@ -13,6 +13,15 @@ bookComments: false
 
 ## github 에서 블로그 만들기 
 
+hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신,  
+**github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용**  
+
+{{< hint info >}}
+**아래 관련 지식 보유 가정**  
+   1. 기본 적인 SSG (Static Site Generator)   
+   2. Brew, Git, GitHub, VSCode, Hugo 설치 및 사용 방법 (Mac)  
+   3. Markdown, YAML, Mermaid 등  
+
 - Editor : Scrivener, VSCode ([Markdown](https://www.markdownguide.org/))
 - SSG : HUGO (theme : hugo-book)  
 - REPO : github (github.com/smjune/smjune.github.io),  
@@ -20,13 +29,7 @@ bookComments: false
 - WEB hosting : smjune.github.io  (GitHub Pages)
    - Project Settings | Pages | Build and Deploy | branches : gh-pages 설정    
 - 로컬에서는 'hugo server' 을 이용하여 확인 후 push 함  
-- Build & Deploy : github actions / gitlab CI/CD
-hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신 github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용   
-
-{{< hint info >}}
-**아래 관련 지식 보유 가정**  
-   1. 기본 적인 SSG (Static Site Generator) 관련 정보  
-   2. brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
+- Build & Deploy : github actions / gitlab CI/CD 
 {{< /hint >}}
 
 ## github pages 만들기 
@@ -53,7 +56,6 @@ flowchart LR;
       D--project & hugo-->H["Code Project & Hug Project\n git하위 source, hugo 폴더 존재"];
   
 {{< /mermaid >}}
-
 
 ---
 
@@ -114,7 +116,6 @@ project folder (git, hugo)
 * Base URL : https://UserAccount.github.io/Project
 * Repo 주소 : https://github.com/UserAcount/Project.git
     * 해당 repo 는 git 프로젝트 안에 source code 와 hugo 을 포함한다.  
-
 
     ```bash
     // 기존 git project 에서 
@@ -188,9 +189,29 @@ _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하�
 {{< /hint >}}
 
 ---  
+
 ### 3. GitHub Actions to build and deploy the hugo project  
 
 * .github/workflows/gh-pages.yml 생성
+
+{{< hint info >}}
+**사용한는 GitHub Actions**  
+actions/checkout@v3  
+peaceiris/actions-hugo  
+peaceiris/actions-gh-pages  
+{{< /hint >}}
+
+```yaml
+      - uses: actions/checkout@v3
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.110.0' # 혹은 'latest'
+```
 
 https://github.com/peaceiris/actions-gh-pages
 
@@ -229,6 +250,8 @@ on:
 
 ![workflow 설정](images/hello_1.png)
 
+---  
+
 ### 4. local branch and remote 
 
 ```bash
@@ -246,6 +269,8 @@ Hello_world$ _
 - remote 로 gitlab (gitlab.com/smjune/smjune.gitlab.io) main 도 등록되어 있으므로  
    - git push gitlab main
 
+---
+
 ### 5. 최종 작업 순서 
 {{< mermaid >}}
 sequenceDiagram
@@ -255,9 +280,9 @@ sequenceDiagram
     links gitlab: {"pages": "https://smjune.gitlab.io/"}
     links github: {"Pages": "https:/smjjune.github.io/"}
     loop main job
+        github-->>Local: fetch (github)
         Local->>Local: edit a page on Hugo
         Local->>Local: add and commit on .git
-        github-->>Local: fetch (github)
         Local->>github: Push (github main)
     end
     Local->>gitlab: push gitlab main
