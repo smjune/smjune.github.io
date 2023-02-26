@@ -128,6 +128,14 @@ info/warning/danger 로 색 구분 (파랑/노랑/빨강) 지원
 ```
 
 ### Details
+확장 되는 문단 표시 (expand 을 사용하는 대신)
+open 옵션을 사용할 경우 항상 확장된 형태로 표시 됨
+
+```md
+{{</* details [ open ] */>}}
+내용 ...
+{{</* /details */>}}
+```
 
 ### Mermaid
 hugo.yml 에서 marmain 사용을 위해 "markup" 설정을 해야 한다.
