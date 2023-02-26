@@ -11,9 +11,9 @@ bookComments: false
 # bookSearchExclude: false
 ---
 
-# github 에서 블로그 만들기 
+## github 에서 블로그 만들기 
 
-- Editor : Scrivener, VSCode  
+- Editor : Scrivener, VSCode ([Markdown](https://www.markdownguide.org/))
 - SSG : HUGO (theme : hugo-book)  
 - REPO : github (github.com/smjune/smjune.github.io),  
          gitlab (backup : gitlab.com/smjune/smjune.gitlab.io)
@@ -28,17 +28,6 @@ hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push �
    1. 기본 적인 SSG (Static Site Generator) 관련 정보  
    2. brew, git, github, hugo 설치 및 사용 방법 (Hugo 는 windows 지원)  
 {{< /hint >}}
-
-## Hugo (SSG)  
-https://gohugo.io/documentation/  
-https://themes.gohugo.io/themes/hugo-book/   
-
-    1. $ hugo new site [hugo project name] 으로 프로젝트 생성.  
-    2. config.toml : baseURL, Title 과 Theme 을 수정.  
-    3. themes : 사용할 Web theme 을 설치. ( git submodule 사용 )  
-    4. content : 폴더/파일.md 형태로 글 작성 및 구성. ( $ hugo new posts/hello.md )  
-    5. hugo server 으로 로컬 호스트 페이지 확인 ( md 파일에 draft : true 인 경우 -D 옵션 필요)
-    6. hugo server 가 실행 중이면, 저장하는 수정 내용이 바로 로컬 호스트 페이지에 반영됨
 
 ## github pages 만들기 
 https://docs.github.com/en/pages/  
