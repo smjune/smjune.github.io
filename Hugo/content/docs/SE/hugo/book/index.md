@@ -243,10 +243,10 @@ hugo
 
 ### giscus
 
-utterances 와 생성 방법이 동일하다.  
-[Giscus 셋업](https://giscus.app/)  
-
-add **"layouts/partials/docs/comments.html"** and paste code provided by your comments provider    
+1. 자신의 repo에 Discussions 을 setting 에서 enable 
+2. Giscus app 을 자신에 repo 에 설치
+3. [Giscus 셋업](https://giscus.app/) 에 가서 스크립트 생성
+4. (hugo-book theme) add **"layouts/partials/docs/comments.html"** and paste code provided by your comments provider    
 ```html
 <script src="https://giscus.app/client.js"
         data-repo="smjune/smjune.github.io"
@@ -264,4 +264,6 @@ add **"layouts/partials/docs/comments.html"** and paste code provided by your co
         async>
 </script>
 ``` 
+5. hugo-book theme comment 는 bookComments: true 가 디폴트 이며, 따라서 모든 page 에 자동으로 적용된다. 따라서, 각 페이지에서 "bookComments: false" 을 설정하여 comment 을 OFF 하여야 한다.
 
+> PaperMode theme comment 는 **"layouts/partials/comments.html"** 에 스크립트를 설치하고, comments: [true | false] 설정을 config (hugo.yml) 과 front matter 에서 설정한다.

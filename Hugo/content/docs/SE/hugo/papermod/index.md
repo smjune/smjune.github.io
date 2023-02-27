@@ -132,7 +132,7 @@ Tags: ["Big Data","한글","Minority",]
 utterances 와 생성 방법이 동일하다.  
 [Giscus 셋업](https://giscus.app/)  
 
-add "layouts/partials/comments.html" and paste code provided by your comments provider    
+add **"layouts/partials/comments.html"** and paste code provided by your comments provider    
 ```html
 <script src="https://giscus.app/client.js"
         data-repo="smjune/Hello_world"
