@@ -17,11 +17,11 @@ Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로 (gitbook 으로 
 그래도 그나마 눈에 익숙하고, 여러형태의 e-book 으로도 지원했던것 같다.  
 사용해 보려고 했으나, 설치 난이도 [참조](https://github.com/GitbookIO/gitbook-cli/issues/110) 와 github actions 지원이 좀 애매하다. [참조](https://github.com/SoftUni/Programming-Basics-Book-JS-EN/blob/master/.github/workflows/gitbook-deploy.yml)
 
-* Known Dependencies
-node : v12.22.1
-npm : v6.14.12
-gitbook-cli : gitbook-cli@2.3.2
-graceful-fs : 4.1.4
+* Known Dependencies  
+node : v12.22.1  
+npm : v6.14.12  
+gitbook-cli : gitbook-cli@2.3.2  
+graceful-fs : 4.1.4  
 
 **관련사이트**  
 https://github.com/GitbookIO/gitbook-cli  
@@ -37,8 +37,10 @@ on MacOS (high sierra, 10.13.6)
 $ brew install node
  
 # 해당 명령어로 오류가 나서 nvm 을 설치 하여 node 12.22.1 을 설치 
+# brew install nvm  이후, 가이드에 따라 설정 
 $ nvm -v
 0.39.3
+# gitbook dependencies 해결 node 버전 설치 
 $ nvm install 12.22.1
 Downloading and installing node v12.22.1...
 Downloading https://nodejs.org/dist/v12.22.1/node-v12.22.1-darwin-x64.tar.xz...
@@ -51,7 +53,7 @@ $ nvm use 12.22.1
 Now using node v12.22.1 (npm v6.14.12)
 $ node -v
 v12.22.1
-# https://github.com/GitbookIO/gitbook-cli/issues/110 참조해서 dependecies 해결 후 
+# https://github.com/GitbookIO/gitbook-cli/issues/110 참조해서 graceful-fs dependecies 해결 후 
 $ gitbook init
 ...
 $ gitbook serve
