@@ -14,4 +14,11 @@ $ undo - 1개 명령 취소
 $ git fakeTeamwork 1 - origin 에 1개 커밋 넣기 Set up # $ git clone -b [브랜치 | tag] [REPO URL] $ git remote add orgin [REPO URL] // origin 으로 REPO URL 등록 $ git remote rm orgin // origin 삭제 $ git submodule add [REPO RUL] [Folder Path] $ git submodule update branch # $ git branch -f bugfix HEAD~1 : bugfix 브랜치를 HEAD [혹은 브랜치 명] 1개 전 commit으로 이동 $ git branch -u origin/maser [Branch A] : 이미 있는 local Branch A (생략하면 현재 checkout branch) 가 origin/master 을 track함 --&amp;gt; git checkout --track 과 비교 $ git branch -d Branch A : local 에서만 Branch A 삭제 $ git branch -d -r origin/branch A : remote 트랙킹 브랜치를 로컬에서 삭제 (에, origin/featrue ) checkout # $ git checkout branch A : Remote에 있는 branch A 에 대해 local 에 branch A 와 origin/branch A만들고, checkout.</description></item><item><title>Python with Pyenv</title><link>https://smjune.github.io/docs/SE/pyenv/</link><pubDate>Thu, 09 Feb 2023 18:07:51 +0900</pubDate><guid>https://smjune.github.io/docs/SE/pyenv/</guid><description>Pyenv 사용하기 # $ pyenv versions * system (set by /home/june.sung/.pyenv/version) 2.7.17 $ pyenv install --list $ pyenv install 3.6.9 * system (set by /home/june.sung/.pyenv/version) 2.7.17 3.6.9 $ pyenv shell 3.6.9 $ pyenv which python 3.6.9 (set by PYENV_VERSION environment variable) # $ pyevn [ global &amp;gt; local &amp;gt; shell ] X.X.X # cat ~/.pyenv/version | cat .pyton-version | echo $PYENV_VERSION # loacal 은 해당 폴더 아래 (set by ~폴더/.</description></item><item><title>Docker</title><link>https://smjune.github.io/docs/SE/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/docker/</guid><description>docker 의 등장
 Github runner 으로 생각해 보는 docker
 Self-hosted (bare metal vs virtual)
-Github-Hosted</description></item></channel></rss>
+Github-Hosted</description></item><item><title>Gitbook</title><link>https://smjune.github.io/docs/SE/gitbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/gitbook/</guid><description>Gitbook # Gitbook 도 생각을 해 봤으나, 2017년 이후로 gitbook-cli 가 업데이트을 지원하지 않음
+Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로 (gitbook 으로 작성된것이라고 들은것 같은데&amp;hellip; 확실치 않음.)
+그래도 그나마 눈에 익숙하고, 여러형태의 e-book 으로도 지원했던것 같다.
+사용해 보려고 했으나, 설치 난이도 참조 와 github actions 지원이 좀 애매하다. 참조
+Known Dependencies node : v12.22.1 npm : v6.14.12 gitbook-cli : gitbook-cli@2.3.2 graceful-fs : 4.1.4 관련사이트
+https://github.com/GitbookIO/gitbook-cli
+https://docs.gitbook.com/integrations/github
+https://www.gitbook.com/</description></item></channel></rss>
