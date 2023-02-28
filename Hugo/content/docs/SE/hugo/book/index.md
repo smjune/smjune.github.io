@@ -268,15 +268,3 @@ hugo
 
 > PaperMode theme comment 는 **"layouts/partials/comments.html"** 에 스크립트를 설치하고, comments: [true | false] 설정을 config (hugo.yml) 과 front matter 에서 설정한다.
 
-## (추가정보) Gitbook
-
-{{< hint info>}}
-Gitbook 도 생각을 해 봤으나, 2017년 이후로 gitbook-cli 가 업데이트을 지원하지 않음  
-Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로 (gitbook 으로 작성된것이라고 들은것 같은데... 확실치 않음.)  
-그래도 그나마 눈에 익숙하고, 여러형태의 e-book 으로도 지원했던것 같다.
-사용해 보려고 했으나, 설치 난이도와 github actions 지원이 좀 애매하다.   
-**관련사이트**  
-https://github.com/GitbookIO/gitbook-cli  
-https://docs.gitbook.com/integrations/github  
-https://www.gitbook.com/  
-{{< /hint >}}
