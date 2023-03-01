@@ -19,7 +19,14 @@ submit 전에 어떻게 사전 검증을 할 것인가에 대하 대답으로
 브랜치 개념이 도입이 됨
 기존 post CI 가 적용된 브랜치를 운영 (dev) 하여
 확인이 완료된 change을 운영 브랜치 (main) 으로 merge
-- 각자 정해진 소스 트리 (branch) 에 소스를 업로드 한다.</description></item><item><title>Git command 정리</title><link>https://smjune.github.io/docs/SE/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/git/</guid><description>GIT 연습 Site # http://learngitbranching.js.org/
+- 각자 정해진 소스 트리 (branch) 에 소스를 업로드 한다.</description></item><item><title>Gitbook</title><link>https://smjune.github.io/docs/SE/gitbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/gitbook/</guid><description>Gitbook # Hugo 처럼 로컬에서 빌드하여 별도 web hosting (github pages) 으로 publish 하는 방식으로 사용해도 되고,
+gitbook.com 에 접속하여 GUI을 이용하여 운영 할 수도 있다.
+(Web hosting 제공 : https://YOUR_ACCOUNT.gitbook.io/, 무료/유로)
+아래 내용은 gitbook-cli을 이용하여 Static site을 생성한 다음 별도 Web hosting 을 이용하는 방식을 기록함
+참고
+2017년 이후로 gitbook-cli 가 업데이트을 지원하지 않음
+Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로
+(gitbook 으로 작성된것이라고 들은것 같은데&amp;hellip; 확실치 않음.</description></item><item><title>Git command 정리</title><link>https://smjune.github.io/docs/SE/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/git/</guid><description>GIT 연습 Site # http://learngitbranching.js.org/
 https://backlogtool.com/git-guide/kr/
 $ level - 연습문제 초기 화면 (문제선택)
 $ sandbox - 빈 연습
@@ -37,18 +44,7 @@ RTM (release to manufacturing) 이라고 해서 CD 로 구울 최후 SW 버전�
 shrinkwrap contract (license) : the seller considers to have been accepted by the buyer once the package is opened or the product used.</description></item><item><title>Docker</title><link>https://smjune.github.io/docs/SE/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/docker/</guid><description>docker 의 등장
 Github runner 으로 생각해 보는 docker
 Self-hosted (bare metal vs virtual)
-Github-Hosted</description></item><item><title>Gitbook</title><link>https://smjune.github.io/docs/SE/gitbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/gitbook/</guid><description>Gitbook # Gitbook 도 생각을 해 봤으나, 2017년 이후로 gitbook-cli 가 업데이트을 지원하지 않음
-Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로 (gitbook 으로 작성된것이라고 들은것 같은데&amp;hellip; 확실치 않음.)
-그래도 그나마 눈에 익숙하고, 여러형태의 e-book 으로도 지원했던것 같다.
-사용해 보려고 했으나, 설치 난이도 참조 와 github actions 지원이 좀 애매하다. 참조
-Known Dependencies
-node : v12.22.1
-npm : v6.14.12
-gitbook-cli : gitbook-cli@2.3.2
-graceful-fs : 4.1.4 관련사이트
-https://github.com/GitbookIO/gitbook-cli
-https://docs.gitbook.com/integrations/github
-https://www.gitbook.com/</description></item><item><title>VCS</title><link>https://smjune.github.io/docs/SE/CI/VCS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/VCS/</guid><description>distributed vs Centrialized VCS
+Github-Hosted</description></item><item><title>VCS</title><link>https://smjune.github.io/docs/SE/CI/VCS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/VCS/</guid><description>distributed vs Centrialized VCS
 fork : clone a repo from remote on REPO</description></item><item><title>Repo</title><link>https://smjune.github.io/docs/SE/CI/REPO/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/REPO/</guid><description>Multi vs Mono REPO</description></item><item><title>사람들은 자신이 무엇을 원하는지 모른다</title><link>https://smjune.github.io/posts/empathy/</link><pubDate>Sat, 25 Feb 2023 21:37:26 +0900</pubDate><guid>https://smjune.github.io/posts/empathy/</guid><description>&amp;ldquo;소비자는 자신이 원하는 것을 직접 보기 전까지는 자신이 무엇을 원하는지 조차 모른다&amp;rdquo;
 사실 이런 명제에 대해 오래전부터 마케팅쪽 (소비심리학에서는 &amp;lsquo;소비자의 말을 믿지 말라&amp;rsquo; 라고 말한다) 에서 논의되고 있고, 계속해서 연구되었던 것이였는데, 어느순간 오로지 한 개인의 경영철학처럼 뉴스에 회자되면서 유명해 졌다.
 처음 이말을 들었을때 나는 무척 혼란스러웠다. 회사에서 제품을 만드는 일을 하고 있는 사람이지만, 나 또한 한 사람의 소비자이기도 하기 때문이다. 과연 나도 내가 원하는 것을 직접보기 전까지 내가 무엇을 원하는지 모르고 있는 걸까?</description></item><item><title>호랑이는 죽어서 가죽을 남기고, 사람은 죽어서 이야기를 남긴다</title><link>https://smjune.github.io/posts/story/</link><pubDate>Sat, 25 Feb 2023 18:41:37 +0900</pubDate><guid>https://smjune.github.io/posts/story/</guid><description>STORY # &amp;ldquo;2차 세계대전 이탈리아, 나치의 유태인 말살정책에 의해 한 남자와 아내, 그리고 어른들 세상의 변화를 아직은 이해할 수 없는 나이의 어린 아들, 이렇게 세식구는 살던 마을을 떠나 유대인 수용소로 강제 수용된다. 자신이 온 곳은 어디이며, 왜 왔는지 궁금해하는 아들을 위해 아버지는 자신들은 게임을 하기위해 선발된 것이며, 이곳에서 게임을 하면서 1,000점을 먼저 따는사람은 탱크을 받게 된다고 이야기해 준다.&amp;rdquo;
