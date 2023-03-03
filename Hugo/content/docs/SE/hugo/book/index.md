@@ -69,6 +69,11 @@ params:
   # - In blog posts
   BookDateFormat: "January 2, 2006"
 
+  # (Optional, default none) Set the path to a logo for the book. If the logo is
+  # /static/logo.png then the path would be 'logo.png'
+  # https://github.com/alex-shpak/hugo-book/pull/442  
+  BookLogo : 'logo.png'
+
 # you can add more option here   
 ```
 :+1: enableEmoji : true  
@@ -113,6 +118,32 @@ categories = [
 BookComments=true
 +++
 ```
+### Blog thumbnail image 
+
+add Frontmatter  
+```
+---
+image : /posts/images/xxx.image
+---
+```  
+[hugo-book QnA](https://github.com/alex-shpak/hugo-book/issues/286)  
+
+---
+
+## Customizing
+### Get image Center of pages
+1. create $PROJECT/assets/_custom.scss  
+2. add the following code into file   
+```scss
+.markdown img { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+```
+[hugo-book QnA](https://github.com/alex-shpak/hugo-book/issues/383)
 
 ---
 
@@ -188,11 +219,9 @@ Lorem markdownum insigne...
 {{</* tab "Windows" */>}} # Windows Content {{</* /tab */>}}
 {{</* /tabs */>}}
 ```
-  
 ---
 
 ## partial
-
 ### Comments
 
 1. utterances 스크립트 생성  
