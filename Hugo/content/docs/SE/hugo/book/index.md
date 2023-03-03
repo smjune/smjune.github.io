@@ -32,6 +32,7 @@ theme: hugo-book
 # Book configuration
 disablePathToLower: true
 enableGitInfo: true       # Set with "BookRepo" to used for 'Last Modified' links.
+enableEmoji: true         # use Emoji
 
 # Needed for mermaid/katex shortcodes
 markup:
@@ -70,6 +71,8 @@ params:
 
 # you can add more option here   
 ```
+:+1: enableEmoji : true  
+[Emoji list](https://gist.github.com/rxaviers/7360908)
 
 ## Pages Front matter
 각 pages (md 파일) 에서 pages 에 대한 설정값을 조정한다.
@@ -84,7 +87,7 @@ weight: 1                     # 메뉴에서 표시되는 순서 1 = 최우선
 # bookComments: false         # 해당 페이지의 comment 활성화 설정 (hugo.yml 설정보다 우선)
 # bookSearchExclude: false
 ---
-```
+```  
 
 ### Categories & Tages
 각 페이지에서 해당 페이지에 대한 category 와 Tags 을 설정  

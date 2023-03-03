@@ -27,6 +27,9 @@ baseURL: https://smjune.github.io/        # 실제 접속 사이트 주소
 title: MyoungJune Sung says Hello Wrold   # 사이트 제목
 theme: hugo-book                          # 랜더링 할 theme
 ```
+### Emoji
+:+1: enableEmoji : true  
+[Emoji list](https://gist.github.com/rxaviers/7360908)
 
 ### theme install 
 각 theme 에서 제공하는 방식에 따라 설정 
