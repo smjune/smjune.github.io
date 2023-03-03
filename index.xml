@@ -24,6 +24,7 @@ gitbook.com 에 접속하여 GUI을 이용하여 운영 할 수도 있다.
 (Web hosting 제공 : https://YOUR_ACCOUNT.gitbook.io/, 무료/유로)
 아래 내용은 gitbook-cli을 이용하여 Static site을 생성한 다음 별도 Web hosting 을 이용하는 방식을 기록함
 참고
+👉 정보
 2017년 이후로 gitbook-cli 가 업데이트을 지원하지 않음
 Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로
 (gitbook 으로 작성된것이라고 들은것 같은데&amp;hellip; 확실치 않음.</description></item><item><title>Git command 정리</title><link>https://smjune.github.io/docs/SE/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/git/</guid><description>GIT 연습 Site # http://learngitbranching.js.org/
