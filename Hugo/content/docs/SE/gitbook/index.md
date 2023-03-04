@@ -78,9 +78,9 @@ $ npm i -g gitbook-cli
 $ gitbook init
 ...
 ```
-### graceful-fs 오류 처리 
+### graceful-fs 오류 처리 :warning:  
 [gitbook QnA](https://github.com/GitbookIO/gitbook-cli/issues/110) 을 참조해서 graceful-fs dependecies 을 해결하기 위해  
-오류를 이르킨 polyfills.js 찾아서 석제후, 재설치 하는 방식 사용
+오류를 발생시킨 polyfills.js 찾아서 삭제후, 재설치하는 방식사용
 >1. /Users/YOURACCOUNT/.nvm/versions/node/v12.22.1/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/ 에서 polyfills.js 삭제  
 >2. $ wget https://raw.githubusercontent.com/isaacs/node-graceful-fs/168bdb8f0bb3174e8499d4bc5878deead4172c39/polyfills.js 실행 해서 해당 파일 재 설치
 

@@ -22,17 +22,16 @@ $ git fakeTeamwork 1          - origin 에 1개 커밋 넣기
 {{< /hint >}}
 
 
-### Set up 
+### :one: Set up 
 ```bash
 $ git clone -b [브랜치 | tag] [REPO URL]  
 $ git remote add orgin [REPO URL]      // origin 으로 REPO URL 등록
 $ git remote rm orgin                  // origin 삭제
-$ git submodule add [REPO RUL] [Folder Path]
-$ git submodule update 
+$ git submodule add [REPO RUL] [Local Folder Path]
+$ git submodule update                 // --init --recursive 
 ```
 
-
-### branch 
+### :two: branch 
 ```bash
 $ git branch -f bugfix HEAD~1                       
 : bugfix 브랜치를 HEAD [혹은 브랜치 명] 1개 전 commit으로 이동  
@@ -46,7 +45,7 @@ $ git branch -d Branch A
 $ git branch -d -r origin/branch A 
 : remote 트랙킹 브랜치를 로컬에서 삭제 (에, origin/featrue )
 ```
-### checkout
+### :three: checkout
 ```bash
 $ git checkout branch A                               
 : Remote에 있는 branch A 에 대해 local 에 branch A 와 origin/branch A만들고, checkout.  
@@ -64,7 +63,7 @@ $ git checkout -b [Branch A] origin/master
 $ git checkout --track origin/master               
 : Local에 master(remote와 같은 이름의 브랜치)을 만들고 checkout 한 후 origin/master (Remote 브랜치)을 tracking 함. --> git branch -u 와 비교  
 ```   
-### Others
+### :four: Others
 ```bash
 $ git cherry-pick [commit-ID1] [commit-ID2] …  
 : 현재 checkout된 브랜치에 C1, C2 을 넣어라  
@@ -88,18 +87,29 @@ $ git revert HEAD
 :  HEAD commit 을 다시 만든다 (commit --amend ?? 와 비슷?)  
 ```
 
-### Merge
+### :five: Merge
+- checkout 된 브랜치가 어떤 a branch(을) 와 Merge 해옴    
 ```bash 
 Merge [ branch A]   : checkout 된 branch 에  branch A 와 합쳐진 commit을 만든다.     
 ```
 
-### Fetch/Pull/Push
-```bash   
-Fetch/Pull/Push                                             
-Fetch/Pull/Push [Remote]  
-Fetch/Pull/Push [Remote] [source branch]          // 여기까지만 사용하는것을 권장  
-Fetch/Pull/Push [Remote] [source]:[tartget]  
- 
+### :six: Fetch/Pull/Push  
+
+- 모든 Remote 에 모든 tracing 하는 브랜치 와 … Fetch/Pull/Push  
+- 언급한 Remote 에 모든 tracing 하는 브랜치 와 …Fetch/Pull/Push  
+- 언급한 Remote 에서/으로 소스 브랜치를  …Fetch/Pull/Push  
+- 소스 브랜치 : 타겟 브랜치     -->  gerrit 사용시 : $ git push origin [source]:refs/for/[target] 
+
+>:warning: Fetch/pull 은 소스가 remote 이고, Push는 소스가 local 이다.  
+$git pull remote remote_branch:local_branch  
+$git push remote local_branch:remote_branch  
+
+```bash
+Fetch/Pull/Push                            // 없으면, origin 으로 등록된 remote                                
+Fetch/Pull/Push [Remote]                   // 없으면, remote/현재브랜치 
+Fetch/Pull/Push [Remote] [source branch]   // 여기까지만 사용하는것을 권장  
+Fetch/Pull/Push [Remote] [source]:[tartget] 
+
 $ git fetch origin master~1:branchA  
 : origin (Remote) master보다 1개 앞선 commit을 local에 branchA 브랜치로 만든다. (checkout 하지 않는다.)  
 
@@ -124,7 +134,9 @@ $ git pull origin master
 $ git pull                              
 : 현재 checkout된 브랜치가 tracking하는 origin (Remote)을 업데이트하고, checkout된 브랜치가 tracking branch를 Merge  
 = fetch origin [the checkouted branch] + merge origin/[the checkouted branch]  
- 
+```
+
+```bash
 $ git push origin HEAD:refs/for/main  
 :  현재 HEAD 브랜치를 gerrit main 브랜치(를만들고)로 push 한후 (submit type에 따라 merge, rebase, cherry-pick 등을 함)   
 -> HEAD가 있는 commit 위치로 origin/main 을 progress 시키겠다.  
@@ -144,11 +156,4 @@ $ git push
 : 현재 checkout된 브랜치가 tracking 하는 origin 으로 (없으면 origin/~~을 만듦) 현재 checkout된 브랜치를 push   
 = push origin [the checkouted branch]:origin/[the checkouted branch]  
 ```
-
-- checkout 된 브랜치가 어떤 a branch(을) 와 Merge 해옴  
- 
-- 모든 Remote 에 모든 tracing 하는 브랜치 와 … Fetch/Pull/Push  
-- 언급한 Remote 에 모든 tracing 하는 브랜치 와 …Fetch/Pull/Push  
-- 언급한 Remote 에서/에서/으로 소스 브랜치를  …Fetch/Pull/Push  
--  소스 브랜치 : 타겟 브랜치     -->  gerrit 사용시 : $ git push origin [source]:refs/for/[target]  
 

@@ -180,6 +180,7 @@ project folder (git)
 *Created from https://arthursonzogni.com/Diagon/#Tree*  
 
 {{< hint warning >}}
+:bulb: **Idea**   
  _branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)_  
     _- main branch : soure code 파일 만 존재_  
     _- hugo branch : hugo project 파일만 존재_  
@@ -195,7 +196,7 @@ _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하�
 * .github/workflows/gh-pages.yml 생성
 
 {{< hint info >}}
-**사용한는 GitHub Actions**  
+:memo: **사용한는 GitHub Actions**  
 actions/checkout@v3  
 peaceiris/actions-hugo  
 peaceiris/actions-gh-pages  
@@ -293,7 +294,12 @@ sequenceDiagram
     Local->>gitlab: push gitlab main
 
 {{< /mermaid >}}
+#### git fetch 
+수정 하기 전에 항상 remote 을 받아서 local 을 업데이트 하자.  
+(해당 로컬이 아닌 다른 로컬에서 업데이트 했을 수 있음)  
+:warning: pull 을 하지말고, fetch 로 현재 로컬과 리모트가 gap 이 있는지 확인 한후 pull 을 수행하여야 한다.
 
+#### git status
 ```bash
 Hello_world$ git status
 On branch main
@@ -306,6 +312,7 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
+#### git add .
 ```bash
 Hello_world$ git add .
 Hello_world$ git commit -m 'update way to push'
@@ -325,6 +332,8 @@ After doing this, you may fix the identity used for this commit with:
 
  1 file changed, 26 insertions(+), 1 deletion(-)
  ```
+ #### git push (github main)
+ :warning: github 을 origin remote 로 등록한 경우 git push 만 사용함.
  ```bash
 Hello_world$ git push github main
 Enumerating objects: 11, done.
@@ -337,6 +346,8 @@ remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/smjune/smjune.github.io.git
    2b0d320..d7c0db2  main -> main
 ```
+#### git push gitlab main
+:warning: 백업용으로 가끔 잊지 말고 push 
 ```bash
 Hello_world$ git push gitlab main
 Enumerating objects: 11, done.
