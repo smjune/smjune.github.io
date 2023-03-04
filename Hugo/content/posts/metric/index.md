@@ -7,7 +7,10 @@ Tags: ["Metrics","Index","Communication",]
 
 bookComments: ture
 # bookSearchExclude: false
+
+image: posts/images/metric.png
 ---
+
     유명한 Global S/W 회사의 한국 지사에서 System Testing Engineer 로 일할때 일화이다. 그 곳에서 나는 사무 프로그램 패키지 제품군중 하나의 제품에 대한 품질을 책임 지고 있었다. 당시에는 단순히 제품이 한국에서 팔리기전 내가 최종 승인을 한다는 것에 대한 매력이 나를 지탱하는 유일한 것이었다. 하지만 그것 보다 그곳에서 내가 생각한 것 이상의 것을 배웠고, 시간이 지나고 이제서야 그 중요성을 깨닫게 되었던 가르침 중 하나을 소개 하고자 한다.  
 
     한국에 제품 출시가 임박해질수록 모든 S/W 개발실이 그러듯이 매우 분주해 지며, 구성원들의 신경은 날카로워 지기 시작한다. 우리는 전체 제품군이 주간 단위의 Bug Review Meeting을 수행했고, 제품군 전체의 품질을 책임지고 있는 이사님이 주제하시는 이 자리가 여간 곤욕스러운 자리로 여기고 있었다. 그 분께서는 한주간 등록된 bug에 대한 data 을 가지고 review 을 진행 하셨는데, 그분의 review 는 주로 이런 것이였다.  

@@ -11,6 +11,8 @@ categories = [
     "Mac",
 ]
 BookComments=true
+
+image="posts/images/highsierra.png"
 +++
 
 ## Mac OS

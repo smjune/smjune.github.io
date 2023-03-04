@@ -39,8 +39,7 @@ https://www.gitbook.com/
 {{< /hint >}}
 
 ## install gitbook  
-on MacOS (high sierra, 10.13.6)
-
+Homebrew on MacOS (high sierra, 10.13.6)
 ```zsh
 # 사전 Homebrew 설치 필요 / $brew update 을 해서 업데이트 하자
 ...
@@ -49,6 +48,9 @@ Homebrew 4.0.4
 Homebrew/homebrew-core (git revision 25e07818a96; last commit 2023-02-28)
 $ brew install node
 ...
+```
+### nvm & Node 설치
+```zsh
 # 해당 명령어로 오류가 나서 nvm 을 설치 하여 node 12.22.1 을 설치 
 $ brew install nvm  # 이후, 가이드에 따라 bash 환경 설정 
 ...
@@ -69,16 +71,19 @@ $ nvm use 12.22.1
 Now using node v12.22.1 (npm v6.14.12)
 $ node -v
 v12.22.1
-
-# gitbook-cli 설치
+```
+### gitbook-cli 설치
+```zsh
 $ npm i -g gitbook-cli 
 $ gitbook init
 ...
-# https://github.com/GitbookIO/gitbook-cli/issues/110 참조해서 graceful-fs dependecies 해결 후 
-# 오류를 이르킨 polyfills.js 찾아서 석제후, 재설치 하는 방식 사용
-# /Users/myoungjunesung/.nvm/versions/node/v12.22.1/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/ 에서 polyfills.js 삭제
-# $ wget https://raw.githubusercontent.com/isaacs/node-graceful-fs/168bdb8f0bb3174e8499d4bc5878deead4172c39/polyfills.js 실행 해서 해당 파일 재 설치
 ```
+### graceful-fs 오류 처리 
+[gitbook QnA](https://github.com/GitbookIO/gitbook-cli/issues/110) 을 참조해서 graceful-fs dependecies 을 해결하기 위해  
+오류를 이르킨 polyfills.js 찾아서 석제후, 재설치 하는 방식 사용
+>1. /Users/YOURACCOUNT/.nvm/versions/node/v12.22.1/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/ 에서 polyfills.js 삭제  
+>2. $ wget https://raw.githubusercontent.com/isaacs/node-graceful-fs/168bdb8f0bb3174e8499d4bc5878deead4172c39/polyfills.js 실행 해서 해당 파일 재 설치
+
 
 위의 결과로 아래와 같은 형태가 구성됨  
 ```bash
