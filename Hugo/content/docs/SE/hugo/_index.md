@@ -28,8 +28,18 @@ title: MyoungJune Sung says Hello Wrold   # 사이트 제목
 theme: hugo-book                          # 랜더링 할 theme
 ```
 ### Emoji
-:+1: enableEmoji : true  
-[Emoji list](https://gist.github.com/rxaviers/7360908)
+:+1: config 파일에 ```enableEmoji : true``` 추가   
+':emoji_name:' 으로 사용 [Emoji list](https://gist.github.com/rxaviers/7360908)  
+
+### Highlight text
+
+1. config 파일에 '[markup.goldmark.renderer] unsafe = true' 입력
+2. <mark>형광강조</mark> 하고 싶은 문자열에 ```<mark> ... </mark>``` 로 표시
+
+### Footnote [^footnote]
+1. 주석을 삽압하고 싶은 곳에 '[^footnote_ID]' 을 입력  
+2. page 맨 아래에 '[^footnote_ID]: 주석 설명' 을 입력  
+:clap: 주석 순서에 따라 차례대로 숫자가 입력됨  
 
 ### theme install 
 각 theme 에서 제공하는 방식에 따라 설정 
@@ -164,6 +174,9 @@ contents
 Leaf bundle 은 하위로 images 폴더를 만들어 해당 페이지 에서 사용하는 이미지를 따로 저장하자.   
 branch bundle 은 _index.md 와 동일한 folder 위치에 이미지를 저장해야 한다.
 
+>:warning:[참고](https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi) bundle 에 따른 이미지 관리  
+
+
 ```
 contents
  └─posts
@@ -179,5 +192,6 @@ contents
           └─images
              └─essay.png   # essay 이미지
 ```
->[참고](https://discourse.gohugo.io/t/question-about-content-folder-structure/11822/4?u=kaushalmodi)
 
+
+[^footnote]: https://www.markdownguide.org/extended-syntax/#footnotes
