@@ -3,8 +3,9 @@ menu:
   after:
     name: blog
     weight: 5
-title: Blog
+title: Writing.logging
 bookFlatSection: true
 BookComments: false
+bookCollapseSection: false
 ---
 

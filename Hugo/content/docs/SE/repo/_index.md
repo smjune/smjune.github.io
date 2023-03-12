@@ -2,11 +2,11 @@
 title: "The Repo"
 weight: 9
 # bookFlatSection: false
-# bookToc: true
+bookToc: false
 # bookHidden: false
 bookCollapseSection: true
 bookComments: false
-# bookSearchExclude: false
+bookSearchExclude: true
 ---
 
 ## Repositories

@@ -17,6 +17,7 @@ Repository : <https://github.com/alex-shpak/hugo-book>
 {{< hint danger >}}
 * docs 폴더의 하위 폴더 기준으로 메뉴구성을 해 준다. 
 * 그 외 폴더 (예: Posts) 는 hugo.yml, 혹은 front matter 에 'menu' 로 별도 구성해야 한다. 
+  * 해당 폴더에서 하위 폴더 구조를 지원하지 않는 이유는 뭘까? ( 다단계 구조 불가 )
 {{< /hint >}}
 
 ## hugo.yml for hugo-book
@@ -282,10 +283,10 @@ hugo
 4. (hugo-book theme) add **"layouts/partials/docs/comments.html"** and paste code provided by your comments provider    
 ```html
 <script src="https://giscus.app/client.js"
-        data-repo="smjune/smjune.github.io"
-        data-repo-id="R_kgDOI5LWbA"
+        data-repo="YOUR_GITHUG_REPO"
+        data-repo-id="YOUR_REPO_ID"
         data-category="Show and tell"
-        data-category-id="DIC_kwDOI5LWbM4CUfYm"
+        data-category-id="YOUR_CID"
         data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"

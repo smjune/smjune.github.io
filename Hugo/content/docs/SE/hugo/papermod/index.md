@@ -135,8 +135,8 @@ utterances 와 생성 방법이 동일하다.
 add **"layouts/partials/comments.html"** and paste code provided by your comments provider    
 ```html
 <script src="https://giscus.app/client.js"
-        data-repo="smjune/Hello_world"
-        data-repo-id="MDEwOlJlcG9zaXRvcnk3NjE1MzQ0MA=="
+        data-repo="YOUR_REPO"
+        data-repo-id="YOUR_REPO_ID"
         data-category="General"
         data-category-id="DIC_kwDOBIoCYM4CUfX_"
         data-mapping="pathname"

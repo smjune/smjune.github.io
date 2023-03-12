@@ -1,5 +1,5 @@
 baseURL: https://smjune.github.io/
-title: MJ. Sung says Hello Wrold
+title: MJ. Breadcrumbs
 theme: hugo-book
 
 # Book configuration
@@ -11,7 +11,7 @@ enableEmoji: true
 markup:
   goldmark:
     renderer:
-      unsafe: true
+      unsafe: true     # for marmaid & highlight text
   tableOfContents:
     startLevel: 1
 

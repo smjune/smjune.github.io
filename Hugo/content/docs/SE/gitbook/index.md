@@ -47,11 +47,13 @@ $ brew -v
 Homebrew 4.0.4
 Homebrew/homebrew-core (git revision 25e07818a96; last commit 2023-02-28)
 $ brew install node
+
+# 해당 명령어로 오류가 나서 nvm 을 설치 하여 node 12.22.1 을 설치 
 ...
 ```
+
 ### nvm & Node 설치
 ```zsh
-# 해당 명령어로 오류가 나서 nvm 을 설치 하여 node 12.22.1 을 설치 
 $ brew install nvm  # 이후, 가이드에 따라 bash 환경 설정 
 ...
 $ nvm -v

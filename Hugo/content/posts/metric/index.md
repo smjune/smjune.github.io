@@ -7,6 +7,7 @@ Tags: ["Metrics","Index","Communication",]
 
 bookComments: ture
 # bookSearchExclude: false
+bookCollapseSection: false
 
 image: posts/images/metric.png
 ---
