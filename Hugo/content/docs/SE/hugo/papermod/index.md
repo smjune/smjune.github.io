@@ -39,12 +39,19 @@ theme: 'PaperMod'
 taxonomies:
   category: categories
   tags: tags
+  series: series
   
 menu:                   # to display menu on top-left side of site.
   main:
+    - name: Home
+      url: /index.html
+      weight: 1
     - identifier: Categories
       name: categories
       url: categories/
+      weight: 5
+    - name: Series
+      url: series/
       weight: 5
     - name: Tags
       url: tags/
@@ -103,7 +110,7 @@ Categories & Tags, Series 는 branch bundle 로 구성한다.
 [샘플 front matter](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-pagemd)
 
 {{< hint danger >}}
-Serise : [" ... "] 의 형태로 작성해야 한다. 
+Series : [" ... "] 의 형태로 작성해야 한다. 
 {{< /hint >}}
 
 </br>
@@ -112,7 +119,7 @@ Serise : [" ... "] 의 형태로 작성해야 한다.
 각 페이지에서 해당 페이지에 대한 category 와 Tags, Series 을 설정  
 
 ```yaml
-Categories: "Posted"
+Categories: ["Posted"]
 Tags: ["Big Data","한글","Minority",]
 Series: ["Git"]
 ``` 
