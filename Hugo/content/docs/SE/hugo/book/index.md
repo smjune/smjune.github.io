@@ -10,6 +10,8 @@ bookComments: false
 ---
 
 ## Hugo-book 주요 사이트 
+---  
+
 기본 사이트 : <https://themes.gohugo.io/themes/hugo-book/>  
 sample site : <https://hugo-book-demo.netlify.app/>  
 Repository : <https://github.com/alex-shpak/hugo-book>  
@@ -19,8 +21,11 @@ Repository : <https://github.com/alex-shpak/hugo-book>
 * 그 외 폴더 (예: Posts) 는 hugo.yml, 혹은 front matter 에 'menu' 로 별도 구성해야 한다. 
   * 해당 폴더에서 하위 폴더 구조를 지원하지 않는 이유는 뭘까? ( 다단계 구조 불가 )
 {{< /hint >}}
+</br>
 
 ## hugo.yml for hugo-book
+---  
+
 [hugo-book 샘플 hugo.yml](https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml)
 
 * 지금 사이트 설정 (yml, toml, json 지원)
@@ -79,8 +84,11 @@ params:
 ```
 :+1: enableEmoji : true  
 [Emoji list](https://gist.github.com/rxaviers/7360908)
+</br>
 
 ## Pages Front matter
+---  
+
 각 pages (md 파일) 에서 pages 에 대한 설정값을 조정한다.
 ```yaml
 ---
@@ -94,6 +102,7 @@ weight: 1                     # 메뉴에서 표시되는 순서 1 = 최우선
 # bookSearchExclude: false
 ---
 ```  
+</br>
 
 ### Categories & Tages
 각 페이지에서 해당 페이지에 대한 category 와 Tags 을 설정  
@@ -119,6 +128,8 @@ categories = [
 BookComments=true
 +++
 ```
+</br>
+
 ### Blog thumbnail image 
 
 add Frontmatter  
@@ -130,9 +141,11 @@ image : /posts/images/xxx.image
 ```  
 [:sos: hugo-book QnA](https://github.com/alex-shpak/hugo-book/issues/286)  
 
----
+</br>
 
 ## Customizing
+---  
+
 ### Get image Center of pages
 1. create $PROJECT/assets/_custom.scss  
 2. add the following code into file   
@@ -147,9 +160,11 @@ image : /posts/images/xxx.image
 ```
 [:sos: hugo-book QnA](https://github.com/alex-shpak/hugo-book/issues/383)
 
----
+</br>
 
 ## Shortcode
+---  
+
 각 페이지에서 사용할 다양한 문단 효과, 아래와 같은 형식으로 사용한다.  
 자세한 내용은 샘플 사이트를 참고 
 
@@ -158,6 +173,8 @@ image : /posts/images/xxx.image
 내용 ...
 {{</* /"Shortcode name" */>}}
 ```
+</br>
+
 ### Hint
 info/warning/danger 로 색 구분 (파랑/노랑/빨강) 지원  
 
@@ -166,6 +183,7 @@ info/warning/danger 로 색 구분 (파랑/노랑/빨강) 지원
 내용 ...
 {{</* /hint */>}}
 ```
+</br>
 
 ### Details
 확장 되는 문단 표시 (expand 을 사용하는 대신)
@@ -176,6 +194,7 @@ open 옵션을 사용할 경우 항상 확장된 형태로 표시 됨
 내용 ...
 {{</* /details */>}}
 ```
+</br>
 
 ### Mermaid
 hugo.yml 에서 marmain 사용을 위해 "markup" 설정을 해야 한다.  
@@ -188,13 +207,18 @@ hugo 에서 제공하는 방식을 미리 theme에서 수정하였으므로, The
 Mermaid syntex 내용 ...    
 {{</* /mermaid */>}}
 ```
+</br>
+
 ### Section
 하위 폴더 내용을 간략하게 표시해 준다.
 ```md
 {{</* section */>}}
 ```
-### columns 
-한 페이지에 문단을 나눠서 표시 해둔다.
+</br>
+
+### Columns 
+한 페이지에 문단을 나눠서 표시 해둔다.  
+
 ```html
 {{</* columns */>}} <!-- begin columns block -->
 # Left Content
@@ -211,9 +235,12 @@ Lorem markdownum insigne...
 Lorem markdownum insigne...
 {{</* /columns */>}}
 ```
+</br>
 
 ### Tabs
-하나의 문단을 tab으로 구분하여 표시 해준다.
+
+하나의 문단을 tab으로 구분하여 표시 해준다.  
+
 ```tpl
 {{</* tabs "uniqueid" */>}}
 {{</* tab "MacOS" */>}} # MacOS Content {{</* /tab */>}}
@@ -221,9 +248,11 @@ Lorem markdownum insigne...
 {{</* tab "Windows" */>}} # Windows Content {{</* /tab */>}}
 {{</* /tabs */>}}
 ```
----
+</br>
 
 ## partial
+---  
+
 ### Comments
 
 1. utterances 스크립트 생성  
@@ -274,6 +303,7 @@ hugo
 >hugo-book theme comment 는 bookComments: true 가 디폴트 이며, 따라서 모든 page 에 자동으로 적용된다. 따라서, 각 페이지에서 "bookComments: false" 을 설정하여 comment 을 OFF 하여야 한다. 
 
 >theme 가 없는 경우 utterance 스크립을 /layouts/partials/utterances.html 에 넣고, 각 pages (xxx.md) 에서 {{ partial "utterances.html" . }} 을 직접 호출하여야 한다.
+</br>
 
 ### giscus
 

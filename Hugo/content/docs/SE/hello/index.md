@@ -12,6 +12,7 @@ bookComments: false
 ---
 
 ## github 에서 블로그 만들기 
+---
 
 hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신,  
 **github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용**  
@@ -32,7 +33,11 @@ hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push �
 - Build & Deploy : github actions / gitlab CI/CD 
 {{< /hint >}}
 
+</br>
+
 ## github pages 만들기 
+---  
+
 https://docs.github.com/en/pages/  
 
 ### github pages 종류
@@ -57,7 +62,7 @@ flowchart LR;
   
 {{< /mermaid >}}
 
----
+</br>
 
 ### 1. 개인 Page (Blog) : UserAccont.github.io
 
@@ -109,7 +114,7 @@ project folder (git, hugo)
 ```  
 *Created from https://arthursonzogni.com/Diagon/#Tree*  
 
----  
+</br> 
 
 ### 2. 프로젝트 Page (Blog) UserAccont.github.io/Project
 
@@ -189,7 +194,7 @@ project folder (git)
 _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하므로 보류_  
 {{< /hint >}}
 
----  
+</br>  
 
 ### 3. GitHub Actions to build and deploy the hugo project  
 
@@ -245,13 +250,14 @@ on:
           publish_dir: ./hugu_project/public        // hugo project 하위 public 폴더 사용
     ...
 ```
----  
+</br> 
+
 > push 을 main 으로 설정할 경우, 2개 (CI 와 Github Pages) workflow 실행이 되는 것을  
 > paths 로 설정하여 hugo 폴더 업데이트 때 Github Pages workflow 만 실행되도록 변경  
 
 ![workflow 설정](images/hello_1.png)
 
----  
+</br> 
 
 ### 4. local branch and remote 
 
@@ -270,7 +276,7 @@ Hello_world$ _
 - remote 로 gitlab (gitlab.com/smjune/smjune.gitlab.io) main 도 등록되어 있으므로  
    - git push gitlab main
 
----
+</br>
 
 ### 5. 최종 작업 순서 
 {{< mermaid >}}
@@ -294,10 +300,15 @@ sequenceDiagram
     Local->>gitlab: push gitlab main
 
 {{< /mermaid >}}
+
+</br>
+
 #### git fetch 
 수정 하기 전에 항상 remote 을 받아서 local 을 업데이트 하자.  
 (해당 로컬이 아닌 다른 로컬에서 업데이트 했을 수 있음)  
 :warning: pull 을 하지말고, fetch 로 현재 로컬과 리모트가 gap 이 있는지 확인 한후 pull 을 수행하여야 한다.
+
+</br>
 
 #### git status
 ```bash
@@ -312,6 +323,8 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
+</br>
+
 #### git add .
 ```bash
 Hello_world$ git add .
@@ -332,6 +345,8 @@ After doing this, you may fix the identity used for this commit with:
 
  1 file changed, 26 insertions(+), 1 deletion(-)
  ```
+ </br>
+
  #### git push (github main)
  :warning: github 을 origin remote 로 등록한 경우 git push 만 사용함.
  ```bash
@@ -346,6 +361,8 @@ remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
 To https://github.com/smjune/smjune.github.io.git
    2b0d320..d7c0db2  main -> main
 ```
+</br>
+
 #### git push gitlab main
 :warning: 백업용으로 가끔 잊지 말고 push 
 ```bash

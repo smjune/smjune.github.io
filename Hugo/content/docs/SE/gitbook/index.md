@@ -10,6 +10,7 @@ bookComments: false
 ---
 
 ## Gitbook
+---  
 
 Hugo 처럼 로컬에서 빌드하여 별도 web hosting (github pages) 으로 publish 하는 방식으로 사용해도 되고,  
 gitbook.com 에 접속하여 GUI을 이용하여 운영 할 수도 있다.  
@@ -37,8 +38,11 @@ https://github.com/GitbookIO/gitbook-cli
 https://docs.gitbook.com/integrations/github  
 https://www.gitbook.com/  
 {{< /hint >}}
+</br>
 
-## install gitbook  
+## install gitbook 
+---
+
 Homebrew on MacOS (high sierra, 10.13.6)
 ```zsh
 # 사전 Homebrew 설치 필요 / $brew update 을 해서 업데이트 하자
@@ -152,7 +156,11 @@ book.json 에 아래 내용 추가,
 gitbook-cli 는 2017년 4월 이후 더이상 지원 되지 않고 있어, 향후 어떻게 gitbook.com 과 차별을 두고 다시 지원을 하게 될찌 궁금하다. 예전고 같은 형태가 될찌, gitbook.com 전용 client tool 이 될찌. 2017년 기준 gitbook-cli (v2.3.2)을 사용하게 된다면 nvm 을 이용해서 최신 node 와 구분하여 사용할 수 밖에 없다. pyenv 처럼 
 {{< /hint >}}
 
+</br>
+
 ## Book 구성 
+---  
+
 - README.md, SUMMARY.md, book.json (플러그인 설정) 등 기본적인 형태를 갖추게할 기본 파일들 구성   
 - content 용 md 파일 구성 (Hugo의 index.md 처럼 README.md 을 이용하는 것으로 보임.)  
 - [상세 내용 참고](https://tinydew4.gitbooks.io/gitbook/content/ko/)  

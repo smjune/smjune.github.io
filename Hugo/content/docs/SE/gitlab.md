@@ -5,12 +5,11 @@ weight: 2
 BookComments: false
 ---
 
-# GitLab 으로 Deploy 하기  
-
+## GitLab 으로 Deploy 하기  
+---  
 github 에 deploy 했던 hugo project 을 git remote 만 추가하서 gitlab repo 에 push 하고,  
 gitlab CI/CD 을 이용하여 build, deploy 하기  
-
-
+</br>
 
 > * 결론     
 > gitlab에서 repo 만들고, 단순히 remote 만 추가해서 바로 push 하면 될 줄 알았는데,  
@@ -23,8 +22,10 @@ gitlab CI/CD 을 이용하여 build, deploy 하기
 > 3. 서로 다른 브랜치로 checkout 할때 없어지는 파일,폴더 (themes) 확인
 > 4. deploy 는 .gitlab-ci.yml 을 수정해야 해야 하는데, 좀 시간이 필요하다.  
 
----  
+</br>
+
 ## gitlab.com/smjune/smjune.io 만들기  
+---  
 
 remote 만 추가해서 main 을 gitlab 에 push 했더니, gitlab 생성시 만들어 졌던 
 main 에 initial commit 으로 이름만 같고 서로 다른 브랜치가 되어 버림.
@@ -45,8 +46,10 @@ $ git branch
   labmain
 * main  
 ```  
----
+</br>
+
 ## gitlab 에서 main 브랜치를 다시 만들기  
+---  
 
 1. gitlab WEB 에서 main (474dbe7)을 삭제, labmain 을 기준으로 main 을 다시 만든다.   
 ```bash
@@ -58,7 +61,7 @@ Hello_world$ git branch -avv
 
 ```
 474dbe7 가 아닌 bcb809a 커밋이 있는 gitlab/main 을 만들어야 함.  
-
+</br>
 
 2. 로컬 fetch 후, labmain 을 gitlab/main 과 연결한다.  
 *생각해보니, gitlab Web 상태가 main (bcb809a)된 후, 아래 단계를 진행 하지 않아도 되었을듯*
@@ -81,9 +84,10 @@ Hello_world$ git branch -avv
   remotes/gitlab/main     bcb809a change name of .gitlab-ci
 ```
 *WEB 에서 labmain 도 삭제*
+</bkr>
 
----
 ## 현재까지 작업 결과  
+---  
 
 main 브랜치와 labmain 이 동일하고 (bcb809a), 각각 자신의 리모트에 연결되어 있음   
 labmain                 bcb809a [gitlab/main] change name of .gitlab-ci  
@@ -151,8 +155,10 @@ Hello_world$ git branch -avv
   remotes/github/main     7afd5d6 add update git page with setup section
   remotes/gitlab/main     7afd5d6 add update git page with setup section
 ``` 
----  
+</br>
+
 ## 남아 있는 Gitlab 작업 : CI/CD 구성
+---  
 
 1. gitlab CI/CD 을 사용하려면 credit card로 인증해야 함. (2021. 5.16 이후 사용자 생성)  
   *https://insight.infograb.net/blog/2021/11/23/how-to-prevent-crypto-mining-abuse/*  

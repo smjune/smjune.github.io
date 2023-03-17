@@ -5,7 +5,8 @@ weight: 5
 BookComments: false
 ---
 
-# Pyenv 사용하기 
+## Pyenv 사용하기 
+---  
 
 ```bash
 $ pyenv versions
@@ -42,14 +43,18 @@ $ pyenv shell --unset                              # 현재 shell의 python 설�
 	2.virtualenv                    # have to install  with pip
 	3.pyenv-virtualenv              # $ pyenv virtualenv XXXX XXXX 을 사용한다면 설치  (pyenv 모듈)
 	4.python3  -m  venv                 (higher than 3.4, python3 모듈)
-
+</br>
 
 ## pyenv 과 virtualenv 별도 사용 
+---  
+
 ```bash
 $ virtualenv py271 --python=python2.7
 ```
+</br>
 
-### Shell setup :  
+### Shell setup  
+
 ```bash
 $ pyenv shell 2.7.1    # 현재 shell 에 2.7.1 적용
 $ pyenv which python   # shell 확인
@@ -65,8 +70,10 @@ $ source py271/bin/activate  # .venv/bin/activate
 (py271)$ deactivate
 $
 ```  
+</br>
 
 ### local setup :  
+
 local path에 적용하기 (해당 폴더를 빠저 나가면 해제)  
 :clap: *shell 인 경우 해당 터미널을 빠저 나가면 해제됨*  
 
@@ -88,8 +95,11 @@ Python 0.0.0
 * System (set by /home-mc/june.sung/.pyenv/version)
 X.X.X 
 ```
- 
+</br>
+
 ## global / local setup  
+---  
+
 :clap: pyenv 의 virtualenv 모듈 사용
  
 ```bash
@@ -110,15 +120,20 @@ $ pyenv activate py369
 (py369) $ pyenv deactivate     
 $  
 ```
+</br>
 
 ### pyenv local 을 이용한 로컬에 가상환경 구성  
+
 ```bash
 /test$ pyenv local py369
 (py3369)/test$ cd ..
 /$
 ```
- 
+</br>
+
 ## Pyenv + python3 의 venv 모듈 사용  
+---  
+
 :clap: after Pyhon 3.3  
 
 > pyenv 로 특정하지 않으면, python3 --vesion 에 표시된 버전으로 생성됨   
@@ -142,7 +157,11 @@ python3 -m venv .venv 로 가상환경 만들어 사용 하고,
 pyenv virtualenv 나 virtualenv 는 사용하지 말자.  - 너무 많이 알면 헤깔린다.  
 {{< /hint >}}
 
+</br>
+
 ## pip install error  
+---  
+
 :office:  proxy setup  
 ```bash  
 $ vi .config/pip/pip.conf
