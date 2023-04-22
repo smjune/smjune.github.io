@@ -39,9 +39,9 @@ VSCode 에 Jupyter extensions 설치하고,
 
 - VSCode shortcuts
 
-
+### Jupyter Notebook (kernel)
 >Anaconda 을 설치해서 Jupyter Notebook 사용  (Local)  
-Kaggle, DACON 에서 제공하는 커널 (Jupyter Notebook) 을 사용  (Cloud)  
+Kaggle, DACON 에서 제공하는 cloud 커널 (Jupyter Notebook) 을 사용  (Cloud)  
 
 
 </br>
@@ -63,10 +63,10 @@ Kaggle API TOKEN을 ~/.kaggle/kaggle.json 에 다운로드,
 kaggle API 을 이용하여 data 다운로드 가능   
 ```bash
 # titanic competitions 에서 아래 명령어를 copy 해서 실행
-$ kaggle competitions download -c titanic
+$ kaggle competitions download -c titanic -p /path/to/dest
 Downloading titanic.zip to /Users/myoungjunesung/pyproject/data
-0%|                                                                         | 0.00/34.1k [00:00<?, ?B/s]
-100%|███████████████████████████████████████████████████████████████████████| 34.1k/34.1k [00:00<00:00, 841kB/s]
+0%|                                                    | 0.00/34.1k [00:00<?, ?B/s]
+100%|██████████████████████████████████████████████████| 34.1k/34.1k [00:00<00:00, 841kB/s]
 ```
 적당한 곳에 압축을 풀어서 jupyter nb cell 에서 load  
 
@@ -102,6 +102,30 @@ df.info()
 df.columns      # 각 columns 을 보기 
 ```
 
+indexing
+```python
+df[row index : row index -1]  row 출력
+df['row label' : 'row label']   lable row 출력
+
+df['column label']  column label 으로 생각함 (row label 은 오류)
+df[['column label','column label_2']]
+df.column_label
+
+# selction by lable 
+df.loc['row label']
+df.loc[ : , 'column label']  # row label 생략 불가
+...
+df.loc['row label' : 'row label' , 'column label' : 'column label']
+
+# selection by position 
+df.iloc[row index]
+df.iloc[ : , column index]   # row index 생략불가
+...
+df.iloc[row index : row index-1 , column index : column index -1 ]
+
+```
+
+```df[[ 'column lable','column lable', ... ]]``` 을 이용한 column selecting 예  
 ![edit column by column](edit_column.png)
 
 1. 일변 (단수변수) : 데이터를 distrubution 
