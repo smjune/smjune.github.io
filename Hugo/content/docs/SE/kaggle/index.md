@@ -98,7 +98,8 @@ df = pd.read_csv('./content/titanic/test.csv')
     - 분석 시 필요한 데이터가 수치형 데이터(numerical data)인데 범주형(categorical data)으로 되어 있다면 (데이터 타입이 ‘object’로 뜸) 수치형으로 변환(ex. astype 활용)해줘야 한다.
 - 이해하기 쉬운 시각화
 
-https://www.youtube.com/watch?v=xi0vhXFPegw 
+https://www.youtube.com/watch?v=xi0vhXFPegw  
+https://datascienceschool.net/intro.html 
 
 ```python
 import pandas as pd
@@ -124,15 +125,19 @@ df.column_label
 
 # selction by lable 
 df.loc['row label']
+df.loc[['row lable','column label_2']]        # df
 df.loc[ : , 'column label']  # row label 생략 불가
 ...
-df.loc['row label' : 'row label' , 'column label' : 'column label']
+df.loc['row label' : 'row label' , 'column label' : 'column label']  # 연속
+df.loc[['row lable','row lable'],['colum lable','column lable']]     # 불연속
 
 # selection by position 
 df.iloc[row index]
+df.iloc[[row index, row index_2]]         # df
 df.iloc[ : , column index]   # row index 생략불가
 ...
 df.iloc[row index : row index-1 , column index : column index -1 ]
+df.iloc[[row index, rowindex],[row index, row index]]
 
 ```
 
