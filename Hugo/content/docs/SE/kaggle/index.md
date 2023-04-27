@@ -34,12 +34,14 @@ VSCode 에 Jupyter extensions 설치하고,
 ```(.venv)$ pip install ipykerne``` 으로  Jupyter kernel 설치  
 ```(.venv)$ pip install pandas```으로 관련 python 모듈 설치  
 
-### Jupyter lab
+### Jupyter lab (notebook)
 https://github.com/jupyterlab/jupyterlab
 ```bash
 $ pip install ipython
+# or $ pip install jupyter (or notebook)
 $ pip install jupyterlab
-$ jupyter lab  # or $ jupyter notebook 
+$ jupyter lab  
+# or $ jupyter notebook 
 ```
 git extension : ```pip install --upgrade jupyterlab jupyterlab-git```
 
