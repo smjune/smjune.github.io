@@ -22,6 +22,16 @@ https://gohugo.io/documentation/
 v0.110.0 이상에서 지원, 하위 호환을 위해 기존 config.toml 도 사용 가능  
 theme 의 가이드에 따라 설정값들을 사용해야 한다.
 
+{{% hint danger %}}
+**-2025.4.12**  
+v0.145.0 (latest) 으로 local 및 github actions (gh-pages.yml) 변경
+```bash
+% brew upgrade hugo
+% hugo version
+hugo v0.145.0+extended+withdeploy darwin/arm64 BuildDate=2025-02-26T15:41:25Z VendorInfo=brew
+```
+{{% /hint %}}
+
 ```yaml
 baseURL: https://smjune.github.io/        # 실제 접속 사이트 주소
 title: MyoungJune Sung says Hello Wrold   # 사이트 제목
@@ -56,10 +66,10 @@ $ git submodule update --init --recursive
 
 ### hugo server
 
-{{< hint info >}}
+{{% hint info %}}
 -D : draft 까지 랜더링함  
 -t [theme] : (config에 theme 미 설정시) 해당 theme로 랜더링함  
-{{< /hint >}}
+{{% /hint %}}
 
 ```bash
 $ hugo server
@@ -195,3 +205,8 @@ contents
 
 
 [^footnote]: https://www.markdownguide.org/extended-syntax/#footnotes
+
+{{% hint info %}}
+* hugo 폴더의 posts, post 폴더 기준으로 메뉴구성을 해 준다. 
+* 그 외 폴더 (예: docs) 는 hugo.yml 의 params : mainSections: 에서 정의 한다.
+{{% /hint %}}

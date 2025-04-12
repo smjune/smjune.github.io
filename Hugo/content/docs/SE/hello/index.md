@@ -17,7 +17,7 @@ bookComments: false
 hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신,  
 **github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용**  
 
-{{< hint info >}}
+{{% hint info %}}
 **아래 관련 지식 보유 가정**  
    1. 기본 적인 SSG (Static Site Generator)   
    2. Brew, Git, GitHub, VSCode, Hugo 설치 및 사용 방법 (Mac)  
@@ -31,7 +31,7 @@ hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push �
    - Project Settings | Pages | Build and Deploy | branches : gh-pages 설정    
 - 로컬에서는 'hugo server' 을 이용하여 확인 후 push 함  
 - Build & Deploy : github actions / gitlab CI/CD 
-{{< /hint >}}
+{{% /hint %}}
 
 </br>
 
@@ -184,7 +184,7 @@ project folder (git)
 ```  
 *Created from https://arthursonzogni.com/Diagon/#Tree*  
 
-{{< hint warning >}}
+{{% hint warning %}}
 :bulb: **Idea**   
  _branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)_  
     _- main branch : soure code 파일 만 존재_  
@@ -192,7 +192,7 @@ project folder (git)
     _- gh-pasges branch : hugo build 결과 (html) 파일만 존재_  
     _동일한 수정에 대한 commit 을 main 브랜치 (source code 수정) 와_  
 _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하므로 보류_  
-{{< /hint >}}
+{{% /hint %}}
 
 </br>  
 
@@ -200,12 +200,12 @@ _hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하�
 
 * .github/workflows/gh-pages.yml 생성
 
-{{< hint info >}}
+{{% hint info %}}
 :memo: **사용한는 GitHub Actions**  
 actions/checkout@v3  
 peaceiris/actions-hugo  
 peaceiris/actions-gh-pages  
-{{< /hint >}}
+{{% /hint %}}
 
 ```yaml
       - uses: actions/checkout@v3
@@ -221,13 +221,13 @@ peaceiris/actions-gh-pages
 
 https://github.com/peaceiris/actions-gh-pages
 
-{{< hint danger >}}
+{{% hint danger %}}
 **작성시 주의 할 점**  
 project page 인 경우, hugo 프로젝트가 git 프로젝트 하위로 설정 되어 있으므로   
     1. hugo 업데이트 일때만 pages workflow 실행  
     2. hugo 폴더로 이동하여 hugo 명령어 사용  
 을 명확하게 구분하여야 한다.  
-{{< /hint >}}
+{{% /hint %}}
 
 ```yml    
 on:
@@ -384,3 +384,16 @@ Hello_world$ git branch -avv
   remotes/gitlab/main     d7c0db2 update way to push
 Hello_world$ 
 ``` 
+
+{{% hint info %}}
+아래 github repo 에 Hello World 폴더가 있다. 
+
+* [My GIT HUB Repo](https://github.com/smjune/smjune.github.io)
+{{% /hint %}}
+
+{{% hint danger %}}
+테마마다 설정값이 다르다. 
+PaperMode 의 경우, front matter 로 설정한다. 
+
+자세한것은 [PaperMode 설정값](https://github.com/adityatelange/hugo-PaperMod/wiki/Front-Matter-Parameters) 을 참조 한다.
+{{% /hint %}}

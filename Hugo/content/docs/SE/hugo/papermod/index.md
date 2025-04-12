@@ -16,10 +16,10 @@ bookComments: false
 sample site : <https://adityatelange.github.io/hugo-PaperMod/>  
 Repository : <https://github.com/adityatelange/hugo-PaperMod>  
 
-{{< hint danger >}}
+{{% hint danger %}}
 * hugo 폴더의 posts, post 폴더 기준으로 메뉴구성을 해 준다. 
 * 그 외 폴더 (예: docs) 는 hugo.yml 의 params : mainSections: 에서 정의 한다.
-{{< /hint >}}
+{{% /hint %}}
 
 </br>
 
@@ -109,9 +109,9 @@ Categories & Tags, Series 는 branch bundle 로 구성한다.
 각 pages (md 파일) 에서 pages 에 대한 설정값을 조정한다.  
 [샘플 front matter](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-pagemd)
 
-{{< hint danger >}}
+{{% hint danger %}}
 Series : [" ... "] 의 형태로 작성해야 한다. 
-{{< /hint >}}
+{{% /hint %}}
 
 </br>
 

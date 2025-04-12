@@ -19,7 +19,7 @@ gitbook.com 에 접속하여 GUI을 이용하여 운영 할 수도 있다.
 아래 내용은 gitbook-cli을 이용하여 Static site을 생성한 다음 별도 Web hosting 을 이용하는 방식을 기록함  
 [참고](https://www.onejar99.com/how-to-build-and-publish-your-own-gitbook-free-unlimitedly-and-automatically-using-github-pages-and-github-actions/)  
 
-{{< hint info>}}
+{{% hint info %}}
 :point_right: **정보**  
 2017년 이후로 gitbook-cli 가 업데이트을 지원하지 않음  
 Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로  
@@ -37,7 +37,9 @@ graceful-fs : 4.1.4
 https://github.com/GitbookIO/gitbook-cli  
 https://docs.gitbook.com/integrations/github  
 https://www.gitbook.com/  
-{{< /hint >}}
+
+{{% /hint %}}
+
 </br>
 
 ## install gitbook 
@@ -152,9 +154,9 @@ book.json 에 아래 내용 추가,
 }
 ```
 
-{{< hint danger >}}
+{{% hint danger %}}
 gitbook-cli 는 2017년 4월 이후 더이상 지원 되지 않고 있어, 향후 어떻게 gitbook.com 과 차별을 두고 다시 지원을 하게 될찌 궁금하다. 예전고 같은 형태가 될찌, gitbook.com 전용 client tool 이 될찌. 2017년 기준 gitbook-cli (v2.3.2)을 사용하게 된다면 nvm 을 이용해서 최신 node 와 구분하여 사용할 수 밖에 없다. pyenv 처럼 
-{{< /hint >}}
+{{% /hint %}}
 
 </br>
 
@@ -181,9 +183,9 @@ gitbook-cli 는 2017년 4월 이후 더이상 지원 되지 않고 있어, 향�
 
 1. plugin 설치  
 
-{{< hint info >}}
+{{% hint info %}}
 **[plugin 찾아서 설정하기](https://www.npmjs.com/search?q=gitbook-plugin&page=1&perPage=20)**
-{{</hint >}}
+{{% /hint %}}
 book.json 에 plugin 설정하고, "$gitbook install" 으로 설치.
  
 ```json

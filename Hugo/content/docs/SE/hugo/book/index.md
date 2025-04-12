@@ -16,11 +16,17 @@ bookComments: false
 sample site : <https://hugo-book-demo.netlify.app/>  
 Repository : <https://github.com/alex-shpak/hugo-book>  
 
-{{< hint danger >}}
+{{% hint danger %}}
 * docs 폴더의 하위 폴더 기준으로 메뉴구성을 해 준다. 
 * 그 외 폴더 (예: Posts) 는 hugo.yml, 혹은 front matter 에 'menu' 로 별도 구성해야 한다. 
   * 해당 폴더에서 하위 폴더 구조를 지원하지 않는 이유는 뭘까? ( 다단계 구조 불가 )
-{{< /hint >}}
+{{% /hint %}}
+</br>
+
+- **submodule update - 2025.4.12**  
+> $ git submodule update --init  
+> $ git submodule update --remote --merge   
+
 </br>
 
 ## hugo.yml for hugo-book
@@ -168,6 +174,16 @@ image : /posts/images/xxx.image
 각 페이지에서 사용할 다양한 문단 효과, 아래와 같은 형식으로 사용한다.  
 자세한 내용은 샘플 사이트를 참고 
 
+{{% hint warning %}}
+2025.04.12  
+```{{{</* hint */>}}}```으로 사용하는 걸    
+```{{{%/* hint */%}}}```으로 변경해야 함.
+
+* section shortcode는 주로 페이지 목록 등을 표시하는 구조적인 용도로 사용되며, 내부 컨텐츠를 Markdown으로 렌더링할 필요가 없는 경우가 많음. 따라서 변경하지 않는 것이 안전. 
+
+* mermaid shortcode는 내부의 Mermaid 문법을 사용하여 다이어그램을 렌더링하여  Markdown 렌더링과는 별개이므로 변경할 필요가 없음.  
+{{% /hint %}}
+
 ```md
 {{</* "Shortcode name" */>}}
 내용 ...
@@ -258,10 +274,10 @@ Lorem markdownum insigne...
 1. utterances 스크립트 생성  
 https://utteranc.es/ 에서 가이하는 작성 방법에 따라 진행   
 
-{{< hint info >}}
+{{% hint info %}}
 :bulb: repo 는 자신의 블로그 repo (yourAcount/yourAccount.github.io) 을 사용해도 되고, 별도 프로젝트 repo (yourAccount/yourRepo) 을 사용해도 된다.  
 해당 repo 에 utterances app 을 설치 하지 않아도 보이긴함, 그러나 작동은 안됨 (ChatGPT 가 틀린듯)
-{{< /hint >}}
+{{% /hint %}}
 
 ```html
 <script src="https://utteranc.es/client.js"
@@ -273,18 +289,18 @@ https://utteranc.es/ 에서 가이하는 작성 방법에 따라 진행
         async>
 </script>
 ```
-{{< hint danger >}}
+{{% hint danger %}}
 :warning: utterances app 을 설치하지 않으면, 아래와 같은 에러가 발생함  
 Error: utterances is not installed on smjune/smjune.github.io. If you own this repo, install the app. Read more about this change in the PR. 
-{{< /hint >}}
+{{% /hint %}}
 
 2. utterances 스크립을 넣을 layouts 파일 
 일반적으로 theme 을 사용하기 때문에 theme 에서 사용하는 commnet layout 을 overriding 하여야 한다. 
 hugo-book (theme) 의 경우 theme/hugo-book/layouts/docs/comments.html 을 사용하여 hugo internal comment (Disque) 을 사용하게 되는데, **layouts/partials/docs/comments.html**을 만들어 hugo-hook 에 있는것 보다 먼저 사용하게 해야 한다. 
 
-{{< hint warning >}}
+{{% hint warning %}}
 :memo: theme 을 customizing 할때 theme 의 파일을 수정하는 것보다, 이렇게 hugo root 에서 부터 동일한 파일을 만들어 수정해야 한다. 로컬이나, github action 에 theme 을 업데이트 할때 수정한 파일이 원복되지 않게 하기 위해서 이다.
-{{< /hint >}}
+{{% /hint %}}
 
 ```
 hugo

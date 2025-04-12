@@ -12,14 +12,14 @@ BookComments: false
 http://learngitbranching.js.org/  
 https://backlogtool.com/git-guide/kr/  
 
-{{< hint info >}}
+{{% hint info %}}
 $ level                       - 연습문제 초기 화면 (문제선택)  
 $ sandbox                     - 빈 연습  
 $ show solution               - 해당보기  
 $ reset                       - 해당 level 처음부터 다시  
 $ undo                        - 1개 명령 취소  
 $ git fakeTeamwork 1          - origin 에 1개 커밋 넣기  
-{{< /hint >}}
+{{% /hint %}}
 
 
 ### :one: Set up 

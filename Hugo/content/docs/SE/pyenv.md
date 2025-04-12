@@ -29,14 +29,14 @@ $ pyenv which python
 $ virtualevn -p $(pyenv which python) .venv        # 바로 위 shell 에 설정한 python 을 사용
 $ pyenv shell --unset                              # 현재 shell의 python 설정 해제
 ```
-{{< hint danger >}}
+{{% hint danger %}}
 :memo:문제는 'global / local /shell' 중 어떤 python 설정을 현재 폴더에 가상환경 ( .venv)으로 만들것인가?  
 1. Pyenv 로 python version들을 설치 
 2. 현재 python 환경 (local / shell) 설정 
 3. python3 -m venv 로 .venv 만든 후, (현재 python 환경이 반영됨)
 4. '--unset' 으로 현재 python 설정 해제
 5. source .venv/bin/activate 으로 가상환경 실행    
-{{< /hint >}}
+{{% /hint %}}
   
 	1.pyenv                         # have to install by using  script  & edit $(Home)/.bashrc
                                           (curl https://pyenv.run  | bash)
@@ -150,12 +150,12 @@ $ source .venv/bin/activate
 (.venv) $ deactivate
 $  
 ```  
-{{< hint danger >}}
+{{% hint danger %}}
 :memo: **결론**  
 pyenv local  X.X.X로 해당 로컬폴더만 X.X.X로 셋업해서,  
 python3 -m venv .venv 로 가상환경 만들어 사용 하고,   
 pyenv virtualenv 나 virtualenv 는 사용하지 말자.  - 너무 많이 알면 헤깔린다.  
-{{< /hint >}}
+{{% /hint %}}
 
 </br>
 

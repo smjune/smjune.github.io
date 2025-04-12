@@ -84,7 +84,7 @@ Hello_world$ git branch -avv
   remotes/gitlab/main     bcb809a change name of .gitlab-ci
 ```
 *WEB 에서 labmain 도 삭제*
-</bkr>
+</br>
 
 ## 현재까지 작업 결과  
 ---  
