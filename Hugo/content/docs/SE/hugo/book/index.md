@@ -23,9 +23,10 @@ Repository : <https://github.com/alex-shpak/hugo-book>
 {{% /hint %}}
 </br>
 
-- **submodule update - 2025.4.12**  
+> **- 2025.4.12 submodule update**  
 > $ git submodule update --init  
-> $ git submodule update --remote --merge   
+> $ git submodule update --remote --merge  
+
 
 </br>
 

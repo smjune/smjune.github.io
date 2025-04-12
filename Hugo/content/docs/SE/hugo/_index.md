@@ -54,14 +54,15 @@ theme: hugo-book                          # 랜더링 할 theme
 ### theme install 
 각 theme 에서 제공하는 방식에 따라 설정 
 
-> git submodule 로 theme 설치를 권장
+> git submodule 로 theme 설치를 권장, 이후 업데이트 도 git submodule 사용  
 
 ```bash
 # 최초 설치
 $ git submodule add --depth=1 https://github.com/[theme Repos] themes/[theme name]
 
 # theme 요소를 찾지 못는 오류 발생시 theme 업데이트 / 프로젝트를 clone 하여 셋업할 때, workflow 설정시 필요
-$ git submodule update --init --recursive   
+$ git submodule update --init # --recursive : submodule 이 중복으로 사용될때
+$ git submodule update --remote --merge
 ```
 
 ### hugo server
