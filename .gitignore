@@ -1,2 +1,4 @@
 Hugo/themes/
 Hugo/public/
+.obsidian/
+.DS_Store
