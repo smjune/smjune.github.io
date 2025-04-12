@@ -1,9 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>iMac on MJ. Breadcrumbs</title><link>https://smjune.github.io/tags/iMac/</link><description>Recent content in iMac on MJ. Breadcrumbs</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 17 Feb 2023 22:02:05 +0900</lastBuildDate><atom:link href="https://smjune.github.io/tags/iMac/index.xml" rel="self" type="application/rss+xml"/><item><title>iMAC, Late 2009 upgrade</title><link>https://smjune.github.io/posts/mac/</link><pubDate>Fri, 17 Feb 2023 22:02:05 +0900</pubDate><guid>https://smjune.github.io/posts/mac/</guid><description>Mac OS # ㅁ Snow leopard (10.6.8) 에서 High Sierra (10.13.6) 까지 업그레이드
-ㅁ iMac Late 2009 는 최대 High Sierra 까지 가능
-(High Sierra 이후 MacOs 는 iMac 2012 부터 가능)
-ㅁ backup on 10.6
-- iClould 는 10.7 이상에서 지원 x
-- 외장SSD는 10.10 이상에서 지원 x
-- 외장HDD 혹은 USB memory, DVD 굽기..
-✓ - iMac Late 2009 는 SD memory card slot 지원 *
-ㅁ Steps (Snow leopard 10.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>IMac on MJ. Breadcrumbs</title><link>https://smjune.github.io/tags/iMac/</link><description>Recent content in IMac on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><lastBuildDate>Sat, 04 Mar 2023 18:04:48 +0900</lastBuildDate><atom:link href="https://smjune.github.io/tags/iMac/index.xml" rel="self" type="application/rss+xml"/><item><title>iMAC, Late 2009 upgrade</title><link>https://smjune.github.io/posts/mac/</link><pubDate>Fri, 17 Feb 2023 22:02:05 +0900</pubDate><guid>https://smjune.github.io/posts/mac/</guid><description>&lt;h2 id="mac-os">
+ Mac OS
+ &lt;a class="anchor" href="#mac-os">#&lt;/a>
+&lt;/h2>
+&lt;p>ㅁ Snow leopard (10.6.8) 에서 High Sierra (10.13.6) 까지 업그레이드&lt;br>
+ㅁ iMac Late 2009 는 최대 High Sierra 까지 가능&lt;br>
+(High Sierra 이후 MacOs 는 iMac 2012 부터 가능)&lt;br>
+ㅁ backup on 10.6&lt;br>
+- iClould 는 10.7 이상에서 지원 x&lt;br>
+- 외장SSD는 10.10 이상에서 지원 x&lt;br>
+- 외장HDD 혹은 USB memory, DVD 굽기..&lt;br>
+✓	- iMac Late 2009 는 SD memory card slot 지원 *&lt;br>
+ㅁ Steps (Snow leopard 10.6 -&amp;gt;)&lt;br>
+0. Backup Bootcamp with USB and iPhoto with SD card&lt;br>
+1. El Capitan (10.11.6) 으로 업그레이드&lt;br>
+&lt;a href="https://support.apple.com/ko-kr/HT206886">https://support.apple.com/ko-kr/HT206886&lt;/a>&lt;br>
+2. High Sierra (10.13.6) 으로 업그레이드&lt;br>
+&lt;a href="https://support.apple.com/ko-kr/HT208969">https://support.apple.com/ko-kr/HT208969&lt;/a>&lt;br>
+✓		-&amp;gt; 성공&lt;/p></description></item></channel></rss>

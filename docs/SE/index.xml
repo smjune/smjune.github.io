@@ -1,30 +1,255 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Job.logging on MJ. Breadcrumbs</title><link>https://smjune.github.io/docs/SE/</link><description>Recent content in Job.logging on MJ. Breadcrumbs</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://smjune.github.io/docs/SE/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello GitHub</title><link>https://smjune.github.io/docs/SE/hello/</link><pubDate>Sun, 05 Feb 2023 10:22:18 +0900</pubDate><guid>https://smjune.github.io/docs/SE/hello/</guid><description>github 에서 블로그 만들기 # hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신,
-github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용
-아래 관련 지식 보유 가정
-기본 적인 SSG (Static Site Generator) Brew, Git, GitHub, VSCode, Hugo 설치 및 사용 방법 (Mac) Markdown, YAML, Mermaid 등 Editor : Scrivener, VSCode (Markdown) SSG : HUGO (theme : hugo-book) REPO : github (github.</description></item><item><title>Push to Gitlab</title><link>https://smjune.github.io/docs/SE/gitlab/</link><pubDate>Mon, 06 Feb 2023 20:28:27 +0900</pubDate><guid>https://smjune.github.io/docs/SE/gitlab/</guid><description>GitLab 으로 Deploy 하기 # github 에 deploy 했던 hugo project 을 git remote 만 추가하서 gitlab repo 에 push 하고,
-gitlab CI/CD 을 이용하여 build, deploy 하기
-결론 gitlab에서 repo 만들고, 단순히 remote 만 추가해서 바로 push 하면 될 줄 알았는데, gitlab 에서 main 생성시 initial commit 이 자동으로 생성되어 바로 push 할 수 없었다. (빈 브랜치 생성불가)
-로컬 main 기준으로 다른 브랜치 labmain 만든 후 push 한 후, main 을 지우고, labmain 를 기준으로 main 을 다시 생성 하여야 한다.</description></item><item><title>Gitbook</title><link>https://smjune.github.io/docs/SE/gitbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/gitbook/</guid><description>Gitbook # Hugo 처럼 로컬에서 빌드하여 별도 web hosting (github pages) 으로 publish 하는 방식으로 사용해도 되고,
-gitbook.com 에 접속하여 GUI을 이용하여 운영 할 수도 있다.
-(Web hosting 제공 : https://YOUR_ACCOUNT.gitbook.io/, 무료/유로)
-아래 내용은 gitbook-cli을 이용하여 Static site을 생성한 다음 별도 Web hosting 을 이용하는 방식을 기록함
-참고
-👉 정보
-2017년 이후로 gitbook-cli 가 업데이트을 지원하지 않음
-Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로
-(gitbook 으로 작성된것이라고 들은것 같은데&amp;hellip; 확실치 않음.</description></item><item><title>Git command Tips</title><link>https://smjune.github.io/docs/SE/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/git/</guid><description>GIT 연습 Site # http://learngitbranching.js.org/
-https://backlogtool.com/git-guide/kr/
-$ level - 연습문제 초기 화면 (문제선택)
-$ sandbox - 빈 연습
-$ show solution - 해당보기
-$ reset - 해당 level 처음부터 다시
-$ undo - 1개 명령 취소
-$ git fakeTeamwork 1 - origin 에 1개 커밋 넣기 1️⃣ Set up # $ git clone -b [브랜치 | tag] [REPO URL] $ git remote add orgin [REPO URL] // origin 으로 REPO URL 등록 $ git remote rm orgin // origin 삭제 $ git submodule add [REPO RUL] [Local Folder Path] $ git submodule update // --init --recursive 2️⃣ branch # $ git branch -f bugfix HEAD~1 : bugfix 브랜치를 HEAD [혹은 브랜치 명] 1개 전 commit으로 이동 $ git branch -u origin/maser [Branch A] : 이미 있는 local Branch A (생략하면 현재 checkout branch) 가 origin/master 을 track함 --&amp;gt; git checkout --track 과 비교 $ git branch -d Branch A : local 에서만 Branch A 삭제 $ git branch -d -r origin/branch A : remote 트랙킹 브랜치를 로컬에서 삭제 (에, origin/featrue ) 3️⃣ checkout # $ git checkout branch A : Remote에 있는 branch A 에 대해 local 에 branch A 와 origin/branch A만들고, checkout.</description></item><item><title>Python with Pyenv</title><link>https://smjune.github.io/docs/SE/pyenv/</link><pubDate>Thu, 09 Feb 2023 18:07:51 +0900</pubDate><guid>https://smjune.github.io/docs/SE/pyenv/</guid><description>Pyenv 사용하기 # $ pyenv versions * system (set by /home/june.sung/.pyenv/version) 2.7.17 $ pyenv install --list $ pyenv install 3.6.9 * system (set by /home/june.sung/.pyenv/version) 2.7.17 3.6.9 $ pyenv shell 3.6.9 $ pyenv which python 3.6.9 (set by PYENV_VERSION environment variable) # $ pyevn [ global &amp;gt; local &amp;gt; shell ] X.X.X # cat ~/.pyenv/version | cat .pyton-version | echo $PYENV_VERSION # loacal 은 해당 폴더 아래 (set by ~폴더/.</description></item><item><title>Docker</title><link>https://smjune.github.io/docs/SE/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/docker/</guid><description>docker 의 등장
-Github runner 으로 생각해 보는 docker
-Self-hosted (bare metal vs virtual)
-Github-Hosted</description></item><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/kaggle/</guid><description>Prerequisites # # 데이터 획득 (Importing a working dataset) 데이터 파악 일변량 (단수변수에 대한 변화) / 다변량 (복수변수의 변화) Summary statistics (기초 통계량, non-graphic) / graphic (시각화) 데이터 변환 모델 적용 (ML) 모델 평가 VSCode with Jupyter extensions # https://code.visualstudio.com/docs/datascience/overview
-VSCode 에 Jupyter extensions 설치하고,
-해당 프로젝트를 github repo 에 저장
-$ python3 -m venv .venv 을 이용해서 virtual 환경 설치
-$ source .venv/bin/activate 으로 virtual 환경 실행
-(.venv)$ pip install ipykerne 으로 Jupyter kernel 설치</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Job.logging on MJ. Breadcrumbs</title><link>https://smjune.github.io/docs/SE/</link><description>Recent content in Job.logging on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><atom:link href="https://smjune.github.io/docs/SE/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello GitHub</title><link>https://smjune.github.io/docs/SE/hello/</link><pubDate>Sun, 05 Feb 2023 10:22:18 +0900</pubDate><guid>https://smjune.github.io/docs/SE/hello/</guid><description>&lt;h2 id="github-에서-블로그-만들기">
+ github 에서 블로그 만들기
+ &lt;a class="anchor" href="#github-%ec%97%90%ec%84%9c-%eb%b8%94%eb%a1%9c%ea%b7%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0">#&lt;/a>
+&lt;/h2>
+&lt;hr>
+&lt;p>hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신,&lt;br>
+&lt;strong>github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용&lt;/strong>&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>&lt;strong>아래 관련 지식 보유 가정&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>기본 적인 SSG (Static Site Generator)&lt;/li>
+&lt;li>Brew, Git, GitHub, VSCode, Hugo 설치 및 사용 방법 (Mac)&lt;/li>
+&lt;li>Markdown, YAML, Mermaid 등&lt;/li>
+&lt;/ol>
+&lt;ul>
+&lt;li>Editor : Scrivener, VSCode (&lt;a href="https://www.markdownguide.org/">Markdown&lt;/a>)&lt;/li>
+&lt;li>SSG : HUGO (theme : hugo-book)&lt;/li>
+&lt;li>REPO : github (github.com/smjune/smjune.github.io),&lt;br>
+gitlab (backup : gitlab.com/smjune/smjune.gitlab.io)&lt;/li>
+&lt;li>WEB hosting : smjune.github.io (GitHub Pages)
+&lt;ul>
+&lt;li>Project Settings | Pages | Build and Deploy | branches : gh-pages 설정&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>로컬에서는 &amp;lsquo;hugo server&amp;rsquo; 을 이용하여 확인 후 push 함&lt;/li>
+&lt;li>Build &amp;amp; Deploy : github actions / gitlab CI/CD&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;/br>
+&lt;h2 id="github-pages-만들기">
+ github pages 만들기
+ &lt;a class="anchor" href="#github-pages-%eb%a7%8c%eb%93%a4%ea%b8%b0">#&lt;/a>
+&lt;/h2>
+&lt;hr>
+&lt;p>&lt;a href="https://docs.github.com/en/pages/">https://docs.github.com/en/pages/&lt;/a>&lt;/p></description></item><item><title>Push to Gitlab</title><link>https://smjune.github.io/docs/SE/gitlab/</link><pubDate>Mon, 06 Feb 2023 20:28:27 +0900</pubDate><guid>https://smjune.github.io/docs/SE/gitlab/</guid><description>&lt;h2 id="gitlab-으로-deploy-하기">
+ GitLab 으로 Deploy 하기
+ &lt;a class="anchor" href="#gitlab-%ec%9c%bc%eb%a1%9c-deploy-%ed%95%98%ea%b8%b0">#&lt;/a>
+&lt;/h2>
+&lt;hr>
+&lt;p>github 에 deploy 했던 hugo project 을 git remote 만 추가하서 gitlab repo 에 push 하고,&lt;br>
+gitlab CI/CD 을 이용하여 build, deploy 하기&lt;br>
+&lt;/br>&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>결론 &lt;br>
+gitlab에서 repo 만들고, 단순히 remote 만 추가해서 바로 push 하면 될 줄 알았는데,&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>gitlab 에서 main 생성시 initial commit 이 자동으로 생성되어 바로 push 할 수 없었다. (빈 브랜치 생성불가)&lt;br>
+로컬 main 기준으로 다른 브랜치 labmain 만든 후 push 한 후, main 을 지우고, labmain 를 기준으로 main 을 다시 생성 하여야 한다.&lt;br>
+(로컬과 같은 커밑 과 같은 브랜치명 필요)&lt;/li>
+&lt;li>서로 다른 값을 저장하는 config.toml 은 각 workflow (CI/CD) 스크립에서 자신에 맞게 copy 하는걸로 해결&lt;br>
+githug : config.toml 을 그냥 사용하고 (어짜피 hugo server 할 때 config.toml 은 필요하니)
+gitlab : config_gitlab.toml -&amp;gt; config.toml (baseURL = &amp;lsquo;smjune.gitlab.io&amp;rsquo;)을 .gitlab-ci.yml에 추가&lt;/li>
+&lt;li>서로 다른 브랜치로 checkout 할때 없어지는 파일,폴더 (themes) 확인&lt;/li>
+&lt;li>deploy 는 .gitlab-ci.yml 을 수정해야 해야 하는데, 좀 시간이 필요하다.&lt;/li>
+&lt;/ol>&lt;/blockquote>
+&lt;/br>
+&lt;h2 id="gitlabcomsmjunesmjuneio-만들기">
+ gitlab.com/smjune/smjune.io 만들기
+ &lt;a class="anchor" href="#gitlabcomsmjunesmjuneio-%eb%a7%8c%eb%93%a4%ea%b8%b0">#&lt;/a>
+&lt;/h2>
+&lt;hr>
+&lt;p>remote 만 추가해서 main 을 gitlab 에 push 했더니, gitlab 생성시 만들어 졌던
+main 에 initial commit 으로 이름만 같고 서로 다른 브랜치가 되어 버림.&lt;/p></description></item><item><title>Gitbook</title><link>https://smjune.github.io/docs/SE/gitbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/gitbook/</guid><description>&lt;h2 id="gitbook">
+ Gitbook
+ &lt;a class="anchor" href="#gitbook">#&lt;/a>
+&lt;/h2>
+&lt;hr>
+&lt;p>Hugo 처럼 로컬에서 빌드하여 별도 web hosting (github pages) 으로 publish 하는 방식으로 사용해도 되고,&lt;br>
+gitbook.com 에 접속하여 GUI을 이용하여 운영 할 수도 있다.&lt;br>
+(Web hosting 제공 : &lt;a href="https://YOUR_ACCOUNT.gitbook.io/">https://YOUR_ACCOUNT.gitbook.io/&lt;/a>, 무료/유로)&lt;/p>
+&lt;p>아래 내용은 gitbook-cli을 이용하여 Static site을 생성한 다음 별도 Web hosting 을 이용하는 방식을 기록함&lt;br>
+&lt;a href="https://www.onejar99.com/how-to-build-and-publish-your-own-gitbook-free-unlimitedly-and-automatically-using-github-pages-and-github-actions/">참고&lt;/a>&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>&amp;#x1f449; &lt;strong>정보&lt;/strong>&lt;br>
+2017년 이후로 gitbook-cli 가 업데이트을 지원하지 않음&lt;br>
+Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로&lt;br>
+(gitbook 으로 작성된것이라고 들은것 같은데&amp;hellip; 확실치 않음.)&lt;br>
+그래도 그나마 눈에 익숙하고, 여러형태의 e-book 으로도 지원했던것 같다. (calibre 설치, &lt;a href="https://blog.appkr.dev/work-n-play/pandoc-gitbook-%EC%A0%84%EC%9E%90%EC%B6%9C%ED%8C%90/">참조&lt;/a>)&lt;br>
+설치 난이도 &lt;a href="https://github.com/GitbookIO/gitbook-cli/issues/110">참조&lt;/a> 와 github actions 지원이 좀 애매하다. &lt;a href="https://github.com/SoftUni/Programming-Basics-Book-JS-EN/blob/master/.github/workflows/gitbook-deploy.yml">참조&lt;/a>&lt;/p></description></item><item><title>Git command Tips</title><link>https://smjune.github.io/docs/SE/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/git/</guid><description>&lt;h3 id="git-연습-site">
+ GIT 연습 Site
+ &lt;a class="anchor" href="#git-%ec%97%b0%ec%8a%b5-site">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="http://learngitbranching.js.org/">http://learngitbranching.js.org/&lt;/a>&lt;br>
+&lt;a href="https://backlogtool.com/git-guide/kr/">https://backlogtool.com/git-guide/kr/&lt;/a>&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>$ level - 연습문제 초기 화면 (문제선택)&lt;br>
+$ sandbox - 빈 연습&lt;br>
+$ show solution - 해당보기&lt;br>
+$ reset - 해당 level 처음부터 다시&lt;br>
+$ undo - 1개 명령 취소&lt;br>
+$ git fakeTeamwork 1 - origin 에 1개 커밋 넣기&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="one-set-up">
+ &amp;#x31;&amp;#xfe0f;&amp;#x20e3; Set up
+ &lt;a class="anchor" href="#one-set-up">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git clone -b &lt;span style="color:#f92672">[&lt;/span>브랜치 | tag&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">[&lt;/span>REPO URL&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git remote add orgin &lt;span style="color:#f92672">[&lt;/span>REPO URL&lt;span style="color:#f92672">]&lt;/span> // origin 으로 REPO URL 등록
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git remote rm orgin // origin 삭제
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git submodule add &lt;span style="color:#f92672">[&lt;/span>REPO RUL&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">[&lt;/span>Local Folder Path&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git submodule update // --init --recursive 
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="two-branch">
+ &amp;#x32;&amp;#xfe0f;&amp;#x20e3; branch
+ &lt;a class="anchor" href="#two-branch">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git branch -f bugfix HEAD~1 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: bugfix 브랜치를 HEAD &lt;span style="color:#f92672">[&lt;/span>혹은 브랜치 명&lt;span style="color:#f92672">]&lt;/span> 1개 전 commit으로 이동 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git branch -u origin/maser &lt;span style="color:#f92672">[&lt;/span>Branch A&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: 이미 있는 local Branch A &lt;span style="color:#f92672">(&lt;/span>생략하면 현재 checkout branch&lt;span style="color:#f92672">)&lt;/span> 가 origin/master 을 track함 --&amp;gt; git checkout --track 과 비교 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git branch -d Branch A 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: local 에서만 Branch A 삭제 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git branch -d -r origin/branch A 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: remote 트랙킹 브랜치를 로컬에서 삭제 &lt;span style="color:#f92672">(&lt;/span>에, origin/featrue &lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="three-checkout">
+ &amp;#x33;&amp;#xfe0f;&amp;#x20e3; checkout
+ &lt;a class="anchor" href="#three-checkout">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git checkout branch A 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: Remote에 있는 branch A 에 대해 local 에 branch A 와 origin/branch A만들고, checkout. 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-&amp;gt; 로컬 branch A가 없고, 유일한 Remote에 branch A가 있다면 &lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;remotes/origin/branch A&amp;#34;&lt;/span>가 있어야 함&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git checkout HEAD~1 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: HEAD &lt;span style="color:#f92672">[&lt;/span>혹은 브랜치 명&lt;span style="color:#f92672">]&lt;/span> 을 1개 commit 앞으로 이동, checkout 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git checkout origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: origin/master 가 있던 commit에서 HEAD을 만들고 checkout &lt;span style="color:#f92672">(&lt;/span>Detached state&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git checkout -b &lt;span style="color:#f92672">[&lt;/span>Branch A&lt;span style="color:#f92672">]&lt;/span> origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: Branch A을 만들고 origin/master을 tracking 함. 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git checkout --track origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: Local에 master&lt;span style="color:#f92672">(&lt;/span>remote와 같은 이름의 브랜치&lt;span style="color:#f92672">)&lt;/span>을 만들고 checkout 한 후 origin/master &lt;span style="color:#f92672">(&lt;/span>Remote 브랜치&lt;span style="color:#f92672">)&lt;/span>을 tracking 함. --&amp;gt; git branch -u 와 비교 
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="four-others">
+ &amp;#x34;&amp;#xfe0f;&amp;#x20e3; Others
+ &lt;a class="anchor" href="#four-others">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git cherry-pick &lt;span style="color:#f92672">[&lt;/span>commit-ID1&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">[&lt;/span>commit-ID2&lt;span style="color:#f92672">]&lt;/span> … 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: 현재 checkout된 브랜치에 C1, C2 을 넣어라 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git rebase &lt;span style="color:#f92672">[&lt;/span>Branch A&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">[&lt;/span>Branch B&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: branch A 아래로 Branch B &lt;span style="color:#f92672">(&lt;/span>checkout&lt;span style="color:#f92672">)&lt;/span> 를 옮긴다. &lt;span style="color:#f92672">(&lt;/span>FF 가능하면 FF&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git rebase &lt;span style="color:#f92672">[&lt;/span>Branch A&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: branch A 아래로 HEAD &lt;span style="color:#f92672">(&lt;/span>checkout한 branch&lt;span style="color:#f92672">)&lt;/span>를 옮긴다. &lt;span style="color:#f92672">(&lt;/span>FF 가능하면 FF&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git rebase -i HEAD~&lt;span style="color:#f92672">[&lt;/span>몇 개 상위?&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: X 개 뒤 Commit 들을 선택하여 새롭게 다시 지금 branch을 재구성한다. 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git pull --rebase origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: origin/master &lt;span style="color:#f92672">(&lt;/span>생략시 현재 branch가 track 하는 remote 브랜치&lt;span style="color:#f92672">)&lt;/span> fetch 하고 현재 checkout 된 branch 을 그 아래로 이동 &lt;span style="color:#f92672">=&lt;/span> $ git fetch origin master + git rebase origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git reset HEAD~&lt;span style="color:#f92672">[&lt;/span>몇 개 상위?&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: HEAD가 있는 branch 을 ~ X개 뒤 commit으로 옮긴다. 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git revert HEAD 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: HEAD commit 을 다시 만든다 &lt;span style="color:#f92672">(&lt;/span>commit --amend ?? 와 비슷?&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="five-merge">
+ &amp;#x35;&amp;#xfe0f;&amp;#x20e3; Merge
+ &lt;a class="anchor" href="#five-merge">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>checkout 된 브랜치가 어떤 a branch(을) 와 Merge 해옴&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code class="language-bash " data-lang="bash ">Merge [ branch A]   : checkout 된 branch 에 branch A 와 합쳐진 commit을 만든다.     
+&lt;/code>&lt;/pre>&lt;h3 id="six-fetchpullpush">
+ &amp;#x36;&amp;#xfe0f;&amp;#x20e3; Fetch/Pull/Push
+ &lt;a class="anchor" href="#six-fetchpullpush">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>모든 Remote 에 모든 tracing 하는 브랜치 와 … Fetch/Pull/Push&lt;/li>
+&lt;li>언급한 Remote 에 모든 tracing 하는 브랜치 와 …Fetch/Pull/Push&lt;/li>
+&lt;li>언급한 Remote 에서/으로 소스 브랜치를 …Fetch/Pull/Push&lt;/li>
+&lt;li>소스 브랜치 : 타겟 브랜치 &amp;ndash;&amp;gt; gerrit 사용시 : $ git push origin [source]:refs/for/[target]&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&amp;#x26a0;&amp;#xfe0f; Fetch/pull 은 소스가 remote 이고, Push는 소스가 local 이다.&lt;br>
+$git pull remote remote_branch:local_branch&lt;br>
+$git push remote local_branch:remote_branch&lt;/p></description></item><item><title>Python with Pyenv</title><link>https://smjune.github.io/docs/SE/pyenv/</link><pubDate>Thu, 09 Feb 2023 18:07:51 +0900</pubDate><guid>https://smjune.github.io/docs/SE/pyenv/</guid><description>&lt;h2 id="pyenv-사용하기">
+ Pyenv 사용하기
+ &lt;a class="anchor" href="#pyenv-%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0">#&lt;/a>
+&lt;/h2>
+&lt;hr>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ pyenv versions
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* system &lt;span style="color:#f92672">(&lt;/span>set by /home/june.sung/.pyenv/version&lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>  2.7.17
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pyenv install --list
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pyenv install 3.6.9
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>* system &lt;span style="color:#f92672">(&lt;/span>set by /home/june.sung/.pyenv/version&lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>  2.7.17
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>  3.6.9
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pyenv shell 3.6.9 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pyenv which python 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> 3.6.9 &lt;span style="color:#f92672">(&lt;/span>set by PYENV_VERSION environment variable&lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># $ pyevn [ global &amp;gt; local &amp;gt; shell ] X.X.X&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># cat ~/.pyenv/version | cat .pyton-version | echo $PYENV_VERSION&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># loacal 은 해당 폴더 아래 (set by ~폴더/.python-version) python 설정 (해당 폴더 나가면 해제)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Shell 은 해당 터미널 (set by PYENV_VERSION) 에 python 설정 (해당 터미널 나가면 해제)&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ virtualevn -p &lt;span style="color:#66d9ef">$(&lt;/span>pyenv which python&lt;span style="color:#66d9ef">)&lt;/span> .venv &lt;span style="color:#75715e"># 바로 위 shell 에 설정한 python 을 사용&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pyenv shell --unset &lt;span style="color:#75715e"># 현재 shell의 python 설정 해제&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote class="book-hint danger">
+&lt;p>&amp;#x1f4dd;문제는 &amp;lsquo;global / local /shell&amp;rsquo; 중 어떤 python 설정을 현재 폴더에 가상환경 ( .venv)으로 만들것인가?&lt;/p></description></item><item><title>Docker</title><link>https://smjune.github.io/docs/SE/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/docker/</guid><description>&lt;p>docker 의 등장&lt;/p>
+&lt;p>Github runner 으로 생각해 보는 docker&lt;/p>
+&lt;p>Self-hosted (bare metal vs virtual)&lt;/p>
+&lt;p>Github-Hosted&lt;/p></description></item><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/kaggle/</guid><description>&lt;h2 id="prerequisites">
+ Prerequisites
+ &lt;a class="anchor" href="#prerequisites">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="">
+ 
+ &lt;a class="anchor" href="#">#&lt;/a>
+&lt;/h3>
+&lt;ol>
+&lt;li>데이터 획득 (Importing a working dataset)&lt;/li>
+&lt;li>데이터 파악
+&lt;ul>
+&lt;li>일변량 (단수변수에 대한 변화) / 다변량 (복수변수의 변화)&lt;/li>
+&lt;li>Summary statistics (기초 통계량, non-graphic) / graphic (시각화)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>데이터 변환&lt;/li>
+&lt;li>모델 적용 (ML)&lt;/li>
+&lt;li>모델 평가&lt;/li>
+&lt;/ol>
+&lt;/bar>
+&lt;h3 id="vscode-with-jupyter-extensions">
+ VSCode with Jupyter extensions
+ &lt;a class="anchor" href="#vscode-with-jupyter-extensions">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://code.visualstudio.com/docs/datascience/overview">https://code.visualstudio.com/docs/datascience/overview&lt;/a>&lt;br>
+VSCode 에 Jupyter extensions 설치하고,&lt;br>
+해당 프로젝트를 github repo 에 저장&lt;/p>
+&lt;p>&lt;code>$ python3 -m venv .venv&lt;/code> 을 이용해서 virtual 환경 설치&lt;br>
+&lt;code>$ source .venv/bin/activate&lt;/code> 으로 virtual 환경 실행&lt;br>
+&lt;code>(.venv)$ pip install ipykerne&lt;/code> 으로 Jupyter kernel 설치&lt;br>
+&lt;code>(.venv)$ pip install pandas&lt;/code>으로 관련 python 모듈 설치&lt;/p></description></item><item><title>Obsidian</title><link>https://smjune.github.io/docs/SE/Obsidian/</link><pubDate>Sat, 12 Apr 2025 09:22:14 +0900</pubDate><guid>https://smjune.github.io/docs/SE/Obsidian/</guid><description>&lt;h2 id="obsidian--github--hugo">
+ Obsidian + Github + Hugo
+ &lt;a class="anchor" href="#obsidian--github--hugo">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;strong>1. Obsidian 기본 정보 (웹 검색 기반):&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>로컬 저장:&lt;/strong> 데이터가 사용자 기기에 직접 저장되어 데이터 소유권과 프라이버시 보장.&lt;/li>
+&lt;li>&lt;strong>Live Preview&lt;/strong>: Source 형태 edit ( VScode) 가 아닌 문서 형태로 edit (Scrivener)가능&lt;/li>
+&lt;li>&lt;strong>마크다운 기반:&lt;/strong> 표준 마크다운 문법 사용.&lt;/li>
+&lt;li>&lt;strong>양방향 링크 (백링크):&lt;/strong> 노트 간 연결을 통해 아이디어를 네트워크처럼 구성.&lt;/li>
+&lt;li>&lt;strong>그래프 뷰:&lt;/strong> 노트 연결 관계 시각화.&lt;/li>
+&lt;li>&lt;strong>플러그인:&lt;/strong> 다양한 커뮤니티 플러그인을 통한 기능 확장. (예: git, copilot, smart compose &amp;hellip;)&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>2. 일반적인 Obsidian 사용 시 장점:&lt;/strong>&lt;/p></description></item></channel></rss>
