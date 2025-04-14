@@ -3,3 +3,5 @@ Hugo/public/
 .obsidian/
 Local/
 .DS_Store
+.smtcmp_json_db/
+.smtcmp__vector_db.*
