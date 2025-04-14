@@ -1,0 +1,495 @@
+{
+  "id": "7ad8754a-5991-4752-b187-a6d1bf79a4e7",
+  "title": "안녕하세요?",
+  "messages": [
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "안녕하세요?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n안녕하세요?\n\n"
+        }
+      ],
+      "id": "3589d9c4-e597-4caf-a950-c2f9d6093b39",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Hugo/content/docs/SE/Obsidian/index.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "id": "cbf11d5c-09a4-4b78-af41-b08972b837b6",
+      "metadata": {}
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "안녕하세요?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n안녕하세요?\n\n"
+        }
+      ],
+      "id": "22ae681e-b678-438c-a51d-088be15a657f",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Hugo/content/docs/SE/Obsidian/index.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "id": "224abbd7-c8ee-42a1-88d3-20f12b5adc20",
+      "metadata": {}
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "안녕하세요?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n안녕하세요?\n\n"
+        }
+      ],
+      "id": "b02f51f9-a694-47d4-857b-33ba89b5e2d6",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Hugo/content/docs/SE/Obsidian/index.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "",
+      "id": "ee207cdd-e753-4179-9453-9b09e4eb4c1b",
+      "metadata": {}
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "안녕하세요?",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n안녕하세요?\n\n"
+        }
+      ],
+      "id": "0ab29808-71da-4d64-99c5-2b687ceb6b9b",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Hugo/content/docs/SE/Obsidian/index.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "안녕하세요! 무슨 도움이 필요하신가요?",
+      "id": "f95b7aaf-67f8-4de7-9f84-56f88f257b64",
+      "metadata": {
+        "usage": {
+          "prompt_tokens": 2007,
+          "completion_tokens": 88,
+          "total_tokens": 2095
+        },
+        "model": {
+          "providerType": "gemini",
+          "providerId": "gemini",
+          "id": "gemini-2.0-flash-thinking",
+          "model": "gemini-2.0-flash-thinking-exp"
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "현재 내 vault 에 대해서 간략하게 정리해서 설명해 주세요.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "## Potentially Relevant Snippets from the current vault\n```Hugo/content/docs/SE/Obsidian/index.md\n32|**4. 사용자 Vault 분석 (`smjune.github.io`):**\n33|\n34|*   Steps : Obsidian 에서 마크다운 글 작성 -> Hugo server 로 로컬에서  Publish 확인 ->  GitHub Repository Push -> Github actions: Hugo -> 웹사이트 (Github Pages) 게시  방식으로 추정됩니다.\n35|\n36|**5. 사용자 Vault 활용 방식의 장점:**\n37|\n38|*   **통합 워크플로우:** 콘텐츠 생성부터 발행까지 효율적 관리.\n39|*   **버전 관리:** Git으로 콘텐츠 변경 이력 관리 및 복구 용이.\n40|*   **무료 배포/호스팅:** Hugo/GitHub Pages 활용.\n41|\n42|**6. 사용자 Vault 활용 방식의 단점 (일반 Obsidian 사용 비교):**\n43|\n44|*   **지식 연결 기능 활용 제한:** 웹사이트 발행 목적에 치중하여 개인 지식 연결/탐색 기능 활용 저하 가능성.\n45|*   **민감 정보 관리 주의:** 공개될 수 있는 GitHub 저장소 특성상 비공개 정보 관리에 주의 필요 (`.gitignore` 등).\n46|*   **동기화 복잡성:** Git 기반 동기화 시 충돌 해결 및 모바일 사용 불편 가능성.\n47|*   **Obsidian 고유 기능 활용 저하:** 웹사이트 관리 위주로 플러그인 활용이 제한될 수 있음.\n48|*   **Template** : 배포를 위해 Hugo front matter 과 Themes format 을 유지해야 함.\n49|\n50|**7. 더 생각해 볼것:**\n51|\n52|Obsidian의 핵심인 **개인 지식 연결 기능 활용을 제한**할 수 있고,  **Git 동기화 및 민감 정보 관리**에 신경 써야 하는 단점이 있다.\n53|\n54|따라서, obsidian/github/hugo 간 구조을 잘 설정해야 한다.\n```\n```Hugo/content/docs/SE/Obsidian/index.md\n7|## Obsidian + Github + Hugo\n8|\n9|**1. Obsidian 기본 정보 (웹 검색 기반):**  \n10|\n11|*   **로컬 저장:** 데이터가 사용자 기기에 직접 저장되어 데이터 소유권과 프라이버시 보장.\n12|*   **Live Preview**: Source 형태 edit ( VScode) 가 아닌 문서 형태로 edit (Scrivener)가능\n13|*   **마크다운 기반:** 표준 마크다운 문법 사용.\n14|*   **양방향 링크 (백링크):** 노트 간 연결을 통해 아이디어를 네트워크처럼 구성.\n15|*   **그래프 뷰:** 노트 연결 관계 시각화.\n16|*   **플러그인:** 다양한 커뮤니티 플러그인을 통한 기능 확장. (예: git, copilot, smart compose ...)\n17|\n18|**2. 일반적인 Obsidian 사용 시 장점:**\n19|\n20|*   **데이터 완전 통제:** 클라우드 종속성 및 위험 회피. (로컬저장)\n21|*   **유연성/확장성:** 표준 마크다운 호환성, 플러그인을 통한 맞춤 설정.\n22|*   **지식 연결:** 아이디어 관계 발견 및 지식 구조화 용이 (예: 제텔카스텐).\n23|*   **오프라인 작업:** 인터넷 연결 없이 사용 가능.\n24|\n25|**3. 일반적인 Obsidian 사용 시 단점:**\n26|\n27|*   **학습 곡선:** 기능, 플러그인, 마크다운 적응 시간 필요.\n28|*   **동기화 설정:** 여러 기기 사용 시 직접 동기화 솔루션 설정 필요 (유료 Obsidian Sync 또는 외부 서비스).\n29|*   **모바일 기능 제한:** 데스크톱 대비 기능 제한 가능성.\n30|*   **협업 기능 부족:** 기본적으로 개인용 앱.\n31|\n32|**4. 사용자 Vault 분석 (`smjune.github.io`):**\n```\n```Hugo/content/docs/SE/Obsidian/index.md\n56|## 구성방식\n57|\n58|- git, Obsidian, Hugo 가 모두 한 폴더에 설정, \n59|```bash\n60|. my_project            # git, Obsidian vault, Hugo project\n61|├── .git \n62|├── .obsidian \n63|├── hugo.yml \n64|├── content/posts             # publish folder\n65|├── no_publish_folder \n66|└── no_sync_folder            #.gitignore\n67|```\n68|\n69|- git 과 Obsidian Vault 가 설정된 하위 폴더로 hugo project (publish 대상 폴더) 와 no_publish 폴더를 구분하여 hugo project 는 hugo 에서 정의한 방식으로  폴더를 구성하고, no_publish 는 일반적인 obsidian 폴더를 구성\n70|```bash\n71|. my_project                # git, Obsidian vault\n72|├── .git \n73|├── .obsidian \n74|├── publish_folder/         # Hugo Project\n75|│   ├── hugo.yml \n76|│   └── content/posts \n77|├── no_publish_folder \n78|└── no_sync_folder          #.gitignore\n```\n```Hugo/content/docs/SE/CI/localbuild.md\n21|빌드가 완성이 되면, 그 다음음 빌드를 확인 하는 과정인데, 테스터나, QA 담당자가 진행한다. 앞에서 말했지만 주로 오후 늦게 빌드가 완성이 되고, 일부 개발자들은 바로 퇴근을 하기 때문에 개발자와 테스터의 사이가 좋을 수가 없었다. (The Phoenix project 책에서도 이런 조직내 갈들이 표현되어 있다.)  \n22|\n23|간단하게 그 과정을 정리하면, \n24|\n25|```\n26|    - 소스를 VCS 에 업로드 한다.\n27|    - 소스를 받아 로컬에서 빌드 한다.\n28|    - 빌드 결과를 depoly 서버에 업로드 한다.\n29|    - deploy 된 빌드를 download 해서 결과를 확인 한다. \n30|    - 확인 결과를 게시 한다. \n31|    - 게시된 빌드 결과에 따라 코드를 수정한다.\n32|    - 수정된 소스를 다시 VCS 에 업로드 (version up) 한다.\n33|    - 수정한 코드를 받아, 다시 빌드 한다.\n```\n```Hugo/content/docs/SE/CI/localbuild.md\n34|```\n35|\n36|이런 옛날 과정을 요즘 툴로 재연 (시뮬레이션) 해 보기로 했다.  \n37|간단하게 hugo 을 이용해 프로젝트을 진행하고, github 으로 소스 관리를 진행한다. \n38|\n39|```\n```\n```Hugo/content/posts/story/index.md\n52|*※ 이 외 육아와 청소년, 그리고 사회 관계에서의 이야기를 통한 행동 개선 처방전이 더 있다. 개인적으로 초등학생 아이을 둔 아버지로써, 아이들에 대한 행동 교정을 위한 보상과 처벌에 대한 부분은 매우 흥미로왔다. 이제부터라도 아이에게 그들이 이해할 수 있는 이야기로 설명을 해 주어야 겠다.*  \n53|\n54|우리가 세상을 이야기로 받아들이고, 바로 그 이야기를 통해 누군가를 설득하거나, 행동을 변하게 할 수 있다면 어떻게 이야기를 만들어서 전달할 것인가는 매우 중요일이 되버렸습니다.  \n55|\n56|</br>\n```\n```Hugo/content/docs/_index.md\n1|---\n2|title: \"Docs.logging\"\n3|weight: 1\n4|bookFlatSection: true\n5|bookToc: false\n6|# bookHidden: false\n7|bookCollapseSection: true\n8|bookComments: false\n9|bookSearchExclude: false\n10|---\n11|\n12|# 주요 작업 정리 (왼쪽 메뉴 사용) \n13|\n14|{{< section >}}\n```\n```Hugo/content/docs/SE/hugo/book/index.md\n257|### Tabs\n258|\n259|하나의 문단을 tab으로 구분하여 표시 해준다.  \n260|\n261|```tpl\n262|{{</* tabs \"uniqueid\" */>}}\n263|{{</* tab \"MacOS\" */>}} # MacOS Content {{</* /tab */>}}\n264|{{</* tab \"Linux\" */>}} # Linux Content {{</* /tab */>}}\n265|{{</* tab \"Windows\" */>}} # Windows Content {{</* /tab */>}}\n266|{{</* /tabs */>}}\n267|```\n268|</br>\n```\n```Hugo/content/posts/lostproject/index.md\n1|---\n2|title: \"프로젝트속에서 길을 잃다\"\n3|date: 2023-02-24T19:06:06+09:00\n4|description: \"우리는 뜻하지 않게 길을 잃고 한다. 그렇땐 어떻게 하지\"\n5|\n6|BookComments: ture\n7|# bookSearchExclude: false\n8|\n9|Categories: \"Posted\"\n10|Tags: [\"project roadmap\",\"추억\",\"lost\",]\n11|\n12|image: posts/images/lost.png\n13|---\n14|\n15|오래 전 저를 포함하여 친한 친구 4명이 자동차로 낯선 곳으로 여행을 했던 적이 있었습니다. 우리들은 저마다 역할을 나누어 누구도 알지 못하는 목적지를 향해 밤 세워 운전을 하여야 했습니다. 운전을 하는 녀석, 조수석에서 운전 하는 녀석이 졸지 않게 말을 걸어 주고, 혹시 운전을 하는 친구가 놓칠 수 있는 milestone 이나 Landmark을 같이 봐주는 친구, 뒷좌석에서 지도를 보며 우리가 현재 어디까지 왔으며, 앞으로 얼마나 가야하고, 어디를 거쳐 가야 하며, 앞자리에 앉아 있는 친구들 (운전수와 조수) 에게 길을 찾는 판단을 쉽게 할 수 있도록 서포트 하는 친구, 그리고 자동차에 대해서 잘 알고 있어서 우리가 예상치 못한 자동차 고장이나, 타이어 갈아 끼우는 것, 스노우 체인 장책하는 등의 일을 하는 친구. (실제로 그 친구는 진부령 못 미처서 스노우 체인 장착을 손 쉽게 하므로 그 역할을 훌륭히 해 냈다. )\n16|\n17|</br>\n18|\n19|<p align=\"center\">\n20|<img src=\"./project1.png\", alt=\"세얼간이\">\n21|</p>\n22|<center>[영화 세얼간이 중에서]</center>  \n23|\n24|    어느 정도 본격적인 여정에 들어 스며서 우리의 모든 관심은 목적지에 대한 계획으로 부풀어 가고 있었다. 새로운 환경, 새로운 재미 그리고 그것들이 우리에게 줄 수 있는 희열, 성취감 등 저마다 정도의 차이는 있었지만 여정이 진행 될수록 우리는 우리가 성취한 결과물에 대해서만 흥분되고 있었던 것이다.\n```\n```Hugo/content/docs/SE/pyenv.md\n200|### uv 설치\n201|\n202|```bash\n203|$ curl -LsSf https://astral.sh/uv/install.sh | sh\n204|\n205|# 또는 homebrew 사용\n206|$ brew install uv\n207|```\n208|\n209|### pyenv와 함께 사용하기\n210|\n211|```bash\n212|# Python 버전 설정\n213|$ pyenv local 3.11.0\n214|\n215|# 가상환경 생성 및 활성화\n216|$ uv venv .venv\n217|$ source .venv/bin/activate\n218|\n219|# 패키지 설치\n220|(.venv) $ uv pip install pandas numpy\n221|(.venv) $ uv pip install -r requirements.txt\n222|\n223|# requirements.txt 생성/업데이트\n224|(.venv) $ uv pip freeze > requirements.txt\n225|\n226|# 의존성 잠금 파일 생성 (선택사항)\n227|(.venv) $ uv pip compile requirements.txt -o requirements.lock\n228|```\n229|\n230|{{% hint info %}}\n231|:bulb: **uv의 장점**\n232|1. 빠른 속도: 대규모 프로젝트에서 특히 효과적\n233|2. 향상된 의존성 관리: 더 명확한 오류 메시지\n234|3. 캐싱: 반복적인 설치 작업 최적화\n235|4. pip 명령어와 호환: 기존 워크플로우 유지 가능\n236|{{% /hint %}}\n237|\n238|{{% hint warning %}}\n239|:warning: **주의사항**\n240|- uv는 아직 개발 중인 도구이므로, 일부 기능이 변경될 수 있습니다\n241|- pip의 모든 기능을 완벽하게 대체하지는 않을 수 있습니다\n242|- 프로젝트의 안정성이 중요한 경우, 기존 도구들과 함께 테스트 후 사용하세요\n243|{{% /hint %}}\n```\n\n\n\n현재 내 vault 에 대해서 간략하게 정리해서 설명해 주세요.\n\n"
+        }
+      ],
+      "id": "be1ac7c6-2a41-40c0-96b2-f8d4d2e87eea",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Hugo/content/docs/SE/Obsidian/index.md"
+        }
+      ],
+      "similaritySearchResults": [
+        {
+          "id": 419,
+          "path": "Hugo/content/docs/SE/Obsidian/index.md",
+          "mtime": 1744624431447,
+          "content": "**4. 사용자 Vault 분석 (`smjune.github.io`):**\n\n*   Steps : Obsidian 에서 마크다운 글 작성 -> Hugo server 로 로컬에서  Publish 확인 ->  GitHub Repository Push -> Github actions: Hugo -> 웹사이트 (Github Pages) 게시  방식으로 추정됩니다.\n\n**5. 사용자 Vault 활용 방식의 장점:**\n\n*   **통합 워크플로우:** 콘텐츠 생성부터 발행까지 효율적 관리.\n*   **버전 관리:** Git으로 콘텐츠 변경 이력 관리 및 복구 용이.\n*   **무료 배포/호스팅:** Hugo/GitHub Pages 활용.\n\n**6. 사용자 Vault 활용 방식의 단점 (일반 Obsidian 사용 비교):**\n\n*   **지식 연결 기능 활용 제한:** 웹사이트 발행 목적에 치중하여 개인 지식 연결/탐색 기능 활용 저하 가능성.\n*   **민감 정보 관리 주의:** 공개될 수 있는 GitHub 저장소 특성상 비공개 정보 관리에 주의 필요 (`.gitignore` 등).\n*   **동기화 복잡성:** Git 기반 동기화 시 충돌 해결 및 모바일 사용 불편 가능성.\n*   **Obsidian 고유 기능 활용 저하:** 웹사이트 관리 위주로 플러그인 활용이 제한될 수 있음.\n*   **Template** : 배포를 위해 Hugo front matter 과 Themes format 을 유지해야 함.\n\n**7. 더 생각해 볼것:**\n\nObsidian의 핵심인 **개인 지식 연결 기능 활용을 제한**할 수 있고,  **Git 동기화 및 민감 정보 관리**에 신경 써야 하는 단점이 있다.\n\n따라서, obsidian/github/hugo 간 구조을 잘 설정해야 한다.",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 54,
+            "startLine": 32
+          },
+          "similarity": 0.6232043988621897
+        },
+        {
+          "id": 418,
+          "path": "Hugo/content/docs/SE/Obsidian/index.md",
+          "mtime": 1744624431447,
+          "content": "## Obsidian + Github + Hugo\n\n**1. Obsidian 기본 정보 (웹 검색 기반):**  \n\n*   **로컬 저장:** 데이터가 사용자 기기에 직접 저장되어 데이터 소유권과 프라이버시 보장.\n*   **Live Preview**: Source 형태 edit ( VScode) 가 아닌 문서 형태로 edit (Scrivener)가능\n*   **마크다운 기반:** 표준 마크다운 문법 사용.\n*   **양방향 링크 (백링크):** 노트 간 연결을 통해 아이디어를 네트워크처럼 구성.\n*   **그래프 뷰:** 노트 연결 관계 시각화.\n*   **플러그인:** 다양한 커뮤니티 플러그인을 통한 기능 확장. (예: git, copilot, smart compose ...)\n\n**2. 일반적인 Obsidian 사용 시 장점:**\n\n*   **데이터 완전 통제:** 클라우드 종속성 및 위험 회피. (로컬저장)\n*   **유연성/확장성:** 표준 마크다운 호환성, 플러그인을 통한 맞춤 설정.\n*   **지식 연결:** 아이디어 관계 발견 및 지식 구조화 용이 (예: 제텔카스텐).\n*   **오프라인 작업:** 인터넷 연결 없이 사용 가능.\n\n**3. 일반적인 Obsidian 사용 시 단점:**\n\n*   **학습 곡선:** 기능, 플러그인, 마크다운 적응 시간 필요.\n*   **동기화 설정:** 여러 기기 사용 시 직접 동기화 솔루션 설정 필요 (유료 Obsidian Sync 또는 외부 서비스).\n*   **모바일 기능 제한:** 데스크톱 대비 기능 제한 가능성.\n*   **협업 기능 부족:** 기본적으로 개인용 앱.\n\n**4. 사용자 Vault 분석 (`smjune.github.io`):**",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 32,
+            "startLine": 7
+          },
+          "similarity": 0.5923540707057663
+        },
+        {
+          "id": 420,
+          "path": "Hugo/content/docs/SE/Obsidian/index.md",
+          "mtime": 1744624431447,
+          "content": "## 구성방식\n\n- git, Obsidian, Hugo 가 모두 한 폴더에 설정, \n```bash\n. my_project            # git, Obsidian vault, Hugo project\n├── .git \n├── .obsidian \n├── hugo.yml \n├── content/posts             # publish folder\n├── no_publish_folder \n└── no_sync_folder            #.gitignore\n```\n\n- git 과 Obsidian Vault 가 설정된 하위 폴더로 hugo project (publish 대상 폴더) 와 no_publish 폴더를 구분하여 hugo project 는 hugo 에서 정의한 방식으로  폴더를 구성하고, no_publish 는 일반적인 obsidian 폴더를 구성\n```bash\n. my_project                # git, Obsidian vault\n├── .git \n├── .obsidian \n├── publish_folder/         # Hugo Project\n│   ├── hugo.yml \n│   └── content/posts \n├── no_publish_folder \n└── no_sync_folder          #.gitignore",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 78,
+            "startLine": 56
+          },
+          "similarity": 0.5684004396446124
+        },
+        {
+          "id": 443,
+          "path": "Hugo/content/docs/SE/CI/localbuild.md",
+          "mtime": 1744423123861,
+          "content": "빌드가 완성이 되면, 그 다음음 빌드를 확인 하는 과정인데, 테스터나, QA 담당자가 진행한다. 앞에서 말했지만 주로 오후 늦게 빌드가 완성이 되고, 일부 개발자들은 바로 퇴근을 하기 때문에 개발자와 테스터의 사이가 좋을 수가 없었다. (The Phoenix project 책에서도 이런 조직내 갈들이 표현되어 있다.)  \n\n간단하게 그 과정을 정리하면, \n\n```\n    - 소스를 VCS 에 업로드 한다.\n    - 소스를 받아 로컬에서 빌드 한다.\n    - 빌드 결과를 depoly 서버에 업로드 한다.\n    - deploy 된 빌드를 download 해서 결과를 확인 한다. \n    - 확인 결과를 게시 한다. \n    - 게시된 빌드 결과에 따라 코드를 수정한다.\n    - 수정된 소스를 다시 VCS 에 업로드 (version up) 한다.\n    - 수정한 코드를 받아, 다시 빌드 한다.",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 33,
+            "startLine": 21
+          },
+          "similarity": 0.553242936778884
+        },
+        {
+          "id": 444,
+          "path": "Hugo/content/docs/SE/CI/localbuild.md",
+          "mtime": 1744423123861,
+          "content": "```\n\n이런 옛날 과정을 요즘 툴로 재연 (시뮬레이션) 해 보기로 했다.  \n간단하게 hugo 을 이용해 프로젝트을 진행하고, github 으로 소스 관리를 진행한다. \n\n```",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 39,
+            "startLine": 34
+          },
+          "similarity": 0.5494070501917018
+        },
+        {
+          "id": 265,
+          "path": "Hugo/content/posts/story/index.md",
+          "mtime": 1744423123875,
+          "content": "*※ 이 외 육아와 청소년, 그리고 사회 관계에서의 이야기를 통한 행동 개선 처방전이 더 있다. 개인적으로 초등학생 아이을 둔 아버지로써, 아이들에 대한 행동 교정을 위한 보상과 처벌에 대한 부분은 매우 흥미로왔다. 이제부터라도 아이에게 그들이 이해할 수 있는 이야기로 설명을 해 주어야 겠다.*  \n\n우리가 세상을 이야기로 받아들이고, 바로 그 이야기를 통해 누군가를 설득하거나, 행동을 변하게 할 수 있다면 어떻게 이야기를 만들어서 전달할 것인가는 매우 중요일이 되버렸습니다.  \n\n</br>",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 56,
+            "startLine": 52
+          },
+          "similarity": 0.548769668690511
+        },
+        {
+          "id": 307,
+          "path": "Hugo/content/docs/_index.md",
+          "mtime": 1744423123866,
+          "content": "---\ntitle: \"Docs.logging\"\nweight: 1\nbookFlatSection: true\nbookToc: false\n# bookHidden: false\nbookCollapseSection: true\nbookComments: false\nbookSearchExclude: false\n---\n\n# 주요 작업 정리 (왼쪽 메뉴 사용) \n\n{{< section >}}",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 14,
+            "startLine": 1
+          },
+          "similarity": 0.5485209827549758
+        },
+        {
+          "id": 349,
+          "path": "Hugo/content/docs/SE/hugo/book/index.md",
+          "mtime": 1744462371145,
+          "content": "### Tabs\n\n하나의 문단을 tab으로 구분하여 표시 해준다.  \n\n```tpl\n{{</* tabs \"uniqueid\" */>}}\n{{</* tab \"MacOS\" */>}} # MacOS Content {{</* /tab */>}}\n{{</* tab \"Linux\" */>}} # Linux Content {{</* /tab */>}}\n{{</* tab \"Windows\" */>}} # Windows Content {{</* /tab */>}}\n{{</* /tabs */>}}\n```\n</br>",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 268,
+            "startLine": 257
+          },
+          "similarity": 0.5484750897182485
+        },
+        {
+          "id": 287,
+          "path": "Hugo/content/posts/lostproject/index.md",
+          "mtime": 1744423123872,
+          "content": "---\ntitle: \"프로젝트속에서 길을 잃다\"\ndate: 2023-02-24T19:06:06+09:00\ndescription: \"우리는 뜻하지 않게 길을 잃고 한다. 그렇땐 어떻게 하지\"\n\nBookComments: ture\n# bookSearchExclude: false\n\nCategories: \"Posted\"\nTags: [\"project roadmap\",\"추억\",\"lost\",]\n\nimage: posts/images/lost.png\n---\n\n오래 전 저를 포함하여 친한 친구 4명이 자동차로 낯선 곳으로 여행을 했던 적이 있었습니다. 우리들은 저마다 역할을 나누어 누구도 알지 못하는 목적지를 향해 밤 세워 운전을 하여야 했습니다. 운전을 하는 녀석, 조수석에서 운전 하는 녀석이 졸지 않게 말을 걸어 주고, 혹시 운전을 하는 친구가 놓칠 수 있는 milestone 이나 Landmark을 같이 봐주는 친구, 뒷좌석에서 지도를 보며 우리가 현재 어디까지 왔으며, 앞으로 얼마나 가야하고, 어디를 거쳐 가야 하며, 앞자리에 앉아 있는 친구들 (운전수와 조수) 에게 길을 찾는 판단을 쉽게 할 수 있도록 서포트 하는 친구, 그리고 자동차에 대해서 잘 알고 있어서 우리가 예상치 못한 자동차 고장이나, 타이어 갈아 끼우는 것, 스노우 체인 장책하는 등의 일을 하는 친구. (실제로 그 친구는 진부령 못 미처서 스노우 체인 장착을 손 쉽게 하므로 그 역할을 훌륭히 해 냈다. )\n\n</br>\n\n<p align=\"center\">\n<img src=\"./project1.png\", alt=\"세얼간이\">\n</p>\n<center>[영화 세얼간이 중에서]</center>  \n\n    어느 정도 본격적인 여정에 들어 스며서 우리의 모든 관심은 목적지에 대한 계획으로 부풀어 가고 있었다. 새로운 환경, 새로운 재미 그리고 그것들이 우리에게 줄 수 있는 희열, 성취감 등 저마다 정도의 차이는 있었지만 여정이 진행 될수록 우리는 우리가 성취한 결과물에 대해서만 흥분되고 있었던 것이다.",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 24,
+            "startLine": 1
+          },
+          "similarity": 0.546373372312127
+        },
+        {
+          "id": 319,
+          "path": "Hugo/content/docs/SE/pyenv.md",
+          "mtime": 1744512528441,
+          "content": "### uv 설치\n\n```bash\n$ curl -LsSf https://astral.sh/uv/install.sh | sh\n\n# 또는 homebrew 사용\n$ brew install uv\n```\n\n### pyenv와 함께 사용하기\n\n```bash\n# Python 버전 설정\n$ pyenv local 3.11.0\n\n# 가상환경 생성 및 활성화\n$ uv venv .venv\n$ source .venv/bin/activate\n\n# 패키지 설치\n(.venv) $ uv pip install pandas numpy\n(.venv) $ uv pip install -r requirements.txt\n\n# requirements.txt 생성/업데이트\n(.venv) $ uv pip freeze > requirements.txt\n\n# 의존성 잠금 파일 생성 (선택사항)\n(.venv) $ uv pip compile requirements.txt -o requirements.lock\n```\n\n{{% hint info %}}\n:bulb: **uv의 장점**\n1. 빠른 속도: 대규모 프로젝트에서 특히 효과적\n2. 향상된 의존성 관리: 더 명확한 오류 메시지\n3. 캐싱: 반복적인 설치 작업 최적화\n4. pip 명령어와 호환: 기존 워크플로우 유지 가능\n{{% /hint %}}\n\n{{% hint warning %}}\n:warning: **주의사항**\n- uv는 아직 개발 중인 도구이므로, 일부 기능이 변경될 수 있습니다\n- pip의 모든 기능을 완벽하게 대체하지는 않을 수 있습니다\n- 프로젝트의 안정성이 중요한 경우, 기존 도구들과 함께 테스트 후 사용하세요\n{{% /hint %}}",
+          "model": "gemini/text-embedding-004",
+          "dimension": 768,
+          "metadata": {
+            "endLine": 243,
+            "startLine": 200
+          },
+          "similarity": 0.5398975830277493
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "Vault 구조를 간략하게 정리해 드리겠습니다.\n\n현재 Vault는 `smjune.github.io` 라는 이름으로 되어 있고, Git으로 버전 관리가 되고 있습니다. Obsidian Vault, Hugo 프로젝트가 함께 관리되고 있으며, 웹사이트 발행을 위해 Hugo를 활용하고 있습니다.\n\n크게 다음과 같은 폴더 구조를 가지고 있습니다.\n\n```bash\n. smjune.github.io               # git, Obsidian vault\n├── .git\n├── .obsidian\n├── Hugo/                        # Hugo Project\n│   ├── hugo.yml\n│   └── content\n│        ├── docs\n│        └── posts\n├── Source                       # sync but not yet publish\n└── Local                        #.gitignore\n```\n\n*   **Hugo**: Hugo 프로젝트 폴더로, 웹사이트 발행을 위한 Hugo 관련 파일들이 위치합니다. `content` 폴더 안에 발행될 `docs` 와 `posts`  가 있습니다.\n*   **Source**:  Obsidian 노트 중 아직 발행되지 않은 (sync는 되지만 publish는 안된)  파일들을 모아두는 곳으로 추정됩니다.\n*   **Local**:  `.gitignore` 설정되어 있어 동기화되지 않는 개인적인 파일들을 보관하는 폴더입니다.\n\n**Obsidian + Github + Hugo 활용 방식**은 다음과 같은 **장점**이 있습니다.\n\n*   **통합 워크플로우**: Obsidian에서 작성한 콘텐츠를 Hugo를 통해 웹사이트로 발행하는 과정을 효율적으로 관리할 수 있습니다.\n*   **버전 관리**: Git을 이용하여 콘텐츠 변경 이력을 관리하고 필요시 복구할 수 있습니다.\n*   **무료 배포/호스팅**: Hugo와 GitHub Pages를 활용하여 무료로 웹사이트를 배포하고 호스팅할 수 있습니다.\n\n하지만 다음과 같은 **단점**도 존재합니다.\n\n*   **지식 연결 기능 활용 제한**: 웹사이트 발행에 집중하다 보면 Obsidian 본연의 지식 연결 및 탐색 기능을 충분히 활용하지 못할 수 있습니다.\n*   **민감 정보 관리 주의**: GitHub 저장소가 공개될 수 있으므로 비공개 정보 관리에 주의해야 합니다.\n*   **동기화 복잡성**: Git 기반 동기화는 충돌 가능성이 있고 모바일 환경에서 사용이 불편할 수 있습니다.\n*   **Obsidian 고유 기능 활용 저하**: 웹사이트 관리를 위해 Obsidian 플러그인 활용이 제한될 수 있습니다.\n*   **Hugo Template**: Hugo 테마에 맞는 Front Matter 템플릿을 유지해야 합니다.\n\n**사용 중인 Community Plug-in**은 다음과 같습니다.\n\n*   Git\n*   Templater\n*   Copilot\n*   Smart Composeer\n\n이러한 정보를 바탕으로 볼 때,  **웹사이트 발행**과 **개인 지식 관리**를 **Obsidian 하나로 통합**하여 관리하려는 것으로 보입니다. 다만,  **Obsidian 본연의 기능**과 **웹사이트 발행** 사이의 균형점을 찾는 것이 중요해 보입니다.\n\n자세한 내용은 다음 부분을 참고하시면 좋습니다.\n\n<smtcmp_block filename=\"Hugo/content/docs/SE/Obsidian/index.md\" language=\"markdown\" startLine=\"32\" endLine=\"54\"></smtcmp_block>\n<smtcmp_block filename=\"Hugo/content/docs/SE/Obsidian/index.md\" language=\"markdown\" startLine=\"58\" endLine=\"67\"></smtcmp_block>\n<smtcmp_block filename=\"Hugo/content/docs/SE/Obsidian/index.md\" language=\"markdown\" startLine=\"7\" endLine=\"31\"></smtcmp_block>\n<smtcmp_block filename=\"Hugo/content/docs/SE/Obsidian/index.md\" language=\"markdown\" startLine=\"56\" endLine=\"78\"></smtcmp_block>",
+      "id": "8ae15ffe-6f9f-4ef8-bd7d-846dad1d40af",
+      "metadata": {
+        "usage": {
+          "prompt_tokens": 5268,
+          "completion_tokens": 1011,
+          "total_tokens": 6279
+        },
+        "model": {
+          "providerType": "gemini",
+          "providerId": "gemini",
+          "id": "gemini-2.0-flash-thinking",
+          "model": "gemini-2.0-flash-thinking-exp"
+        }
+      }
+    },
+    {
+      "role": "user",
+      "content": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "\bweb을 검색해서 community plug-in 과 나열되어 있는 4개 plug-in 에 대해서 3줄로 설명을 추가 해 줘",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1,
+              "textFormat": 0,
+              "textStyle": ""
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      },
+      "promptContent": [
+        {
+          "type": "text",
+          "text": "\n\n\bweb을 검색해서 community plug-in 과 나열되어 있는 4개 plug-in 에 대해서 3줄로 설명을 추가 해 줘\n\n"
+        }
+      ],
+      "id": "5a3775bb-ba00-499f-9af7-22e467144a36",
+      "mentionables": [
+        {
+          "type": "current-file",
+          "file": "Hugo/content/docs/SE/Obsidian/index.md"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": "```Hugo/content/docs/SE/Obsidian/index.md\n<!-- ... skipped ... -->\n## Community Plug-In\n\n- Git\n    - **Git:**  Obsidian Vault를 Git 저장소로 만들어 버전 관리 및 GitHub 등과의 동기화를 가능하게 합니다.  `.git` 폴더를 Obsidian Vault 안에 생성하여 Git 명령어를 Obsidian 내에서 실행하거나 외부 Git 도구와 연동할 수 있습니다.  이를 통해 노트 변경 이력 관리, 협업, 백업 등에 유용하게 활용됩니다.\n- Templater\n    - **Templater:**  템플릿 기능을 제공하여,  노트 작성 시 미리 정의된 템플릿을 불러와 빠르게 내용을 채울 수 있게 합니다.  날짜, 제목, 사용자 정의 변수 등을 템플릿에 활용하여 생산성을 높이고,  반복적인 문서 양식을 효율적으로 관리할 수 있습니다.  코드 스니펫,  frontmatter,  정형화된 보고서 등에 유용합니다.\n- Copilot\n    - **Copilot:**  OpenAI Codex 모델 기반으로 코드 및 텍스트 자동 완성 기능을 제공합니다.  Obsidian에서 글을 쓸 때 문맥을 파악하여 자연스러운 문장 완성을 돕고,  코드 작성 시에도 자동 완성 및 추천 기능을 제공하여 생산성을 향상시킵니다.  아이디어 구상, 초안 작성, 코드 작성 등 다양한 상황에서 활용 가능합니다.\n- Smart Composer\n    - **Smart Composer:**  노트 작성을 위한 다양한 편집 기능을 제공합니다.  문장 병합, 분할, 순서 변경,  스타일 변경 등 고급 편집 기능을 통해  글쓰기 흐름을 개선하고 효율적인 문서 작성을 지원합니다.  긴 문서를 다듬거나,  아이디어를 구조화하고 재구성할 때 유용합니다.\n```",
+      "id": "65d28267-803a-4f58-9c48-c587c0e3a65d",
+      "metadata": {
+        "usage": {
+          "prompt_tokens": 6098,
+          "completion_tokens": 457,
+          "total_tokens": 6555
+        },
+        "model": {
+          "providerType": "gemini",
+          "providerId": "gemini",
+          "id": "gemini-2.0-flash-thinking",
+          "model": "gemini-2.0-flash-thinking-exp"
+        }
+      }
+    }
+  ],
+  "createdAt": 1744624122258,
+  "updatedAt": 1744624591629,
+  "schemaVersion": 1
+}

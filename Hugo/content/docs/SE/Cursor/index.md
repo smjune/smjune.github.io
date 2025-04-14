@@ -28,21 +28,44 @@ draft: false
     -   **주요 특징:** 실시간 정보 접근(X 플랫폼 연동), 유머러스하고 반항적인 페르소나, 최신 정보 기반 답변.
     -   **가격:** X Premium+ 구독 필요. API 접근은 별도 제공될 수 있음.
     -   **활용:** 최신 뉴스/트렌드 기반 질의응답, 특정 관점의 정보 탐색.
+-   **Perplexity:** [https://www.perplexity.ai/](https://www.perplexity.ai/)
+    -   **주요 특징:** AI 기반 검색 엔진과 챗봇 기술 결합, GPT-4/Claude 3 등 최신 모델 활용, 실시간 웹 검색 및 Q&A, 복잡한 추론을 위한 o13 시리즈 모델 제공.
+    -   **가격:** 무료 플랜, Pro 구독(일 300회+ Pro 검색), Enterprise 플랜 제공.
+    -   **활용:** 실시간 정보 검색/분석, 학술 연구, 코딩 문제 해결, 복잡한 추론 작업.
+    -   **차별점:** 실시간 웹 검색 통합으로 최신 정보 제공(다른 LLM들의 학습 데이터 제한 극복), 모든 답변에 대한 출처 링크 제공으로 신뢰성 확보, 검색 엔진과 LLM의 하이브리드 접근으로 정확성 향상.
 
-### 2. Open LLM Hub (오픈소스 모델 허브)
+### 2. Open LLM & Hub (오픈소스 모델과 허브)
 
-오픈소스 LLM 모델과 데이터셋을 공유하고 협업하는 플랫폼입니다.
+- **대표적인 Open Source LLM:**
+    -   Llama (Meta)
+        > - GPT-4.5, Claude 3.7 Sonnet 수준의 STEM 성능 달성
+        > - 128k 토큰의 긴 컨텍스트 윈도우 지원
+        > - 8개 언어 지원 및 강화된 안전성 기능 탑재
+    -   Mistral / Mixtral (Mistral AI)
+        > - Llama 2 70B 대비 6배 빠른 추론 속도와 더 높은 성능
+        > - 코드 생성, 수학, 추론 능력에서 뛰어난 성능
+        > - 140개 이상 언어 지원 및 고급 함수 호출 기능
+    -   Gemma (Google)
+        > - Gemini 기술 기반의 경량 오픈소스 모델
+        > - 고해상도 비정사각형 이미지 처리 및 향상된 추론 능력
+        > - 단일 GPU/TPU에서 실행 가능한 최고 성능 모델
+    -   Phi (Microsoft)
+        > - 동일 크기 및 상위 크기 모델 대비 우수한 성능
+        > - 20만 단어 어휘로 다국어 지원 강화
+        > - 그룹 쿼리 어텐션, 내장 함수 호출 기능 제공
+    -   Qwen (Alibaba)
+        > - GPT-4o, DeepSeek-V3, Llama-3.1-405B 대비 우수한 성능
+        > - 텍스트, 이미지, 오디오, 비디오 통합 처리 가능
+        > - 32k 토큰 컨텍스트와 강화된 추론 능력
 
--   **HuggingFace:** [https://huggingface.co/](https://huggingface.co/)
+- **HuggingFace:** [https://huggingface.co/](https://huggingface.co/)  
+
+    오픈소스 LLM 모델과 데이터셋을 공유하고 협업하는 플랫폼입니다.
+
     -   **주요 특징:** 방대한 모델/데이터셋 저장소(Hub), 모델 학습/추론 라이브러리(Transformers, Diffusers 등), 데모 공유(Spaces), LLM 리더보드, 학습 코스 제공.
     -   **가격:** 대부분 무료, 유료 플랜(추가 기능, 우선 지원 등) 제공.
     -   **활용:** 오픈소스 모델 탐색/다운로드, 모델 파인튜닝, AI 애플리케이션 개발/배포.
-    -   **대표적인 Open Source LLM:**
-        -   Llama (Meta)
-        -   Mistral / Mixtral (Mistral AI)
-        -   Gemma (Google)
-        -   Phi (Microsoft)
-        -   Qwen (Alibaba)
+
 
 ### 3. Local LLM Launcher (로컬 실행 도구)
 
