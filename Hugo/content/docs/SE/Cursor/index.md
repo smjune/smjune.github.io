@@ -94,17 +94,24 @@ draft: false
 
 로컬 개발 환경(IDE, 텍스트 에디터 등) 내에서 LLM 기능을 활용할 수 있도록 돕는 도구들입니다.
 
-#### 4.1 Code Editor (AI 네이티브 에디터)
+- AI Code Editor : Cursor, Windsuf
+- AI Code Extension : Continue, Cline, Copilot, Gemini Code Assist
+* AI luncher : Claud Desk top, Witcy, Enconvo
+* Obsidian + AI community plug-in (SmartComposer, Copilot, ...)
+
+#### 4.1 AI Code Editor (AI 네이티브 에디터)
 
 LLM 기능이 깊숙이 통합된 코드 에디터입니다.
 
--   **Cursor:** [https://www.cursor.com/en](https://www.cursor.com/en)
+-   **Cursor:** [https://www.cursor.com/en](https://www.cursor.com/en)   
     -   **주요 특징:** VS Code 기반, AI 기반 코드 생성/편집/리팩토링, "Codebase-aware" 채팅, 로컬 모델 연동 지원(설정 필요).
     -   **지원 모델:** OpenAI 모델(기본), Anthropic 모델, Azure OpenAI, 로컬 모델(Ollama, LM Studio 등 연동).
     -   **가격:** 무료 플랜(제한적 사용), 유료 Pro/Business 플랜.
     -   **설치:** 웹사이트에서 OS별 설치 파일 다운로드.
+    - [Cursor 커뮤니티](https://forum.cursor.com),[Cursor MCP, Rule ...](https://cursor.directory)
     - 활용예시 : cursor + git + obsidian 
-    ![cursor 활용](./cursor.png)
+    ![cursor 활용](./cursor.png) 
+
 -   **Windsurf:** [https://codeium.com/windsurf](https://codeium.com/windsurf)
     -   **주요 특징:** Codeium 개발, 빠른 자동 완성, Context Engine 기반 이해, 다중 파일 편집 지원, 경량화 추구.
     -   **지원 모델:** Codeium 자체 모델, 로컬 모델 연동 지원 논의 중/개발 중.
@@ -119,15 +126,11 @@ LLM 기능이 깊숙이 통합된 코드 에디터입니다.
     | **로컬 모델**    | 지원 (Ollama, LM Studio 등) | 제한적/개발 중             |
     | **가격**         | 무료/유료 플랜              | 현재 무료                   |
 
+
 #### 4.2 Extension, Plug-in (IDE 확장 기능)
 
-기존 IDE에 설치하여 LLM 기능을 추가하는 확장 프로그램입니다.
+기존 IDE(VScode)에 설치하여 LLM 기능을 추가하는 확장 프로그램입니다.
 
--   **GitHub Copilot:** [https://github.com/features/copilot](https://github.com/features/copilot)
-    -   **주요 특징:** GitHub/OpenAI 개발, 강력한 코드 자동 완성 및 제안, 채팅 기능(Copilot Chat), 광범위한 언어/IDE 지원.
-    -   **지원 모델:** OpenAI 모델(GPT 기반).
-    -   **가격:** 유료 구독 (개인/비즈니스), 학생/오픈소스 기여자 무료.
-    -   **설치:** 각 IDE 마켓플레이스에서 설치 (VS Code, JetBrains 등).
 -   **Continue:** [https://www.continue.dev/](https://www.continue.dev/)
     -   **주요 특징:** 오픈소스, 다양한 모델(로컬/클라우드) 연결 유연성, 사용자 정의 컨텍스트 제공(파일, 터미널 등), 자동 완성 및 채팅.
     -   **지원 모델:** OpenAI, Anthropic, Google, Mistral, Ollama, LM Studio 등 다수.
@@ -138,19 +141,29 @@ LLM 기능이 깊숙이 통합된 코드 에디터입니다.
     -   **지원 모델:** OpenAI, Anthropic, Google, Ollama, LM Studio 등 다수.
     -   **가격:** 무료 (오픈소스).
     -   **설치:** VS Code 마켓플레이스에서 설치.
+-   **GitHub Copilot:** [https://github.com/features/copilot](https://github.com/features/copilot)
+    -   **주요 특징:** GitHub/OpenAI 개발, 강력한 코드 자동 완성 및 제안, 채팅 기능(Copilot Chat), 광범위한 언어/IDE 지원.
+    -   **지원 모델:** OpenAI 모델(GPT 기반).
+    -   **가격:** 유료 구독 (개인/비즈니스), 학생/오픈소스 기여자 무료.
+    -   **설치:** 각 IDE 마켓플레이스에서 설치 (VS Code, JetBrains 등).
+-   **Gemini Code Assist:** [https://developers.google.com/gemini-code-assist](https://developers.google.com/gemini-code-assist)
+    -   **주요 특징:** Google 개발, 코드 자동 완성, 디버깅 지원, 프로그래밍 개념 학습 지원, GitHub 통합
+    -   **지원 모델:** Google Gemini
+    -   **가격:** 개인 사용자 무료, 기업용 Standard/Enterprise 버전 유료
+    -   **설치:** VS Code, JetBrains IDE, Cloud Shell Editor에서 설치 가능
 
 -   **비교 요약 (Extension, Plug-in):**
-    | 특징             | GitHub Copilot              | Continue                    | Cline                       |
-    | :--------------- | :-------------------------- | :-------------------------- | :-------------------------- |
-    | **개발 주체**    | GitHub/OpenAI               | 커뮤니티 (오픈소스)         | 커뮤니티 (오픈소스)         |
-    | **핵심 기능**    | 코드 완성, 채팅             | 모델 유연성, 컨텍스트       | 자율 에이전트, MCP         |
-    | **로컬 모델 지원**| 제한적/미지원               | 매우 우수 (Ollama 등)       | 매우 우수 (Ollama 등)       |
-    | **가격**         | 유료 (일부 무료)            | 무료                        | 무료                        |
+    | 특징             | Continue                    | Cline                       | GitHub Copilot              | Gemini Code Assist          |
+    | :--------------- | :-------------------------- | :-------------------------- | :-------------------------- | :-------------------------- |
+    | **개발 주체**    | 커뮤니티 (오픈소스)         | 커뮤니티 (오픈소스)         | GitHub/OpenAI               | Google                      |
+    | **핵심 기능**    | 모델 유연성, 컨텍스트       | 자율 에이전트, MCP          | 코드 완성, 채팅             | 코드 완성, 디버깅, 학습     |
+    | **로컬 모델 지원**| 매우 우수 (Ollama 등)       | 매우 우수 (Ollama 등)       | 제한적/미지원               | 미지원                      |
+    | **가격**         | 무료                        | 무료                        | 유료 (일부 무료)            | 무료 (기업용 유료)          |
 
 -   **활용 예시:**
     -   `Ollama` 또는 `LM Studio`를 사용하여 로컬에 `Llama 3` 모델을 실행시킨 후, `Continue` 또는 `Cline` 확장 프로그램을 통해 VS Code에서 해당 로컬 모델을 코드 생성 및 분석에 활용할 수 있습니다. 이를 통해 민감한 코드를 외부로 전송하지 않고 AI 지원을 받을 수 있습니다.
 
-#### 4.3 Desktop tools (데스크톱 애플리케이션)
+#### 4.3 AI launcher (데스크톱 애플리케이션)
 
 독립적으로 실행되는 LLM 관련 데스크톱 애플리케이션입니다.
 

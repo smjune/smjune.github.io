@@ -184,8 +184,30 @@ draft: true
     - AI가 제안한 내용을 클릭 한 번으로 적용할 수 있습니다.
     - Vault 내용 기반 대화, 시맨틱 검색, 로컬 모델 지원 등의 기능을 제공합니다.
     - 최근 Gemini 모델 및 이미지 지원이 추가되었습니다.
-
+]
 ##  LM studio + Local LLM
 
 SmartComposer 에서 Cloud LLM 을 사용하지 않고, Local  LLM 을 사용하기 위해 local 환경 구축 
 
+- LM Studio 에서 자신에 local 환경에 맞는 모델을 download 하여 실행한다. 
+![LM studio](lmstudio.png)
+
+- Obsidian | community plug-in | Smart Composer 에서 lm-studio 을 설정하고 해당 모델을 입력 한다.
+![Smart Composer Setting](smartcomposer.png)
+
+- Clould LLM 과 Local LLM 비교 
+
+각 LLM 의 성능 차이는 분명히 존재 한다. 같은 모델을 Cloud 와 Local 에서 비교해 보면 좋을것 같은데, 성능이 좋은 LLM 의 경우 Local 에서 운영하는데는 한계가 있다. 
+
+-- gemini-20-flash-thinking (Cloud)
+한번에 원하는 대답을 보여준다.  
+>오늘 추가된 내용은 다음과 같습니다.  
+>1. **Obsidian, Github, Hugo 간 구조 설정**에 대한 고민과 함께 발생할 수 있는 **개인 지식 연결 기능 활용 제한** 및 **Git 동기화/민감 정보 관리**의 단점을 "7. 더 생각해 볼것" 섹션에 추가했습니다.
+>2. **Obsidian Community Plugin** 섹션을 추가하여, AI Plug-in 인 **SmartComposer** 와 **Cursor** 의 플러그인 검색 결과를 비교 분석했습니다. **Git, Templater, Copilot, Smart Composer** 플러그인에 대한 두 검색 결과의 요약 내용을 비교했습니다.
+>3. **LM Studio 와 Local LLM** 섹션을 추가하여, SmartComposer 에서 Cloud LLM 대신 Local LLM 을 사용하는 방법에 대한 안내와 함께, **Gemini (Cloud LLM)** 와 **Gemma (Local LLM)** 의 SmartComposer 출력 결과를 비교했습니다.
+![[스크린샷 2025-04-19 오전 10.50.38.png]]
+-- lmstudio:gemma3_12b_it (Local : LM studio)
+바로 한번에 요약해 주시 못하는데, 뭔가 자세하게 말해야 할 것 같다. 
+
+>최근 추가된 내용은 다음과 같습니다:  
+Obsidian 플러그인(Git, Templater, Copilot, Smart Composer) 사용법과 LM Studio를 활용하여 Obsidian 내 AI 지원을 강화하는 방법에 대한 설명입니다. 각 플러그인의 기능과 클라우드 LLM과 로컬 LLM의 차이점을 비교합니다.

@@ -13,6 +13,9 @@ bookComments: false
 
 Multi vs Mono REPO
 
+- Multi repo 의 경우 각각의 프로젝트에 각각의 변경을 넣어야 한다. 
+- Mono repo 의 경우 각각의 프로젝트 변경을 1개의 변경으로 수정이 가능하다.
+
 VFSforGit[^vfsforgit]
 Piper[^piper]
 
