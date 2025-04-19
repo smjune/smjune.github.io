@@ -330,8 +330,8 @@ submit 전 Work In Progress 단계를 제공함&lt;/p>
 - submit 된 change 기준으로 다시 빌드, 테스트 한다. 
  (Postsubmit)
 &lt;/code>&lt;/pre>
-&lt;p>MR/PR
-shleves
+&lt;p>MR/PR &lt;br>
+shleves &lt;br>
 refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><link>https://smjune.github.io/docs/SE/pyenv/</link><pubDate>Thu, 09 Feb 2023 18:07:51 +0900</pubDate><guid>https://smjune.github.io/docs/SE/pyenv/</guid><description>&lt;h2 id="pyenv-사용하기">
  Pyenv 사용하기
  &lt;a class="anchor" href="#pyenv-%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0">#&lt;/a>
@@ -370,54 +370,136 @@ refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><
 . discrete (App) / countinuous (WEB))&lt;/p></description></item><item><title>Docker</title><link>https://smjune.github.io/docs/SE/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/docker/</guid><description>&lt;p>docker 의 등장&lt;/p>
 &lt;p>Github runner 으로 생각해 보는 docker&lt;/p>
 &lt;p>Self-hosted (bare metal vs virtual)&lt;/p>
-&lt;p>Github-Hosted&lt;/p></description></item><item><title>VCS</title><link>https://smjune.github.io/docs/SE/repo/VCS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/VCS/</guid><description>&lt;p>distributed vs Centralized VCS&lt;/p>
-&lt;p>fork : clone a repo from remote on REPO&lt;/p>
-&lt;h2 id="1-1세대-vcs">
- 1. 1세대 VCS
- &lt;a class="anchor" href="#1-1%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
+&lt;p>Github-Hosted&lt;/p></description></item><item><title>VCS</title><link>https://smjune.github.io/docs/SE/repo/VCS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/VCS/</guid><description>&lt;h1 id="버전-관리-시스템의-진화">
+ 버전 관리 시스템의 진화
+ &lt;a class="anchor" href="#%eb%b2%84%ec%a0%84-%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c%ec%9d%98-%ec%a7%84%ed%99%94">#&lt;/a>
+&lt;/h1>
+&lt;p>버전 관리 시스템(VCS)은 소프트웨어 개발에서 코드의 변경사항을 추적하고 관리하는 필수적인 도구입니다. 시대별로 발전해온 VCS의 특징과 장단점을 살펴보겠습니다.&lt;/p>
+&lt;h2 id="1-1세대-vcs-local-vcs-1972">
+ 1. 1세대 VCS: Local VCS (1972~)
+ &lt;a class="anchor" href="#1-1%ec%84%b8%eb%8c%80-vcs-local-vcs-1972">#&lt;/a>
 &lt;/h2>
-&lt;p>: Local VCS&lt;/p>
-&lt;h2 id="2-2세대-vcs">
- 2. 2세대 VCS
- &lt;a class="anchor" href="#2-2%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
-&lt;/h2>
-&lt;p>: Centralized VCS&lt;/p>
+&lt;p>: 로컬 시스템에서 파일의 변경사항을 관리&lt;/p>
+&lt;h3 id="특징">
+ 특징
+ &lt;a class="anchor" href="#%ed%8a%b9%ec%a7%95">#&lt;/a>
+&lt;/h3>
 &lt;ul>
-&lt;li>변경에 대해서 연속된 숫자로 id을 배정한다.&lt;/li>
+&lt;li>단일 시스템에서 작동&lt;/li>
+&lt;li>파일 단위의 변경사항 추적&lt;/li>
+&lt;li>간단한 버전 관리 기능&lt;/li>
 &lt;/ul>
-&lt;h2 id="3-3세대-vcs">
- 3. 3세대 VCS
- &lt;a class="anchor" href="#3-3%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
-&lt;/h2>
-&lt;p>: Distributed VCS&lt;/p>
+&lt;h3 id="장점">
+ 장점
+ &lt;a class="anchor" href="#%ec%9e%a5%ec%a0%90">#&lt;/a>
+&lt;/h3>
 &lt;ul>
-&lt;li>각 clone 에서 랜덤 변수로 id을 배정한다.&lt;/li>
+&lt;li>간단하고 빠른 작동&lt;/li>
+&lt;li>별도의 네트워크 불필요&lt;/li>
+&lt;li>즉각적인 버전 전환&lt;/li>
 &lt;/ul>
-&lt;h2 id="4-4세대-vcs">
- 4. 4세대 VCS
- &lt;a class="anchor" href="#4-4%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
-&lt;/h2></description></item><item><title>Repo</title><link>https://smjune.github.io/docs/SE/repo/REPO/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/REPO/</guid><description>&lt;h2 id="4세대-vcs">
+&lt;h3 id="단점">
+ 단점
+ &lt;a class="anchor" href="#%eb%8b%a8%ec%a0%90">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>협업 기능 부재&lt;/li>
+&lt;li>백업의 어려움&lt;/li>
+&lt;li>버전 충돌 관리 불가능&lt;/li>
+&lt;/ul>
+&lt;h3 id="대표-도구">
+ 대표 도구
+ &lt;a class="anchor" href="#%eb%8c%80%ed%91%9c-%eb%8f%84%ea%b5%ac">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>&lt;strong>RCS&lt;/strong> (Revision Control System)&lt;/li>
+&lt;li>&lt;strong>SCCS&lt;/strong> (Source Code Control System)&lt;/li>
+&lt;/ul>
+&lt;h2 id="2-2세대-vcs-centralized-vcs-1986">
+ 2. 2세대 VCS: Centralized VCS (1986~)
+ &lt;a class="anchor" href="#2-2%ec%84%b8%eb%8c%80-vcs-centralized-vcs-1986">#&lt;/a>
+&lt;/h2>
+&lt;p>: 중앙 서버를 통한 버전 관리&lt;/p></description></item><item><title>Repo</title><link>https://smjune.github.io/docs/SE/repo/REPO/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/REPO/</guid><description>&lt;h2 id="4세대-vcs">
  4세대 VCS
  &lt;a class="anchor" href="#4%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
 &lt;/h2>
-&lt;p>Multi vs Mono REPO&lt;/p>
+&lt;h3 id="monorepo-vs-multirepo">
+ Monorepo vs Multirepo
+ &lt;a class="anchor" href="#monorepo-vs-multirepo">#&lt;/a>
+&lt;/h3>
+&lt;p>모노레포(Monorepo)와 멀티레포(Multirepo)는 현대 소프트웨어 개발에서 가장 중요한 버전 관리 전략입니다.&lt;/p>
+&lt;h4 id="모노레포-monorepo">
+ 모노레포 (Monorepo)
+ &lt;a class="anchor" href="#%eb%aa%a8%eb%85%b8%eb%a0%88%ed%8f%ac-monorepo">#&lt;/a>
+&lt;/h4>
 &lt;ul>
-&lt;li>Multi repo 의 경우 각각의 프로젝트에 각각의 변경을 넣어야 한다.&lt;/li>
-&lt;li>Mono repo 의 경우 각각의 프로젝트 변경을 1개의 변경으로 수정이 가능하다.&lt;/li>
+&lt;li>&lt;strong>정의&lt;/strong>: 여러 프로젝트의 코드를 단일 저장소에서 관리하는 방식&lt;/li>
+&lt;li>&lt;strong>장점&lt;/strong>:
+&lt;ul>
+&lt;li>코드 공유와 재사용이 용이&lt;/li>
+&lt;li>원자적 커밋으로 cross-project 변경 관리 가능&lt;/li>
+&lt;li>통합된 CI/CD 파이프라인 구성 가능&lt;/li>
+&lt;li>일관된 개발 환경과 도구 사용&lt;/li>
 &lt;/ul>
-&lt;p>VFSforGit&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
-Piper&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
+&lt;/li>
+&lt;li>&lt;strong>단점&lt;/strong>:
+&lt;ul>
+&lt;li>저장소 크기가 커져 성능 이슈 발생 가능&lt;/li>
+&lt;li>접근 권한 관리가 복잡&lt;/li>
+&lt;li>빌드 시간이 길어질 수 있음&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h4 id="멀티레포-multirepo">
+ 멀티레포 (Multirepo)
+ &lt;a class="anchor" href="#%eb%a9%80%ed%8b%b0%eb%a0%88%ed%8f%ac-multirepo">#&lt;/a>
+&lt;/h4>
+&lt;ul>
+&lt;li>&lt;strong>정의&lt;/strong>: 각 프로젝트를 독립된 저장소에서 관리하는 방식&lt;/li>
+&lt;li>&lt;strong>장점&lt;/strong>:
+&lt;ul>
+&lt;li>프로젝트별 독립적인 버전 관리&lt;/li>
+&lt;li>더 명확한 접근 권한 관리&lt;/li>
+&lt;li>저장소별 가벼운 크기 유지&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>단점&lt;/strong>:
+&lt;ul>
+&lt;li>코드 재사용이 어려움&lt;/li>
+&lt;li>프로젝트 간 종속성 관리가 복잡&lt;/li>
+&lt;li>여러 프로젝트에 걸친 변경사항 관리가 어려움&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="대규모-기업의-vcs-솔루션">
+ 대규모 기업의 VCS 솔루션
+ &lt;a class="anchor" href="#%eb%8c%80%ea%b7%9c%eb%aa%a8-%ea%b8%b0%ec%97%85%ec%9d%98-vcs-%ec%86%94%eb%a3%a8%ec%85%98">#&lt;/a>
+&lt;/h3>
+&lt;h4 id="vfsforgit">
+ VFSforGit
+ &lt;a class="anchor" href="#vfsforgit">#&lt;/a>
+&lt;/h4>
+&lt;ul>
+&lt;li>Microsoft가 개발한 가상 파일 시스템 기반 Git 확장&lt;/li>
+&lt;li>대규모 Git 저장소를 효율적으로 관리&lt;/li>
+&lt;li>필요한 파일만 선택적으로 다운로드하여 작업 가능&lt;/li>
+&lt;/ul>
+&lt;h4 id="google-piper">
+ Google Piper
+ &lt;a class="anchor" href="#google-piper">#&lt;/a>
+&lt;/h4>
+&lt;ul>
+&lt;li>Google의 자체 개발 중앙집중식 VCS&lt;/li>
+&lt;li>수백만 커밋과 페타바이트 규모의 코드 관리&lt;/li>
+&lt;li>강력한 코드 검색과 분석 기능 제공&lt;/li>
+&lt;/ul>
+&lt;h3 id="현대적-vcs-트렌드">
+ 현대적 VCS 트렌드
+ &lt;a class="anchor" href="#%ed%98%84%eb%8c%80%ec%a0%81-vcs-%ed%8a%b8%eb%a0%8c%eb%93%9c">#&lt;/a>
+&lt;/h3>
 &lt;ol>
-&lt;li id="fn:1">
-&lt;p>&lt;a href="https://www.youtube.com/watch?v=ykZbBD-CmP8">https://www.youtube.com/watch?v=ykZbBD-CmP8&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2">
-&lt;p>&lt;a href="https://www.youtube.com/watch?v=W71BTkUbdqE">https://www.youtube.com/watch?v=W71BTkUbdqE&lt;/a>&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></description></item><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/kaggle/</guid><description>&lt;h2 id="prerequisites">
+&lt;li>
+&lt;p>&lt;strong>하이브리드 접근&lt;/strong>&lt;/p></description></item><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/kaggle/</guid><description>&lt;h2 id="prerequisites">
  Prerequisites
  &lt;a class="anchor" href="#prerequisites">#&lt;/a>
 &lt;/h2>

@@ -31,8 +31,8 @@ submit 전 Work In Progress 단계를 제공함&lt;/p>
 - submit 된 change 기준으로 다시 빌드, 테스트 한다. 
  (Postsubmit)
 &lt;/code>&lt;/pre>
-&lt;p>MR/PR
-shleves
+&lt;p>MR/PR &lt;br>
+shleves &lt;br>
 refs/for/head&lt;/p></description></item><item><title>Delivery &amp; Deployment</title><link>https://smjune.github.io/docs/SE/CI/CD/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/CD/</guid><description>&lt;p>SW 제품도 점차 서비스화 되면서 발전(?)하게 된 분야이다.&lt;/p>
 &lt;p>기준에 package SW (shrinkwrap license) 에서 WEB 을 기반으로 한 서비스로 SW 제품의 성격이 변경되었다.&lt;/p>
 &lt;p>기존에 박스를 사서 자시의 PC 에 설치하는 사용하는 것이 이제는 NW에 접속하여 온라인으로 사용하는 것이다.&lt;/p>

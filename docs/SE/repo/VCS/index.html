@@ -1,43 +1,81 @@
-<!doctype html><html lang=en dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="distributed vs Centralized VCS
-fork : clone a repo from remote on REPO
-
-  1. 1세대 VCS
+<!doctype html><html lang=en dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  버전 관리 시스템의 진화
   #
 
-: Local VCS
+버전 관리 시스템(VCS)은 소프트웨어 개발에서 코드의 변경사항을 추적하고 관리하는 필수적인 도구입니다. 시대별로 발전해온 VCS의 특징과 장단점을 살펴보겠습니다.
 
-  2. 2세대 VCS
+  1. 1세대 VCS: Local VCS (1972~)
   #
 
-: Centralized VCS
+: 로컬 시스템에서 파일의 변경사항을 관리
 
-변경에 대해서 연속된 숫자로 id을 배정한다.
-
-
-  3. 3세대 VCS
+  특징
   #
 
-: Distributed VCS
 
-각 clone 에서 랜덤 변수로 id을 배정한다.
+단일 시스템에서 작동
+파일 단위의 변경사항 추적
+간단한 버전 관리 기능
 
 
-  4. 4세대 VCS
+  장점
   #
-"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://smjune.github.io/docs/SE/repo/VCS/"><meta property="og:site_name" content="MJ. Breadcrumbs"><meta property="og:title" content="VCS"><meta property="og:description" content="distributed vs Centralized VCS
-fork : clone a repo from remote on REPO
-1. 1세대 VCS # : Local VCS
-2. 2세대 VCS # : Centralized VCS
-변경에 대해서 연속된 숫자로 id을 배정한다. 3. 3세대 VCS # : Distributed VCS
-각 clone 에서 랜덤 변수로 id을 배정한다. 4. 4세대 VCS #"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2025-04-19T13:28:27+09:00"><title>VCS | MJ. Breadcrumbs</title>
-<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://smjune.github.io/docs/SE/repo/VCS/><link rel=stylesheet href=/book.min.e1139f93982fd362719f88c60dab8e0226b8024de46e42eb47bb4f697a18fec1.css integrity="sha256-4ROfk5gv02Jxn4jGDauOAia4Ak3kbkLrR7tPaXoY/sE=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.f1f616f2f234f088f9f4f474e8746cdead7c4f9aff39865e58d54ca65952bdb0.js integrity="sha256-8fYW8vI08Ij59PR06HRs3q18T5r/OYZeWNVMpllSvbA=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+
+
+간단하고 빠른 작동
+별도의 네트워크 불필요
+즉각적인 버전 전환
+
+
+  단점
+  #
+
+
+협업 기능 부재
+백업의 어려움
+버전 충돌 관리 불가능
+
+
+  대표 도구
+  #
+
+
+RCS (Revision Control System)
+SCCS (Source Code Control System)
+
+
+  2. 2세대 VCS: Centralized VCS (1986~)
+  #
+
+: 중앙 서버를 통한 버전 관리"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://smjune.github.io/docs/SE/repo/VCS/"><meta property="og:site_name" content="MJ. Breadcrumbs"><meta property="og:title" content="VCS"><meta property="og:description" content="버전 관리 시스템의 진화 # 버전 관리 시스템(VCS)은 소프트웨어 개발에서 코드의 변경사항을 추적하고 관리하는 필수적인 도구입니다. 시대별로 발전해온 VCS의 특징과 장단점을 살펴보겠습니다.
+1. 1세대 VCS: Local VCS (1972~) # : 로컬 시스템에서 파일의 변경사항을 관리
+특징 # 단일 시스템에서 작동 파일 단위의 변경사항 추적 간단한 버전 관리 기능 장점 # 간단하고 빠른 작동 별도의 네트워크 불필요 즉각적인 버전 전환 단점 # 협업 기능 부재 백업의 어려움 버전 충돌 관리 불가능 대표 도구 # RCS (Revision Control System) SCCS (Source Code Control System) 2. 2세대 VCS: Centralized VCS (1986~) # : 중앙 서버를 통한 버전 관리"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2025-04-19T17:30:43+09:00"><title>VCS | MJ. Breadcrumbs</title>
+<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://smjune.github.io/docs/SE/repo/VCS/><link rel=stylesheet href=/book.min.e1139f93982fd362719f88c60dab8e0226b8024de46e42eb47bb4f697a18fec1.css integrity="sha256-4ROfk5gv02Jxn4jGDauOAia4Ak3kbkLrR7tPaXoY/sE=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.7cb7f703fdb6c4a0ee73992c5dbb0ead41ba4dd514f6a2f7e9d8c6847ec406a6.js integrity="sha256-fLf3A/22xKDuc5ksXbsOrUG6TdUU9qL36djGhH7EBqY=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>MJ. Breadcrumbs</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li class=book-section-flat><a href=/docs/SE/>Job.logging</a><ul><li><a href=/docs/SE/hello/>Hello GitHub</a></li><li><a href=/docs/SE/gitlab/>Push to Gitlab</a></li><li><a href=/docs/SE/gitbook/>Gitbook</a></li><li><input type=checkbox id=section-0590d23097cd9a656856c869f5eb6946 class=toggle>
 <label for=section-0590d23097cd9a656856c869f5eb6946 class="flex justify-between"><a href=/docs/SE/hugo/>Hugo Tips</a></label><ul><li><a href=/docs/SE/hugo/book/>Hugo-book Theme</a></li><li><a href=/docs/SE/hugo/papermod/>PaperMod Theme</a></li></ul></li><li><a href=/docs/SE/git/>Git command Tips</a></li><li><a href=/docs/SE/pyenv/>Python with Pyenv</a></li><li><a href=/docs/SE/docker/>Docker</a></li><li><input type=checkbox id=section-772819a1dfe456a467414ffb423082ae class=toggle checked>
 <label for=section-772819a1dfe456a467414ffb423082ae class="flex justify-between"><a href=/docs/SE/repo/>The Repo</a></label><ul><li><a href=/docs/SE/repo/VCS/ class=active>VCS</a></li><li><a href=/docs/SE/repo/REPO/>Repo</a></li></ul></li><li><input type=checkbox id=section-b5b586e1e415262ed46bc98d0a676fb3 class=toggle>
 <label for=section-b5b586e1e415262ed46bc98d0a676fb3 class="flex justify-between"><a href=/docs/SE/CI/>Countinuous Integration</a></label><ul><li><a href=/docs/SE/CI/localbuild/>Local build</a></li><li><a href=/docs/SE/CI/PostCI/>Post CI</a></li><li><a href=/docs/SE/CI/Branch/>Branches</a></li><li><a href=/docs/SE/CI/Presubmit/>Presubmit</a></li><li><a href=/docs/SE/CI/CD/>Delivery & Deployment</a></li></ul></li><li><a href=/docs/SE/kaggle/>Data Science</a></li><li><a href=/docs/SE/Cursor/>Cursor</a></li><li><a href=/docs/SE/Obsidian/>Obsidian</a></li></ul></li><li class=book-section-flat><a href=/docs/ENG/>Eng.logging</a><ul><li><input type=checkbox id=section-5316120ef730e623d87facb7e14429fb class=toggle>
-<label for=section-5316120ef730e623d87facb7e14429fb class="flex justify-between"><a href=/docs/ENG/daily/>Daily</a></label><ul><li><a href=/docs/ENG/daily/daily1/>Daily1</a></li></ul></li><li><a href=/docs/ENG/grammarly/>Grammarly</a><ul></ul></li></ul></li></ul><ul><li><a href=/posts/>Writing.logging</a></li><li><a href=https://github.com/smjune/ target=_blank rel=noopener>Github Repo</a></li><li><a href=https://gohugo.io/ target=_blank rel=noopener>Powered by Hugo</a></li><li><a href=https://themes.gohugo.io/hugo-book// target=_blank rel=noopener>and hugo-book</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>VCS</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#1-1세대-vcs>1. 1세대 VCS</a></li><li><a href=#2-2세대-vcs>2. 2세대 VCS</a></li><li><a href=#3-3세대-vcs>3. 3세대 VCS</a></li><li><a href=#4-4세대-vcs>4. 4세대 VCS</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><p>distributed vs Centralized VCS</p><p>fork : clone a repo from remote on REPO</p><h2 id=1-1세대-vcs>1. 1세대 VCS
-<a class=anchor href=#1-1%ec%84%b8%eb%8c%80-vcs>#</a></h2><p>: Local VCS</p><h2 id=2-2세대-vcs>2. 2세대 VCS
-<a class=anchor href=#2-2%ec%84%b8%eb%8c%80-vcs>#</a></h2><p>: Centralized VCS</p><ul><li>변경에 대해서 연속된 숫자로 id을 배정한다.</li></ul><h2 id=3-3세대-vcs>3. 3세대 VCS
-<a class=anchor href=#3-3%ec%84%b8%eb%8c%80-vcs>#</a></h2><p>: Distributed VCS</p><ul><li>각 clone 에서 랜덤 변수로 id을 배정한다.</li></ul><h2 id=4-4세대-vcs>4. 4세대 VCS
-<a class=anchor href=#4-4%ec%84%b8%eb%8c%80-vcs>#</a></h2></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/smjune/smjune.github.io/commit/516a11fab520f3393e1915e031b584aea871d987 title='Last modified by 성명준 | April 19, 2025' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt>
-<span>April 19, 2025</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#1-1세대-vcs>1. 1세대 VCS</a></li><li><a href=#2-2세대-vcs>2. 2세대 VCS</a></li><li><a href=#3-3세대-vcs>3. 3세대 VCS</a></li><li><a href=#4-4세대-vcs>4. 4세대 VCS</a></li></ul></li></ul></nav></div></aside></main></body></html>
+<label for=section-5316120ef730e623d87facb7e14429fb class="flex justify-between"><a href=/docs/ENG/daily/>Daily</a></label><ul><li><a href=/docs/ENG/daily/daily1/>Daily1</a></li></ul></li><li><a href=/docs/ENG/grammarly/>Grammarly</a><ul></ul></li></ul></li></ul><ul><li><a href=/posts/>Writing.logging</a></li><li><a href=https://github.com/smjune/ target=_blank rel=noopener>Github Repo</a></li><li><a href=https://gohugo.io/ target=_blank rel=noopener>Powered by Hugo</a></li><li><a href=https://themes.gohugo.io/hugo-book// target=_blank rel=noopener>and hugo-book</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>VCS</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#버전-관리-시스템의-진화>버전 관리 시스템의 진화</a><ul><li><a href=#1-1세대-vcs-local-vcs-1972>1. 1세대 VCS: Local VCS (1972~)</a><ul><li><a href=#특징>특징</a></li><li><a href=#장점>장점</a></li><li><a href=#단점>단점</a></li><li><a href=#대표-도구>대표 도구</a></li></ul></li><li><a href=#2-2세대-vcs-centralized-vcs-1986>2. 2세대 VCS: Centralized VCS (1986~)</a><ul><li><a href=#특징-1>특징</a></li><li><a href=#장점-1>장점</a></li><li><a href=#단점-1>단점</a></li><li><a href=#대표-도구-1>대표 도구</a></li></ul></li><li><a href=#3-3세대-vcs-distributed-vcs-2005>3. 3세대 VCS: Distributed VCS (2005~)</a><ul><li><a href=#특징-2>특징</a></li><li><a href=#장점-2>장점</a></li><li><a href=#단점-2>단점</a></li><li><a href=#대표-도구-2>대표 도구</a></li></ul></li><li><a href=#4-4세대-vcs-cloud-native--ai-enhanced-vcs-2015>4. 4세대 VCS: Cloud-Native & AI-Enhanced VCS (2015~)</a><ul><li><a href=#특징-3>특징</a></li><li><a href=#장점-3>장점</a></li><li><a href=#단점-3>단점</a></li><li><a href=#대표-도구-3>대표 도구</a></li></ul></li><li><a href=#vcs-발전-트렌드>VCS 발전 트렌드</a></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h1 id=버전-관리-시스템의-진화>버전 관리 시스템의 진화
+<a class=anchor href=#%eb%b2%84%ec%a0%84-%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c%ec%9d%98-%ec%a7%84%ed%99%94>#</a></h1><p>버전 관리 시스템(VCS)은 소프트웨어 개발에서 코드의 변경사항을 추적하고 관리하는 필수적인 도구입니다. 시대별로 발전해온 VCS의 특징과 장단점을 살펴보겠습니다.</p><h2 id=1-1세대-vcs-local-vcs-1972>1. 1세대 VCS: Local VCS (1972~)
+<a class=anchor href=#1-1%ec%84%b8%eb%8c%80-vcs-local-vcs-1972>#</a></h2><p>: 로컬 시스템에서 파일의 변경사항을 관리</p><h3 id=특징>특징
+<a class=anchor href=#%ed%8a%b9%ec%a7%95>#</a></h3><ul><li>단일 시스템에서 작동</li><li>파일 단위의 변경사항 추적</li><li>간단한 버전 관리 기능</li></ul><h3 id=장점>장점
+<a class=anchor href=#%ec%9e%a5%ec%a0%90>#</a></h3><ul><li>간단하고 빠른 작동</li><li>별도의 네트워크 불필요</li><li>즉각적인 버전 전환</li></ul><h3 id=단점>단점
+<a class=anchor href=#%eb%8b%a8%ec%a0%90>#</a></h3><ul><li>협업 기능 부재</li><li>백업의 어려움</li><li>버전 충돌 관리 불가능</li></ul><h3 id=대표-도구>대표 도구
+<a class=anchor href=#%eb%8c%80%ed%91%9c-%eb%8f%84%ea%b5%ac>#</a></h3><ul><li><strong>RCS</strong> (Revision Control System)</li><li><strong>SCCS</strong> (Source Code Control System)</li></ul><h2 id=2-2세대-vcs-centralized-vcs-1986>2. 2세대 VCS: Centralized VCS (1986~)
+<a class=anchor href=#2-2%ec%84%b8%eb%8c%80-vcs-centralized-vcs-1986>#</a></h2><p>: 중앙 서버를 통한 버전 관리</p><h3 id=특징-1>특징
+<a class=anchor href=#%ed%8a%b9%ec%a7%95-1>#</a></h3><ul><li>중앙 서버에 모든 버전 이력 저장</li><li>순차적인 버전 번호 부여</li><li>클라이언트-서버 모델</li></ul><h3 id=장점-1>장점
+<a class=anchor href=#%ec%9e%a5%ec%a0%90-1>#</a></h3><ul><li>팀 협업 가능</li><li>접근 권한 관리 용이</li><li>프로젝트 전체 파악 쉬움</li></ul><h3 id=단점-1>단점
+<a class=anchor href=#%eb%8b%a8%ec%a0%90-1>#</a></h3><ul><li>중앙 서버 의존성</li><li>네트워크 연결 필수</li><li>서버 장애 시 작업 불가</li></ul><h3 id=대표-도구-1>대표 도구
+<a class=anchor href=#%eb%8c%80%ed%91%9c-%eb%8f%84%ea%b5%ac-1>#</a></h3><ul><li><strong>CVS</strong> (Concurrent Versions System)</li><li><strong>SVN</strong> (Subversion)</li><li><strong>Perforce</strong></li></ul><h2 id=3-3세대-vcs-distributed-vcs-2005>3. 3세대 VCS: Distributed VCS (2005~)
+<a class=anchor href=#3-3%ec%84%b8%eb%8c%80-vcs-distributed-vcs-2005>#</a></h2><p>: 분산형 버전 관리</p><h3 id=특징-2>특징
+<a class=anchor href=#%ed%8a%b9%ec%a7%95-2>#</a></h3><ul><li>전체 저장소 복제</li><li>로컬에서 커밋 가능</li><li>브랜치 작업 용이</li><li>고유한 해시 ID로 버전 관리</li></ul><h3 id=장점-2>장점
+<a class=anchor href=#%ec%9e%a5%ec%a0%90-2>#</a></h3><ul><li>오프라인 작업 가능</li><li>빠른 브랜칭과 머징</li><li>안정적인 백업</li><li>유연한 워크플로우</li></ul><h3 id=단점-2>단점
+<a class=anchor href=#%eb%8b%a8%ec%a0%90-2>#</a></h3><ul><li>학습 곡선이 높음</li><li>저장소 크기 증가</li><li>초기 클론 시간 증가</li></ul><h3 id=대표-도구-2>대표 도구
+<a class=anchor href=#%eb%8c%80%ed%91%9c-%eb%8f%84%ea%b5%ac-2>#</a></h3><ul><li><strong>Git</strong></li><li><strong>Mercurial</strong></li><li><strong>Bazaar</strong></li></ul><h2 id=4-4세대-vcs-cloud-native--ai-enhanced-vcs-2015>4. 4세대 VCS: Cloud-Native & AI-Enhanced VCS (2015~)
+<a class=anchor href=#4-4%ec%84%b8%eb%8c%80-vcs-cloud-native--ai-enhanced-vcs-2015>#</a></h2><p>: 클라우드 네이티브 환경과 AI 통합</p><h3 id=특징-3>특징
+<a class=anchor href=#%ed%8a%b9%ec%a7%95-3>#</a></h3><ul><li>클라우드 기반 확장성</li><li>AI 지원 코드 리뷰</li><li>자동화된 워크플로우</li><li>대규모 코드베이스 최적화</li></ul><h3 id=장점-3>장점
+<a class=anchor href=#%ec%9e%a5%ec%a0%90-3>#</a></h3><ul><li>무제한 확장성</li><li>지능형 코드 분석</li><li>통합된 개발 환경</li><li>고성능 검색과 분석</li></ul><h3 id=단점-3>단점
+<a class=anchor href=#%eb%8b%a8%ec%a0%90-3>#</a></h3><ul><li>클라우드 의존성</li><li>비용 증가 가능성</li><li>보안 고려사항 증가</li></ul><h3 id=대표-도구-3>대표 도구
+<a class=anchor href=#%eb%8c%80%ed%91%9c-%eb%8f%84%ea%b5%ac-3>#</a></h3><ul><li><strong>VFSforGit</strong> (Microsoft)</li><li><strong>Piper</strong> (Google)</li><li><strong>Cloud Source Repositories</strong></li></ul><h2 id=vcs-발전-트렌드>VCS 발전 트렌드
+<a class=anchor href=#vcs-%eb%b0%9c%ec%a0%84-%ed%8a%b8%eb%a0%8c%eb%93%9c>#</a></h2><ol><li><p><strong>협업 중심</strong></p><ul><li>실시간 협업 기능 강화</li><li>코드 리뷰 프로세스 통합</li><li>소셜 코딩 플랫폼화</li></ul></li><li><p><strong>자동화와 지능화</strong></p><ul><li>AI 기반 코드 분석</li><li>자동화된 테스트 통합</li><li>스마트 충돌 해결</li></ul></li><li><p><strong>클라우드 네이티브</strong></p><ul><li>서버리스 아키텍처</li><li>컨테이너 통합</li><li>마이크로서비스 지원</li></ul></li><li><p><strong>보안 강화</strong></p><ul><li>취약점 자동 검사</li><li>암호화 기능 강화</li><li>접근 제어 세분화</li></ul></li></ol></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/smjune/smjune.github.io/commit/cb89fdbdaa416a5a06f9d9d98ac94fea432bb761 title='Last modified by 성명준 | April 19, 2025' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt>
+<span>April 19, 2025</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#버전-관리-시스템의-진화>버전 관리 시스템의 진화</a><ul><li><a href=#1-1세대-vcs-local-vcs-1972>1. 1세대 VCS: Local VCS (1972~)</a><ul><li><a href=#특징>특징</a></li><li><a href=#장점>장점</a></li><li><a href=#단점>단점</a></li><li><a href=#대표-도구>대표 도구</a></li></ul></li><li><a href=#2-2세대-vcs-centralized-vcs-1986>2. 2세대 VCS: Centralized VCS (1986~)</a><ul><li><a href=#특징-1>특징</a></li><li><a href=#장점-1>장점</a></li><li><a href=#단점-1>단점</a></li><li><a href=#대표-도구-1>대표 도구</a></li></ul></li><li><a href=#3-3세대-vcs-distributed-vcs-2005>3. 3세대 VCS: Distributed VCS (2005~)</a><ul><li><a href=#특징-2>특징</a></li><li><a href=#장점-2>장점</a></li><li><a href=#단점-2>단점</a></li><li><a href=#대표-도구-2>대표 도구</a></li></ul></li><li><a href=#4-4세대-vcs-cloud-native--ai-enhanced-vcs-2015>4. 4세대 VCS: Cloud-Native & AI-Enhanced VCS (2015~)</a><ul><li><a href=#특징-3>특징</a></li><li><a href=#장점-3>장점</a></li><li><a href=#단점-3>단점</a></li><li><a href=#대표-도구-3>대표 도구</a></li></ul></li><li><a href=#vcs-발전-트렌드>VCS 발전 트렌드</a></li></ul></li></ul></nav></div></aside></main></body></html>
