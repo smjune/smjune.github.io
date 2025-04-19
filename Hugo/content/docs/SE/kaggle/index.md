@@ -146,24 +146,6 @@ df.iloc[[row index, rowindex],[row index, row index]]
 ```df[[ 'column lable','column lable', ... ]]``` 을 이용한 column selecting 예  
 ![edit column by column](edit_column.png)
 
-1. 일변 (단수변수) : 데이터를 distrubution 
-
-- Summary statistics : 
-
-    - Numeric data
-                    Center (Mean, Median, Mod),  
-                    Spread (Variance, SD, IQR, Range),   
-                    Modality (Peak)  
-                    Shape (Tail, Skewness, Kurtosis)  
-                    Outliers  
-
-    - Categorical data
-                    occurence, frequency, tabulation (도수분포)
-
-- 시각화 (graphic)
-
-    - Histogram 혹은 Pie chart, Stem-leaf plot, Boxplot, QQplot
-
 Useful properties and functions in Pandas
 
 ```python
@@ -194,29 +176,44 @@ plt.show()
 
 ```
 
-</br>
+## Statistics
 
-2. 다변 (복수 변수) : 변수간의 관계 correlation
+![기초통계](basic_statistics.pdf)
+## Variable /  Variate
 
-- Summary statistics 
+>Simple variable(단수 변수) / Multiple Variables (다중변수): X   
+>univariate (단/일변량) / multivariate (다변량) : y
 
-    - Numerical data :  Cros Statistics
-    - Categorical data :  Cross-Tabulation
+- 종속변수가 하나이고, 독립변수가 하나인 선형회귀분석 : 단순선형회귀분석( simple liner regression)    
+- 종속변수가 하나이고, 독립변수가 2개 이상인 선형회귀분석 :  다중선형회귀분석 (multiple linear regression), 다변수선형회귀분석( multi-variable linear regression)  * 다항회귀분석 (polynomial regression).  
+- 종속변수가 2개 이상이고, 독립변수가 2개 이상인 회귀분석은 다변량 다중회귀 분석 (multivariate multiple regression).   
 
-- 시작화 (graphic)
+### Statistical hypothesis test
+: regession / t-test / logistic / chisquare
 
-    - Category data & Numeric data : Boxplots, Stacked bar, Parallel Coordinate, Heatmap 
-    - Numeric data & Numeric data : Scatter Plot 
+| 통계 검정 방법    | 설명                       | 적합한 데이터 <br>유형                                    | 사용 예시                       |
+| ----------- | ------------------------ | ------------------------------------------------- | --------------------------- |
+| **회귀 분석**   | 변수 간 관계 모델링 및 예측         | 종속변수: 연속형, <br>독립변수: 연속/범주형                       | 키와 몸무게 관계, <br>매출액 예측       |
+| **t-검정**    | 두 그룹 평균 차이 검정            | 종속변수: 연속형, <br>독립변수: 범주형 (2그룹)<br>*2그룹 이상 : ANOVA | 남녀 학생 키 비교, <br>교육 방법 효과 비교 |
+| **로지스틱 회귀** | 범주형 변수 확률 예측             | 종속변수: 범주형, <br>독립변수: 연속/범주형                       | 질병 발병 위험 예측, <br>고객 이탈 예측   |
+| **카이제곱 검정** | 범주형 변수 간 적합성,독립성, 동질성 검정 | 모든 변수: 범주형                                        | 성별과 선호 색상 관계 분석             |
 
-    </br>
+- 귀무가설 vs 대립가설  (**null hypothesis** vs **alternative hypothesis**)
+: 알려진 사실 (귀무가설) 상황에서 내가 발견한 것 (대립가설)이 발생할 확률이 유의 수준 (p-value) 보다 작을때, 알려진 사실은 사실이 아닐수도 있지 않을까? 
+
+### Confusion Matrix
+|      | Predict                   |
+| ---- | :-----: | :-: | :-: | :-: |
+| Real |   H0    |     |  1  |  0  |
+|      |         | H1  |  0  |  1  |
+|      |    1    |  0  | TF  | FP  |
+|      |    0    |  1  | FN  | TP  |
 
 </br>
 
 https://www.youtube.com/watch?v=xi0vhXFPegw 
 
 https://blog.naver.com/dtddtd4861/222985892251  
-
-
 
 
 </br>

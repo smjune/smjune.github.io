@@ -205,9 +205,11 @@ SmartComposer 에서 Cloud LLM 을 사용하지 않고, Local  LLM 을 사용하
 >1. **Obsidian, Github, Hugo 간 구조 설정**에 대한 고민과 함께 발생할 수 있는 **개인 지식 연결 기능 활용 제한** 및 **Git 동기화/민감 정보 관리**의 단점을 "7. 더 생각해 볼것" 섹션에 추가했습니다.
 >2. **Obsidian Community Plugin** 섹션을 추가하여, AI Plug-in 인 **SmartComposer** 와 **Cursor** 의 플러그인 검색 결과를 비교 분석했습니다. **Git, Templater, Copilot, Smart Composer** 플러그인에 대한 두 검색 결과의 요약 내용을 비교했습니다.
 >3. **LM Studio 와 Local LLM** 섹션을 추가하여, SmartComposer 에서 Cloud LLM 대신 Local LLM 을 사용하는 방법에 대한 안내와 함께, **Gemini (Cloud LLM)** 와 **Gemma (Local LLM)** 의 SmartComposer 출력 결과를 비교했습니다.
-![[스크린샷 2025-04-19 오전 10.50.38.png]]
+
 -- lmstudio:gemma3_12b_it (Local : LM studio)
-바로 한번에 요약해 주시 못하는데, 뭔가 자세하게 말해야 할 것 같다. 
+바로 한번에 바로 요약해 주시 못하는데, 뭔가 자세하게 말해야 할 것 같다. 
+(agent 모드 가 안되는 것으로 보인다.)   
+-- MCP 같은 툴을 사용하지 못하는 것이 아쉽다. -> think 모드가 지원되는 모델을 사용해야 할듯
 
 >최근 추가된 내용은 다음과 같습니다:  
 Obsidian 플러그인(Git, Templater, Copilot, Smart Composer) 사용법과 LM Studio를 활용하여 Obsidian 내 AI 지원을 강화하는 방법에 대한 설명입니다. 각 플러그인의 기능과 클라우드 LLM과 로컬 LLM의 차이점을 비교합니다.

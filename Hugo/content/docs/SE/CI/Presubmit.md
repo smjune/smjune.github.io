@@ -26,6 +26,6 @@ submit 전 Work In Progress 단계를 제공함
     - submit 된 change 기준으로 다시 빌드, 테스트 한다.  
         (Postsubmit)
 
-MR/PR 
-shleves
-refs/for/head
+MR/PR    
+shleves    
+refs/for/head    
