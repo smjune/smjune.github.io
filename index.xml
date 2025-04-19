@@ -382,11 +382,17 @@ refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><
  &lt;a class="anchor" href="#2-2%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
 &lt;/h2>
 &lt;p>: Centralized VCS&lt;/p>
+&lt;ul>
+&lt;li>변경에 대해서 연속된 숫자로 id을 배정한다.&lt;/li>
+&lt;/ul>
 &lt;h2 id="3-3세대-vcs">
  3. 3세대 VCS
  &lt;a class="anchor" href="#3-3%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
 &lt;/h2>
 &lt;p>: Distributed VCS&lt;/p>
+&lt;ul>
+&lt;li>각 clone 에서 랜덤 변수로 id을 배정한다.&lt;/li>
+&lt;/ul>
 &lt;h2 id="4-4세대-vcs">
  4. 4세대 VCS
  &lt;a class="anchor" href="#4-4%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
@@ -395,6 +401,10 @@ refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><
  &lt;a class="anchor" href="#4%ec%84%b8%eb%8c%80-vcs">#&lt;/a>
 &lt;/h2>
 &lt;p>Multi vs Mono REPO&lt;/p>
+&lt;ul>
+&lt;li>Multi repo 의 경우 각각의 프로젝트에 각각의 변경을 넣어야 한다.&lt;/li>
+&lt;li>Mono repo 의 경우 각각의 프로젝트 변경을 1개의 변경으로 수정이 가능하다.&lt;/li>
+&lt;/ul>
 &lt;p>VFSforGit&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>
 Piper&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;/p>
 &lt;div class="footnotes" role="doc-endnotes">
