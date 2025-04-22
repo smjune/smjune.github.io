@@ -49,11 +49,11 @@ git extension : ```pip install --upgrade jupyterlab jupyterlab-git```
 > 1. [Anaconda](https://www.anaconda.com/) 을 설치해서 Jupyter Notebook 사용  (Local)  
 > 2. [google colab](https://colab.research.google.com), [Kaggle](https://www.kaggle.com), [dacon](https://dacon.io/) 에서 제공하는 cloud 커널 을 사용  (Cloud)  
 
-
+</br>
 
 ### Jupyter shortcuts
 
-
+</br>
 
 ### VSCode shortcuts
 
