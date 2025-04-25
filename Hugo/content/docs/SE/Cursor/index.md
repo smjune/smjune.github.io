@@ -202,6 +202,25 @@ LLM 기능이 깊숙이 통합된 코드 에디터입니다.
 -   **서버 목록 (GitHub):** [https://github.com/modelcontextprotocol/servers](https://github.com/modelcontextprotocol/servers)
 -   **서버 레지스트리:** [https://mcp-get.com/](https://mcp-get.com/), [https://smithery.ai](https://smithery.ai)
 
+
+### 6. Agent 
+
+> An AI agent is a system that uses an LLM to decide the control flow of an application.
+[내용출처](https://blog.langchain.dev/what-is-an-agent/)
+
+There are many frameworks that make agentic systems easier to implement, including:
+
+- [LangGraph](https://langchain-ai.github.io/langgraph/) from LangChain;
+- Amazon Bedrock's [AI Agent framework](https://aws.amazon.com/bedrock/agents/);
+- [Rivet](https://rivet.ironcladapp.com/), a drag and drop GUI LLM workflow builder; and
+- [Vellum](https://www.vellum.ai/), another GUI tool for building and testing complex workflows.
+[내용 출처](https://www.anthropic.com/engineering/building-effective-agents)
+
+Workflow(Chain) vs Agent
+
+![Chain vs Agent](chainagent.png)
+[이미지 출처](https://python.langchain.com/v0.1/docs/use_cases/tool_use/)
+
 ---
 
 이 문서는 계속 업데이트될 수 있습니다.

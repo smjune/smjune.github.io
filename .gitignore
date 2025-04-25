@@ -4,5 +4,5 @@ Hugo/public/
 Local/
 .DS_Store
 .smtcmp_json_db/
-.smtcmp__vector_db.*
+.smtcmp_vector_db.*
 .cursor/
