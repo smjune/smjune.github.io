@@ -208,18 +208,18 @@ LLM 기능이 깊숙이 통합된 코드 에디터입니다.
 > An AI agent is a system that uses an LLM to decide the control flow of an application.
 [내용출처](https://blog.langchain.dev/what-is-an-agent/)
 
-There are many frameworks that make agentic systems easier to implement, including:
+There are many frameworks that make agentic systems easier to implement, including: [내용 출처](https://www.anthropic.com/engineering/building-effective-agents)
 
 - [LangGraph](https://langchain-ai.github.io/langgraph/) from LangChain;
 - Amazon Bedrock's [AI Agent framework](https://aws.amazon.com/bedrock/agents/);
 - [Rivet](https://rivet.ironcladapp.com/), a drag and drop GUI LLM workflow builder; and
-- [Vellum](https://www.vellum.ai/), another GUI tool for building and testing complex workflows.
-[내용 출처](https://www.anthropic.com/engineering/building-effective-agents)
+- [Vellum](https://www.vellum.ai/), another GUI tool for building and testing complex workflows.  
 
-Workflow(Chain) vs Agent
+
+Workflow(Chain) vs Agent   [이미지 출처](https://python.langchain.com/v0.1/docs/use_cases/tool_use/)
 
 ![Chain vs Agent](chainagent.png)
-[이미지 출처](https://python.langchain.com/v0.1/docs/use_cases/tool_use/)
+
 
 ---
 
