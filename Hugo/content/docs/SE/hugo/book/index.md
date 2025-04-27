@@ -148,6 +148,21 @@ image : /posts/images/xxx.image
 ```  
 [:sos: hugo-book QnA](https://github.com/alex-shpak/hugo-book/issues/286)  
 
+{{% hint  warning %}}
+- 2025.4.16     
+[[Feature] Image thumbnails for posts? · Issue #286 · alex-shpak/hugo-book](https://github.com/alex-shpak/hugo-book/issues/286)
+
+\themes\hugo-book\layouts\partials\docs\post-meta.html 파일을.   
+\layouts\partials\docs\post-meta.html 으로 복사하여. 
+아래 코드를 추가 해야 함.
+```
+{{ with .Params.image }}
+  <img src={{ . | relURL }} />
+{{ end }}
+```
+
+{{% /hint %}}
+
 </br>
 
 ## Customizing
@@ -176,7 +191,7 @@ image : /posts/images/xxx.image
 자세한 내용은 샘플 사이트를 참고 
 
 {{% hint warning %}}
-2025.04.12  
+- 2025.04.12  
 ```{{{</* hint */>}}}```으로 사용하는 걸    
 ```{{{%/* hint */%}}}```으로 변경해야 함.
 
