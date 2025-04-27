@@ -2,14 +2,18 @@
 title: Vibe Coding
 description: 
 date: 2025-04-22T17:58:45+09:00
-draft: true
+draft: false
 ---
 ## What is Vibe Coding
+
+- Pair programming with AI generating code
 
 ![Vibe Coding](vibecoding.png)
 
 ### Essence and Accident
 
+- 제품을 위한 코드들 보다는 제품 코드를 테스트 하는 코드를 생산
+- 원하는 코드를 LLM 이 생산하도록 만들기위해 필요한 것들
 ### Tools 
 
 - Knowledge Management tool : Notion, Obsidian
@@ -26,7 +30,7 @@ draft: true
 - Idea을 작성 지속적으로 구체화하고,
 - 관련자료를 모으고 분류하고, 
 - 정보들을 연결한다. 
-- 이 모든걸 위해 Knowledge Mangement tool 이 필요함.
+- 이 모든걸 위해 Knowledge Management tool 이 필요함.
 
 ### Refs. Index
 
@@ -45,22 +49,27 @@ draft: true
 	- ...
 
 ## Harmonize with SDLC 
-: Design - Code - Test - Build - Deploy
 
+-  Design - Code - Test - Build - Deploy
+- Iterative incremental , evolutionary 
 ### Design
 
 - PRD : Notion, Obsidian
 - UI/UX : Figma 
 - Diagram : UML, Mermaid
 
-### Vibe Coding (Implement Prompt)
+### Code 
 
 - Choosing LLM Model
+- Context-Aware
+- Prompt Engineering
+	- 잘통하는 prompt DB화 할것 
 - Agentic approch
 	- Access to resource (MCP) 
 	- Make a Agent (ADK)
 	- Connect to Agents (A2A)
 - Managing Non-deterministic 
+- Human-In-The-Loop
 - Restore checkpoint
 
 ### Build
@@ -72,3 +81,7 @@ draft: true
 
 - App
 - WEB
+
+## 추가 읽을거리
+
+- [kakao AI blog](https://tech.kakao.com/posts/696)
