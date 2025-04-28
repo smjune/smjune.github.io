@@ -10,5 +10,3 @@ bookComments: false
 ---
 
 영어관련 자료 모음
-
-{{< section >}}

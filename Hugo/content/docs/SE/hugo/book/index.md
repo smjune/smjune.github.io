@@ -23,7 +23,7 @@ Repository : <https://github.com/alex-shpak/hugo-book>
 {{% /hint %}}
 </br>
 
-> **- 2025.4.12 submodule update**  
+> **- 2025.4.12 submodule update**    
 > $ git submodule update --init  
 > $ git submodule update --remote --merge  
 
@@ -246,6 +246,18 @@ Mermaid syntex 내용 ...
 ```md
 {{</* section */>}}
 ```
+
+{{% hint warning %}}
+2025.4.26  build 시 warning :  section sortcode deprecated 됨.           
+```
+hugo v0.147.0+extended+withdeploy darwin/arm64 BuildDate=2025-04-25T15:26:28Z VendorInfo=brew
+
+WARN  Section shortcode is deprecated and will be removed
+```
+[Deprecated section shorcode commit](https://github.com/alex-shpak/hugo-book/commit/2b7a0e87c3700f371f69e5f569dfd8d821f62672)
+
+{{% /hint %}}
+
 </br>
 
 ### Columns 
