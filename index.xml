@@ -52,7 +52,7 @@ Repository : &lt;a href="https://github.com/alex-shpak/hugo-book">https://github
 &lt;/blockquote>
 &lt;/br>
 &lt;blockquote>
-&lt;p>&lt;strong>- 2025.4.12 submodule update&lt;/strong>&lt;br>
+&lt;p>&lt;strong>- 2025.4.12 submodule update&lt;/strong> &lt;br>
 $ git submodule update &amp;ndash;init&lt;br>
 $ git submodule update &amp;ndash;remote &amp;ndash;merge&lt;/p>&lt;/blockquote>
 &lt;/br>
