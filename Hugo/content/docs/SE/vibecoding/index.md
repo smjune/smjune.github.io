@@ -6,14 +6,17 @@ draft: false
 ---
 ## What is Vibe Coding
 
-- Pair programming with AI generating code
 
 ![Vibe Coding](vibecoding.png)
 
 ### Essence and Accident
 
+- Pair programming with AI generating code ?
+- Assembly 으로 코딩하던 사람이 C 로 코딩하는 것을 보고 어떤 생각이 들었을까? 
 - 제품을 위한 코드들 보다는 제품 코드를 테스트 하는 코드를 생산
-- 원하는 코드를 LLM 이 생산하도록 만들기위해 필요한 것들
+- 어떻게 내가 의도하는 코드를 LLM 이 생산하도록 만들것 인가?
+	- agent, prompt, context aware, ... 
+	- 
 ### Tools 
 
 - Knowledge Management tool : Notion, Obsidian

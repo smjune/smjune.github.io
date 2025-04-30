@@ -22,7 +22,7 @@ CI 툴 (서버) 에서 빌드, 테스트 되어 deploy 됨
 
 Github self-hosted 는 항상 repos 을 listening 하고 있다.  
     bare metal 서버  
-    vitural 서버  
+    virtual 서버  
 
     - 소스 코드를 VCS 에 업로드 한다 
     - VCS 로 부터 WebHook 혹은 Polling 을 통해 CI 서버가 빌드 한다. 

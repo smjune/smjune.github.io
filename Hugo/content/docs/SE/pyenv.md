@@ -157,8 +157,9 @@ $
 ```  
 {{% hint danger %}}
 :memo: **결론**  
-pyenv local  X.X.X로 해당 로컬폴더만 X.X.X로 셋업해서,  
-python3 -m venv .venv 로 가상환경 만들어 사용 하고,   
+pyenv install X.X.X 으로 필요한 python 을 설치하고,    
+pyenv shell  X.X.X로 해당 shell 만 X.X.X로 셋업해서,  
+python3 -m venv .venv 로 가상환경 만들어 사용 하고,   shell 해제,   
 pyenv virtualenv 나 virtualenv 는 사용하지 말자.  - 너무 많이 알면 헤깔린다.  
 {{% /hint %}}
 
@@ -190,7 +191,7 @@ $ pip install --prxoy http://xxx.xxx.xxx.xxx:8080 --trusted-host pypi.python.org
 
 :clap: Rust로 작성된 초고속 파이썬 패키지 관리자
 
-### uv 소개
+### uv 소개 ([공식문서](https://docs.astral.sh/uv/#getting-started))
 
 uv는 pip, pip-tools, virtualenv를 모두 대체할 수 있는 통합 패키지 관리자입니다:
 - pip 대비 8-10배 빠른 의존성 해결 (캐시 사용 시 80-115배)
@@ -226,6 +227,8 @@ $ source .venv/bin/activate
 # 의존성 잠금 파일 생성 (선택사항)
 (.venv) $ uv pip compile requirements.txt -o requirements.lock
 ```
+
+- ```$uv run main.py``` 처럼 장점이 있으나, 축약된 내용이 있어서 이해가 더 필요하다.     
 
 {{% hint info %}}
 :bulb: **uv의 장점**

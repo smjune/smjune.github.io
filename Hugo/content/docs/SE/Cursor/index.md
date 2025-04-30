@@ -207,7 +207,7 @@ MCP 이해하려면 Agent 을 먼저 이해해야 한다.
 
 1. An AI agent is a system that uses an LLM to decide the control flow of an application. [내용출처](https://blog.langchain.dev/what-is-an-agent/)
 
-2. In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components:   [내용 출처](https://lilianweng.github.io/posts/2023-06-23-agent/)
+2. **Agent = LLM + planning + Memory + Tool use** : In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components:   [내용 출처](https://lilianweng.github.io/posts/2023-06-23-agent/)
 
 	- **Planning**
 	    - Subgoal and decomposition: The agent breaks down large tasks into smaller, manageable subgoals, enabling efficient handling of complex tasks.
@@ -229,7 +229,7 @@ MCP 이해하려면 Agent 을 먼저 이해해야 한다.
 
 - Agent Framework : LLM 이 외부 서비스와 협업을 하면서, 질문에 대한 답을 찾아가게 하는 app, agent 을 구축하기 위히 외부 서비스와 LLM 을 어떻게 조합(?) 할 것인가?
 
-![[Agentframework.png]]
+![Agent Frameworks](Agentframework.png)
 [이미지출처](https://bcho.tistory.com/1470)
 
 
