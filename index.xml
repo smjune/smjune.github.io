@@ -534,17 +534,21 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
  What is Vibe Coding
  &lt;a class="anchor" href="#what-is-vibe-coding">#&lt;/a>
 &lt;/h2>
-&lt;ul>
-&lt;li>Pair programming with AI generating code&lt;/li>
-&lt;/ul>
 &lt;p>&lt;img src="vibecoding.png" alt="Vibe Coding" />&lt;/p>
 &lt;h3 id="essence-and-accident">
  Essence and Accident
  &lt;a class="anchor" href="#essence-and-accident">#&lt;/a>
 &lt;/h3>
 &lt;ul>
+&lt;li>Pair programming with AI generating code ?&lt;/li>
+&lt;li>Assembly 으로 코딩하던 사람이 C 로 코딩하는 것을 보고 어떤 생각이 들었을까?&lt;/li>
 &lt;li>제품을 위한 코드들 보다는 제품 코드를 테스트 하는 코드를 생산&lt;/li>
-&lt;li>원하는 코드를 LLM 이 생산하도록 만들기위해 필요한 것들&lt;/li>
+&lt;li>어떻게 내가 의도하는 코드를 LLM 이 생산하도록 만들것 인가?
+&lt;ul>
+&lt;li>agent, prompt, context aware, &amp;hellip;&lt;/li>
+&lt;li>&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;h3 id="tools">
  Tools
