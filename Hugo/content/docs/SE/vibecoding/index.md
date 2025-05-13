@@ -12,8 +12,10 @@ draft: false
 ### Essence and Accident
 
 - Pair programming with AI generating code ?
-- Assembly 으로 코딩하던 사람이 C 로 코딩하는 것을 보고 어떤 생각이 들었을까? 
-- 제품을 위한 코드들 보다는 제품 코드를 테스트 하는 코드를 생산
+- Assembly 으로 코딩하던 사람이 C/C++ 으로 코딩하는 것을 보고 어떤 생각이 들었을까? 
+	- C/C++ 을 사용하지만, Assembly 도 배움.
+- 제품을 위한 코드 보다는 제품 코드를 테스트 하는 코드를 생산
+	- 제품을 위한 코드는 의외로 매우 보수적임 (신기술을 적용하기 힘듬)
 - 어떻게 내가 의도하는 코드를 LLM 이 생산하도록 만들것 인가?
 	- agent, prompt, context aware, ... 
 	- 
@@ -62,15 +64,15 @@ draft: false
 - Diagram : UML, Mermaid
 
 ### Code 
-
+ 
 - Choosing LLM Model
 - Context-Aware
 - Prompt Engineering
 	- 잘통하는 prompt DB화 할것 
 - Agentic approch
-	- Access to resource (MCP) 
-	- Make a Agent (ADK)
-	- Connect to Agents (A2A)
+	- Access to resource (e.g., [MCP](https://modelcontextprotocol.io/introduction)) 
+	- Make a Agent (e.g., [ADK](https://google.github.io/adk-docs/))
+	- Connect Agent to Agent (e.g., [A2A](https://github.com/google/A2A))
 - Managing Non-deterministic 
 - Human-In-The-Loop
 - Restore checkpoint

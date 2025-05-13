@@ -229,6 +229,7 @@ $ source .venv/bin/activate
 ```
 
 - ```$uv run main.py``` 처럼 장점이 있으나, 축약된 내용이 있어서 이해가 더 필요하다.     
+- [uv tutorial youtub](https://youtu.be/6pttmsBSi8M?si=qHWI4vF7Ri5gLDVa)
 
 {{% hint info %}}
 :bulb: **uv의 장점**
