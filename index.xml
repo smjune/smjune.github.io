@@ -530,7 +530,39 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
 &lt;p>&lt;code>$ python3 -m venv .venv&lt;/code> 을 이용해서 virtual 환경 설치&lt;br>
 &lt;code>$ source .venv/bin/activate&lt;/code> 으로 virtual 환경 실행&lt;br>
 &lt;code>(.venv)$ pip install ipykerne&lt;/code> 으로 Jupyter kernel 설치&lt;br>
-&lt;code>(.venv)$ pip install pandas&lt;/code>으로 관련 python 모듈 설치&lt;/p></description></item><item><title>Vibe Coding</title><link>https://smjune.github.io/docs/SE/vibecoding/</link><pubDate>Tue, 22 Apr 2025 17:58:45 +0900</pubDate><guid>https://smjune.github.io/docs/SE/vibecoding/</guid><description>&lt;h2 id="what-is-vibe-coding">
+&lt;code>(.venv)$ pip install pandas&lt;/code>으로 관련 python 모듈 설치&lt;/p></description></item><item><title>Agent</title><link>https://smjune.github.io/docs/SE/agent/</link><pubDate>Thu, 01 May 2025 18:09:47 +0900</pubDate><guid>https://smjune.github.io/docs/SE/agent/</guid><description>&lt;h2 id="agent">
+ Agent
+ &lt;a class="anchor" href="#agent">#&lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>An AI agent is a system that uses an LLM to decide the control flow of an application. &lt;a href="https://blog.langchain.dev/what-is-an-agent/">내용출처&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Agent = LLM + planning + Memory + Tool use&lt;/strong> : In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components: &lt;a href="https://lilianweng.github.io/posts/2023-06-23-agent/">내용 출처&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Planning&lt;/strong>
+&lt;ul>
+&lt;li>Subgoal and decomposition: The agent breaks down large tasks into smaller, manageable subgoals, enabling efficient handling of complex tasks.&lt;/li>
+&lt;li>Reflection and refinement: The agent can do self-criticism and self-reflection over past actions, learn from mistakes and refine them for future steps, thereby improving the quality of final results.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Memory&lt;/strong>
+&lt;ul>
+&lt;li>Short-term memory: I would consider all the in-context learning (See &lt;a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/">Prompt Engineering&lt;/a>) as utilizing short-term memory of the model to learn.&lt;/li>
+&lt;li>Long-term memory: This provides the agent with the capability to retain and recall (infinite) information over extended periods, often by leveraging an external vector store and fast retrieval.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Tool use&lt;/strong>
+&lt;ul>
+&lt;li>The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="llm_agent.png" alt="LLM - AGENT" />
+3. Agent Type&lt;/p></description></item><item><title>Vibe Coding</title><link>https://smjune.github.io/docs/SE/vibecoding/</link><pubDate>Tue, 22 Apr 2025 17:58:45 +0900</pubDate><guid>https://smjune.github.io/docs/SE/vibecoding/</guid><description>&lt;h2 id="what-is-vibe-coding">
  What is Vibe Coding
  &lt;a class="anchor" href="#what-is-vibe-coding">#&lt;/a>
 &lt;/h2>
@@ -541,8 +573,16 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
 &lt;/h3>
 &lt;ul>
 &lt;li>Pair programming with AI generating code ?&lt;/li>
-&lt;li>Assembly 으로 코딩하던 사람이 C 로 코딩하는 것을 보고 어떤 생각이 들었을까?&lt;/li>
-&lt;li>제품을 위한 코드들 보다는 제품 코드를 테스트 하는 코드를 생산&lt;/li>
+&lt;li>Assembly 으로 코딩하던 사람이 C/C++ 으로 코딩하는 것을 보고 어떤 생각이 들었을까?
+&lt;ul>
+&lt;li>C/C++ 을 사용하지만, Assembly 도 배움.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>제품을 위한 코드 보다는 제품 코드를 테스트 하는 코드를 생산
+&lt;ul>
+&lt;li>제품을 위한 코드는 의외로 매우 보수적임 (신기술을 적용하기 힘듬)&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;li>어떻게 내가 의도하는 코드를 LLM 이 생산하도록 만들것 인가?
 &lt;ul>
 &lt;li>agent, prompt, context aware, &amp;hellip;&lt;/li>
@@ -638,9 +678,9 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
 &lt;/li>
 &lt;li>Agentic approch
 &lt;ul>
-&lt;li>Access to resource (MCP)&lt;/li>
-&lt;li>Make a Agent (ADK)&lt;/li>
-&lt;li>Connect to Agents (A2A)&lt;/li>
+&lt;li>Access to resource (e.g., &lt;a href="https://modelcontextprotocol.io/introduction">MCP&lt;/a>)&lt;/li>
+&lt;li>Make a Agent (e.g., &lt;a href="https://google.github.io/adk-docs/">ADK&lt;/a>)&lt;/li>
+&lt;li>Connect Agent to Agent (e.g., &lt;a href="https://github.com/google/A2A">A2A&lt;/a>)&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Managing Non-deterministic&lt;/li>
