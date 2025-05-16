@@ -190,10 +190,10 @@ draft: true
 SmartComposer 에서 Cloud LLM 을 사용하지 않고, Local  LLM 을 사용하기 위해 local 환경 구축 
 
 - LM Studio 에서 자신에 local 환경에 맞는 모델을 download 하여 실행한다. 
-![LM studio](lmstudio.png)
+![LM studio](Hugo/content/docs/SE/hugo/Obsidian/lmstudio.png)
 
 - Obsidian | community plug-in | Smart Composer 에서 lm-studio 을 설정하고 해당 모델을 입력 한다.
-![Smart Composer Setting](smartcomposer.png)
+![Smart Composer Setting](Hugo/content/docs/SE/hugo/Obsidian/smartcomposer.png)
 
 - Clould LLM 과 Local LLM 비교 
 

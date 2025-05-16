@@ -136,7 +136,7 @@ Serving book on http://localhost:4000
 ```
 * localhost:4000 에서 결과 보기 
 
-![Gitbook Web](4000.png)
+![Gitbook Web](Hugo/content/docs/SE/hugo/gitbook/4000.png)
 
 ### docs 폴더로 운영 
 SW 개발 프로젝트 하위 /docs 폴더로 gitbook 운영이 필요할때
@@ -176,7 +176,7 @@ gitbook-cli 는 2017년 4월 이후 더이상 지원 되지 않고 있어, 향�
 
 * 목차 구성  
 
-![SUMMARY](summary.png)
+![SUMMARY](Hugo/content/docs/SE/hugo/gitbook/summary.png)
 
 ### book.json 
 전체적인 환경을 구성할 수 있도록 설정하는 파일으로 보임.
@@ -233,7 +233,7 @@ $
 ```
 * Site view  
 
-![have plugins installed](toc.png)
+![have plugins installed](Hugo/content/docs/SE/hugo/gitbook/toc.png)
 
 * **오른쪽 Toc**
 [gitbook-plugin-intopic](https://www.npmjs.com/package/gitbook-plugin-intopic-toc/)  

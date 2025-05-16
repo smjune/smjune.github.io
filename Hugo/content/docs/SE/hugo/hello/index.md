@@ -255,7 +255,7 @@ on:
 > push 을 main 으로 설정할 경우, 2개 (CI 와 Github Pages) workflow 실행이 되는 것을  
 > paths 로 설정하여 hugo 폴더 업데이트 때 Github Pages workflow 만 실행되도록 변경  
 
-![workflow 설정](images/hello_1.png)
+![workflow 설정](Hugo/content/docs/SE/hugo/hello/images/hello_1.png)
 
 </br> 
 

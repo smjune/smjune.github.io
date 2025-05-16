@@ -110,7 +110,7 @@ LLM 기능이 깊숙이 통합된 코드 에디터입니다.
     -   **설치:** 웹사이트에서 OS별 설치 파일 다운로드.
     - [Cursor 커뮤니티](https://forum.cursor.com),[Cursor MCP, Rule ...](https://cursor.directory)
     - 활용예시 : cursor + git + obsidian 
-    ![cursor 활용](./cursor.png) 
+    ![cursor 활용](cursor.png) 
 
 -   **Windsurf:** [https://codeium.com/windsurf](https://codeium.com/windsurf)
     -   **주요 특징:** Codeium 개발, 빠른 자동 완성, Context Engine 기반 이해, 다중 파일 편집 지원, 경량화 추구.
