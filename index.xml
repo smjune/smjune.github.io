@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on MJ. Breadcrumbs</title><link>https://smjune.github.io/</link><description>Recent content in Introduction on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><atom:link href="https://smjune.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello GitHub</title><link>https://smjune.github.io/docs/SE/hello/</link><pubDate>Sun, 05 Feb 2023 10:22:18 +0900</pubDate><guid>https://smjune.github.io/docs/SE/hello/</guid><description>&lt;h2 id="github-에서-블로그-만들기">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Introduction on MJ. Breadcrumbs</title><link>https://smjune.github.io/</link><description>Recent content in Introduction on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><atom:link href="https://smjune.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello GitHub</title><link>https://smjune.github.io/docs/SE/hugo/hello/</link><pubDate>Sun, 05 Feb 2023 10:22:18 +0900</pubDate><guid>https://smjune.github.io/docs/SE/hugo/hello/</guid><description>&lt;h2 id="github-에서-블로그-만들기">
  github 에서 블로그 만들기
  &lt;a class="anchor" href="#github-%ec%97%90%ec%84%9c-%eb%b8%94%eb%a1%9c%ea%b7%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0">#&lt;/a>
 &lt;/h2>
@@ -61,7 +61,7 @@ $ git submodule update &amp;ndash;remote &amp;ndash;merge&lt;/p>&lt;/blockquote>
  &lt;a class="anchor" href="#hugoyml-for-hugo-book">#&lt;/a>
 &lt;/h2>
 &lt;hr>
-&lt;p>&lt;a href="https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml">hugo-book 샘플 hugo.yml&lt;/a>&lt;/p></description></item><item><title>Local build</title><link>https://smjune.github.io/docs/SE/CI/localbuild/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/localbuild/</guid><description>&lt;p>지금 하는 이야기는 주로 2000년 초반 처음 SW 개발 일을 시작하면서 겪은 일이다.&lt;br>
+&lt;p>&lt;a href="https://github.com/alex-shpak/hugo-book/blob/master/exampleSite/config.yaml">hugo-book 샘플 hugo.yml&lt;/a>&lt;/p></description></item><item><title>Local build</title><link>https://smjune.github.io/docs/SE/repo/CI/localbuild/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/CI/localbuild/</guid><description>&lt;p>지금 하는 이야기는 주로 2000년 초반 처음 SW 개발 일을 시작하면서 겪은 일이다.&lt;br>
 생각해보면, 장비도 비싸고, 사용하는 툴도 MS visual SourceSafe (1994)이거나, 당시 최신 툴인 Subversion (2000)정도여서 그때는 거기까지가 최선이였고, 어쩔수 없이 발생하는 업무 공백들은 많은 사람들이 젊음으로 매우고 있었다. 말 그대로 &amp;lsquo;라떼는&amp;hellip;&amp;rsquo; 이야기 이다.&lt;/p>
 &lt;p>개발자가 로컬빌드를 하거나, 주로 여러 개발자의 소스가 VCS에 다 모아 졌을때, 빌드 담당자가 해당 소스를 빌드 서버로 다운받아 일괄 빌드을 한 후 결과를 게시하게 된다. (빌드서버는 개발자 PC 보다 HW spec이 좋았다. 그당시 workstation 급)&lt;br>
 게시된 결과가 테스터나, QA 담당자에게 전달되면, 이것을 다운로드 하여 확인하게 된다. &lt;br>
@@ -153,7 +153,7 @@ Repository : &lt;a href="https://github.com/adityatelange/hugo-PaperMod">https:/
  &lt;a class="anchor" href="#archives--search">#&lt;/a>
 &lt;/h3>
 &lt;p>&lt;a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#archives-layout">Archives 가이드&lt;/a>&lt;br>
-&lt;a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page">Search 가이드&lt;/a>&lt;/p></description></item><item><title>Push to Gitlab</title><link>https://smjune.github.io/docs/SE/gitlab/</link><pubDate>Mon, 06 Feb 2023 20:28:27 +0900</pubDate><guid>https://smjune.github.io/docs/SE/gitlab/</guid><description>&lt;h2 id="gitlab-으로-deploy-하기">
+&lt;a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page">Search 가이드&lt;/a>&lt;/p></description></item><item><title>Push to Gitlab</title><link>https://smjune.github.io/docs/SE/repo/gitlab/</link><pubDate>Mon, 06 Feb 2023 20:28:27 +0900</pubDate><guid>https://smjune.github.io/docs/SE/repo/gitlab/</guid><description>&lt;h2 id="gitlab-으로-deploy-하기">
  GitLab 으로 Deploy 하기
  &lt;a class="anchor" href="#gitlab-%ec%9c%bc%eb%a1%9c-deploy-%ed%95%98%ea%b8%b0">#&lt;/a>
 &lt;/h2>
@@ -183,7 +183,7 @@ gitlab : config_gitlab.toml -&amp;gt; config.toml (baseURL = &amp;lsquo;smjune.g
 &lt;/h2>
 &lt;hr>
 &lt;p>remote 만 추가해서 main 을 gitlab 에 push 했더니, gitlab 생성시 만들어 졌던
-main 에 initial commit 으로 이름만 같고 서로 다른 브랜치가 되어 버림.&lt;/p></description></item><item><title>Post CI</title><link>https://smjune.github.io/docs/SE/CI/PostCI/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/PostCI/</guid><description>&lt;p>2005년 부터 약 10년간 SW개발에 참여하지 않았기에 branch 와 git 을 2016년 다시 SW개발 조직에 되돌아 와서야 접하게 되었다. 개인적으로 그 10년을 그대로 SW개발 업무를 계속했었더라면 현재 나의 위치가 지금과 많이 달라졌을찌 종종 생각하게 된다. 빠르게 발전하고 매년 새로운 기술이 나온는 SW 분야에서 10년의 외도는 그야 말로 나를 신입사원으로 만들게 충분한 시간이였다. 그 나마 대학 전공과 취업 후 6년을 시간들을 되 집어보면서 &amp;lsquo;그때 그랬는데&amp;rsquo; 라는 생각이 어느정도 도움이 되는 부분도 있었고, &amp;lsquo;어 아직도 이렇게 하고 있네?&amp;rsquo; 하는 부분은 적잖이 있어 놀라기도 했다.&lt;/p></description></item><item><title>Branches</title><link>https://smjune.github.io/docs/SE/CI/Branch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/Branch/</guid><description>&lt;p>앞에서 말한 것 처럼 2016년이 되서야 다시 SW개발 업무를 다시 시작하게 되었으므로 나에게 branch 의 개념을 이해하는 것은, 군 제대 후 복학생으로 공업 수학의 미분을 푸는데 갑자기 인수분해가 되지 않았을때 느겼던 괴리감을 다시 한번 느끼게 해 주었다.&lt;/p>
+main 에 initial commit 으로 이름만 같고 서로 다른 브랜치가 되어 버림.&lt;/p></description></item><item><title>Post CI</title><link>https://smjune.github.io/docs/SE/repo/CI/PostCI/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/CI/PostCI/</guid><description>&lt;p>2005년 부터 약 10년간 SW개발에 참여하지 않았기에 branch 와 git 을 2016년 다시 SW개발 조직에 되돌아 와서야 접하게 되었다. 개인적으로 그 10년을 그대로 SW개발 업무를 계속했었더라면 현재 나의 위치가 지금과 많이 달라졌을찌 종종 생각하게 된다. 빠르게 발전하고 매년 새로운 기술이 나온는 SW 분야에서 10년의 외도는 그야 말로 나를 신입사원으로 만들게 충분한 시간이였다. 그 나마 대학 전공과 취업 후 6년을 시간들을 되 집어보면서 &amp;lsquo;그때 그랬는데&amp;rsquo; 라는 생각이 어느정도 도움이 되는 부분도 있었고, &amp;lsquo;어 아직도 이렇게 하고 있네?&amp;rsquo; 하는 부분은 적잖이 있어 놀라기도 했다.&lt;/p></description></item><item><title>Branches</title><link>https://smjune.github.io/docs/SE/repo/CI/Branch/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/CI/Branch/</guid><description>&lt;p>앞에서 말한 것 처럼 2016년이 되서야 다시 SW개발 업무를 다시 시작하게 되었으므로 나에게 branch 의 개념을 이해하는 것은, 군 제대 후 복학생으로 공업 수학의 미분을 푸는데 갑자기 인수분해가 되지 않았을때 느겼던 괴리감을 다시 한번 느끼게 해 주었다.&lt;/p>
 &lt;p>submit 전에 어떻게 사전 검증을 할 것인가에 대하 대답으로&lt;/p>
 &lt;p>브랜치 개념이 도입이 됨&lt;/p>
 &lt;p>기존 post CI 가 적용된 브랜치를 운영 (dev) 하여&lt;br>
@@ -198,7 +198,7 @@ main 에 initial commit 으로 이름만 같고 서로 다른 브랜치가 되�
 - 빌드 후 자동화된 테스트 를 수행한다. 
 - 이상이 없는 경우 Code base 와 해당 브랜치를 merge 한다. 
 - merge된 code base 을 다시 빌드, 테스트 한다. 
-&lt;/code>&lt;/pre></description></item><item><title>Gitbook</title><link>https://smjune.github.io/docs/SE/gitbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/gitbook/</guid><description>&lt;h2 id="gitbook">
+&lt;/code>&lt;/pre></description></item><item><title>Gitbook</title><link>https://smjune.github.io/docs/SE/hugo/gitbook/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/hugo/gitbook/</guid><description>&lt;h2 id="gitbook">
  Gitbook
  &lt;a class="anchor" href="#gitbook">#&lt;/a>
 &lt;/h2>
@@ -214,7 +214,7 @@ gitbook.com 에 접속하여 GUI을 이용하여 운영 할 수도 있다.&lt;br
 Google, MS 등 SW 개발 도규먼트들과 비슷한 형태로&lt;br>
 (gitbook 으로 작성된것이라고 들은것 같은데&amp;hellip; 확실치 않음.)&lt;br>
 그래도 그나마 눈에 익숙하고, 여러형태의 e-book 으로도 지원했던것 같다. (calibre 설치, &lt;a href="https://blog.appkr.dev/work-n-play/pandoc-gitbook-%EC%A0%84%EC%9E%90%EC%B6%9C%ED%8C%90/">참조&lt;/a>)&lt;br>
-설치 난이도 &lt;a href="https://github.com/GitbookIO/gitbook-cli/issues/110">참조&lt;/a> 와 github actions 지원이 좀 애매하다. &lt;a href="https://github.com/SoftUni/Programming-Basics-Book-JS-EN/blob/master/.github/workflows/gitbook-deploy.yml">참조&lt;/a>&lt;/p></description></item><item><title>Git command Tips</title><link>https://smjune.github.io/docs/SE/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/git/</guid><description>&lt;h3 id="git-연습-site">
+설치 난이도 &lt;a href="https://github.com/GitbookIO/gitbook-cli/issues/110">참조&lt;/a> 와 github actions 지원이 좀 애매하다. &lt;a href="https://github.com/SoftUni/Programming-Basics-Book-JS-EN/blob/master/.github/workflows/gitbook-deploy.yml">참조&lt;/a>&lt;/p></description></item><item><title>Git command Tips</title><link>https://smjune.github.io/docs/SE/repo/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/repo/git/</guid><description>&lt;h3 id="git-연습-site">
  GIT 연습 Site
  &lt;a class="anchor" href="#git-%ec%97%b0%ec%8a%b5-site">#&lt;/a>
 &lt;/h3>
@@ -316,7 +316,7 @@ $ git fakeTeamwork 1 - origin 에 1개 커밋 넣기&lt;/p>
 &lt;blockquote>
 &lt;p>&amp;#x26a0;&amp;#xfe0f; Fetch/pull 은 소스가 remote 이고, Push는 소스가 local 이다.&lt;br>
 $git pull remote remote_branch:local_branch&lt;br>
-$git push remote local_branch:remote_branch&lt;/p></description></item><item><title>Presubmit</title><link>https://smjune.github.io/docs/SE/CI/Presubmit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/Presubmit/</guid><description>&lt;p>branch 와 더불어 presubmit 은 병결로 빼먹은 진도를 따로 따라 잡아야 하는 상황과 비슷했다.&lt;/p>
+$git push remote local_branch:remote_branch&lt;/p></description></item><item><title>Presubmit</title><link>https://smjune.github.io/docs/SE/repo/CI/Presubmit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/CI/Presubmit/</guid><description>&lt;p>branch 와 더불어 presubmit 은 병결로 빼먹은 진도를 따로 따라 잡아야 하는 상황과 비슷했다.&lt;/p>
 &lt;p>브랜치가 많아 짐에 따라 브랜치 운영 전략 (Flow) 이 복잡해짐&lt;br>
 이에 바로 main 브랜치에 submit 하는 것을 기본으로&lt;br>
 submit 전 Work In Progress 단계를 제공함&lt;/p>
@@ -332,7 +332,7 @@ submit 전 Work In Progress 단계를 제공함&lt;/p>
 &lt;/code>&lt;/pre>
 &lt;p>MR/PR &lt;br>
 shleves &lt;br>
-refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><link>https://smjune.github.io/docs/SE/pyenv/</link><pubDate>Thu, 09 Feb 2023 18:07:51 +0900</pubDate><guid>https://smjune.github.io/docs/SE/pyenv/</guid><description>&lt;h2 id="pyenv-사용하기">
+refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><link>https://smjune.github.io/docs/SE/Tools/pyenv/</link><pubDate>Thu, 09 Feb 2023 18:07:51 +0900</pubDate><guid>https://smjune.github.io/docs/SE/Tools/pyenv/</guid><description>&lt;h2 id="pyenv-사용하기">
  Pyenv 사용하기
  &lt;a class="anchor" href="#pyenv-%ec%82%ac%ec%9a%a9%ed%95%98%ea%b8%b0">#&lt;/a>
 &lt;/h2>
@@ -357,7 +357,7 @@ refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ virtualevn -p &lt;span style="color:#66d9ef">$(&lt;/span>pyenv which python&lt;span style="color:#66d9ef">)&lt;/span> .venv &lt;span style="color:#75715e"># 바로 위 shell 에 설정한 python 을 사용&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ pyenv shell --unset &lt;span style="color:#75715e"># 현재 shell의 python 설정 해제&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote class="book-hint danger">
-&lt;p>&amp;#x1f4dd;문제는 &amp;lsquo;global / local /shell&amp;rsquo; 중 어떤 python 설정을 현재 폴더에 가상환경 ( .venv)으로 만들것인가?&lt;/p></description></item><item><title>Delivery &amp; Deployment</title><link>https://smjune.github.io/docs/SE/CI/CD/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/CI/CD/</guid><description>&lt;p>SW 제품도 점차 서비스화 되면서 발전(?)하게 된 분야이다.&lt;/p>
+&lt;p>&amp;#x1f4dd;문제는 &amp;lsquo;global / local /shell&amp;rsquo; 중 어떤 python 설정을 현재 폴더에 가상환경 ( .venv)으로 만들것인가?&lt;/p></description></item><item><title>Delivery &amp; Deployment</title><link>https://smjune.github.io/docs/SE/repo/CI/CD/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/CI/CD/</guid><description>&lt;p>SW 제품도 점차 서비스화 되면서 발전(?)하게 된 분야이다.&lt;/p>
 &lt;p>기준에 package SW (shrinkwrap license) 에서 WEB 을 기반으로 한 서비스로 SW 제품의 성격이 변경되었다.&lt;/p>
 &lt;p>기존에 박스를 사서 자시의 PC 에 설치하는 사용하는 것이 이제는 NW에 접속하여 온라인으로 사용하는 것이다.&lt;/p>
 &lt;p>RTM (release to manufacturing) 이라고 해서 CD 로 구울 최후 SW 버전의 개념은, 기껏 HW 와 밀접하게 연관되어 있는 SW 로 한정되어 이제는 몇 남지 않아 보인다.&lt;/p>
@@ -367,7 +367,7 @@ refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><
 &lt;p>deploy 을 어느 user 수준까지 제공하는냐.&lt;br>
 - 완료된 binary 을 누구에게 배포할 것인가?&lt;br>
 . 내부 / 외부&lt;br>
-. discrete (App) / countinuous (WEB))&lt;/p></description></item><item><title>Docker</title><link>https://smjune.github.io/docs/SE/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/docker/</guid><description>&lt;p>docker 의 등장&lt;/p>
+. discrete (App) / countinuous (WEB))&lt;/p></description></item><item><title>Docker</title><link>https://smjune.github.io/docs/SE/Tools/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/Tools/docker/</guid><description>&lt;p>docker 의 등장&lt;/p>
 &lt;p>Github runner 으로 생각해 보는 docker&lt;/p>
 &lt;p>Self-hosted (bare metal vs virtual)&lt;/p>
 &lt;p>Github-Hosted&lt;/p></description></item><item><title>VCS</title><link>https://smjune.github.io/docs/SE/repo/VCS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/VCS/</guid><description>&lt;h1 id="버전-관리-시스템의-진화">
@@ -499,7 +499,7 @@ refs/for/head&lt;/p></description></item><item><title>Python with Pyenv</title><
 &lt;/h3>
 &lt;ol>
 &lt;li>
-&lt;p>&lt;strong>하이브리드 접근&lt;/strong>&lt;/p></description></item><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/kaggle/</guid><description>&lt;h2 id="prerequisites">
+&lt;p>&lt;strong>하이브리드 접근&lt;/strong>&lt;/p></description></item><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/AI/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/AI/kaggle/</guid><description>&lt;h2 id="prerequisites">
  Prerequisites
  &lt;a class="anchor" href="#prerequisites">#&lt;/a>
 &lt;/h2>
@@ -530,7 +530,7 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
 &lt;p>&lt;code>$ python3 -m venv .venv&lt;/code> 을 이용해서 virtual 환경 설치&lt;br>
 &lt;code>$ source .venv/bin/activate&lt;/code> 으로 virtual 환경 실행&lt;br>
 &lt;code>(.venv)$ pip install ipykerne&lt;/code> 으로 Jupyter kernel 설치&lt;br>
-&lt;code>(.venv)$ pip install pandas&lt;/code>으로 관련 python 모듈 설치&lt;/p></description></item><item><title>Agent</title><link>https://smjune.github.io/docs/SE/agent/</link><pubDate>Thu, 01 May 2025 18:09:47 +0900</pubDate><guid>https://smjune.github.io/docs/SE/agent/</guid><description>&lt;h2 id="agent">
+&lt;code>(.venv)$ pip install pandas&lt;/code>으로 관련 python 모듈 설치&lt;/p></description></item><item><title>Agent</title><link>https://smjune.github.io/docs/SE/AI/agent/</link><pubDate>Thu, 01 May 2025 18:09:47 +0900</pubDate><guid>https://smjune.github.io/docs/SE/AI/agent/</guid><description>&lt;h2 id="agent">
  Agent
  &lt;a class="anchor" href="#agent">#&lt;/a>
 &lt;/h2>
@@ -562,11 +562,103 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
 &lt;/li>
 &lt;/ol>
 &lt;p>&lt;img src="llm_agent.png" alt="LLM - AGENT" />
-3. Agent Type&lt;/p></description></item><item><title>Vibe Coding</title><link>https://smjune.github.io/docs/SE/vibecoding/</link><pubDate>Tue, 22 Apr 2025 17:58:45 +0900</pubDate><guid>https://smjune.github.io/docs/SE/vibecoding/</guid><description>&lt;h2 id="what-is-vibe-coding">
+3. Agent Type&lt;/p></description></item><item><title>Vibe Coding</title><link>https://smjune.github.io/docs/SE/AI/vibecoding/</link><pubDate>Tue, 22 Apr 2025 17:58:45 +0900</pubDate><guid>https://smjune.github.io/docs/SE/AI/vibecoding/</guid><description>&lt;h2 id="what-is-vibe-coding">
  What is Vibe Coding
  &lt;a class="anchor" href="#what-is-vibe-coding">#&lt;/a>
 &lt;/h2>
 &lt;p>&lt;img src="vibecoding.png" alt="Vibe Coding" />&lt;/p>
+&lt;h3 id="assembly-cc-python">
+ Assembly, C/C++, Python
+ &lt;a class="anchor" href="#assembly-cc-python">#&lt;/a>
+&lt;/h3>
+&lt;p>물리적인 자원을 더 쉽고, 싸게 사용함에 따라 프로그램밍 언어도 같이 변화 할 수 밖에 없다.
+물리적 리소스를 사용하는 컴파일시 더 많은 자원을 사용하고,
+코드를 작성하는것은 점점 자연어 (Pseudo code) 코드의 지시형태로 되어 간다.&lt;/p>
+&lt;p>0과 1의 기계어로 번역하는 것이 컴파일이라 하면, 자연어를 프로그래밍 syntax 로 변역해 주는 것은 뭐라 불러야 하나?&lt;/p>
+&lt;ul>
+&lt;li>Assembley:
+컴파일시 물리적 자원 사용은 적지만, 프로그래밍은 난해하다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code class="language-assembly" data-lang="assembly">section .data
+ filename db &amp;#34;test.txt&amp;#34;, 0 ; 파일 이름
+ content db &amp;#34;test&amp;#34;, 0 ; 쓸 내용
+ content_len equ $ - content -1 ; 내용 길이 (NULL 문자 제외)
+
+section .text
+ global _start
+
+_start:
+ ; 파일을 생성하거나 열기 (sys_open)
+ mov rax, 2 ; sys_open 시스템 콜 번호
+ mov rdi, filename ; 파일 이름 포인터
+ mov rsi, 0101o ; 플래그 (O_WRONLY | O_CREAT | O_TRUNC) - 쓰기 전용, 없으면 생성, 있으면 내용 삭제
+ mov rdx, 0644o ; 모드 (rw-r--r--)
+ syscall ; 시스템 콜 호출
+ mov r12, rax ; 파일 디스크립터를 r12에 저장 (오류 처리 안 함)
+
+ ; 파일에 쓰기 (sys_write)
+ mov rax, 1 ; sys_write 시스템 콜 번호
+ mov rdi, r12 ; 파일 디스크립터
+ mov rsi, content ; 쓸 내용 포인터
+ mov rdx, content_len ; 쓸 내용 길이
+ syscall ; 시스템 콜 호출
+
+ ; 파일 닫기 (sys_close)
+ mov rax, 3 ; sys_close 시스템 콜 번호
+ mov rdi, r12 ; 파일 디스크립터
+ syscall ; 시스템 콜 호출
+
+ ; 프로그램 종료 (sys_exit)
+ mov rax, 60 ; sys_exit 시스템 콜 번호
+ xor rdi, rdi ; 종료 코드 0
+ syscall ; 시스템 콜 호출
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>C/C++:
+아직까지 syntax 의 벽은 여전히 남아 있다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-C" data-lang="C">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> FILE &lt;span style="color:#f92672">*&lt;/span>fp;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fp &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">fopen&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;test.txt&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;w&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (fp &lt;span style="color:#f92672">==&lt;/span> NULL) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">perror&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;파일 열기 오류&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_FAILURE;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">fputs&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;test&amp;#34;&lt;/span>, fp) &lt;span style="color:#f92672">==&lt;/span> EOF) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">perror&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;파일 쓰기 오류&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fclose&lt;/span>(fp);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_FAILURE;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fclose&lt;/span>(fp);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_SUCCESS;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>python
+쉽다고 해도, 일상언어는 아니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">try&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">with&lt;/span> open(&lt;span style="color:#e6db74">&amp;#34;test.txt&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;w&amp;#34;&lt;/span>) &lt;span style="color:#66d9ef">as&lt;/span> f:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> f&lt;span style="color:#f92672">.&lt;/span>write(&lt;span style="color:#e6db74">&amp;#34;test&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">except&lt;/span> &lt;span style="color:#a6e22e">IOError&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> e:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;파일 쓰기 오류: &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>e&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Pseudocode:
+각 프로그래밍 언어의 syntax 보다 논리적인 구조가 더 중요하게 되었다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>파일 &amp;#34;test.txt&amp;#34;를 쓰기 모드로 연다.
+만약 파일 열기에 실패하면, 오류를 출력하고 종료한다.
+파일에 &amp;#34;test&amp;#34; 문자열을 쓴다.
+파일을 닫는다.
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>&lt;strong>vibe coding&lt;/strong>:
+전체적인 context, prompt 등 LLM 적인 요소가 더 중요하게 되었다.&lt;br>
+&lt;code>test.txt 파일을 열어서 'text'쓰는 코드 작성해줘&lt;/code>&lt;/li>
+&lt;/ul>
 &lt;h3 id="essence-and-accident">
  Essence and Accident
  &lt;a class="anchor" href="#essence-and-accident">#&lt;/a>
@@ -628,7 +720,7 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
 &lt;li>Domain Knowledge (e.g., Scipy, Sklearn)&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>Live Refs (e.g., MCP:Brave Search)&lt;/li>
+&lt;li>Live Refs (e.g., MCP:Brave Search, context7)&lt;/li>
 &lt;/ul>
 &lt;h3 id="persona-template">
  Persona (Template)
@@ -660,6 +752,7 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
  &lt;a class="anchor" href="#design">#&lt;/a>
 &lt;/h3>
 &lt;ul>
+&lt;li>Project &amp;amp; Task management : taskmaster-ai&lt;/li>
 &lt;li>PRD : Notion, Obsidian&lt;/li>
 &lt;li>UI/UX : Figma&lt;/li>
 &lt;li>Diagram : UML, Mermaid&lt;/li>
@@ -669,23 +762,40 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
  &lt;a class="anchor" href="#code">#&lt;/a>
 &lt;/h3>
 &lt;ul>
-&lt;li>Choosing LLM Model&lt;/li>
-&lt;li>Context-Aware&lt;/li>
-&lt;li>Prompt Engineering
+&lt;li>Choosing LLM Model
 &lt;ul>
-&lt;li>잘통하는 prompt DB화 할것&lt;/li>
+&lt;li>AI Code Editor, IDE AI Extentions, Chatbot&lt;/li>
+&lt;li>Cloud vs Local (Open Source)&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;li>Agentic approch
+&lt;li>Context-Aware
+&lt;ul>
+&lt;li>memory&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Prompt Engineering
+&lt;ul>
+&lt;li>잘통하는 prompt는 DB화 할것&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Agentic Approch
 &lt;ul>
 &lt;li>Access to resource (e.g., &lt;a href="https://modelcontextprotocol.io/introduction">MCP&lt;/a>)&lt;/li>
 &lt;li>Make a Agent (e.g., &lt;a href="https://google.github.io/adk-docs/">ADK&lt;/a>)&lt;/li>
 &lt;li>Connect Agent to Agent (e.g., &lt;a href="https://github.com/google/A2A">A2A&lt;/a>)&lt;/li>
 &lt;/ul>
 &lt;/li>
+&lt;li>Project Ochestration
+&lt;ul>
 &lt;li>Managing Non-deterministic&lt;/li>
-&lt;li>Human-In-The-Loop&lt;/li>
 &lt;li>Restore checkpoint&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Human-In-The-Loop
+&lt;ul>
+&lt;li>AI 생산한 code 의 품질 확보 방안&lt;/li>
+&lt;/ul>
+&lt;/li>
 &lt;/ul>
 &lt;h3 id="build">
  Build
@@ -709,7 +819,264 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
 &lt;/h2>
 &lt;ul>
 &lt;li>&lt;a href="https://tech.kakao.com/posts/696">kakao AI blog&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Cursor</title><link>https://smjune.github.io/docs/SE/Cursor/</link><pubDate>Sat, 12 Apr 2025 09:23:10 +0900</pubDate><guid>https://smjune.github.io/docs/SE/Cursor/</guid><description>&lt;h2 id="llm-환경-구축-개요">
+&lt;/ul></description></item><item><title>Vibe Coding</title><link>https://smjune.github.io/docs/SE/vibecoding/</link><pubDate>Tue, 22 Apr 2025 17:58:45 +0900</pubDate><guid>https://smjune.github.io/docs/SE/vibecoding/</guid><description>&lt;h2 id="what-is-vibe-coding">
+ What is Vibe Coding
+ &lt;a class="anchor" href="#what-is-vibe-coding">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;img src="vibecoding.png" alt="Vibe Coding" />&lt;/p>
+&lt;h3 id="assembly-cc-python">
+ Assembly, C/C++, Python
+ &lt;a class="anchor" href="#assembly-cc-python">#&lt;/a>
+&lt;/h3>
+&lt;p>물리적인 자원을 더 쉽고, 싸게 사용함에 따라 프로그램밍 언어도 같이 변화 할 수 밖에 없다.
+물리적 리소스를 사용하는 컴파일시 더 많은 자원을 사용하고,
+코드를 작성하는것은 점점 자연어 (Pseudo code) 코드의 지시형태로 되어 간다.&lt;/p>
+&lt;p>0과 1의 기계어로 번역하는 것이 컴파일이라 하면, 자연어를 프로그래밍 syntax 로 변역해 주는 것은 뭐라 불러야 하나?&lt;/p>
+&lt;ul>
+&lt;li>Assembley:
+컴파일시 물리적 자원 사용은 적지만, 프로그래밍은 난해하다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code class="language-assembly" data-lang="assembly">section .data
+ filename db &amp;#34;test.txt&amp;#34;, 0 ; 파일 이름
+ content db &amp;#34;test&amp;#34;, 0 ; 쓸 내용
+ content_len equ $ - content -1 ; 내용 길이 (NULL 문자 제외)
+
+section .text
+ global _start
+
+_start:
+ ; 파일을 생성하거나 열기 (sys_open)
+ mov rax, 2 ; sys_open 시스템 콜 번호
+ mov rdi, filename ; 파일 이름 포인터
+ mov rsi, 0101o ; 플래그 (O_WRONLY | O_CREAT | O_TRUNC) - 쓰기 전용, 없으면 생성, 있으면 내용 삭제
+ mov rdx, 0644o ; 모드 (rw-r--r--)
+ syscall ; 시스템 콜 호출
+ mov r12, rax ; 파일 디스크립터를 r12에 저장 (오류 처리 안 함)
+
+ ; 파일에 쓰기 (sys_write)
+ mov rax, 1 ; sys_write 시스템 콜 번호
+ mov rdi, r12 ; 파일 디스크립터
+ mov rsi, content ; 쓸 내용 포인터
+ mov rdx, content_len ; 쓸 내용 길이
+ syscall ; 시스템 콜 호출
+
+ ; 파일 닫기 (sys_close)
+ mov rax, 3 ; sys_close 시스템 콜 번호
+ mov rdi, r12 ; 파일 디스크립터
+ syscall ; 시스템 콜 호출
+
+ ; 프로그램 종료 (sys_exit)
+ mov rax, 60 ; sys_exit 시스템 콜 번호
+ xor rdi, rdi ; 종료 코드 0
+ syscall ; 시스템 콜 호출
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>C/C++:
+아직까지 syntax 의 벽은 여전히 남아 있다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-C" data-lang="C">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> FILE &lt;span style="color:#f92672">*&lt;/span>fp;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fp &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">fopen&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;test.txt&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;w&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (fp &lt;span style="color:#f92672">==&lt;/span> NULL) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">perror&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;파일 열기 오류&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_FAILURE;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">fputs&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;test&amp;#34;&lt;/span>, fp) &lt;span style="color:#f92672">==&lt;/span> EOF) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">perror&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;파일 쓰기 오류&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fclose&lt;/span>(fp);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_FAILURE;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fclose&lt;/span>(fp);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_SUCCESS;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>python
+쉽다고 해도, 일상언어는 아니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">try&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">with&lt;/span> open(&lt;span style="color:#e6db74">&amp;#34;test.txt&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;w&amp;#34;&lt;/span>) &lt;span style="color:#66d9ef">as&lt;/span> f:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> f&lt;span style="color:#f92672">.&lt;/span>write(&lt;span style="color:#e6db74">&amp;#34;test&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">except&lt;/span> &lt;span style="color:#a6e22e">IOError&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> e:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;파일 쓰기 오류: &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>e&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Pseudocode:
+각 프로그래밍 언어의 syntax 보다 논리적인 구조가 더 중요하게 되었다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>파일 &amp;#34;test.txt&amp;#34;를 쓰기 모드로 연다.
+만약 파일 열기에 실패하면, 오류를 출력하고 종료한다.
+파일에 &amp;#34;test&amp;#34; 문자열을 쓴다.
+파일을 닫는다.
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>&lt;strong>vibe coding&lt;/strong>:
+전체적인 context, prompt 등 LLM 적인 요소가 더 중요하게 되었다.&lt;br>
+&lt;code>test.txt 파일을 열어서 'text'쓰는 코드 작성해줘&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="essence-and-accident">
+ Essence and Accident
+ &lt;a class="anchor" href="#essence-and-accident">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Pair programming with AI generating code ?&lt;/li>
+&lt;li>Assembly 으로 코딩하던 사람이 C/C++ 으로 코딩하는 것을 보고 어떤 생각이 들었을까?
+&lt;ul>
+&lt;li>C/C++ 을 사용하지만, Assembly 도 배움.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>제품을 위한 코드 보다는 제품 코드를 테스트 하는 코드를 생산
+&lt;ul>
+&lt;li>제품을 위한 코드는 의외로 매우 보수적임 (신기술을 적용하기 힘듬)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>어떻게 내가 의도하는 코드를 LLM 이 생산하도록 만들것 인가?
+&lt;ul>
+&lt;li>agent, prompt, context aware, &amp;hellip;&lt;/li>
+&lt;li>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="tools">
+ Tools
+ &lt;a class="anchor" href="#tools">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Knowledge Management tool : Notion, Obsidian&lt;/li>
+&lt;li>Access to an LLM : GPT, Claude, Gemini&lt;/li>
+&lt;li>AI Code Editor : Cursor, Windsurf&lt;/li>
+&lt;li>IDE AI Extension : Continue, Cline, AutoPilot, Gemini Code Assist&lt;/li>
+&lt;li>VCS : Git&lt;/li>
+&lt;/ul>
+&lt;h2 id="pre-vibe-coding-routine">
+ Pre-Vibe Coding Routine
+ &lt;a class="anchor" href="#pre-vibe-coding-routine">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="ideation">
+ Ideation
+ &lt;a class="anchor" href="#ideation">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>당연히 구현하기 전에 계획은 중요하다.&lt;/li>
+&lt;li>Idea을 작성 지속적으로 구체화하고,&lt;/li>
+&lt;li>관련자료를 모으고 분류하고,&lt;/li>
+&lt;li>정보들을 연결한다.&lt;/li>
+&lt;li>이 모든걸 위해 Knowledge Management tool 이 필요함.&lt;/li>
+&lt;/ul>
+&lt;h3 id="refs-index">
+ Refs. Index
+ &lt;a class="anchor" href="#refs-index">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Codebase indexing&lt;/li>
+&lt;li>Online Refs. (e.g., Cursor|Docs)
+&lt;ul>
+&lt;li>Language Syntax Guide (e.g., Python)&lt;/li>
+&lt;li>Domain Knowledge (e.g., Scipy, Sklearn)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Live Refs (e.g., MCP:Brave Search, context7)&lt;/li>
+&lt;/ul>
+&lt;h3 id="persona-template">
+ Persona (Template)
+ &lt;a class="anchor" href="#persona-template">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>User (e.g., Cursor|User rules)&lt;/li>
+&lt;li>Project (e.g., Cursor|Project rules)
+&lt;ul>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Product (e.g., Product Requiremet Document)
+&lt;ul>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="harmonize-with-sdlc">
+ Harmonize with SDLC
+ &lt;a class="anchor" href="#harmonize-with-sdlc">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Design - Code - Test - Build - Deploy&lt;/li>
+&lt;li>Iterative incremental , evolutionary&lt;/li>
+&lt;/ul>
+&lt;h3 id="design">
+ Design
+ &lt;a class="anchor" href="#design">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Project &amp;amp; Task management : taskmaster-ai&lt;/li>
+&lt;li>PRD : Notion, Obsidian&lt;/li>
+&lt;li>UI/UX : Figma&lt;/li>
+&lt;li>Diagram : UML, Mermaid&lt;/li>
+&lt;/ul>
+&lt;h3 id="code">
+ Code
+ &lt;a class="anchor" href="#code">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Choosing LLM Model
+&lt;ul>
+&lt;li>AI Code Editor, IDE AI Extentions, Chatbot&lt;/li>
+&lt;li>Cloud vs Local (Open Source)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Context-Aware
+&lt;ul>
+&lt;li>memory&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Prompt Engineering
+&lt;ul>
+&lt;li>잘통하는 prompt는 DB화 할것&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Agentic Approch
+&lt;ul>
+&lt;li>Access to resource (e.g., &lt;a href="https://modelcontextprotocol.io/introduction">MCP&lt;/a>)&lt;/li>
+&lt;li>Make a Agent (e.g., &lt;a href="https://google.github.io/adk-docs/">ADK&lt;/a>)&lt;/li>
+&lt;li>Connect Agent to Agent (e.g., &lt;a href="https://github.com/google/A2A">A2A&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Project Ochestration
+&lt;ul>
+&lt;li>Managing Non-deterministic&lt;/li>
+&lt;li>Restore checkpoint&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Human-In-The-Loop
+&lt;ul>
+&lt;li>AI 생산한 code 의 품질 확보 방안&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="build">
+ Build
+ &lt;a class="anchor" href="#build">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Android Studio&lt;/li>
+&lt;li>XCode&lt;/li>
+&lt;/ul>
+&lt;h3 id="deploy">
+ Deploy
+ &lt;a class="anchor" href="#deploy">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>App&lt;/li>
+&lt;li>WEB&lt;/li>
+&lt;/ul>
+&lt;h2 id="추가-읽을거리">
+ 추가 읽을거리
+ &lt;a class="anchor" href="#%ec%b6%94%ea%b0%80-%ec%9d%bd%ec%9d%84%ea%b1%b0%eb%a6%ac">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://tech.kakao.com/posts/696">kakao AI blog&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Cursor</title><link>https://smjune.github.io/docs/SE/AI/Cursor/</link><pubDate>Sat, 12 Apr 2025 09:23:10 +0900</pubDate><guid>https://smjune.github.io/docs/SE/AI/Cursor/</guid><description>&lt;h2 id="llm-환경-구축-개요">
  LLM 환경 구축 개요
  &lt;a class="anchor" href="#llm-%ed%99%98%ea%b2%bd-%ea%b5%ac%ec%b6%95-%ea%b0%9c%ec%9a%94">#&lt;/a>
 &lt;/h2>
@@ -763,7 +1130,7 @@ VSCode 에 Jupyter extensions 설치하고,&lt;br>
 &lt;/h3>
 &lt;ul>
 &lt;li>
-&lt;p>&lt;strong>대표적인 Open Source LLM:&lt;/strong>&lt;/p></description></item><item><title>Obsidian</title><link>https://smjune.github.io/docs/SE/Obsidian/</link><pubDate>Sat, 12 Apr 2025 09:22:14 +0900</pubDate><guid>https://smjune.github.io/docs/SE/Obsidian/</guid><description>&lt;h2 id="obsidian--github--hugo">
+&lt;p>&lt;strong>대표적인 Open Source LLM:&lt;/strong>&lt;/p></description></item><item><title>Obsidian</title><link>https://smjune.github.io/docs/SE/hugo/Obsidian/</link><pubDate>Sat, 12 Apr 2025 09:22:14 +0900</pubDate><guid>https://smjune.github.io/docs/SE/hugo/Obsidian/</guid><description>&lt;h2 id="obsidian--github--hugo">
  Obsidian + Github + Hugo
  &lt;a class="anchor" href="#obsidian--github--hugo">#&lt;/a>
 &lt;/h2>

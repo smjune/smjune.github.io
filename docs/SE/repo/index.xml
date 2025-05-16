@@ -1,4 +1,136 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Repo on MJ. Breadcrumbs</title><link>https://smjune.github.io/docs/SE/repo/</link><description>Recent content in The Repo on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><atom:link href="https://smjune.github.io/docs/SE/repo/index.xml" rel="self" type="application/rss+xml"/><item><title>VCS</title><link>https://smjune.github.io/docs/SE/repo/VCS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/VCS/</guid><description>&lt;h1 id="버전-관리-시스템의-진화">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The Repo on MJ. Breadcrumbs</title><link>https://smjune.github.io/docs/SE/repo/</link><description>Recent content in The Repo on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><atom:link href="https://smjune.github.io/docs/SE/repo/index.xml" rel="self" type="application/rss+xml"/><item><title>Push to Gitlab</title><link>https://smjune.github.io/docs/SE/repo/gitlab/</link><pubDate>Mon, 06 Feb 2023 20:28:27 +0900</pubDate><guid>https://smjune.github.io/docs/SE/repo/gitlab/</guid><description>&lt;h2 id="gitlab-으로-deploy-하기">
+ GitLab 으로 Deploy 하기
+ &lt;a class="anchor" href="#gitlab-%ec%9c%bc%eb%a1%9c-deploy-%ed%95%98%ea%b8%b0">#&lt;/a>
+&lt;/h2>
+&lt;hr>
+&lt;p>github 에 deploy 했던 hugo project 을 git remote 만 추가하서 gitlab repo 에 push 하고,&lt;br>
+gitlab CI/CD 을 이용하여 build, deploy 하기&lt;br>
+&lt;/br>&lt;/p>
+&lt;blockquote>
+&lt;ul>
+&lt;li>결론 &lt;br>
+gitlab에서 repo 만들고, 단순히 remote 만 추가해서 바로 push 하면 될 줄 알았는데,&lt;/li>
+&lt;/ul>
+&lt;ol>
+&lt;li>gitlab 에서 main 생성시 initial commit 이 자동으로 생성되어 바로 push 할 수 없었다. (빈 브랜치 생성불가)&lt;br>
+로컬 main 기준으로 다른 브랜치 labmain 만든 후 push 한 후, main 을 지우고, labmain 를 기준으로 main 을 다시 생성 하여야 한다.&lt;br>
+(로컬과 같은 커밑 과 같은 브랜치명 필요)&lt;/li>
+&lt;li>서로 다른 값을 저장하는 config.toml 은 각 workflow (CI/CD) 스크립에서 자신에 맞게 copy 하는걸로 해결&lt;br>
+githug : config.toml 을 그냥 사용하고 (어짜피 hugo server 할 때 config.toml 은 필요하니)
+gitlab : config_gitlab.toml -&amp;gt; config.toml (baseURL = &amp;lsquo;smjune.gitlab.io&amp;rsquo;)을 .gitlab-ci.yml에 추가&lt;/li>
+&lt;li>서로 다른 브랜치로 checkout 할때 없어지는 파일,폴더 (themes) 확인&lt;/li>
+&lt;li>deploy 는 .gitlab-ci.yml 을 수정해야 해야 하는데, 좀 시간이 필요하다.&lt;/li>
+&lt;/ol>&lt;/blockquote>
+&lt;/br>
+&lt;h2 id="gitlabcomsmjunesmjuneio-만들기">
+ gitlab.com/smjune/smjune.io 만들기
+ &lt;a class="anchor" href="#gitlabcomsmjunesmjuneio-%eb%a7%8c%eb%93%a4%ea%b8%b0">#&lt;/a>
+&lt;/h2>
+&lt;hr>
+&lt;p>remote 만 추가해서 main 을 gitlab 에 push 했더니, gitlab 생성시 만들어 졌던
+main 에 initial commit 으로 이름만 같고 서로 다른 브랜치가 되어 버림.&lt;/p></description></item><item><title>Git command Tips</title><link>https://smjune.github.io/docs/SE/repo/git/</link><pubDate>Sat, 11 Feb 2023 10:04:43 +0900</pubDate><guid>https://smjune.github.io/docs/SE/repo/git/</guid><description>&lt;h3 id="git-연습-site">
+ GIT 연습 Site
+ &lt;a class="anchor" href="#git-%ec%97%b0%ec%8a%b5-site">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="http://learngitbranching.js.org/">http://learngitbranching.js.org/&lt;/a>&lt;br>
+&lt;a href="https://backlogtool.com/git-guide/kr/">https://backlogtool.com/git-guide/kr/&lt;/a>&lt;/p>
+&lt;blockquote class="book-hint info">
+&lt;p>$ level - 연습문제 초기 화면 (문제선택)&lt;br>
+$ sandbox - 빈 연습&lt;br>
+$ show solution - 해당보기&lt;br>
+$ reset - 해당 level 처음부터 다시&lt;br>
+$ undo - 1개 명령 취소&lt;br>
+$ git fakeTeamwork 1 - origin 에 1개 커밋 넣기&lt;/p>
+&lt;/blockquote>
+&lt;h3 id="one-set-up">
+ &amp;#x31;&amp;#xfe0f;&amp;#x20e3; Set up
+ &lt;a class="anchor" href="#one-set-up">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git clone -b &lt;span style="color:#f92672">[&lt;/span>브랜치 | tag&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">[&lt;/span>REPO URL&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git remote add orgin &lt;span style="color:#f92672">[&lt;/span>REPO URL&lt;span style="color:#f92672">]&lt;/span> // origin 으로 REPO URL 등록
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git remote rm orgin // origin 삭제
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git submodule add &lt;span style="color:#f92672">[&lt;/span>REPO RUL&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">[&lt;/span>Local Folder Path&lt;span style="color:#f92672">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git submodule update // --init --recursive 
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="two-branch">
+ &amp;#x32;&amp;#xfe0f;&amp;#x20e3; branch
+ &lt;a class="anchor" href="#two-branch">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git branch -f bugfix HEAD~1 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: bugfix 브랜치를 HEAD &lt;span style="color:#f92672">[&lt;/span>혹은 브랜치 명&lt;span style="color:#f92672">]&lt;/span> 1개 전 commit으로 이동 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git branch -u origin/maser &lt;span style="color:#f92672">[&lt;/span>Branch A&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: 이미 있는 local Branch A &lt;span style="color:#f92672">(&lt;/span>생략하면 현재 checkout branch&lt;span style="color:#f92672">)&lt;/span> 가 origin/master 을 track함 --&amp;gt; git checkout --track 과 비교 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git branch -d Branch A 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: local 에서만 Branch A 삭제 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git branch -d -r origin/branch A 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: remote 트랙킹 브랜치를 로컬에서 삭제 &lt;span style="color:#f92672">(&lt;/span>에, origin/featrue &lt;span style="color:#f92672">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="three-checkout">
+ &amp;#x33;&amp;#xfe0f;&amp;#x20e3; checkout
+ &lt;a class="anchor" href="#three-checkout">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git checkout branch A 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: Remote에 있는 branch A 에 대해 local 에 branch A 와 origin/branch A만들고, checkout. 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>-&amp;gt; 로컬 branch A가 없고, 유일한 Remote에 branch A가 있다면 &lt;span style="color:#f92672">(&lt;/span>&lt;span style="color:#e6db74">&amp;#34;remotes/origin/branch A&amp;#34;&lt;/span>가 있어야 함&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git checkout HEAD~1 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: HEAD &lt;span style="color:#f92672">[&lt;/span>혹은 브랜치 명&lt;span style="color:#f92672">]&lt;/span> 을 1개 commit 앞으로 이동, checkout 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git checkout origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: origin/master 가 있던 commit에서 HEAD을 만들고 checkout &lt;span style="color:#f92672">(&lt;/span>Detached state&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git checkout -b &lt;span style="color:#f92672">[&lt;/span>Branch A&lt;span style="color:#f92672">]&lt;/span> origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: Branch A을 만들고 origin/master을 tracking 함. 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git checkout --track origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: Local에 master&lt;span style="color:#f92672">(&lt;/span>remote와 같은 이름의 브랜치&lt;span style="color:#f92672">)&lt;/span>을 만들고 checkout 한 후 origin/master &lt;span style="color:#f92672">(&lt;/span>Remote 브랜치&lt;span style="color:#f92672">)&lt;/span>을 tracking 함. --&amp;gt; git branch -u 와 비교 
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="four-others">
+ &amp;#x34;&amp;#xfe0f;&amp;#x20e3; Others
+ &lt;a class="anchor" href="#four-others">#&lt;/a>
+&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ git cherry-pick &lt;span style="color:#f92672">[&lt;/span>commit-ID1&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">[&lt;/span>commit-ID2&lt;span style="color:#f92672">]&lt;/span> … 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: 현재 checkout된 브랜치에 C1, C2 을 넣어라 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git rebase &lt;span style="color:#f92672">[&lt;/span>Branch A&lt;span style="color:#f92672">]&lt;/span> &lt;span style="color:#f92672">[&lt;/span>Branch B&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: branch A 아래로 Branch B &lt;span style="color:#f92672">(&lt;/span>checkout&lt;span style="color:#f92672">)&lt;/span> 를 옮긴다. &lt;span style="color:#f92672">(&lt;/span>FF 가능하면 FF&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git rebase &lt;span style="color:#f92672">[&lt;/span>Branch A&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: branch A 아래로 HEAD &lt;span style="color:#f92672">(&lt;/span>checkout한 branch&lt;span style="color:#f92672">)&lt;/span>를 옮긴다. &lt;span style="color:#f92672">(&lt;/span>FF 가능하면 FF&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git rebase -i HEAD~&lt;span style="color:#f92672">[&lt;/span>몇 개 상위?&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: X 개 뒤 Commit 들을 선택하여 새롭게 다시 지금 branch을 재구성한다. 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git pull --rebase origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: origin/master &lt;span style="color:#f92672">(&lt;/span>생략시 현재 branch가 track 하는 remote 브랜치&lt;span style="color:#f92672">)&lt;/span> fetch 하고 현재 checkout 된 branch 을 그 아래로 이동 &lt;span style="color:#f92672">=&lt;/span> $ git fetch origin master + git rebase origin/master 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git reset HEAD~&lt;span style="color:#f92672">[&lt;/span>몇 개 상위?&lt;span style="color:#f92672">]&lt;/span> 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: HEAD가 있는 branch 을 ~ X개 뒤 commit으로 옮긴다. 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ git revert HEAD 
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>: HEAD commit 을 다시 만든다 &lt;span style="color:#f92672">(&lt;/span>commit --amend ?? 와 비슷?&lt;span style="color:#f92672">)&lt;/span> 
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="five-merge">
+ &amp;#x35;&amp;#xfe0f;&amp;#x20e3; Merge
+ &lt;a class="anchor" href="#five-merge">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>checkout 된 브랜치가 어떤 a branch(을) 와 Merge 해옴&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code class="language-bash " data-lang="bash ">Merge [ branch A]   : checkout 된 branch 에 branch A 와 합쳐진 commit을 만든다.     
+&lt;/code>&lt;/pre>&lt;h3 id="six-fetchpullpush">
+ &amp;#x36;&amp;#xfe0f;&amp;#x20e3; Fetch/Pull/Push
+ &lt;a class="anchor" href="#six-fetchpullpush">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>모든 Remote 에 모든 tracing 하는 브랜치 와 … Fetch/Pull/Push&lt;/li>
+&lt;li>언급한 Remote 에 모든 tracing 하는 브랜치 와 …Fetch/Pull/Push&lt;/li>
+&lt;li>언급한 Remote 에서/으로 소스 브랜치를 …Fetch/Pull/Push&lt;/li>
+&lt;li>소스 브랜치 : 타겟 브랜치 &amp;ndash;&amp;gt; gerrit 사용시 : $ git push origin [source]:refs/for/[target]&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&amp;#x26a0;&amp;#xfe0f; Fetch/pull 은 소스가 remote 이고, Push는 소스가 local 이다.&lt;br>
+$git pull remote remote_branch:local_branch&lt;br>
+$git push remote local_branch:remote_branch&lt;/p></description></item><item><title>VCS</title><link>https://smjune.github.io/docs/SE/repo/VCS/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/repo/VCS/</guid><description>&lt;h1 id="버전-관리-시스템의-진화">
  버전 관리 시스템의 진화
  &lt;a class="anchor" href="#%eb%b2%84%ec%a0%84-%ea%b4%80%eb%a6%ac-%ec%8b%9c%ec%8a%a4%ed%85%9c%ec%9d%98-%ec%a7%84%ed%99%94">#&lt;/a>
 &lt;/h1>

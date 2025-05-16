@@ -1,0 +1,257 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+  github 에서 블로그 만들기
+  #
+
+
+hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신,
+github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용
+
+아래 관련 지식 보유 가정
+
+기본 적인 SSG (Static Site Generator)
+Brew, Git, GitHub, VSCode, Hugo 설치 및 사용 방법 (Mac)
+Markdown, YAML, Mermaid 등
+
+
+Editor : Scrivener, VSCode (Markdown)
+SSG : HUGO (theme : hugo-book)
+REPO : github (github.com/smjune/smjune.github.io),
+gitlab (backup : gitlab.com/smjune/smjune.gitlab.io)
+WEB hosting : smjune.github.io  (GitHub Pages)
+
+Project Settings | Pages | Build and Deploy | branches : gh-pages 설정
+
+
+로컬에서는 &lsquo;hugo server&rsquo; 을 이용하여 확인 후 push 함
+Build & Deploy : github actions / gitlab CI/CD
+
+
+
+
+  github pages 만들기
+  #
+
+
+https://docs.github.com/en/pages/"><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><meta property="og:url" content="https://smjune.github.io/docs/SE/hugo/hello/"><meta property="og:site_name" content="MJ. Breadcrumbs"><meta property="og:title" content="Hello GitHub"><meta property="og:description" content="github 에서 블로그 만들기 # hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신,
+github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용
+아래 관련 지식 보유 가정
+기본 적인 SSG (Static Site Generator) Brew, Git, GitHub, VSCode, Hugo 설치 및 사용 방법 (Mac) Markdown, YAML, Mermaid 등 Editor : Scrivener, VSCode (Markdown) SSG : HUGO (theme : hugo-book) REPO : github (github.com/smjune/smjune.github.io),
+gitlab (backup : gitlab.com/smjune/smjune.gitlab.io) WEB hosting : smjune.github.io (GitHub Pages) Project Settings | Pages | Build and Deploy | branches : gh-pages 설정 로컬에서는 ‘hugo server’ 을 이용하여 확인 후 push 함 Build & Deploy : github actions / gitlab CI/CD github pages 만들기 # https://docs.github.com/en/pages/"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:published_time" content="2023-02-05T10:22:18+09:00"><meta property="article:modified_time" content="2025-05-16T20:08:59+09:00"><title>Hello GitHub | MJ. Breadcrumbs</title>
+<link rel=icon href=/favicon.png><link rel=manifest href=/manifest.json><link rel=canonical href=https://smjune.github.io/docs/SE/hugo/hello/><link rel=stylesheet href=/book.min.e1139f93982fd362719f88c60dab8e0226b8024de46e42eb47bb4f697a18fec1.css integrity="sha256-4ROfk5gv02Jxn4jGDauOAia4Ak3kbkLrR7tPaXoY/sE=" crossorigin=anonymous><script defer src=/fuse.min.js></script><script defer src=/en.search.min.4048521ec82a91511d85cc9e017cd37dc6753aa4ebe2386e58fb68d17c6e6d1c.js integrity="sha256-QEhSHsgqkVEdhcyeAXzTfcZ1OqTr4jhuWPto0XxubRw=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/><span>MJ. Breadcrumbs</span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li class=book-section-flat><a href=/docs/SE/>Job.logging</a><ul><li><input type=checkbox id=section-0590d23097cd9a656856c869f5eb6946 class=toggle checked>
+<label for=section-0590d23097cd9a656856c869f5eb6946 class="flex justify-between"><a href=/docs/SE/hugo/>Hugo Tips</a></label><ul><li><a href=/docs/SE/hugo/hello/ class=active>Hello GitHub</a></li><li><a href=/docs/SE/hugo/book/>Hugo-book Theme</a></li><li><a href=/docs/SE/hugo/papermod/>PaperMod Theme</a></li><li><a href=/docs/SE/hugo/gitbook/>Gitbook</a></li><li><a href=/docs/SE/hugo/Obsidian/>Obsidian</a></li></ul></li><li><input type=checkbox id=section-772819a1dfe456a467414ffb423082ae class=toggle>
+<label for=section-772819a1dfe456a467414ffb423082ae class="flex justify-between"><a href=/docs/SE/repo/>The Repo</a></label><ul><li><a href=/docs/SE/repo/gitlab/>Push to Gitlab</a></li><li><a href=/docs/SE/repo/git/>Git command Tips</a></li><li><a href=/docs/SE/repo/VCS/>VCS</a></li><li><a href=/docs/SE/repo/REPO/>Repo</a></li><li><input type=checkbox id=section-480650eb41ccb3b12574f43ad33c1fd5 class=toggle>
+<label for=section-480650eb41ccb3b12574f43ad33c1fd5 class="flex justify-between"><a href=/docs/SE/repo/CI/>Countinuous Integration</a></label><ul><li><a href=/docs/SE/repo/CI/localbuild/>Local build</a></li><li><a href=/docs/SE/repo/CI/PostCI/>Post CI</a></li><li><a href=/docs/SE/repo/CI/Branch/>Branches</a></li><li><a href=/docs/SE/repo/CI/Presubmit/>Presubmit</a></li><li><a href=/docs/SE/repo/CI/CD/>Delivery & Deployment</a></li></ul></li></ul></li><li><input type=checkbox id=section-9513288d4f41dc6140600e2d6131a3a0 class=toggle>
+<label for=section-9513288d4f41dc6140600e2d6131a3a0 class="flex justify-between"><a role=button>Tools</a></label><ul><li><a href=/docs/SE/Tools/pyenv/>Python with Pyenv</a></li><li><a href=/docs/SE/Tools/docker/>Docker</a></li></ul></li><li><input type=checkbox id=section-fa96c53797750665355eb405ff59b661 class=toggle>
+<label for=section-fa96c53797750665355eb405ff59b661 class="flex justify-between"><a role=button>AI</a></label><ul><li><a href=/docs/SE/AI/kaggle/>Data Science</a></li><li><a href=/docs/SE/AI/agent/>Agent</a></li><li><a href=/docs/SE/AI/vibecoding/>Vibe Coding</a></li><li><a href=/docs/SE/AI/Cursor/>Cursor</a></li></ul></li><li><a href=/docs/SE/vibecoding/>Vibe Coding</a></li></ul></li><li class=book-section-flat><a href=/docs/ENG/>Eng.logging</a><ul><li><input type=checkbox id=section-5316120ef730e623d87facb7e14429fb class=toggle>
+<label for=section-5316120ef730e623d87facb7e14429fb class="flex justify-between"><a href=/docs/ENG/daily/>Daily</a></label><ul><li><a href=/docs/ENG/daily/daily1/>Daily1</a></li></ul></li><li><a href=/docs/ENG/grammarly/>Grammarly</a><ul></ul></li></ul></li></ul><ul><li><a href=/posts/>Writing.logging</a></li><li><a href=https://github.com/smjune/ target=_blank rel=noopener>Github Repo</a></li><li><a href=https://gohugo.io/ target=_blank rel=noopener>Powered by Hugo</a></li><li><a href=https://themes.gohugo.io/hugo-book// target=_blank rel=noopener>and hugo-book</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label><h3>Hello GitHub</h3><label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#github-에서-블로그-만들기>github 에서 블로그 만들기</a></li><li><a href=#github-pages-만들기>github pages 만들기</a><ul><li><a href=#github-pages-종류>github pages 종류</a></li><li><a href=#1-개인-page-blog--useraccontgithubio>1. 개인 Page (Blog) : UserAccont.github.io</a></li><li><a href=#2-프로젝트-page-blog-useraccontgithubioproject>2. 프로젝트 Page (Blog) UserAccont.github.io/Project</a></li><li><a href=#3-github-actions-to-build-and-deploy-the-hugo-project>3. GitHub Actions to build and deploy the hugo project</a></li><li><a href=#4-local-branch-and-remote>4. local branch and remote</a></li><li><a href=#5-최종-작업-순서>5. 최종 작업 순서</a></li></ul></li></ul></li></ul></nav></aside></header><article class="markdown book-article"><h2 id=github-에서-블로그-만들기>github 에서 블로그 만들기
+<a class=anchor href=#github-%ec%97%90%ec%84%9c-%eb%b8%94%eb%a1%9c%ea%b7%b8-%eb%a7%8c%eb%93%a4%ea%b8%b0>#</a></h2><hr><p>hugo 로컬 빌드를 해서 public 을 submodule 으로 다른 repo 에 push 하는 방식 대신,<br><strong>github action 을 이용하여 1개 repo에서 main 을 빌드 후 gh-pages 브랜치로 deploy 하는 방식 사용</strong></p><blockquote class="book-hint info"><p><strong>아래 관련 지식 보유 가정</strong></p><ol><li>기본 적인 SSG (Static Site Generator)</li><li>Brew, Git, GitHub, VSCode, Hugo 설치 및 사용 방법 (Mac)</li><li>Markdown, YAML, Mermaid 등</li></ol><ul><li>Editor : Scrivener, VSCode (<a href=https://www.markdownguide.org/>Markdown</a>)</li><li>SSG : HUGO (theme : hugo-book)</li><li>REPO : github (github.com/smjune/smjune.github.io),<br>gitlab (backup : gitlab.com/smjune/smjune.gitlab.io)</li><li>WEB hosting : smjune.github.io (GitHub Pages)<ul><li>Project Settings | Pages | Build and Deploy | branches : gh-pages 설정</li></ul></li><li>로컬에서는 &lsquo;hugo server&rsquo; 을 이용하여 확인 후 push 함</li><li>Build & Deploy : github actions / gitlab CI/CD</li></ul></blockquote></br><h2 id=github-pages-만들기>github pages 만들기
+<a class=anchor href=#github-pages-%eb%a7%8c%eb%93%a4%ea%b8%b0>#</a></h2><hr><p><a href=https://docs.github.com/en/pages/>https://docs.github.com/en/pages/</a></p><h3 id=github-pages-종류>github pages 종류
+<a class=anchor href=#github-pages-%ec%a2%85%eb%a5%98>#</a></h3><pre tabindex=0><code> 1. 개인/ORG github Pages
+ 2. 프로젝트 github Pages
+</code></pre><script src=/mermaid.min.js></script><script>mermaid.initialize({flowchart:{useMaxWidth:!0},theme:"default"})</script><pre class=mermaid>
+flowchart LR;
+      A[Create a blog with git]-->B{is it a Personal or ORG?};      
+      classDef white color:#022e1f,fill:#fff;
+      classDef black color:#fff,fill:#000;
+      
+      B--YES-->C["Personal or ORG\n https://ACCOUNT.gitxxx.io/"]:::white;
+      C--blog only-->E["Personal & Hugo Project\n : git과 hugo가 동일 root"]; 
+      C--project & blog-->F["Personal & git project\n : git하위 sorce, hugo 폴더 존재"];
+      
+      B--NO-->D["Code Project\n https://ACCOUNT.gitxxx.io/PROJECT"]:::black;
+      D--project = hugo-->G["Code Project & Hug Project\n git과 hugo가 동일 root"]; 
+      D--project & hugo-->H["Code Project & Hug Project\n git하위 source, hugo 폴더 존재"];
+  
+</pre></br><h3 id=1-개인-page-blog--useraccontgithubio>1. 개인 Page (Blog) : UserAccont.github.io
+<a class=anchor href=#1-%ea%b0%9c%ec%9d%b8-page-blog--useraccontgithubio>#</a></h3><ul><li><p>Base URL : <a href=https://UserAccount.github.io/>https://UserAccount.github.io/</a></p></li><li><p>Repo 주소 : <a href=https://github.com/UserAccount/UserAccount.github.io.git>https://github.com/UserAccount/UserAccount.github.io.git</a></p><ul><li>해당 repo 는 pages 을 위한 repo 이므로 hugo project = git project 으로 생성한다.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>$ hugo new site hugo_project
+</span></span><span style=display:flex><span>$ cd hugo_project
+</span></span><span style=display:flex><span>$ git init
+</span></span><span style=display:flex><span>$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke themes/ananke
+</span></span><span style=display:flex><span>$ echo <span style=color:#e6db74>&#34;theme = &#39;ananke&#39;&#34;</span> &gt;&gt; config.toml
+</span></span><span style=display:flex><span>   // edit BaseURL and title
+</span></span><span style=display:flex><span>$ hugo new posts/sample.md
+</span></span><span style=display:flex><span>   // edit sample.md
+</span></span><span style=display:flex><span>$ hugo server
+</span></span><span style=display:flex><span>   // Be sure it works. <span style=color:#66d9ef>if</span> not, correct it
+</span></span><span style=display:flex><span>$ git remote add origin https://github.com/UserAccount/UserAccount.github.io.git
+</span></span><span style=display:flex><span>$ git add .
+</span></span><span style=display:flex><span>$ git commit -m <span style=color:#e6db74>&#39;initiate project&#39;</span>
+</span></span><span style=display:flex><span>$ git push origin main
+</span></span><span style=display:flex><span>// browse https://UserAccount.github.io/  
+</span></span></code></pre></div></li><li><p>폴더 구조</p></li></ul><blockquote><p>hugo project 을 git (github) 로 관리한다고 생각하면 된다.<br>project root 에서 hugo 와 git 명령어를 사용할 수 있다.</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>project folder (git, hugo)
+</span></span><span style=display:flex><span> ├─.git
+</span></span><span style=display:flex><span> ├─.gitmodules
+</span></span><span style=display:flex><span> ├─.github
+</span></span><span style=display:flex><span> │  └─workflows
+</span></span><span style=display:flex><span> │     └─gh-pages.yml
+</span></span><span style=display:flex><span> ├─congif.toml
+</span></span><span style=display:flex><span> ├─themes
+</span></span><span style=display:flex><span> │  └─themes folder (submodule)
+</span></span><span style=display:flex><span> ├─content
+</span></span><span style=display:flex><span> │  ├─posts
+</span></span><span style=display:flex><span> │  │  ├─main.md
+</span></span><span style=display:flex><span> │  │  └─...
+</span></span><span style=display:flex><span> │  └─...
+</span></span><span style=display:flex><span> ├─...
+</span></span><span style=display:flex><span> └─readme.md
+</span></span></code></pre></div><p><em>Created from <a href=https://arthursonzogni.com/Diagon/#Tree>https://arthursonzogni.com/Diagon/#Tree</a></em></p></br><h3 id=2-프로젝트-page-blog-useraccontgithubioproject>2. 프로젝트 Page (Blog) UserAccont.github.io/Project
+<a class=anchor href=#2-%ed%94%84%eb%a1%9c%ec%a0%9d%ed%8a%b8-page-blog-useraccontgithubioproject>#</a></h3><ul><li><p>Base URL : <a href=https://UserAccount.github.io/Project>https://UserAccount.github.io/Project</a></p></li><li><p>Repo 주소 : <a href=https://github.com/UserAcount/Project.git>https://github.com/UserAcount/Project.git</a></p><ul><li>해당 repo 는 git 프로젝트 안에 source code 와 hugo 을 포함한다.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>// 기존 git project 에서 
+</span></span><span style=display:flex><span>$ hugo new site hugo_project
+</span></span><span style=display:flex><span>$ cd hugo_project
+</span></span><span style=display:flex><span>$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke themes/ananke
+</span></span><span style=display:flex><span>$ echo <span style=color:#e6db74>&#34;theme = &#39;ananke&#39;&#34;</span> &gt;&gt; config.toml
+</span></span><span style=display:flex><span>   // edit BaseURL and title
+</span></span><span style=display:flex><span>$ hugo new posts/sample.md
+</span></span><span style=display:flex><span>   // edit sample.md
+</span></span><span style=display:flex><span>$ hugo server
+</span></span><span style=display:flex><span>   // Be sure it works. <span style=color:#66d9ef>if</span> not, correct it
+</span></span><span style=display:flex><span>$ cd ..
+</span></span><span style=display:flex><span>$ git add .
+</span></span><span style=display:flex><span>$ git commit -m <span style=color:#e6db74>&#39;initiate project&#39;</span>
+</span></span><span style=display:flex><span>$ git push origin main
+</span></span><span style=display:flex><span>// browse https://UserAccount.github.io/Project
+</span></span></code></pre></div></li><li><p>폴더 구조</p></li></ul><blockquote><p>프로젝트의 main branch 기본구조는 아래와 같이 구성된다.<br>프로젝트는 source code folder와 hugo 폴더를 갖는다.<br>따라서 git 명령어는 project root 에서, hugo 명령어는 hugo 폴더로 이동후 사용한다.<br>pages 을 deploy 하는 github action 은 .github/workflows/gh-pages.yml 이다.<br>hugo folder 는 &rsquo; $ hugo new site hugo &rsquo; 로 생성한다.<br>theme 는 &rsquo; $ git submodule add [submoduel.git] themes/[theme name] &rsquo;<br>각 page 는 &rsquo; $ hugo new xxx/xxx.md &rsquo; 로 생성한다.<br>프로젝트 gh-pages 브랜치는 hugo 가 빌드된 Web Site (html) 만 존재한다.</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>project folder (git)
+</span></span><span style=display:flex><span> ├─.git
+</span></span><span style=display:flex><span> ├─.gitmodules
+</span></span><span style=display:flex><span> ├─.github
+</span></span><span style=display:flex><span> │  └─workflows
+</span></span><span style=display:flex><span> │     └─gh-pages.yml
+</span></span><span style=display:flex><span> ├─Source Code folder
+</span></span><span style=display:flex><span> │  ├─lib
+</span></span><span style=display:flex><span> │  │  ├─utillib.lib
+</span></span><span style=display:flex><span> │  │  └─...
+</span></span><span style=display:flex><span> │  ├─build
+</span></span><span style=display:flex><span> │  │  ├─.buildscript
+</span></span><span style=display:flex><span> │  │  └─...
+</span></span><span style=display:flex><span> │  ├─main.cpp
+</span></span><span style=display:flex><span> │  └─...
+</span></span><span style=display:flex><span> ├─hugo project folder (hugo)
+</span></span><span style=display:flex><span> │  ├─congif.toml
+</span></span><span style=display:flex><span> │  ├─themes
+</span></span><span style=display:flex><span> │  │  └─themes folder (submodule)
+</span></span><span style=display:flex><span> │  ├─content
+</span></span><span style=display:flex><span> │  │  ├─posts
+</span></span><span style=display:flex><span> │  │  │  ├─main.md
+</span></span><span style=display:flex><span> │  │  │  └─...
+</span></span><span style=display:flex><span> │  │  └─...
+</span></span><span style=display:flex><span> │  └─...
+</span></span><span style=display:flex><span> ├─...
+</span></span><span style=display:flex><span> └─readme.md
+</span></span></code></pre></div><p><em>Created from <a href=https://arthursonzogni.com/Diagon/#Tree>https://arthursonzogni.com/Diagon/#Tree</a></em></p><blockquote class="book-hint warning"><p>&#x1f4a1; <strong>Idea</strong><br><em>branch 으로 구분하는 방법도 생각해 보았으나, (main, hugo, gh-pages)</em><br><em>- main branch : soure code 파일 만 존재</em><br><em>- hugo branch : hugo project 파일만 존재</em><br><em>- gh-pasges branch : hugo build 결과 (html) 파일만 존재</em><br><em>동일한 수정에 대한 commit 을 main 브랜치 (source code 수정) 와</em><br><em>hugo 브랜치 (page 수정 ) 에 각각 1번씩 총 2번을 수행해야 하므로 보류</em></p></blockquote></br><h3 id=3-github-actions-to-build-and-deploy-the-hugo-project>3. GitHub Actions to build and deploy the hugo project
+<a class=anchor href=#3-github-actions-to-build-and-deploy-the-hugo-project>#</a></h3><ul><li>.github/workflows/gh-pages.yml 생성</li></ul><blockquote class="book-hint info"><p>&#x1f4dd; <strong>사용한는 GitHub Actions</strong><br>actions/checkout@v3<br>peaceiris/actions-hugo<br>peaceiris/actions-gh-pages</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>      - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v3</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>submodules</span>: <span style=color:#66d9ef>true</span>  <span style=color:#75715e># Fetch Hugo themes (true OR recursive)</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>fetch-depth</span>: <span style=color:#ae81ff>0</span>    <span style=color:#75715e># Fetch all history for .GitInfo and .Lastmod</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Hugo</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-hugo@v2</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>hugo-version</span>: <span style=color:#e6db74>&#39;0.110.0&#39;</span> <span style=color:#75715e># 혹은 &#39;latest&#39;</span>
+</span></span></code></pre></div><p><a href=https://github.com/peaceiris/actions-gh-pages>https://github.com/peaceiris/actions-gh-pages</a></p><blockquote class="book-hint danger"><p><strong>작성시 주의 할 점</strong><br>project page 인 경우, hugo 프로젝트가 git 프로젝트 하위로 설정 되어 있으므로<br>1. hugo 업데이트 일때만 pages workflow 실행<br>2. hugo 폴더로 이동하여 hugo 명령어 사용<br>을 명확하게 구분하여야 한다.</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yml data-lang=yml><span style=display:flex><span><span style=color:#f92672>on</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>push</span>:
+</span></span><span style=display:flex><span><span style=color:#75715e>#    branches:</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#      - main  # Set a branch to deploy</span>
+</span></span><span style=display:flex><span>     <span style=color:#f92672>paths</span>:
+</span></span><span style=display:flex><span>       - <span style=color:#e6db74>&#39;.github/workflows/gh-pages.yml&#39;</span>           <span style=color:#ae81ff>// olny deploy when workflow and hugo folder are updated.</span>
+</span></span><span style=display:flex><span>       - <span style=color:#e6db74>&#39;Hugo/**&#39;</span>
+</span></span><span style=display:flex><span>   <span style=color:#ae81ff>...</span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>run</span>: |<span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>          cd hugo_project                           // hugo 프로젝트로 이동
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>          hugo --minify</span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Deploy</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>peaceiris/actions-gh-pages@v.</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>if</span>: <span style=color:#ae81ff>${{ github.ref == &#39;refs/heads/main&#39; }}  // branch 확인</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>github_token</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>publish_dir</span>: <span style=color:#ae81ff>./hugu_project/public        // hugo project 하위 public 폴더 사용</span>
+</span></span><span style=display:flex><span>    <span style=color:#ae81ff>...</span>
+</span></span></code></pre></div></br><blockquote><p>push 을 main 으로 설정할 경우, 2개 (CI 와 Github Pages) workflow 실행이 되는 것을<br>paths 로 설정하여 hugo 폴더 업데이트 때 Github Pages workflow 만 실행되도록 변경</p></blockquote><p><img src=Hugo/content/docs/SE/hugo/hello/images/hello_1.png alt="workflow 설정"></p></br><h3 id=4-local-branch-and-remote>4. local branch and remote
+<a class=anchor href=#4-local-branch-and-remote>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Hello_world$ git branch -avv
+</span></span><span style=display:flex><span>* main                    bcb809a <span style=color:#f92672>[</span>github/main<span style=color:#f92672>]</span> change name of .gitlab-ci
+</span></span><span style=display:flex><span>  remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
+</span></span><span style=display:flex><span>  remotes/github/main     bcb809a change name of .gitlab-ci
+</span></span><span style=display:flex><span>  remotes/gitlab/main     bcb809a change name of .gitlab-ci
+</span></span><span style=display:flex><span>Hello_world$ _
+</span></span></code></pre></div><p><em>/labmain 과 gitlab/labmain 은 삭제/</em></p><ul><li>main 은 remote 로 github (github.com/smjune/smjung.github.io) 의 main 브랜치를 트랙킹<ul><li>git push github main, git fetch, git pull</li></ul></li><li>remote 로 gitlab (gitlab.com/smjune/smjune.gitlab.io) main 도 등록되어 있으므로<ul><li>git push gitlab main</li></ul></li></ul></br><h3 id=5-최종-작업-순서>5. 최종 작업 순서
+<a class=anchor href=#5-%ec%b5%9c%ec%a2%85-%ec%9e%91%ec%97%85-%ec%88%9c%ec%84%9c>#</a></h3><pre class=mermaid>
+sequenceDiagram
+    participant gitlab
+    participant Local 
+    participant github
+    links gitlab: {"pages": "https://smjune.gitlab.io/"}
+    links github: {"Pages": "https:/smjjune.github.io/"}
+    loop main job
+        github-->>Local: fetch (github)
+        Local->>Local: edit a page on Hugo
+        Local->>Local: add and commit on .git
+        Local->>github: Push (github main)
+    end
+    Local->>gitlab: push gitlab main
+    github-->>Local: fetch (github)
+    github->>github: edit a page on GitHub WEB UI
+    github-->>Local: fetch (github)
+    github->>Local: pull (github main)
+    Local->>gitlab: push gitlab main
+
+</pre></br><h4 id=git-fetch>git fetch
+<a class=anchor href=#git-fetch>#</a></h4><p>수정 하기 전에 항상 remote 을 받아서 local 을 업데이트 하자.<br>(해당 로컬이 아닌 다른 로컬에서 업데이트 했을 수 있음)<br>&#9888;&#xfe0f; pull 을 하지말고, fetch 로 현재 로컬과 리모트가 gap 이 있는지 확인 한후 pull 을 수행하여야 한다.</p></br><h4 id=git-status>git status
+<a class=anchor href=#git-status>#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Hello_world$ git status
+</span></span><span style=display:flex><span>On branch main
+</span></span><span style=display:flex><span>Your branch is up to date with <span style=color:#e6db74>&#39;github/main&#39;</span>.
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Changes not staged <span style=color:#66d9ef>for</span> commit:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>use <span style=color:#e6db74>&#34;git add &lt;file&gt;...&#34;</span> to update what will be committed<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>(</span>use <span style=color:#e6db74>&#34;git restore &lt;file&gt;...&#34;</span> to discard changes in working directory<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>        modified:   content/posts/gitlab.md
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>no changes added to commit <span style=color:#f92672>(</span>use <span style=color:#e6db74>&#34;git add&#34;</span> and/or <span style=color:#e6db74>&#34;git commit -a&#34;</span><span style=color:#f92672>)</span>
+</span></span></code></pre></div></br><h4 id=git-add->git add .
+<a class=anchor href=#git-add->#</a></h4><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Hello_world$ git add .
+</span></span><span style=display:flex><span>Hello_world$ git commit -m <span style=color:#e6db74>&#39;update way to push&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>[</span>main d7c0db2<span style=color:#f92672>]</span> update way to push
+</span></span><span style=display:flex><span> Committer: myoungjune sung &lt;myoungjunesung@myoungjune-sung-ui-iMac.local&gt;
+</span></span><span style=display:flex><span>Your name and email address were configured automatically based
+</span></span><span style=display:flex><span>on your username and hostname. Please check that they are accurate.
+</span></span><span style=display:flex><span>You can suppress this message by setting them explicitly. Run the
+</span></span><span style=display:flex><span>following command and follow the instructions in your editor to edit
+</span></span><span style=display:flex><span>your configuration file:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    git config --global --edit
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>After doing this, you may fix the identity used <span style=color:#66d9ef>for</span> this commit with:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    git commit --amend --reset-author
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> <span style=color:#ae81ff>1</span> file changed, <span style=color:#ae81ff>26</span> insertions<span style=color:#f92672>(</span>+<span style=color:#f92672>)</span>, <span style=color:#ae81ff>1</span> deletion<span style=color:#f92672>(</span>-<span style=color:#f92672>)</span>
+</span></span></code></pre></div></br><h4 id=git-push-github-main>git push (github main)
+<a class=anchor href=#git-push-github-main>#</a></h4><p>&#9888;&#xfe0f; github 을 origin remote 로 등록한 경우 git push 만 사용함.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Hello_world$ git push github main
+</span></span><span style=display:flex><span>Enumerating objects: 11, <span style=color:#66d9ef>done</span>.
+</span></span><span style=display:flex><span>Counting objects: 100% <span style=color:#f92672>(</span>11/11<span style=color:#f92672>)</span>, <span style=color:#66d9ef>done</span>.
+</span></span><span style=display:flex><span>Delta compression using up to <span style=color:#ae81ff>2</span> threads
+</span></span><span style=display:flex><span>Compressing objects: 100% <span style=color:#f92672>(</span>5/5<span style=color:#f92672>)</span>, <span style=color:#66d9ef>done</span>.
+</span></span><span style=display:flex><span>Writing objects: 100% <span style=color:#f92672>(</span>6/6<span style=color:#f92672>)</span>, 1.11 KiB | 1.11 MiB/s, <span style=color:#66d9ef>done</span>.
+</span></span><span style=display:flex><span>Total <span style=color:#ae81ff>6</span> <span style=color:#f92672>(</span>delta 3<span style=color:#f92672>)</span>, reused <span style=color:#ae81ff>0</span> <span style=color:#f92672>(</span>delta 0<span style=color:#f92672>)</span>, pack-reused <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>remote: Resolving deltas: 100% <span style=color:#f92672>(</span>3/3<span style=color:#f92672>)</span>, completed with <span style=color:#ae81ff>3</span> local objects.
+</span></span><span style=display:flex><span>To https://github.com/smjune/smjune.github.io.git
+</span></span><span style=display:flex><span>  2b0d320..d7c0db2  main -&gt; main
+</span></span></code></pre></div></br><h4 id=git-push-gitlab-main>git push gitlab main
+<a class=anchor href=#git-push-gitlab-main>#</a></h4><p>&#9888;&#xfe0f; 백업용으로 가끔 잊지 말고 push</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Hello_world$ git push gitlab main
+</span></span><span style=display:flex><span>Enumerating objects: 11, <span style=color:#66d9ef>done</span>.
+</span></span><span style=display:flex><span>Counting objects: 100% <span style=color:#f92672>(</span>11/11<span style=color:#f92672>)</span>, <span style=color:#66d9ef>done</span>.
+</span></span><span style=display:flex><span>Delta compression using up to <span style=color:#ae81ff>2</span> threads
+</span></span><span style=display:flex><span>Compressing objects: 100% <span style=color:#f92672>(</span>5/5<span style=color:#f92672>)</span>, <span style=color:#66d9ef>done</span>.
+</span></span><span style=display:flex><span>Writing objects: 100% <span style=color:#f92672>(</span>6/6<span style=color:#f92672>)</span>, 1.11 KiB | 1.11 MiB/s, <span style=color:#66d9ef>done</span>.
+</span></span><span style=display:flex><span>Total <span style=color:#ae81ff>6</span> <span style=color:#f92672>(</span>delta 3<span style=color:#f92672>)</span>, reused <span style=color:#ae81ff>0</span> <span style=color:#f92672>(</span>delta 0<span style=color:#f92672>)</span>, pack-reused <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>To https://gitlab.com/smjune/smjune.gitlab.io.git
+</span></span><span style=display:flex><span>   2b0d320..d7c0db2  main -&gt; main
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>Hello_world$ git branch -avv
+</span></span><span style=display:flex><span>* main                    d7c0db2 <span style=color:#f92672>[</span>github/main<span style=color:#f92672>]</span> update way to push
+</span></span><span style=display:flex><span>  remotes/github/gh-pages 309c2bd deploy: 41dfa412c2cd0ebdfd7675d7bd4604b8a07761bb
+</span></span><span style=display:flex><span>  remotes/github/main     d7c0db2 update way to push
+</span></span><span style=display:flex><span>  remotes/gitlab/main     d7c0db2 update way to push
+</span></span><span style=display:flex><span>Hello_world$ 
+</span></span></code></pre></div><blockquote class="book-hint info"><p>아래 github repo 에 Hello World 폴더가 있다.</p><ul><li><a href=https://github.com/smjune/smjune.github.io>My GIT HUB Repo</a></li></ul></blockquote><blockquote class="book-hint danger"><p>테마마다 설정값이 다르다.
+PaperMode 의 경우, front matter 로 설정한다.</p><p>자세한것은 <a href=https://github.com/adityatelange/hugo-PaperMod/wiki/Front-Matter-Parameters>PaperMode 설정값</a> 을 참조 한다.</p></blockquote></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/smjune/smjune.github.io/commit/d7e5e576414d92d0c262ef9d6b5c5af2a9d9a18a title='Last modified by 성명준 | May 16, 2025' target=_blank rel=noopener><img src=/svg/calendar.svg class=book-icon alt>
+<span>May 16, 2025</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#github-에서-블로그-만들기>github 에서 블로그 만들기</a></li><li><a href=#github-pages-만들기>github pages 만들기</a><ul><li><a href=#github-pages-종류>github pages 종류</a></li><li><a href=#1-개인-page-blog--useraccontgithubio>1. 개인 Page (Blog) : UserAccont.github.io</a></li><li><a href=#2-프로젝트-page-blog-useraccontgithubioproject>2. 프로젝트 Page (Blog) UserAccont.github.io/Project</a></li><li><a href=#3-github-actions-to-build-and-deploy-the-hugo-project>3. GitHub Actions to build and deploy the hugo project</a></li><li><a href=#4-local-branch-and-remote>4. local branch and remote</a></li><li><a href=#5-최종-작업-순서>5. 최종 작업 순서</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>

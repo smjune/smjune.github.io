@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on MJ. Breadcrumbs</title><link>https://smjune.github.io/docs/SE/AI/</link><description>Recent content in AI on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 16 May 2025 20:08:59 +0900</lastBuildDate><atom:link href="https://smjune.github.io/docs/SE/AI/index.xml" rel="self" type="application/rss+xml"/><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/AI/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/AI/kaggle/</guid><description>&lt;h2 id="prerequisites">
+ Prerequisites
+ &lt;a class="anchor" href="#prerequisites">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="">
+ 
+ &lt;a class="anchor" href="#">#&lt;/a>
+&lt;/h3>
+&lt;ol>
+&lt;li>데이터 획득 (Importing a working dataset)&lt;/li>
+&lt;li>데이터 파악
+&lt;ul>
+&lt;li>일변량 (단수변수에 대한 변화) / 다변량 (복수변수의 변화)&lt;/li>
+&lt;li>Summary statistics (기초 통계량, non-graphic) / graphic (시각화)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>데이터 변환&lt;/li>
+&lt;li>모델 적용 (ML)&lt;/li>
+&lt;li>모델 평가&lt;/li>
+&lt;/ol>
+&lt;/bar>
+&lt;h3 id="vscode-with-jupyter-extensions">
+ VSCode with Jupyter extensions
+ &lt;a class="anchor" href="#vscode-with-jupyter-extensions">#&lt;/a>
+&lt;/h3>
+&lt;p>&lt;a href="https://code.visualstudio.com/docs/datascience/overview">https://code.visualstudio.com/docs/datascience/overview&lt;/a>&lt;br>
+VSCode 에 Jupyter extensions 설치하고,&lt;br>
+해당 프로젝트를 github repo 에 저장&lt;/p>
+&lt;p>&lt;code>$ python3 -m venv .venv&lt;/code> 을 이용해서 virtual 환경 설치&lt;br>
+&lt;code>$ source .venv/bin/activate&lt;/code> 으로 virtual 환경 실행&lt;br>
+&lt;code>(.venv)$ pip install ipykerne&lt;/code> 으로 Jupyter kernel 설치&lt;br>
+&lt;code>(.venv)$ pip install pandas&lt;/code>으로 관련 python 모듈 설치&lt;/p></description></item><item><title>Agent</title><link>https://smjune.github.io/docs/SE/AI/agent/</link><pubDate>Thu, 01 May 2025 18:09:47 +0900</pubDate><guid>https://smjune.github.io/docs/SE/AI/agent/</guid><description>&lt;h2 id="agent">
+ Agent
+ &lt;a class="anchor" href="#agent">#&lt;/a>
+&lt;/h2>
+&lt;ol>
+&lt;li>
+&lt;p>An AI agent is a system that uses an LLM to decide the control flow of an application. &lt;a href="https://blog.langchain.dev/what-is-an-agent/">내용출처&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;strong>Agent = LLM + planning + Memory + Tool use&lt;/strong> : In a LLM-powered autonomous agent system, LLM functions as the agent’s brain, complemented by several key components: &lt;a href="https://lilianweng.github.io/posts/2023-06-23-agent/">내용 출처&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Planning&lt;/strong>
+&lt;ul>
+&lt;li>Subgoal and decomposition: The agent breaks down large tasks into smaller, manageable subgoals, enabling efficient handling of complex tasks.&lt;/li>
+&lt;li>Reflection and refinement: The agent can do self-criticism and self-reflection over past actions, learn from mistakes and refine them for future steps, thereby improving the quality of final results.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Memory&lt;/strong>
+&lt;ul>
+&lt;li>Short-term memory: I would consider all the in-context learning (See &lt;a href="https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/">Prompt Engineering&lt;/a>) as utilizing short-term memory of the model to learn.&lt;/li>
+&lt;li>Long-term memory: This provides the agent with the capability to retain and recall (infinite) information over extended periods, often by leveraging an external vector store and fast retrieval.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Tool use&lt;/strong>
+&lt;ul>
+&lt;li>The agent learns to call external APIs for extra information that is missing from the model weights (often hard to change after pre-training), including current information, code execution capability, access to proprietary information sources and more.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;p>&lt;img src="llm_agent.png" alt="LLM - AGENT" />
+3. Agent Type&lt;/p></description></item><item><title>Vibe Coding</title><link>https://smjune.github.io/docs/SE/AI/vibecoding/</link><pubDate>Tue, 22 Apr 2025 17:58:45 +0900</pubDate><guid>https://smjune.github.io/docs/SE/AI/vibecoding/</guid><description>&lt;h2 id="what-is-vibe-coding">
+ What is Vibe Coding
+ &lt;a class="anchor" href="#what-is-vibe-coding">#&lt;/a>
+&lt;/h2>
+&lt;p>&lt;img src="vibecoding.png" alt="Vibe Coding" />&lt;/p>
+&lt;h3 id="assembly-cc-python">
+ Assembly, C/C++, Python
+ &lt;a class="anchor" href="#assembly-cc-python">#&lt;/a>
+&lt;/h3>
+&lt;p>물리적인 자원을 더 쉽고, 싸게 사용함에 따라 프로그램밍 언어도 같이 변화 할 수 밖에 없다.
+물리적 리소스를 사용하는 컴파일시 더 많은 자원을 사용하고,
+코드를 작성하는것은 점점 자연어 (Pseudo code) 코드의 지시형태로 되어 간다.&lt;/p>
+&lt;p>0과 1의 기계어로 번역하는 것이 컴파일이라 하면, 자연어를 프로그래밍 syntax 로 변역해 주는 것은 뭐라 불러야 하나?&lt;/p>
+&lt;ul>
+&lt;li>Assembley:
+컴파일시 물리적 자원 사용은 적지만, 프로그래밍은 난해하다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code class="language-assembly" data-lang="assembly">section .data
+ filename db &amp;#34;test.txt&amp;#34;, 0 ; 파일 이름
+ content db &amp;#34;test&amp;#34;, 0 ; 쓸 내용
+ content_len equ $ - content -1 ; 내용 길이 (NULL 문자 제외)
+
+section .text
+ global _start
+
+_start:
+ ; 파일을 생성하거나 열기 (sys_open)
+ mov rax, 2 ; sys_open 시스템 콜 번호
+ mov rdi, filename ; 파일 이름 포인터
+ mov rsi, 0101o ; 플래그 (O_WRONLY | O_CREAT | O_TRUNC) - 쓰기 전용, 없으면 생성, 있으면 내용 삭제
+ mov rdx, 0644o ; 모드 (rw-r--r--)
+ syscall ; 시스템 콜 호출
+ mov r12, rax ; 파일 디스크립터를 r12에 저장 (오류 처리 안 함)
+
+ ; 파일에 쓰기 (sys_write)
+ mov rax, 1 ; sys_write 시스템 콜 번호
+ mov rdi, r12 ; 파일 디스크립터
+ mov rsi, content ; 쓸 내용 포인터
+ mov rdx, content_len ; 쓸 내용 길이
+ syscall ; 시스템 콜 호출
+
+ ; 파일 닫기 (sys_close)
+ mov rax, 3 ; sys_close 시스템 콜 번호
+ mov rdi, r12 ; 파일 디스크립터
+ syscall ; 시스템 콜 호출
+
+ ; 프로그램 종료 (sys_exit)
+ mov rax, 60 ; sys_exit 시스템 콜 번호
+ xor rdi, rdi ; 종료 코드 0
+ syscall ; 시스템 콜 호출
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>C/C++:
+아직까지 syntax 의 벽은 여전히 남아 있다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-C" data-lang="C">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;stdio.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">#include&lt;/span> &lt;span style="color:#75715e">&amp;lt;stdlib.h&amp;gt;&lt;/span>&lt;span style="color:#75715e">
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">int&lt;/span> &lt;span style="color:#a6e22e">main&lt;/span>() {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> FILE &lt;span style="color:#f92672">*&lt;/span>fp;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> fp &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#a6e22e">fopen&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;test.txt&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;w&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (fp &lt;span style="color:#f92672">==&lt;/span> NULL) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">perror&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;파일 열기 오류&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_FAILURE;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">if&lt;/span> (&lt;span style="color:#a6e22e">fputs&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;test&amp;#34;&lt;/span>, fp) &lt;span style="color:#f92672">==&lt;/span> EOF) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">perror&lt;/span>(&lt;span style="color:#e6db74">&amp;#34;파일 쓰기 오류&amp;#34;&lt;/span>);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fclose&lt;/span>(fp);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_FAILURE;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#a6e22e">fclose&lt;/span>(fp);
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">return&lt;/span> EXIT_SUCCESS;
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>python
+쉽다고 해도, 일상언어는 아니다.&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-python" data-lang="python">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">try&lt;/span>:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">with&lt;/span> open(&lt;span style="color:#e6db74">&amp;#34;test.txt&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;w&amp;#34;&lt;/span>) &lt;span style="color:#66d9ef">as&lt;/span> f:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> f&lt;span style="color:#f92672">.&lt;/span>write(&lt;span style="color:#e6db74">&amp;#34;test&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">except&lt;/span> &lt;span style="color:#a6e22e">IOError&lt;/span> &lt;span style="color:#66d9ef">as&lt;/span> e:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> print(&lt;span style="color:#e6db74">f&lt;/span>&lt;span style="color:#e6db74">&amp;#34;파일 쓰기 오류: &lt;/span>&lt;span style="color:#e6db74">{&lt;/span>e&lt;span style="color:#e6db74">}&lt;/span>&lt;span style="color:#e6db74">&amp;#34;&lt;/span>)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>Pseudocode:
+각 프로그래밍 언어의 syntax 보다 논리적인 구조가 더 중요하게 되었다.&lt;/li>
+&lt;/ul>
+&lt;pre tabindex="0">&lt;code>파일 &amp;#34;test.txt&amp;#34;를 쓰기 모드로 연다.
+만약 파일 열기에 실패하면, 오류를 출력하고 종료한다.
+파일에 &amp;#34;test&amp;#34; 문자열을 쓴다.
+파일을 닫는다.
+&lt;/code>&lt;/pre>&lt;ul>
+&lt;li>&lt;strong>vibe coding&lt;/strong>:
+전체적인 context, prompt 등 LLM 적인 요소가 더 중요하게 되었다.&lt;br>
+&lt;code>test.txt 파일을 열어서 'text'쓰는 코드 작성해줘&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="essence-and-accident">
+ Essence and Accident
+ &lt;a class="anchor" href="#essence-and-accident">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Pair programming with AI generating code ?&lt;/li>
+&lt;li>Assembly 으로 코딩하던 사람이 C/C++ 으로 코딩하는 것을 보고 어떤 생각이 들었을까?
+&lt;ul>
+&lt;li>C/C++ 을 사용하지만, Assembly 도 배움.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>제품을 위한 코드 보다는 제품 코드를 테스트 하는 코드를 생산
+&lt;ul>
+&lt;li>제품을 위한 코드는 의외로 매우 보수적임 (신기술을 적용하기 힘듬)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>어떻게 내가 의도하는 코드를 LLM 이 생산하도록 만들것 인가?
+&lt;ul>
+&lt;li>agent, prompt, context aware, &amp;hellip;&lt;/li>
+&lt;li>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="tools">
+ Tools
+ &lt;a class="anchor" href="#tools">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Knowledge Management tool : Notion, Obsidian&lt;/li>
+&lt;li>Access to an LLM : GPT, Claude, Gemini&lt;/li>
+&lt;li>AI Code Editor : Cursor, Windsurf&lt;/li>
+&lt;li>IDE AI Extension : Continue, Cline, AutoPilot, Gemini Code Assist&lt;/li>
+&lt;li>VCS : Git&lt;/li>
+&lt;/ul>
+&lt;h2 id="pre-vibe-coding-routine">
+ Pre-Vibe Coding Routine
+ &lt;a class="anchor" href="#pre-vibe-coding-routine">#&lt;/a>
+&lt;/h2>
+&lt;h3 id="ideation">
+ Ideation
+ &lt;a class="anchor" href="#ideation">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>당연히 구현하기 전에 계획은 중요하다.&lt;/li>
+&lt;li>Idea을 작성 지속적으로 구체화하고,&lt;/li>
+&lt;li>관련자료를 모으고 분류하고,&lt;/li>
+&lt;li>정보들을 연결한다.&lt;/li>
+&lt;li>이 모든걸 위해 Knowledge Management tool 이 필요함.&lt;/li>
+&lt;/ul>
+&lt;h3 id="refs-index">
+ Refs. Index
+ &lt;a class="anchor" href="#refs-index">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Codebase indexing&lt;/li>
+&lt;li>Online Refs. (e.g., Cursor|Docs)
+&lt;ul>
+&lt;li>Language Syntax Guide (e.g., Python)&lt;/li>
+&lt;li>Domain Knowledge (e.g., Scipy, Sklearn)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Live Refs (e.g., MCP:Brave Search, context7)&lt;/li>
+&lt;/ul>
+&lt;h3 id="persona-template">
+ Persona (Template)
+ &lt;a class="anchor" href="#persona-template">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>User (e.g., Cursor|User rules)&lt;/li>
+&lt;li>Project (e.g., Cursor|Project rules)
+&lt;ul>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Product (e.g., Product Requiremet Document)
+&lt;ul>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="harmonize-with-sdlc">
+ Harmonize with SDLC
+ &lt;a class="anchor" href="#harmonize-with-sdlc">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Design - Code - Test - Build - Deploy&lt;/li>
+&lt;li>Iterative incremental , evolutionary&lt;/li>
+&lt;/ul>
+&lt;h3 id="design">
+ Design
+ &lt;a class="anchor" href="#design">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Project &amp;amp; Task management : taskmaster-ai&lt;/li>
+&lt;li>PRD : Notion, Obsidian&lt;/li>
+&lt;li>UI/UX : Figma&lt;/li>
+&lt;li>Diagram : UML, Mermaid&lt;/li>
+&lt;/ul>
+&lt;h3 id="code">
+ Code
+ &lt;a class="anchor" href="#code">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Choosing LLM Model
+&lt;ul>
+&lt;li>AI Code Editor, IDE AI Extentions, Chatbot&lt;/li>
+&lt;li>Cloud vs Local (Open Source)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Context-Aware
+&lt;ul>
+&lt;li>memory&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Prompt Engineering
+&lt;ul>
+&lt;li>잘통하는 prompt는 DB화 할것&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Agentic Approch
+&lt;ul>
+&lt;li>Access to resource (e.g., &lt;a href="https://modelcontextprotocol.io/introduction">MCP&lt;/a>)&lt;/li>
+&lt;li>Make a Agent (e.g., &lt;a href="https://google.github.io/adk-docs/">ADK&lt;/a>)&lt;/li>
+&lt;li>Connect Agent to Agent (e.g., &lt;a href="https://github.com/google/A2A">A2A&lt;/a>)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Project Ochestration
+&lt;ul>
+&lt;li>Managing Non-deterministic&lt;/li>
+&lt;li>Restore checkpoint&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Human-In-The-Loop
+&lt;ul>
+&lt;li>AI 생산한 code 의 품질 확보 방안&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="build">
+ Build
+ &lt;a class="anchor" href="#build">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Android Studio&lt;/li>
+&lt;li>XCode&lt;/li>
+&lt;/ul>
+&lt;h3 id="deploy">
+ Deploy
+ &lt;a class="anchor" href="#deploy">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>App&lt;/li>
+&lt;li>WEB&lt;/li>
+&lt;/ul>
+&lt;h2 id="추가-읽을거리">
+ 추가 읽을거리
+ &lt;a class="anchor" href="#%ec%b6%94%ea%b0%80-%ec%9d%bd%ec%9d%84%ea%b1%b0%eb%a6%ac">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://tech.kakao.com/posts/696">kakao AI blog&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Cursor</title><link>https://smjune.github.io/docs/SE/AI/Cursor/</link><pubDate>Sat, 12 Apr 2025 09:23:10 +0900</pubDate><guid>https://smjune.github.io/docs/SE/AI/Cursor/</guid><description>&lt;h2 id="llm-환경-구축-개요">
+ LLM 환경 구축 개요
+ &lt;a class="anchor" href="#llm-%ed%99%98%ea%b2%bd-%ea%b5%ac%ec%b6%95-%ea%b0%9c%ec%9a%94">#&lt;/a>
+&lt;/h2>
+&lt;p>이 문서는 다양한 LLM(Large Language Model)을 활용하여 로컬 개발 환경을 구축하는 데 필요한 도구와 기술을 소개합니다. Cloud LLM부터 로컬 실행 도구, 개발 환경 연동 도구까지 폭넓게 다룹니다.&lt;/p>
+&lt;h3 id="1-cloud-llm-클라우드-기반-모델">
+ 1. Cloud LLM (클라우드 기반 모델)
+ &lt;a class="anchor" href="#1-cloud-llm-%ed%81%b4%eb%9d%bc%ec%9a%b0%eb%93%9c-%ea%b8%b0%eb%b0%98-%eb%aa%a8%eb%8d%b8">#&lt;/a>
+&lt;/h3>
+&lt;p>클라우드 서버에서 강력한 성능을 제공하는 상용 LLM입니다. API를 통해 접근하며, 고성능 추론 능력이 필요할 때 유용합니다.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>GPT (OpenAI):&lt;/strong> &lt;a href="https://platform.openai.com/docs/models">https://platform.openai.com/docs/models&lt;/a>
+&lt;ul>
+&lt;li>&lt;strong>주요 특징:&lt;/strong> 강력한 자연어 이해 및 생성 능력, 다양한 모델(GPT-4, GPT-4o 등) 제공, 광범위한 API 생태계.&lt;/li>
+&lt;li>&lt;strong>가격:&lt;/strong> 사용량 기반 유료 (API 호출당 과금), ChatGPT는 무료/유료 구독 플랜 제공.&lt;/li>
+&lt;li>&lt;strong>활용:&lt;/strong> 챗봇, 콘텐츠 생성, 코드 생성, 번역 등.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Gemini (Google):&lt;/strong> &lt;a href="https://deepmind.google/technologies/gemini/">https://deepmind.google/technologies/gemini/&lt;/a>
+&lt;ul>
+&lt;li>&lt;strong>주요 특징:&lt;/strong> 멀티모달(텍스트, 이미지, 오디오, 비디오) 처리 능력, 다양한 크기(Ultra, Pro, Flash, Nano) 제공, Google 생태계 연동.&lt;/li>
+&lt;li>&lt;strong>가격:&lt;/strong> 사용량 기반 유료 (Vertex AI API), Google AI Studio 및 Gemini 앱에서 무료/유료 플랜 제공.&lt;/li>
+&lt;li>&lt;strong>활용:&lt;/strong> 멀티모달 콘텐츠 생성, 복잡한 추론, 데이터 분석, Google Workspace 연동.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Claude (Anthropic):&lt;/strong> &lt;a href="https://www.anthropic.com/claude">https://www.anthropic.com/claude&lt;/a>
+&lt;ul>
+&lt;li>&lt;strong>주요 특징:&lt;/strong> 안전성 및 윤리성 강조(Constitutional AI), 긴 컨텍스트 처리 능력, 창의적 글쓰기 및 코딩 능력.&lt;/li>
+&lt;li>&lt;strong>가격:&lt;/strong> 사용량 기반 유료 (API), Claude.ai 웹사이트 및 앱에서 무료/유료 플랜 제공.&lt;/li>
+&lt;li>&lt;strong>활용:&lt;/strong> 긴 문서 요약/분석, 창의적 글쓰기, 안전한 대화형 AI 개발.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Grok (xAI):&lt;/strong> &lt;a href="https://x.ai/grok">https://x.ai/grok&lt;/a>
+&lt;ul>
+&lt;li>&lt;strong>주요 특징:&lt;/strong> 실시간 정보 접근(X 플랫폼 연동), 유머러스하고 반항적인 페르소나, 최신 정보 기반 답변.&lt;/li>
+&lt;li>&lt;strong>가격:&lt;/strong> X Premium+ 구독 필요. API 접근은 별도 제공될 수 있음.&lt;/li>
+&lt;li>&lt;strong>활용:&lt;/strong> 최신 뉴스/트렌드 기반 질의응답, 특정 관점의 정보 탐색.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;strong>Perplexity:&lt;/strong> &lt;a href="https://www.perplexity.ai/">https://www.perplexity.ai/&lt;/a>
+&lt;ul>
+&lt;li>&lt;strong>주요 특징:&lt;/strong> AI 기반 검색 엔진과 챗봇 기술 결합, GPT-4/Claude 3 등 최신 모델 활용, 실시간 웹 검색 및 Q&amp;amp;A, 복잡한 추론을 위한 o13 시리즈 모델 제공.&lt;/li>
+&lt;li>&lt;strong>가격:&lt;/strong> 무료 플랜, Pro 구독(일 300회+ Pro 검색), Enterprise 플랜 제공.&lt;/li>
+&lt;li>&lt;strong>활용:&lt;/strong> 실시간 정보 검색/분석, 학술 연구, 코딩 문제 해결, 복잡한 추론 작업.&lt;/li>
+&lt;li>&lt;strong>차별점:&lt;/strong> 실시간 웹 검색 통합으로 최신 정보 제공(다른 LLM들의 학습 데이터 제한 극복), 모든 답변에 대한 출처 링크 제공으로 신뢰성 확보, 검색 엔진과 LLM의 하이브리드 접근으로 정확성 향상.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="2-open-llm--hub-오픈소스-모델과-허브">
+ 2. Open LLM &amp;amp; Hub (오픈소스 모델과 허브)
+ &lt;a class="anchor" href="#2-open-llm--hub-%ec%98%a4%ed%94%88%ec%86%8c%ec%8a%a4-%eb%aa%a8%eb%8d%b8%ea%b3%bc-%ed%97%88%eb%b8%8c">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;strong>대표적인 Open Source LLM:&lt;/strong>&lt;/p></description></item></channel></rss>
