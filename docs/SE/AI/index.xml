@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on MJ. Breadcrumbs</title><link>https://smjune.github.io/docs/SE/AI/</link><description>Recent content in AI on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><lastBuildDate>Fri, 16 May 2025 20:08:59 +0900</lastBuildDate><atom:link href="https://smjune.github.io/docs/SE/AI/index.xml" rel="self" type="application/rss+xml"/><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/AI/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/AI/kaggle/</guid><description>&lt;h2 id="prerequisites">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI on MJ. Breadcrumbs</title><link>https://smjune.github.io/docs/SE/AI/</link><description>Recent content in AI on MJ. Breadcrumbs</description><generator>Hugo</generator><language>en</language><lastBuildDate>Thu, 04 Sep 2025 13:10:10 +0900</lastBuildDate><atom:link href="https://smjune.github.io/docs/SE/AI/index.xml" rel="self" type="application/rss+xml"/><item><title>Data Science</title><link>https://smjune.github.io/docs/SE/AI/kaggle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://smjune.github.io/docs/SE/AI/kaggle/</guid><description>&lt;h2 id="prerequisites">
  Prerequisites
  &lt;a class="anchor" href="#prerequisites">#&lt;/a>
 &lt;/h2>
@@ -334,6 +334,8 @@ _start:
 &lt;li>&lt;strong>주요 특징:&lt;/strong> 강력한 자연어 이해 및 생성 능력, 다양한 모델(GPT-4, GPT-4o 등) 제공, 광범위한 API 생태계.&lt;/li>
 &lt;li>&lt;strong>가격:&lt;/strong> 사용량 기반 유료 (API 호출당 과금), ChatGPT는 무료/유료 구독 플랜 제공.&lt;/li>
 &lt;li>&lt;strong>활용:&lt;/strong> 챗봇, 콘텐츠 생성, 코드 생성, 번역 등.&lt;/li>
+&lt;li>&lt;a href="https://chatgpt.com/">ChatGPT&lt;/a> , &lt;a href="https://platform.openai.com/docs/overview">OpenAI API&lt;/a>&lt;/li>
+&lt;li>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;strong>Gemini (Google):&lt;/strong> &lt;a href="https://deepmind.google/technologies/gemini/">https://deepmind.google/technologies/gemini/&lt;/a>
@@ -341,6 +343,8 @@ _start:
 &lt;li>&lt;strong>주요 특징:&lt;/strong> 멀티모달(텍스트, 이미지, 오디오, 비디오) 처리 능력, 다양한 크기(Ultra, Pro, Flash, Nano) 제공, Google 생태계 연동.&lt;/li>
 &lt;li>&lt;strong>가격:&lt;/strong> 사용량 기반 유료 (Vertex AI API), Google AI Studio 및 Gemini 앱에서 무료/유료 플랜 제공.&lt;/li>
 &lt;li>&lt;strong>활용:&lt;/strong> 멀티모달 콘텐츠 생성, 복잡한 추론, 데이터 분석, Google Workspace 연동.&lt;/li>
+&lt;li>&lt;a href="https://gemini.google.com/app">google Gemini Chat&lt;/a>, &lt;a href="https://aistudio.google.com/prompts/new_chat">google AI Studio&lt;/a>, &lt;a href="https://notebooklm.google.com/">google Notebook LM&lt;/a>&lt;/li>
+&lt;li>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;strong>Claude (Anthropic):&lt;/strong> &lt;a href="https://www.anthropic.com/claude">https://www.anthropic.com/claude&lt;/a>
@@ -348,6 +352,7 @@ _start:
 &lt;li>&lt;strong>주요 특징:&lt;/strong> 안전성 및 윤리성 강조(Constitutional AI), 긴 컨텍스트 처리 능력, 창의적 글쓰기 및 코딩 능력.&lt;/li>
 &lt;li>&lt;strong>가격:&lt;/strong> 사용량 기반 유료 (API), Claude.ai 웹사이트 및 앱에서 무료/유료 플랜 제공.&lt;/li>
 &lt;li>&lt;strong>활용:&lt;/strong> 긴 문서 요약/분석, 창의적 글쓰기, 안전한 대화형 AI 개발.&lt;/li>
+&lt;li>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;strong>Grok (xAI):&lt;/strong> &lt;a href="https://x.ai/grok">https://x.ai/grok&lt;/a>
@@ -355,6 +360,7 @@ _start:
 &lt;li>&lt;strong>주요 특징:&lt;/strong> 실시간 정보 접근(X 플랫폼 연동), 유머러스하고 반항적인 페르소나, 최신 정보 기반 답변.&lt;/li>
 &lt;li>&lt;strong>가격:&lt;/strong> X Premium+ 구독 필요. API 접근은 별도 제공될 수 있음.&lt;/li>
 &lt;li>&lt;strong>활용:&lt;/strong> 최신 뉴스/트렌드 기반 질의응답, 특정 관점의 정보 탐색.&lt;/li>
+&lt;li>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>&lt;strong>Perplexity:&lt;/strong> &lt;a href="https://www.perplexity.ai/">https://www.perplexity.ai/&lt;/a>
