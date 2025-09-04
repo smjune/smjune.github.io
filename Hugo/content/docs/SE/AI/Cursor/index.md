@@ -16,18 +16,24 @@ draft: false
     -   **주요 특징:** 강력한 자연어 이해 및 생성 능력, 다양한 모델(GPT-4, GPT-4o 등) 제공, 광범위한 API 생태계.
     -   **가격:** 사용량 기반 유료 (API 호출당 과금), ChatGPT는 무료/유료 구독 플랜 제공.
     -   **활용:** 챗봇, 콘텐츠 생성, 코드 생성, 번역 등.
+    - [ChatGPT](https://chatgpt.com/) , [OpenAI API](https://platform.openai.com/docs/overview)
+    - 
 -   **Gemini (Google):** [https://deepmind.google/technologies/gemini/](https://deepmind.google/technologies/gemini/)
     -   **주요 특징:** 멀티모달(텍스트, 이미지, 오디오, 비디오) 처리 능력, 다양한 크기(Ultra, Pro, Flash, Nano) 제공, Google 생태계 연동.
     -   **가격:** 사용량 기반 유료 (Vertex AI API), Google AI Studio 및 Gemini 앱에서 무료/유료 플랜 제공.
     -   **활용:** 멀티모달 콘텐츠 생성, 복잡한 추론, 데이터 분석, Google Workspace 연동.
+    - [google Gemini Chat](https://gemini.google.com/app), [google AI Studio](https://aistudio.google.com/prompts/new_chat), [google Notebook LM](https://notebooklm.google.com/)
+    - 
 -   **Claude (Anthropic):** [https://www.anthropic.com/claude](https://www.anthropic.com/claude)
     -   **주요 특징:** 안전성 및 윤리성 강조(Constitutional AI), 긴 컨텍스트 처리 능력, 창의적 글쓰기 및 코딩 능력.
     -   **가격:** 사용량 기반 유료 (API), Claude.ai 웹사이트 및 앱에서 무료/유료 플랜 제공.
     -   **활용:** 긴 문서 요약/분석, 창의적 글쓰기, 안전한 대화형 AI 개발.
+    - 
 -   **Grok (xAI):** [https://x.ai/grok](https://x.ai/grok)
     -   **주요 특징:** 실시간 정보 접근(X 플랫폼 연동), 유머러스하고 반항적인 페르소나, 최신 정보 기반 답변.
     -   **가격:** X Premium+ 구독 필요. API 접근은 별도 제공될 수 있음.
     -   **활용:** 최신 뉴스/트렌드 기반 질의응답, 특정 관점의 정보 탐색.
+    - 
 -   **Perplexity:** [https://www.perplexity.ai/](https://www.perplexity.ai/)
     -   **주요 특징:** AI 기반 검색 엔진과 챗봇 기술 결합, GPT-4/Claude 3 등 최신 모델 활용, 실시간 웹 검색 및 Q&A, 복잡한 추론을 위한 o13 시리즈 모델 제공.
     -   **가격:** 무료 플랜, Pro 구독(일 300회+ Pro 검색), Enterprise 플랜 제공.
